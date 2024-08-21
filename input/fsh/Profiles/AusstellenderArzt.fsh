@@ -1,8 +1,8 @@
 Profile: AusstellenderArzt
 Parent: Practitioner
 Id: AusstellenderArzt
-Title: "Ausstellender Arzt*in"
-Description: "Ausstellender Arzt*in für Obduktionsschein und Sterbeurkunde"
+Title: "Ausstellender Arzt"
+Description: "Ausstellender Arzt für Obduktionsschein und Sterbeurkunde"
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open

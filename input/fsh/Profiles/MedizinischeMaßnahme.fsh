@@ -7,7 +7,3 @@ Description: ""
 * performed[x] only dateTime
 * performedDateTime MS
 * reasonCode.coding.display MS
-
-
-
-//Flag Warnhinweis

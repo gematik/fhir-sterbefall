@@ -10,3 +10,8 @@ Alias: $de.basis-marital-status = http://fhir.de/CodeSystem/marital-status-suppl
 //Core
 Alias: $core-patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
 Alias: $core-patient-nationality = http://hl7.org/fhir/StructureDefinition/patient-nationality
+Alias: $core-observation-timeOffset = http://hl7.org/fhir/StructureDefinition/observation-timeOffset
+
+//Terminoligien
+Alias: $sct = http://snomed.info/sct
+Alias: $icd-10-gm = http://fhir.de/ValueSet/bfarm/icd-10-gm
