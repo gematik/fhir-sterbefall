@@ -16,7 +16,7 @@ Description: "Informationen zur verstorbenen Person"
 * extension[Nationalität].extension[code].valueCodeableConcept from Nationalitaet
 * extension[WohnungsSituation].extension[status] MS
 * extension[WohnungsSituation].extension[auszugsdatum] MS
-* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
 * identifier ^definition = "In diesem Element wird der Identifier (Identifikator) für diese behandelnde Person definiert. Der Identifikator kann aus diversen Quellen stammen."
@@ -24,10 +24,9 @@ Description: "Informationen zur verstorbenen Person"
     GUID ..1 MS and
     KVNR ..1 MS
 * identifier[KVNR] only $de.basis-identifier-kvid-10
+* identifier[KVNR].type = http://fhir.de/CodeSystem/identifier-type-de-basis#KVZ10
 * identifier[KVNR].assigner MS
 * identifier[KVNR].assigner.identifier only $de.basis-identifier-iknr
-* identifier[KVNR].assigner.identifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#XX
-* identifier[KVNR].assigner.identifier.system = "http://fhir.de/sid/arge-ik/iknr"
 * identifier[KVNR].assigner.identifier.system MS
 * identifier[KVNR].assigner.identifier.value MS
 * name ^slicing.discriminator.type = #value
