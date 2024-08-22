@@ -31,3 +31,4 @@ Description: ""
 * subject MS
 * subject only Reference(Patient)
 
+//TODO Umbau zu Observation -> valueCodableConcept mit .text

@@ -60,3 +60,6 @@ Title: "unklare Todesart"
 Context: Observation
 * value[x] only Coding
 * valueCoding from YesNoUnknown (required)
+
+//TODO: auf hasMember mit Extension auf TU CS
+//TODO: derivedFrom verweis auf DocRef des Obduktionsscheins
