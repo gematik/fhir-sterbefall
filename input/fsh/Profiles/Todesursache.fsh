@@ -22,7 +22,7 @@ Description: "Todesursache (kompatibel zu [MII PR Onkologie Tod](https://www.med
 * value[x].coding.display 1.. MS
 * hasMember MS
 * hasMember.reference MS
-* hasMember.extension TodesursacheTypExtension named TodesursacheTyp 1..1 MS
+* hasMember.extension contains EtbTodesursacheTypExtension named TodesursacheTyp 1..1 MS
 
 Extension: NichtNatuerlicherTod
 Id: NichtNatuerlicherTod
@@ -41,8 +41,8 @@ Context: Observation
 //TODO: auf hasMember mit Extension auf TU CS
 //TODO: derivedFrom verweis auf DocRef des Obduktionsscheins
 
-Extension: TodesursacheTypExtension
-Id: TodesursacheTypExtension
+Extension: EtbTodesursacheTypExtension
+Id: EtbTodesursacheTypExtension
 Title: "Todesursache Typ"
 Context: Observation.hasMember
 * value[x] only CodeableConcept

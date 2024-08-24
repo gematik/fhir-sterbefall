@@ -4,7 +4,7 @@ Id: Obduktionsschein
 Title: "Obduktionsschein"
 Description: ""
 * status MS
-* type = 
+* type MS //TODO Binding
 * date MS
 
-716347009
+//716347009

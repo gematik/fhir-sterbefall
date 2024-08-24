@@ -19,17 +19,3 @@ Title: "Sterbezeit festgestellt durch"
 Context: Composition.date
 * value[x] only Reference
 * valueReference only Reference(Practitioner)
-
-Extension: SicherGelebt
-Id: FeststellungSterbezeit
-Title: "Sterbezeit festgestellt durch"
-Context: Composition.date
-* value[x] only Reference
-* valueReference only Reference(Practitioner)
-
-Extension: FeststellungSterbezeit
-Id: FeststellungSterbezeit
-Title: "Sterbezeit festgestellt durch"
-Context: Composition.date
-* value[x] only Reference
-* valueReference only Reference(Practitioner)
