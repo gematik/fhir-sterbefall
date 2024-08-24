@@ -5,6 +5,7 @@ Title: "Organisations Type"
 * #Klinik "Klinik"
 * #Praxis "Praxis"
 * #Abteilung "Abteilung"
+* #StAmt "Standesamt"
 
 ValueSet: OrganizationType
 Id: OrganizationTypeVS
