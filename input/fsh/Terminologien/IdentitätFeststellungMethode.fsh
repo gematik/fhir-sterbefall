@@ -1,5 +1,5 @@
-CodeSystem: IdentitaetFeststellungMethodeCS
-Id: IdentitaetFeststellungMethodeCS
+CodeSystem: EtbIdentitaetFeststellungMethodeCS
+Id: EtbIdentitaetFeststellungMethodeCS
 Title: "Methode zur Feststellung der Identität"
 * #EigeneKenntnis "Aufgrund eigener Kenntnis"
 * #AusweisReisepass "Nach Einsicht in Personalausweis/Reisepass"
@@ -7,7 +7,7 @@ Title: "Methode zur Feststellung der Identität"
 * #SonstigerNachweis "Sonstigem Nachweis"
 * #NichtMoeglich "Nicht möglich"
 
-ValueSet: IdentitaetFeststellungMethode
-Id: IdentitaetFeststellungMethodeVS
+ValueSet: EtbIdentitaetFeststellungMethode
+Id: EtbIdentitaetFeststellungMethodeVS
 Title: "Methode zur Feststellung der Identität"
-* include codes from system IdentitaetFeststellungMethodeCS
+* include codes from system EtbIdentitaetFeststellungMethodeCS

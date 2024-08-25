@@ -1,8 +1,8 @@
-Profile: MedizinischeMassnahme
+Profile: EtbMedizinischeMassnahme
 Parent: Procedure
-Id: MedizinischeMassnahme
-Title: "Medizinische Maßnahme"
-Description: ""
+Id: EtbMedizinischeMassnahme
+Title: "eTB Medizinische Maßnahme"
+Description: "Abbildung einer medizinischen Maßnahme im Kontext des eTB"
 * code.coding.display MS
 * performed[x] only dateTime
 * performedDateTime MS

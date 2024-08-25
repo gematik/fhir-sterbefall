@@ -6,6 +6,7 @@ Alias: $de.basis-identifier-kvid-10 = http://fhir.de/StructureDefinition/identif
 Alias: $de.basis-identifier-iknr = http://fhir.de/StructureDefinition/identifier-iknr
 
 Alias: $de.basis-marital-status = http://fhir.de/CodeSystem/marital-status-supplement
+Alias: $de.basis-koerpergewicht = http://fhir.de/StructureDefinition/observation-de-vitalsign-koerpergewicht
 
 //Core
 Alias: $core-patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
@@ -13,5 +14,6 @@ Alias: $core-patient-nationality = http://hl7.org/fhir/StructureDefinition/patie
 Alias: $core-observation-timeOffset = http://hl7.org/fhir/StructureDefinition/observation-timeOffset
 
 //Terminoligien
+Alias: $loinc = http://loinc.org
 Alias: $sct = http://snomed.info/sct
 Alias: $icd-10-gm = http://fhir.de/ValueSet/bfarm/icd-10-gm

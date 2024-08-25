@@ -1,20 +1,26 @@
-Profile: AusstellenderArzt
+Profile: EtbArzt
 Parent: Practitioner
-Id: AusstellenderArzt
-Title: "Ausstellender Arzt"
-Description: "Ausstellender Arzt für Obduktionsschein und Sterbeurkunde"
+Id: EtbArzt
+Title: "eTB Arzt"
+Description: "Informationen über Ärzte und Ärztinnen, die im Kontext der eTB relevant sind"
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
 * identifier ^definition = "In diesem Element wird der Identifier (Identifikator) für diese behandelnde Person definiert. Der Identifikator kann aus diversen Quellen stammen."
 * identifier contains
-    ANR 0..1 MS
+    ID ..1 MS and
+    ANR ..1 MS and
+    Zulassungsnummer ..1 MS
+* identifier[ID].system 1.. MS
+* identifier[ID].value 1.. MS
 * identifier[ANR] only $de.basis-identifier-lanr
 * identifier[ANR] ^definition = "In diesem Element wird die Arztnummer (umgangssprachlich auch Lebenslange Arztnummer „LANR“ genannt) nach § 108 SGB V abgebildet."
 * identifier[ANR].type 1.. MS
 * identifier[ANR].type.coding 1..1 MS
 * identifier[ANR].type.coding.system 1.. MS
 * identifier[ANR].type.coding.code 1.. MS
+* identifier[Zulassungsnummer].system 1.. MS
+* identifier[Zulassungsnummer].value 1.. MS
 * name ^slicing.discriminator.type = #value
 * name ^slicing.discriminator.path = "use"
 * name ^slicing.rules = #open
