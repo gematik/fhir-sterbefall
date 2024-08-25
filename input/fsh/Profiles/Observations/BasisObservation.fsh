@@ -35,6 +35,7 @@ Description: ""
 * $sct#75478009 "Vergiftung"
 * $sct#108369006 "Tumor" //TODO Klären, ob das nicht zu allgemein ist
 * include codes from system EtbObservationCodesErweiterungCS
+* include codes from system EtbWarnhinweisCodeCS
 
 CodeSystem: EtbObservationCodesErweiterungCS
 Id: EtbObservationCodesErweiterungCS
@@ -43,7 +44,7 @@ Description: ""
 * #sicherGelebt "Sicher Gelebt"
 * #sicherTod "Sicher Tod"
 * #todesanzeichen "Anzeichen für den Tod"
-* #aussereUrsache "Äußeren Ursache" //TODO Eigenes Profil
+* #aussereUrsache "Äußeren Ursache"
 * #unikausaleTodesursache "Unikausale Todesursache" //TODO Eigenes Profil ICD10
 * #totgeburtLebensdauer "Lebensdauer einer Totgeburt"
 * #totgeburtMehrlingsgeburt "Totgeburt Mehrlingsgeburt"
