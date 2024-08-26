@@ -6,7 +6,9 @@ Description: "Informationen zur verstorbenen Person"
 * extension contains 
   $core-patient-birthPlace named Geburtsort ..1 MS and
   $core-patient-nationality named Nationalität ..1 MS and
-  WohnungsSituation named WohnungsSituation ..1 MS
+  EtbWohnungsSituationExtension named WohnungsSituation ..1 MS and
+  EtbSterbedatumExtension named Sterbedatum ..1 MS and
+  EtbSterbedatumModifiziertExtension named Sterbedatum-Modifiziert ..1 MS
 * extension[Geburtsort].valueAddress MS
 * extension[Geburtsort].valueAddress only $de.basis-address
 * extension[Geburtsort].valueAddress
@@ -109,3 +111,17 @@ Title: "eTB Amt Extension"
 Description: "Abbildung des zuständigen Amtes für eine verstorbene Person. Als Freitext oder in Form der Kreisnummer (Bundesland, Regierungsbezirk, Kreis) möglich."
 Context: Address
 * value[x] only string or integer
+
+Extension: EtbSterbedatumExtension
+Id: EtbSterbedatumExtension
+Title: "eTB Sterbedatum"
+Description: ""
+Context: Patient
+* value[x] only dateTime
+
+Extension: EtbSterbedatumModifiziertExtension
+Id: EtbSterbedatumModifiziertExtension
+Title: "eTB Sterbedatum modifiziert"
+Description: "Sterbedatum wurde modifiziert wegen unvollständiger Angabe auf dem Leichenschauschein"
+Context: Patient
+* value[x] only dateTime

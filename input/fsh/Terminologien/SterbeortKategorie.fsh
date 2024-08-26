@@ -1,6 +1,6 @@
-CodeSystem: SterbeortKategorieCS
-Id: SterbeortKategorieCS
-Title: "Sterbeort Kategorie"
+CodeSystem: EtbSterbeortKategorieCS
+Id: EtbSterbeortKategorieCS
+Title: "eTB Sterbeort Kategorie"
 * #Eingliederungshilfe "Einrichtung der Eingliederungshilfe"
 * #Heim "Im Heim"
 * #Krankenhaus "Im Krankenhaus"
@@ -9,7 +9,7 @@ Title: "Sterbeort Kategorie"
 * #Transport "Transport"
 * #Zuhause "zu Hause"
 
-ValueSet: SterbeortKategorie
-Id: SterbeortKategorieVS
-Title: "Location Type"
-* include codes from system SterbeortKategorieCS
+ValueSet: EtbSterbeortKategorie
+Id: EtbSterbeortKategorieVS
+Title: "eTB Sterbeort Kategorie"
+* include codes from system EtbSterbeortKategorieCS

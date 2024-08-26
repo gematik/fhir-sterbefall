@@ -8,6 +8,9 @@ Title: "eTB Typ einer Organisation"
 * #StAmt "Standesamt"
 * #PathInst "Pathologisches Institut"
 * #GerichtsmedInst "Gerichtsmedizinisches Institut"
+* #GA "Gesundheitsamt"
+* #UebermittelndeStelle "Übermittelnde Stelle"
+* #MeldendeStelle "Meldende Stelle"
 
 ValueSet: EtbOrganisationsTyp
 Id: EtbOrganisationsTypVS

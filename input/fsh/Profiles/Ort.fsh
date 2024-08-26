@@ -1,9 +1,9 @@
-Profile: SterbeinformationOrt
+Profile: EtbOrt
 Parent: Location
-Id: SterbeinformationOrt
-Title: "SterbeinformationOrt"
+Id: EtbOrt
+Title: "eTB Ort"
 * type MS
-* type from SterbeinformationOrte (required)
+* type from EtbOrte (required)
 * description MS
 * address MS
 * address only $de.basis-address
@@ -12,4 +12,4 @@ Title: "SterbeinformationOrt"
   * postalCode MS
   * line MS //TODO: Extensions relevant?
 * physicalType MS
-* physicalType from SterbeortKategorie (required)
+* physicalType from EtbSterbeortKategorie (required)

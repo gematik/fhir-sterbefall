@@ -7,6 +7,7 @@ Alias: $de.basis-identifier-iknr = http://fhir.de/StructureDefinition/identifier
 
 Alias: $de.basis-marital-status = http://fhir.de/CodeSystem/marital-status-supplement
 Alias: $de.basis-koerpergewicht = http://fhir.de/StructureDefinition/observation-de-vitalsign-koerpergewicht
+Alias: $de.basis-bundeslaender = http://fhir.de/ValueSet/iso/bundeslaender
 
 //Core
 Alias: $core-patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-birthPlace

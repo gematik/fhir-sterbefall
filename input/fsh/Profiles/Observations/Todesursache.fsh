@@ -1,7 +1,7 @@
-Profile: Todesursache
-Parent: Observation
-Id: Todesursache
-Title: "Todesursache"
+Profile: EtbTodesursache
+Parent: EtbBasisObservation
+Id: EtbTodesursache
+Title: "eTB Todesursache"
 Description: "Todesursache (kompatibel zu [MII PR Onkologie Tod](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod) )"
 * extension contains
   NichtNatuerlicherTod named NichtNatürlicherTod ..1 MS and
@@ -46,4 +46,4 @@ Id: EtbTodesursacheTypExtension
 Title: "Todesursache Typ"
 Context: Observation.hasMember
 * value[x] only CodeableConcept
-* valueCodeableConcept from TodesursacheComponent (required)
+* valueCodeableConcept from EtbTodesursacheCode (required)

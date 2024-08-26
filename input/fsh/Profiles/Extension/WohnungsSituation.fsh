@@ -1,6 +1,6 @@
-Extension: WohnungsSituation
-Id: WohnungsSituation
-Title: "Situation der Wohnung"
+Extension: EtbWohnungsSituationExtension
+Id: EtbWohnungsSituationExtension
+Title: "eTB Situation der Wohnung"
 Description: "Angaben zur Situation der Wohnung"
 Context: Patient
 * extension contains

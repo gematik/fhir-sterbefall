@@ -7,18 +7,24 @@ Description: "Dieses Profil stellt die Basis Observation im Kontext der eTB dar.
 * code MS
 * code from EtbObservationCodes
 * subject 1.. MS
+* subject only Reference(Patient)
 * effective[x] MS
+* effectiveDateTime MS
 * value[x] MS
 * value[x] only CodeableConcept or string or Quantity or dateTime
+* valueDateTime MS
+* valueQuantity MS
 * valueCodeableConcept MS
 * valueString MS
 * note MS
 * hasMember MS
+* hasMember only Reference(Observation)
 
 ValueSet: EtbObservationCodes
 Id: EtbObservationCodes
 Title: "eTB Observation Codes"
 Description: ""
+* $sct#184305005 "Cause of Death"
 * $sct#40733004 "Infektionskrankheit"
 * $sct#218209002 "Overexposure to radioactive isotopes"
 * $sct#115966001 "Occupational disorder"
@@ -34,6 +40,7 @@ Description: ""
 * $sct#419393000 "Dead - suspicious death"
 * $sct#75478009 "Vergiftung"
 * $sct#108369006 "Tumor" //TODO Klären, ob das nicht zu allgemein ist
+* $sct#398299004 "Time of death"
 * include codes from system EtbObservationCodesErweiterungCS
 * include codes from system EtbWarnhinweisCodeCS
 
@@ -46,9 +53,11 @@ Description: ""
 * #todesanzeichen "Anzeichen für den Tod"
 * #aussereUrsache "Äußeren Ursache"
 * #unikausaleTodesursache "Unikausale Todesursache" //TODO Eigenes Profil ICD10
-* #totgeburtLebensdauer "Lebensdauer einer Totgeburt"
-* #totgeburtMehrlingsgeburt "Totgeburt Mehrlingsgeburt"
-* #totgeburtSchwangerschaftswoche "Totgeburt Schwangerschaftswoche"
-* #totgeburtLaenge "Totgeburt Länge"
-* #totgeburtGewicht "Totgeburt Gewicht"
+* #totgeburt "Totgeburt"
+* #totgeburt #totgeburtLebensdauer "Lebensdauer einer Totgeburt"
+* #totgeburt #totgeburtMehrlingsgeburt "Totgeburt Mehrlingsgeburt"
+* #totgeburt #totgeburtSchwangerschaftswoche "Totgeburt Schwangerschaftswoche"
+* #totgeburt #totgeburtLaenge "Totgeburt Länge"
+* #totgeburt #totgeburtGewicht "Totgeburt Gewicht"
 * #leichenfund "Leichenfund"
+* #bemerkungStaLa "Bemerkungen des Statistischen Landesamtes" "Bemerkungen des Statistischen Landesamtes zur Verarbeitung der Bescheinigung"

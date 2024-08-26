@@ -4,6 +4,8 @@ Id: EtbAutopsie
 Title: "EtbAutopsie"
 Description: "Abbildung der Informationen zu einer Autopsie im Kontext der eTB"
 * status MS
+* code MS
+* code = $sct#29240004
 * asserter MS
 * asserter.display MS
 * location MS
@@ -21,3 +23,6 @@ Description: "Abbildung der Informationen zu einer Autopsie im Kontext der eTB"
   PathologischesInstitut ..1 MS
 * performer[GerichtsmedizinischesInstitut].function = #GerichtsmedInst
 * performer[PathologischesInstitut].function = #PathINst
+* report MS
+
+//TODO: Unterschied Obduktion und Autopsie?
