@@ -1,15 +1,14 @@
-CodeSystem: PhysicianRoleCS
-Id: PhysicianRoleCS
-Title: "Physician Role in Patient Care"
+CodeSystem: EtbFestlegungTodesursacheCS
+Id: EtbFestlegungTodesursacheCS
+Title: "eTB Festlegung der Todesursache"
 * #BehandelnderArzt "Behandelnder Arzt"
 * #NichtBehandelnderNachAngabe "nicht behandelnder Arzt nach Angaben des behandelnden Arztes"
 * #NichtBehandelnderOhneAngabe "nicht behandelnder Arzt ohne Angaben des behandelnden Arztes"
 * #LeichenschauerNachAngabe "Ärztl. Leichenschauer nach Angaben des behandelnden Arztes"
 
-ValueSet: PhysicianRoleVS
-Id: PhysicianRoleVS
-Title: "Physician Role in Patient Care"
-* include codes from system PhysicianRoleCS
+ValueSet: EtbFestlegungTodesursache
+Id: EtbFestlegungTodesursacheVS
+Title: "eTB Festlegung der Todesursache"
+* include codes from system EtbFestlegungTodesursacheCS
 
-//TODO umbenennen und anpassen
 //TODO Todesursache Observation .performer Extension

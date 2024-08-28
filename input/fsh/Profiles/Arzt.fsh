@@ -66,4 +66,4 @@ Description: "Informationen über Ärzte und Ärztinnen, die im Kontext der eTB 
   * system = #fax
   * value MS
 * qualification.code MS
-* qualification.code from Berufsgruppe
+* qualification.code from EtbBerufsgruppe

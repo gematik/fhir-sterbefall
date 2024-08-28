@@ -15,7 +15,7 @@ Description: "Informationen zur verstorbenen Person"
   * city MS
   * country MS
   * state MS
-* extension[Nationalität].extension[code].valueCodeableConcept from Nationalitaet
+* extension[Nationalität].extension[code].valueCodeableConcept from EtbNationalitaet
 * extension[WohnungsSituation].extension[status] MS
 * extension[WohnungsSituation].extension[auszugsdatum] MS
 * identifier ^slicing.discriminator.type = #pattern
@@ -48,6 +48,8 @@ Description: "Informationen zur verstorbenen Person"
 * name[geburtsname]
   * use = #maiden
   * family MS
+  * given 0..0
+  * prefix 0..0
 * name[weitere_namen] only $de.basis-humanName
 * name[weitere_namen]
   * use = #old

@@ -1,6 +1,6 @@
-CodeSystem: AccidentTypeCS
-Id: AccidentTypeCS
-Title: "Accident Type"
+CodeSystem: EtbUnfallKategorieCS
+Id: EtbUnfallKategorieCS
+Title: "eTB Unfalltyp"
 * #ArbeitsDienstunfall "Arbeits- oder Dienstunfall (ohne Wegeunfall)"
 * #HaeslicherUnfall "häuslicher Unfall"
 * #Schulunfall "Schulunfall (ohne Wegeunfall)"
@@ -10,9 +10,7 @@ Title: "Accident Type"
 * #VerkehrsunfallPrivatweg "Verkehrsunfall (auf nicht öffentl. Verkehrsweg)"
 * #VerkehrsunfallWegeunfall "Verkehrsunfall (einschl. Wegeunfall)"
 
-ValueSet: AccidentTypeVS
-Id: AccidentTypeVS
-Title: "Accident Type"
-* include codes from system AccidentTypeCS
-
-//TODO Name anpassen
+ValueSet: EtbUnfallKategorie
+Id: EtbUnfallKategorieVS
+Title: "eTB Unfalltyp"
+* include codes from system EtbUnfallKategorieCS

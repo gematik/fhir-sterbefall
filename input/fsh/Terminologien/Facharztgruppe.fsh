@@ -1,6 +1,6 @@
-CodeSystem: FacharztgruppeCS
-Id: FacharztgruppeCS
-Title: "Facharztgruppe"
+CodeSystem: EtbFacharztgruppeCS
+Id: EtbFacharztgruppeCS
+Title: "eTB Facharztgruppe"
 * #Hausarzt "Hausarzt/-ärztin"
 * #Notarzt "Notarzt/-ärztin"
 * #Notdienstarzt "Arzt/Ärztin des kassenärztlichen Notdienstes"
@@ -8,7 +8,7 @@ Title: "Facharztgruppe"
 * #Rechtsmediziner "Rechtsmediziner/-in"
 * #Sonstiges "Sonstiges"
 
-ValueSet: Facharztgruppe
-Id: FacharztgruppeVS
-Title: "Facharztgruppe"
-* include codes from system FacharztgruppeCS
+ValueSet: EtbFacharztgruppe
+Id: EtbFacharztgruppeVS
+Title: "eTB Facharztgruppe"
+* include codes from system EtbFacharztgruppeCS

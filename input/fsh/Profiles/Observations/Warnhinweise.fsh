@@ -11,4 +11,4 @@ Description: ""
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding contains
   JNX ..1 MS
-* valueCodeableConcept.coding[JNX] from YesNoUnknown (required)
+* valueCodeableConcept.coding[JNX] from EtbJaNeinUnbekannt (required)

@@ -1,6 +1,6 @@
 CodeSystem: EtbOrteCS
 Id: EtbOrteCS
-Title: "Orte im Kontext der eTB"
+Title: "eTB Orte"
 Description: ""
 * #auffindeort "Auffindeort"
 * #sterbeort "Sterbeort"
@@ -10,5 +10,5 @@ Description: ""
 
 ValueSet: EtbOrte
 Id: EtbOrteVS
-Title: "Orte im Kontext der eTB"
+Title: "eTB Orte"
 * include codes from system EtbOrteCS

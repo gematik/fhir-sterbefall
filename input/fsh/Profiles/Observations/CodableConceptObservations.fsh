@@ -3,18 +3,14 @@ Parent: EtbBasisObservation
 Id: EtbObservationIdentifikation
 Title: "eTB Observation Identifikation"
 Description: ""
-* code = $sct#43390006
-* value[x] only CodeableConcept
-* valueCodeableConcept from EtbIdentitaetFeststellungMethode (extensible)
+* insert CodConObsExt($sct, 43390006, EtbIdentitaetFeststellungMethode)
 
 Profile: EtbObservationTodesanzeichen
 Parent: EtbBasisObservation
 Id: EtbObservationTodesanzeichen
 Title: "eTB Observation Todesanzeichen"
 Description: ""
-* code = EtbObservationCodesErweiterungCS#todesanzeichen
-* value[x] only CodeableConcept
-* valueCodeableConcept from EtbTodesanzeichen (extensible)
+* insert CodConObsExt(EtbObservationCodesErweiterungCS, todesanzeichen, EtbTodesanzeichen)
 
 Profile: EtbObservationAussereUrsache
 Parent: EtbBasisObservation
@@ -30,6 +26,35 @@ Parent: EtbBasisObservation
 Id: EtbObservationUnikausaleTodesursache
 Title: "eTB Observation unikausale Todesursache"
 Description: ""
-* code = EtbObservationCodesErweiterungCS#unikausaleTodesursache
+* insert CodConObsReq(EtbObservationCodesErweiterungCS, unikausaleTodesursache, $icd-10-gm)
+
+Profile: EtbObservationUnfallkategorie
+Parent: EtbBasisObservation
+Id: EtbObservationUnfallkategorie
+Title: "eTB Observation Unfallkategorie"
+Description: ""
+* insert CodConObsExt($sct, 55566008, EtbUnfallKategorie)
+
+Profile: EtbObservationUnnatuerlicheTodesursache
+Parent: EtbBasisObservation
+Id: EtbObservationUnnatuerlicheTodesursache
+Title: "eTB Observation Unnatürliche Todesursache"
+Description: ""
+* insert CodConObsExt($sct, 87309006, EtbUnnatuerlicheTodesursachen)
+
+Profile: EtbObservationVerkehrsunfall
+Parent: EtbBasisObservation
+Id: EtbObservationVerkehrsunfall
+Title: "eTB Observation Verkehrsunfall"
+Description: ""
+* insert CodConObsExt($sct, 418161006, EtbVerkehrsunfallKategorie)
+
+RuleSet: CodConObsExt(system, code, vs)
+* code = {system}#{code}
 * value[x] only CodeableConcept
-* valueCodeableConcept from $icd-10-gm (required)
+* valueCodeableConcept from {vs} (extensible)
+
+RuleSet: CodConObsReq(system, code, vs)
+* code = {system}#{code}
+* value[x] only CodeableConcept
+* valueCodeableConcept from {vs} (required)

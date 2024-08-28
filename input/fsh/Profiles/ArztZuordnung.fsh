@@ -6,4 +6,4 @@ Description: "Zuordnung von Ärztinnen und Ärzten zu Organisationen im Kontext 
 * practitioner MS
 * organization MS
 * specialty MS
-* specialty from Facharztgruppe
+* specialty from EtbFacharztgruppe

@@ -41,6 +41,8 @@ Description: ""
 * $sct#75478009 "Vergiftung"
 * $sct#108369006 "Tumor" //TODO Klären, ob das nicht zu allgemein ist
 * $sct#398299004 "Time of death"
+* $sct#55566008 "Accident"
+* $sct#418161006 "Vehicle accident"
 * include codes from system EtbObservationCodesErweiterungCS
 * include codes from system EtbWarnhinweisCodeCS
 

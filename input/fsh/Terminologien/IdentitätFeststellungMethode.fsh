@@ -1,6 +1,6 @@
 CodeSystem: EtbIdentitaetFeststellungMethodeCS
 Id: EtbIdentitaetFeststellungMethodeCS
-Title: "Methode zur Feststellung der Identität"
+Title: "eTB Methode zur Feststellung der Identität"
 * #EigeneKenntnis "Aufgrund eigener Kenntnis"
 * #AusweisReisepass "Nach Einsicht in Personalausweis/Reisepass"
 * #AngabenDritter "Nach Angaben von Angehörigen/Dritten"
@@ -9,5 +9,5 @@ Title: "Methode zur Feststellung der Identität"
 
 ValueSet: EtbIdentitaetFeststellungMethode
 Id: EtbIdentitaetFeststellungMethodeVS
-Title: "Methode zur Feststellung der Identität"
+Title: "eTB Methode zur Feststellung der Identität"
 * include codes from system EtbIdentitaetFeststellungMethodeCS

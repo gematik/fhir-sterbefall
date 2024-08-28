@@ -1,6 +1,6 @@
-CodeSystem: AccidentInvolvementCS
-Id: AccidentInvolvementCS
-Title: "Accident Involvement Role"
+CodeSystem: EtbVerkehrsunfallKategorieCS
+Id: EtbVerkehrsunfallKategorieCS
+Title: "eTB Verkehrsunfall Kategorie"
 * #0 "PKW-Fahrer/-in"
 * #1 "LKW-Fahrer/-in"
 * #2 "Motorradfahrer/-in"
@@ -15,9 +15,7 @@ Title: "Accident Involvement Role"
 * #11 "Sonstiges (bitte in Beschreibung der äußeren Ursache aufführen)"
 * #99 "nicht bekannt"
 
-ValueSet: AccidentInvolvementVS
-Id: AccidentInvolvementVS
-Title: "Accident Involvement Role"
-* include codes from system AccidentInvolvementCS
-
-//TODO Name anpassen
+ValueSet: EtbVerkehrsunfallKategorie
+Id: EtbVerkehrsunfallKategorieVS
+Title: "eTB Verkehrsunfall Kategorie"
+* include codes from system EtbVerkehrsunfallKategorieCS

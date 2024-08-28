@@ -23,20 +23,22 @@ Description: "Todesursache (kompatibel zu [MII PR Onkologie Tod](https://www.med
 * hasMember MS
 * hasMember.reference MS
 * hasMember.extension contains EtbTodesursacheTypExtension named TodesursacheTyp 1..1 MS
+* performer MS
+* performer.extension contains EtbFestlegungTodesursacheExtension named FestlegungTodesursache ..1 MS
 
 Extension: NichtNatuerlicherTod
 Id: NichtNatuerlicherTod
 Title: "Nicht-Natürlicher Tod"
 Context: Observation
 * value[x] only Coding
-* valueCoding from YesNoUnknown (required)
+* valueCoding from EtbJaNeinUnbekannt (required)
 
 Extension: TodesartUnklar
 Id: TodesartUnklar
 Title: "unklare Todesart"
 Context: Observation
 * value[x] only Coding
-* valueCoding from YesNoUnknown (required)
+* valueCoding from EtbJaNeinUnbekannt (required)
 
 //TODO: auf hasMember mit Extension auf TU CS
 //TODO: derivedFrom verweis auf DocRef des Obduktionsscheins
@@ -47,3 +49,11 @@ Title: "Todesursache Typ"
 Context: Observation.hasMember
 * value[x] only CodeableConcept
 * valueCodeableConcept from EtbTodesursacheCode (required)
+
+Extension: EtbFestlegungTodesursacheExtension
+Id: EtbFestlegungTodesursacheExtension
+Title: "eTB Festlegung Todesursache Extension"
+Description: ""
+Context: Observation.performer
+* value[x] only Coding
+* valueCoding from EtbFestlegungTodesursache

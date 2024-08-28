@@ -19,6 +19,6 @@ Title: "eTB Typ einer Organisation"
 
 ValueSet: EtbOrganisationsTypAutopsie
 Id: EtbOrganisationsTypAutopsieVS
-Title: "eTB Typ einer Organisation bei Autoplien"
+Title: "eTB Typ einer Organisation bei Autopsien"
 * EtbOrganisationsTypCS#PathInst
 * EtbOrganisationsTypCS#GerichtsmedInst

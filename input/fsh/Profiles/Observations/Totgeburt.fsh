@@ -58,7 +58,7 @@ Title: "eTB Observation Totgeburt - Mehrlingsgeburt"
 Description: ""
 * code = EtbObservationCodesErweiterungCS#totgeburtMehrlingsgeburt
 * value[x] only CodeableConcept
-* valueCodeableConcept from YesNoUnknownVS (required)
+* valueCodeableConcept from EtbJaNeinUnbekanntVS (required)
 
 Profile: EtbObservationTotgeburtSchwangerschaftswoche
 Parent: EtbBasisObservation
