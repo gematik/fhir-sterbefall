@@ -41,14 +41,22 @@ Description: "Informationen über Ärzte und Ärztinnen, die im Kontext der eTB 
 * address[Strassenanschrift] only $de.basis-address
 * address[Strassenanschrift]
   * type = #both
-  * line MS //TODO: Extensions mit MS versehen?
+  * line MS
+  * line.extension[Postfach] 0..0
+  * line.extension[Strasse] MS
+  * line.extension[Hausnummer] MS
+  * line.extension[Adresszusatz] MS
   * city MS
   * postalCode MS
   * country MS
 * address[Postfach] only $de.basis-address
 * address[Postfach]
   * type = #postal
-  * line MS //TODO: Extensions mit MS versehen?
+  * line MS
+  * line.extension[Postfach] MS
+  * line.extension[Strasse] 0..0
+  * line.extension[Hausnummer] 0..0
+  * line.extension[Adresszusatz] 0..0
   * city MS
   * postalCode MS
   * country MS

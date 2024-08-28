@@ -10,6 +10,10 @@ Title: "eTB Ort"
 * address
   * city MS
   * postalCode MS
-  * line MS //TODO: Extensions relevant?
+  * line MS
+  * line.extension[Postfach] 0..0
+  * line.extension[Strasse] MS
+  * line.extension[Hausnummer] MS
+  * line.extension[Adresszusatz] MS
 * physicalType MS
 * physicalType from EtbSterbeortKategorie (required)

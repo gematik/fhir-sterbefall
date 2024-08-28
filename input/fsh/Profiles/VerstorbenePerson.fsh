@@ -73,14 +73,22 @@ Description: "Informationen zur verstorbenen Person"
   * extension[Stadtteil] MS
   * type = #both
   * extension[Stadtteil] MS
-  * line MS //TODO: Extensions mit MS versehen?
+  * line MS
+  * line.extension[Postfach] 0..0
+  * line.extension[Strasse] MS
+  * line.extension[Hausnummer] MS
+  * line.extension[Adresszusatz] MS
   * city MS
   * postalCode MS
   * country MS
 * address[Postfach] only $de.basis-address
 * address[Postfach]
   * type = #postal
-  * line MS //TODO: Extensions mit MS versehen?
+  * line MS
+  * line.extension[Postfach] MS
+  * line.extension[Strasse] 0..0
+  * line.extension[Hausnummer] 0..0
+  * line.extension[Adresszusatz] 0..0
   * city MS
   * postalCode MS
   * country MS
@@ -119,7 +127,13 @@ Id: EtbSterbedatumExtension
 Title: "eTB Sterbedatum"
 Description: ""
 Context: Patient
-* value[x] only dateTime
+* extension contains
+  Datum 1..1 MS and
+  FestgestelltDurch ..1 MS
+* extension[Datum].value[x] only dateTime
+* extension[FestgestelltDurch].value[x] only Reference or string //TODO wollen wir String wirklich zulassen?
+* extension[FestgestelltDurch].valueReference only Reference(Practitioner)
+
 
 Extension: EtbSterbedatumModifiziertExtension
 Id: EtbSterbedatumModifiziertExtension
