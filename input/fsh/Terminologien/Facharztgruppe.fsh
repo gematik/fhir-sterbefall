@@ -1,6 +1,6 @@
-CodeSystem: EtbFacharztgruppeCS
-Id: EtbFacharztgruppeCS
-Title: "eTB Facharztgruppe"
+CodeSystem: StfFacharztgruppeCS
+Id: StfFacharztgruppeCS
+Title: "STF Facharztgruppe"
 * #Hausarzt "Hausarzt/-ärztin"
 * #Notarzt "Notarzt/-ärztin"
 * #Notdienstarzt "Arzt/Ärztin des kassenärztlichen Notdienstes"
@@ -8,7 +8,7 @@ Title: "eTB Facharztgruppe"
 * #Rechtsmediziner "Rechtsmediziner/-in"
 * #Sonstiges "Sonstiges"
 
-ValueSet: EtbFacharztgruppe
-Id: EtbFacharztgruppeVS
-Title: "eTB Facharztgruppe"
-* include codes from system EtbFacharztgruppeCS
+ValueSet: StfFacharztgruppe
+Id: StfFacharztgruppeVS
+Title: "STF Facharztgruppe"
+* include codes from system StfFacharztgruppeCS

@@ -1,57 +1,57 @@
-Profile: EtbObservationIdentifikation
-Parent: EtbBasisObservation
-Id: EtbObservationIdentifikation
-Title: "eTB Observation Identifikation"
+Profile: StfObservationIdentifikation
+Parent: StfBasisObservation
+Id: StfObservationIdentifikation
+Title: "STF Observation Identifikation"
 Description: ""
-* insert CodConObsExt($sct, 43390006, EtbIdentitaetFeststellungMethode)
+* insert CodConObsExt($sct, 43390006, StfIdentitaetFeststellungMethode)
 
-Profile: EtbObservationTodesanzeichen
-Parent: EtbBasisObservation
-Id: EtbObservationTodesanzeichen
-Title: "eTB Observation Todesanzeichen"
+Profile: StfObservationTodesanzeichen
+Parent: StfBasisObservation
+Id: StfObservationTodesanzeichen
+Title: "STF Observation Todesanzeichen"
 Description: ""
-* insert CodConObsExt(EtbObservationCodesErweiterungCS, todesanzeichen, EtbTodesanzeichen)
+* insert CodConObsExt(StfObservationCodesErweiterungCS, todesanzeichen, StfTodesanzeichen)
 
-Profile: EtbObservationAussereUrsache
-Parent: EtbBasisObservation
-Id: EtbObservationAussereUrsache
-Title: "eTB Observation äußere Ursache"
+Profile: StfObservationAussereUrsache
+Parent: StfBasisObservation
+Id: StfObservationAussereUrsache
+Title: "STF Observation äußere Ursache"
 Description: ""
-* code = EtbObservationCodesErweiterungCS#aussereUrsache
+* code = StfObservationCodesErweiterungCS#aussereUrsache
 * value[x] only CodeableConcept
 * valueCodeableConcept.text MS
 
-Profile: EtbObservationUnikausaleTodesursache
-Parent: EtbBasisObservation
-Id: EtbObservationUnikausaleTodesursache
-Title: "eTB Observation unikausale Todesursache"
+Profile: StfObservationUnikausaleTodesursache
+Parent: StfBasisObservation
+Id: StfObservationUnikausaleTodesursache
+Title: "STF Observation unikausale Todesursache"
 Description: ""
-* insert CodConObsReq(EtbObservationCodesErweiterungCS, unikausaleTodesursache, $icd-10-gm)
+* insert CodConObsReq(StfObservationCodesErweiterungCS, unikausaleTodesursache, $icd-10-gm)
 
-Profile: EtbObservationUnfallkategorie
-Parent: EtbBasisObservation
-Id: EtbObservationUnfallkategorie
-Title: "eTB Observation Unfallkategorie"
+Profile: StfObservationUnfallkategorie
+Parent: StfBasisObservation
+Id: StfObservationUnfallkategorie
+Title: "STF Observation Unfallkategorie"
 Description: ""
-* insert CodConObsExt($sct, 55566008, EtbUnfallKategorie)
+* insert CodConObsExt($sct, 55566008, StfUnfallKategorie)
 
-Profile: EtbObservationUnnatuerlicheTodesursache
-Parent: EtbBasisObservation
-Id: EtbObservationUnnatuerlicheTodesursache
-Title: "eTB Observation Unnatürliche Todesursache"
+Profile: StfObservationUnnatuerlicheTodesursache
+Parent: StfBasisObservation
+Id: StfObservationUnnatuerlicheTodesursache
+Title: "STF Observation Unnatürliche Todesursache"
 Description: ""
-* insert CodConObsExt($sct, 87309006, EtbUnnatuerlicheTodesursachen)
+* insert CodConObsExt($sct, 87309006, StfUnnatuerlicheTodesursachen)
 
-Profile: EtbObservationVerkehrsunfall
-Parent: EtbBasisObservation
-Id: EtbObservationVerkehrsunfall
-Title: "eTB Observation Verkehrsunfall"
+Profile: StfObservationVerkehrsunfall
+Parent: StfBasisObservation
+Id: StfObservationVerkehrsunfall
+Title: "STF Observation Verkehrsunfall"
 Description: ""
-* insert CodConObsExt($sct, 418161006, EtbVerkehrsunfallKategorie)
+* insert CodConObsExt($sct, 418161006, StfVerkehrsunfallKategorie)
 
-Profile: EtbObservationBestattung
-Parent: EtbBasisObservation
-Id: EtbObservationBestattung
-Title: "eTB Observation Bestattung"
+Profile: StfObservationBestattung
+Parent: StfBasisObservation
+Id: StfObservationBestattung
+Title: "STF Observation Bestattung"
 Description: ""
-* insert CodConObsExt($sct, 52373005, EtbBestattungsart)
+* insert CodConObsExt($sct, 52373005, StfBestattungsart)

@@ -1,9 +1,9 @@
-Profile: EtbWarnhinweis
-Parent: EtbBasisObservation
-Id: EtbWarnhinweis
-Title: "eTB Warnhinweis"
+Profile: StfWarnhinweis
+Parent: StfBasisObservation
+Id: StfWarnhinweis
+Title: "STF Warnhinweis"
 Description: ""
-* code from EtbWarnhinweisCode (required)
+* code from StfWarnhinweisCode (required)
 * value[x] only CodeableConcept
 * valueCodeableConcept.text MS
 * valueCodeableConcept.coding ^slicing.discriminator.type = #pattern
@@ -11,4 +11,4 @@ Description: ""
 * valueCodeableConcept.coding ^slicing.rules = #open
 * valueCodeableConcept.coding contains
   JNX ..1 MS
-* valueCodeableConcept.coding[JNX] from EtbJaNeinUnbekannt (required)
+* valueCodeableConcept.coding[JNX] from StfJaNeinUnbekannt (required)

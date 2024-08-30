@@ -1,6 +1,6 @@
-CodeSystem: EtbTodesursacheCodeCS
-Id: EtbTodesursacheCodeCS
-Title: "eTB Weitere Todesursachen"
+CodeSystem: StfTodesursacheCodeCS
+Id: StfTodesursacheCodeCS
+Title: "STF Weitere Todesursachen"
 Description: ""
 * #TU2 "Todesursache 2" "Als Folge von..."
 * #TU3 "Todesursache 3" "Als Folge von... (Grundleiden)"
@@ -8,7 +8,7 @@ Description: ""
 * #TU5 "Todesursache_5"
 * #GA "Todesursache Gesundheitsamt"
 
-ValueSet: EtbTodesursacheCode
-Id: EtbTodesursacheCodeVS
+ValueSet: StfTodesursacheCode
+Id: StfTodesursacheCodeVS
 Title: "Warnhinweis Code"
-* include codes from system EtbTodesursacheCodeCS
+* include codes from system StfTodesursacheCodeCS

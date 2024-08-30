@@ -1,12 +1,12 @@
-Profile: EtbObservationTotgeburt
-Parent: EtbBasisObservation
-Id: EtbObservationTotgeburt
-Title: "eTB Observation Totgeburt"
+Profile: StfObservationTotgeburt
+Parent: StfBasisObservation
+Id: StfObservationTotgeburt
+Title: "STF Observation Totgeburt"
 Description: ""
 * code = $sct#237364002
 * value[x] only CodeableConcept
-* valueCodeableConcept from EtbAngabenTotgeburt (extensible)
-* hasMember.extension contains EtbTotgeburtWeitereInformation named TodgeburtWeitereInformationen 1..1 MS
+* valueCodeableConcept from StfAngabenTotgeburt (extensible)
+* hasMember.extension contains StfTotgeburtWeitereInformation named TodgeburtWeitereInformationen 1..1 MS
 * hasMember ^slicing.discriminator.type = #pattern
 * hasMember ^slicing.discriminator.path = "extension:TodgeburtWeitereInformationen.valueCoding"
 * hasMember ^slicing.rules = #open
@@ -16,21 +16,21 @@ Description: ""
   Lebensdauer ..1 MS and
   Mehrlingsgeburt ..1 MS and
   Schwangerschaftswoche ..1 MS
-* hasMember[Gewicht].extension[TodgeburtWeitereInformationen].valueCoding = EtbObservationCodesErweiterungCS#totgeburtGewicht
+* hasMember[Gewicht].extension[TodgeburtWeitereInformationen].valueCoding = StfObservationCodesErweiterungCS#totgeburtGewicht
 * hasMember[Gewicht] only Reference(Observation)
-* hasMember[Länge].extension[TodgeburtWeitereInformationen].valueCoding = EtbObservationCodesErweiterungCS#totgeburtLaenge
+* hasMember[Länge].extension[TodgeburtWeitereInformationen].valueCoding = StfObservationCodesErweiterungCS#totgeburtLaenge
 * hasMember[Länge] only Reference(Observation)
-* hasMember[Lebensdauer].extension[TodgeburtWeitereInformationen].valueCoding = EtbObservationCodesErweiterungCS#totgeburtLebensdauer
+* hasMember[Lebensdauer].extension[TodgeburtWeitereInformationen].valueCoding = StfObservationCodesErweiterungCS#totgeburtLebensdauer
 * hasMember[Lebensdauer] only Reference(Observation)
-* hasMember[Mehrlingsgeburt].extension[TodgeburtWeitereInformationen].valueCoding = EtbObservationCodesErweiterungCS#totgeburtMehrlingsgeburt
+* hasMember[Mehrlingsgeburt].extension[TodgeburtWeitereInformationen].valueCoding = StfObservationCodesErweiterungCS#totgeburtMehrlingsgeburt
 * hasMember[Mehrlingsgeburt] only Reference(Observation)
-* hasMember[Schwangerschaftswoche].extension[TodgeburtWeitereInformationen].valueCoding = EtbObservationCodesErweiterungCS#totgeburtSchwangerschaftswoche
+* hasMember[Schwangerschaftswoche].extension[TodgeburtWeitereInformationen].valueCoding = StfObservationCodesErweiterungCS#totgeburtSchwangerschaftswoche
 * hasMember[Schwangerschaftswoche] only Reference(Observation)
 
-Profile: EtbObservationTotgeburtGewicht
+Profile: StfObservationTotgeburtGewicht
 Parent: $de.basis-koerpergewicht
-Id: EtbObservationTotgeburtGewicht
-Title: "eTB Observation Totgeburt - Gewicht"
+Id: StfObservationTotgeburtGewicht
+Title: "STF Observation Totgeburt - Gewicht"
 Description: ""
 * status MS
 * category MS
@@ -39,8 +39,8 @@ Description: ""
 * code.coding ^slicing.discriminator.path = "$this"
 * code.coding ^slicing.rules = #open
 * code.coding contains
-  eTB-Kontext ..1 MS
-* code.coding[eTB-Kontext] = EtbObservationCodesErweiterungCS#totgeburtGewicht
+  STF-Kontext ..1 MS
+* code.coding[STF-Kontext] = StfObservationCodesErweiterungCS#totgeburtGewicht
 * value[x] MS
 * valueQuantity MS
 * valueQuantity
@@ -51,53 +51,53 @@ Description: ""
   * unit MS
   * unit = "gram"
 
-Profile: EtbObservationTotgeburtMehrlingsgeburt
-Parent: EtbBasisObservation
-Id: EtbObservationTotgeburtMehrlingsgeburt
-Title: "eTB Observation Totgeburt - Mehrlingsgeburt"
+Profile: StfObservationTotgeburtMehrlingsgeburt
+Parent: StfBasisObservation
+Id: StfObservationTotgeburtMehrlingsgeburt
+Title: "STF Observation Totgeburt - Mehrlingsgeburt"
 Description: ""
-* code = EtbObservationCodesErweiterungCS#totgeburtMehrlingsgeburt
+* code = StfObservationCodesErweiterungCS#totgeburtMehrlingsgeburt
 * value[x] only CodeableConcept
-* valueCodeableConcept from EtbJaNeinUnbekanntVS (required)
+* valueCodeableConcept from StfJaNeinUnbekanntVS (required)
 
-Profile: EtbObservationTotgeburtSchwangerschaftswoche
-Parent: EtbBasisObservation
-Id: EtbObservationTotgeburtSchwangerschaftswoche
-Title: "eTB Observation Totgeburt - Schwangerschaftswoche"
+Profile: StfObservationTotgeburtSchwangerschaftswoche
+Parent: StfBasisObservation
+Id: StfObservationTotgeburtSchwangerschaftswoche
+Title: "STF Observation Totgeburt - Schwangerschaftswoche"
 Description: ""
-* code = EtbObservationCodesErweiterungCS#totgeburtSchwangerschaftswoche
+* code = StfObservationCodesErweiterungCS#totgeburtSchwangerschaftswoche
 * value[x] only Quantity
 * valueQuantity
   * code = #wk
   * unit = "Woche"
   * system = "http://unitsofmeasure.org"
 
-Profile: EtbObservationTotgeburtLaenge
-Parent: EtbBasisObservation
-Id: EtbObservationTotgeburtLaenge
-Title: "eTB Observation Totgeburt - Länge"
+Profile: StfObservationTotgeburtLaenge
+Parent: StfBasisObservation
+Id: StfObservationTotgeburtLaenge
+Title: "STF Observation Totgeburt - Länge"
 Description: ""
-* code = EtbObservationCodesErweiterungCS#totgeburtLaenge
+* code = StfObservationCodesErweiterungCS#totgeburtLaenge
 * value[x] only Quantity
 * valueQuantity
   * code = #cm
   * unit = "Zentimeter"
   * system = "http://unitsofmeasure.org"
 
-Extension: EtbTotgeburtWeitereInformation
-Id: EtbTotgeburtWeitereInformation
-Title: "eTB Weitere Information zur Totgeburt"
+Extension: StfTotgeburtWeitereInformation
+Id: StfTotgeburtWeitereInformation
+Title: "STF Weitere Information zur Totgeburt"
 Description: ""
 Context: Observation.hasMember
 * value[x] only Coding
-* valueCoding from EtbTotgeburtWeitereInformationVS
+* valueCoding from StfTotgeburtWeitereInformationVS
 
-ValueSet: EtbTotgeburtWeitereInformationVS
-Id: EtbTotgeburtWeitereInformationVS
-Title: "eTB ValueSet mit Codes zu weiteren Information zur Totgeburt"
+ValueSet: StfTotgeburtWeitereInformationVS
+Id: StfTotgeburtWeitereInformationVS
+Title: "STF ValueSet mit Codes zu weiteren Information zur Totgeburt"
 Description: ""
-* EtbObservationCodesErweiterungCS#totgeburtLebensdauer
-* EtbObservationCodesErweiterungCS#totgeburtMehrlingsgeburt
-* EtbObservationCodesErweiterungCS#totgeburtSchwangerschaftswoche
-* EtbObservationCodesErweiterungCS#totgeburtLaenge
-* EtbObservationCodesErweiterungCS#totgeburtGewicht
+* StfObservationCodesErweiterungCS#totgeburtLebensdauer
+* StfObservationCodesErweiterungCS#totgeburtMehrlingsgeburt
+* StfObservationCodesErweiterungCS#totgeburtSchwangerschaftswoche
+* StfObservationCodesErweiterungCS#totgeburtLaenge
+* StfObservationCodesErweiterungCS#totgeburtGewicht

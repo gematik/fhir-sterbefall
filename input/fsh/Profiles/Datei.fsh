@@ -1,11 +1,11 @@
-Profile: EtbDatei
+Profile: StfDatei
 Parent: DocumentReference
-Id: EtbDateien
-Title: "eTB Dateien"
-Description: "Metadaten zu Dateien, die im Kontext der eTB Übermittlung relevant sind"
+Id: StfDateien
+Title: "STF Dateien"
+Description: "Metadaten zu Dateien, die im Kontext der STF Übermittlung relevant sind"
 * status MS
 * type MS
-* type from EtbDateiTyp (extensible)
+* type from StfDateiTyp (extensible)
 * subject MS
 * subject only Reference(Patient)
 * author MS

@@ -1,6 +1,6 @@
-CodeSystem: EtbTodesanzeichenCS
-Id: EtbTodesanzeichenCS
-Title: "eTB Todesanzeichen"
+CodeSystem: StfTodesanzeichenCS
+Id: StfTodesanzeichenCS
+Title: "STF Todesanzeichen"
 * #erfolgloseReanimation "erfolglose Reanimation"
 * #faeulnis "Fäulnis"
 * #hirntod "Hirntod"
@@ -8,7 +8,7 @@ Title: "eTB Todesanzeichen"
 * #totenstarre "Totenstarre"
 * #unvereinbareVerletzungen "Verletzungen, die nicht mit dem Leben vereinbar sind"
 
-ValueSet: EtbTodesanzeichen
-Id: EtbTodesanzeichenVS
-Title: "eTB Todesanzeichen"
-* include codes from system EtbTodesanzeichenCS
+ValueSet: StfTodesanzeichen
+Id: StfTodesanzeichenVS
+Title: "STF Todesanzeichen"
+* include codes from system StfTodesanzeichenCS

@@ -1,8 +1,8 @@
-Profile: EtbAutopsie
+Profile: StfAutopsie
 Parent: Procedure
-Id: EtbAutopsie
-Title: "EtbAutopsie"
-Description: "Abbildung der Informationen zu einer Autopsie im Kontext der eTB"
+Id: StfAutopsie
+Title: "StfAutopsie"
+Description: "Abbildung der Informationen zu einer Autopsie im Kontext der STF"
 * status MS
 * code MS
 * code = $sct#29240004
@@ -12,7 +12,7 @@ Description: "Abbildung der Informationen zu einer Autopsie im Kontext der eTB"
 * location.display MS
 * performer MS
 * performer.function MS
-* performer.function from EtbOrganisationsTypAutopsie (extensible)
+* performer.function from StfOrganisationsTypAutopsie (extensible)
 * performer.actor MS
 * performer.actor.display MS
 * performer ^slicing.discriminator.type = #value

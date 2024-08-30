@@ -1,9 +1,9 @@
-Profile: EtbOrt
+Profile: StfOrt
 Parent: Location
-Id: EtbOrt
-Title: "eTB Ort"
+Id: StfOrt
+Title: "STF Ort"
 * type MS
-* type from EtbOrte (required)
+* type from StfOrte (required)
 * description MS
 * address MS
 * address only $de.basis-address
@@ -16,4 +16,4 @@ Title: "eTB Ort"
   * line.extension[Hausnummer] MS
   * line.extension[Adresszusatz] MS
 * physicalType MS
-* physicalType from EtbSterbeortKategorie (required)
+* physicalType from StfSterbeortKategorie (required)

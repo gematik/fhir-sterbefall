@@ -1,6 +1,6 @@
-CodeSystem: EtbOrteCS
-Id: EtbOrteCS
-Title: "eTB Orte"
+CodeSystem: StfOrteCS
+Id: StfOrteCS
+Title: "STF Orte"
 Description: ""
 * #auffindeort "Auffindeort"
 * #sterbeort "Sterbeort"
@@ -8,7 +8,7 @@ Description: ""
 * #totgeburtort "Totgeburt Ort"
 * #obduktionsort "Obduktionsort"
 
-ValueSet: EtbOrte
-Id: EtbOrteVS
-Title: "eTB Orte"
-* include codes from system EtbOrteCS
+ValueSet: StfOrte
+Id: StfOrteVS
+Title: "STF Orte"
+* include codes from system StfOrteCS

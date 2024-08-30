@@ -1,8 +1,8 @@
-Profile: EtbArzt
+Profile: StfArzt
 Parent: Practitioner
-Id: EtbArzt
-Title: "eTB Arzt"
-Description: "Informationen über Ärzte und Ärztinnen, die im Kontext der eTB relevant sind"
+Id: StfArzt
+Title: "STF Arzt"
+Description: "Informationen über Ärzte und Ärztinnen, die im Kontext der STF relevant sind"
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
@@ -74,4 +74,4 @@ Description: "Informationen über Ärzte und Ärztinnen, die im Kontext der eTB 
   * system = #fax
   * value MS
 * qualification.code MS
-* qualification.code from EtbBerufsgruppe
+* qualification.code from StfBerufsgruppe

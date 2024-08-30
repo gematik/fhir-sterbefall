@@ -1,7 +1,7 @@
-Profile: EtbTodesursache
-Parent: EtbBasisObservation
-Id: EtbTodesursache
-Title: "eTB Todesursache"
+Profile: StfTodesursache
+Parent: StfBasisObservation
+Id: StfTodesursache
+Title: "STF Todesursache"
 Description: "Todesursache (kompatibel zu [MII PR Onkologie Tod](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod) )"
 * extension contains
   NichtNatuerlicherTod named NichtNatürlicherTod ..1 MS and
@@ -22,38 +22,35 @@ Description: "Todesursache (kompatibel zu [MII PR Onkologie Tod](https://www.med
 * value[x].coding.display 1.. MS
 * hasMember MS
 * hasMember.reference MS
-* hasMember.extension contains EtbTodesursacheTypExtension named TodesursacheTyp 1..1 MS
+* hasMember.extension contains StfTodesursacheTypExtension named TodesursacheTyp 1..1 MS
 * performer MS
-* performer.extension contains EtbFestlegungTodesursacheExtension named FestlegungTodesursache ..1 MS
+* performer.extension contains StfFestlegungTodesursacheExtension named FestlegungTodesursache ..1 MS
 
 Extension: NichtNatuerlicherTod
 Id: NichtNatuerlicherTod
 Title: "Nicht-Natürlicher Tod"
 Context: Observation
 * value[x] only Coding
-* valueCoding from EtbJaNeinUnbekannt (required)
+* valueCoding from StfJaNeinUnbekannt (required)
 
 Extension: TodesartUnklar
 Id: TodesartUnklar
 Title: "unklare Todesart"
 Context: Observation
 * value[x] only Coding
-* valueCoding from EtbJaNeinUnbekannt (required)
+* valueCoding from StfJaNeinUnbekannt (required)
 
-//TODO: auf hasMember mit Extension auf TU CS
-//TODO: derivedFrom verweis auf DocRef des Obduktionsscheins
-
-Extension: EtbTodesursacheTypExtension
-Id: EtbTodesursacheTypExtension
+Extension: StfTodesursacheTypExtension
+Id: StfTodesursacheTypExtension
 Title: "Todesursache Typ"
 Context: Observation.hasMember
 * value[x] only CodeableConcept
-* valueCodeableConcept from EtbTodesursacheCode (required)
+* valueCodeableConcept from StfTodesursacheCode (required)
 
-Extension: EtbFestlegungTodesursacheExtension
-Id: EtbFestlegungTodesursacheExtension
-Title: "eTB Festlegung Todesursache Extension"
+Extension: StfFestlegungTodesursacheExtension
+Id: StfFestlegungTodesursacheExtension
+Title: "STF Festlegung Todesursache Extension"
 Description: ""
 Context: Observation.performer
 * value[x] only Coding
-* valueCoding from EtbFestlegungTodesursache
+* valueCoding from StfFestlegungTodesursache

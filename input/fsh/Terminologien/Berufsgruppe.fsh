@@ -1,13 +1,13 @@
-CodeSystem: EtbBerufsgruppeCS
-Id: EtbBerufsgruppeCS
-Title: "eTB Berufsgruppe"
+CodeSystem: StfBerufsgruppeCS
+Id: StfBerufsgruppeCS
+Title: "STF Berufsgruppe"
 * #Krankenhaus "Krankenhaus"
 * #Niedergelassen "Niedergelassen"
 * #Rettungsdienst "Rettungsdienst"
 * #AmbulanterNotdienst "ambulanter Notdienst"
 * #Sonstige "Sonstige"
 
-ValueSet: EtbBerufsgruppe
-Id: EtbBerufsgruppeVS
-Title: "eTB Berufsgruppe"
-* include codes from system EtbBerufsgruppeCS
+ValueSet: StfBerufsgruppe
+Id: StfBerufsgruppeVS
+Title: "STF Berufsgruppe"
+* include codes from system StfBerufsgruppeCS

@@ -1,12 +1,12 @@
-CodeSystem: EtbNationalitaetCS
-Id: EtbNationalitaetCS
-Title: "eTB Nationalität"
+CodeSystem: StfNationalitaetCS
+Id: StfNationalitaetCS
+Title: "STF Nationalität"
 * #N "Nicht deutsch"
 * #X "unbekannt"
 
-ValueSet: EtbNationalitaet
-Id: EtbNationalitaetVS
-Title: "eTB Nationalität"
+ValueSet: StfNationalitaet
+Id: StfNationalitaetVS
+Title: "STF Nationalität"
 * ISO3166Part1#DE
-* include codes from system EtbNationalitaetCS
+* include codes from system StfNationalitaetCS
 

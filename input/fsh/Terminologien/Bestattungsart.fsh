@@ -1,11 +1,11 @@
-CodeSystem: EtbBestattungsartCS
-Id: EtbBestattungsartCS
-Title: "eTB Bestattungsart"
+CodeSystem: StfBestattungsartCS
+Id: StfBestattungsartCS
+Title: "STF Bestattungsart"
 * #0 "Erdbestattung"
 * #1 "Feuerbestattung"
 * #9 "keine Angabe"
 
-ValueSet: EtbBestattungsart
-Id: EtbBestattungsartVS
-Title: "eTB Bestattungsart"
-* include codes from system EtbBestattungsartCS
+ValueSet: StfBestattungsart
+Id: StfBestattungsartVS
+Title: "STF Bestattungsart"
+* include codes from system StfBestattungsartCS

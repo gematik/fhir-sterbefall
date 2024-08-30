@@ -1,6 +1,6 @@
-CodeSystem: EtbWarnhinweisCodeCS
-Id: EtbWarnhinweisCodeCS
-Title: "eTB Warnhinweis Codes"
+CodeSystem: StfWarnhinweisCodeCS
+Id: StfWarnhinweisCodeCS
+Title: "STF Warnhinweis Codes"
 Description: ""
 * #uebertragbareKrankheit "Übertragbare_Krankheit" "Liegen Hinweise vor, dass der Verstorbene an einer übertragbaren Krankheit im Sinne des Bundes-Seuchengesetzes erkrankt war"
 * #meldepflichtigeKrankheit "Meldepflichtige_Krankheit" "Meldepflichtige Krankheit"
@@ -11,7 +11,7 @@ Description: ""
 * #radionuklide "Radionuklide"
 * #sonstiges "sonstiges"
 
-ValueSet: EtbWarnhinweisCode
-Id: EtbWarnhinweisCodeVS
-Title: "eTB Warnhinweis Code"
-* include codes from system EtbWarnhinweisCodeCS
+ValueSet: StfWarnhinweisCode
+Id: StfWarnhinweisCodeVS
+Title: "STF Warnhinweis Code"
+* include codes from system StfWarnhinweisCodeCS

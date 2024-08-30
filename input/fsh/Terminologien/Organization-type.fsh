@@ -1,6 +1,6 @@
-CodeSystem: EtbOrganisationsTypCS
-Id: EtbOrganisationsTypCS
-Title: "eTB Typ einer Organisation"
+CodeSystem: StfOrganisationsTypCS
+Id: StfOrganisationsTypCS
+Title: "STF Typ einer Organisation"
 * #Institution "Institution"
 * #Klinik "Klinik"
 * #Praxis "Praxis"
@@ -12,13 +12,13 @@ Title: "eTB Typ einer Organisation"
 * #UebermittelndeStelle "Übermittelnde Stelle"
 * #MeldendeStelle "Meldende Stelle"
 
-ValueSet: EtbOrganisationsTyp
-Id: EtbOrganisationsTypVS
-Title: "eTB Typ einer Organisation"
-* include codes from system EtbOrganisationsTypCS
+ValueSet: StfOrganisationsTyp
+Id: StfOrganisationsTypVS
+Title: "STF Typ einer Organisation"
+* include codes from system StfOrganisationsTypCS
 
-ValueSet: EtbOrganisationsTypAutopsie
-Id: EtbOrganisationsTypAutopsieVS
-Title: "eTB Typ einer Organisation bei Autopsien"
-* EtbOrganisationsTypCS#PathInst
-* EtbOrganisationsTypCS#GerichtsmedInst
+ValueSet: StfOrganisationsTypAutopsie
+Id: StfOrganisationsTypAutopsieVS
+Title: "STF Typ einer Organisation bei Autopsien"
+* StfOrganisationsTypCS#PathInst
+* StfOrganisationsTypCS#GerichtsmedInst

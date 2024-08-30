@@ -1,11 +1,11 @@
-Profile: EtbBasisObservation
+Profile: StfBasisObservation
 Parent: Observation
-Id: EtbBasisObservation
-Title: "eTB Basis Observation"
-Description: "Dieses Profil stellt die Basis Observation im Kontext der eTB dar. Alle weiteren Observation sind auf dieser Basis aufbauend."
+Id: StfBasisObservation
+Title: "STF Basis Observation"
+Description: "Dieses Profil stellt die Basis Observation im Kontext der STF dar. Alle weiteren Observation sind auf dieser Basis aufbauend."
 * status MS
 * code MS
-* code from EtbObservationCodes
+* code from StfObservationCodes
 * subject 1.. MS
 * subject only Reference(Patient)
 * effective[x] MS
@@ -20,9 +20,9 @@ Description: "Dieses Profil stellt die Basis Observation im Kontext der eTB dar.
 * hasMember MS
 * hasMember only Reference(Observation)
 
-ValueSet: EtbObservationCodes
-Id: EtbObservationCodes
-Title: "eTB Observation Codes"
+ValueSet: StfObservationCodes
+Id: StfObservationCodes
+Title: "STF Observation Codes"
 Description: ""
 * $sct#184305005 "Cause of Death"
 * $sct#40733004 "Infektionskrankheit"
@@ -44,12 +44,12 @@ Description: ""
 * $sct#55566008 "Accident"
 * $sct#418161006 "Vehicle accident"
 * $sct#52373005 "Burial"
-* include codes from system EtbObservationCodesErweiterungCS
-* include codes from system EtbWarnhinweisCodeCS
+* include codes from system StfObservationCodesErweiterungCS
+* include codes from system StfWarnhinweisCodeCS
 
-CodeSystem: EtbObservationCodesErweiterungCS
-Id: EtbObservationCodesErweiterungCS
-Title: "EtbObservationCodesErweiterung"
+CodeSystem: StfObservationCodesErweiterungCS
+Id: StfObservationCodesErweiterungCS
+Title: "StfObservationCodesErweiterung"
 Description: ""
 * #sicherGelebt "Sicher Gelebt"
 * #sicherTod "Sicher Tod"

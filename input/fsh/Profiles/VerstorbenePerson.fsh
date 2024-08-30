@@ -1,21 +1,21 @@
-Profile: EtbVerstorbenePerson
+Profile: StfVerstorbenePerson
 Parent: Patient
-Id: EtbVerstorbenePerson
-Title: "eTB Verstorbene Person"
+Id: StfVerstorbenePerson
+Title: "STF Verstorbene Person"
 Description: "Informationen zur verstorbenen Person"
 * extension contains 
   $core-patient-birthPlace named Geburtsort ..1 MS and
   $core-patient-nationality named Nationalität ..1 MS and
-  EtbWohnungsSituationExtension named WohnungsSituation ..1 MS and
-  EtbSterbedatumExtension named Sterbedatum ..1 MS and
-  EtbSterbedatumModifiziertExtension named Sterbedatum-Modifiziert ..1 MS
+  StfWohnungsSituationExtension named WohnungsSituation ..1 MS and
+  StfSterbedatumExtension named Sterbedatum ..1 MS and
+  StfSterbedatumModifiziertExtension named Sterbedatum-Modifiziert ..1 MS
 * extension[Geburtsort].valueAddress MS
 * extension[Geburtsort].valueAddress only $de.basis-address
 * extension[Geburtsort].valueAddress
   * city MS
   * country MS
   * state MS
-* extension[Nationalität].extension[code].valueCodeableConcept from EtbNationalitaet
+* extension[Nationalität].extension[code].valueCodeableConcept from StfNationalitaet
 * extension[WohnungsSituation].extension[status] MS
 * extension[WohnungsSituation].extension[auszugsdatum] MS
 * identifier ^slicing.discriminator.type = #pattern
@@ -67,9 +67,9 @@ Description: "Informationen zur verstorbenen Person"
     Postfach 0..* MS
 * address[Strassenanschrift] only $de.basis-address
 * address[Strassenanschrift]
-  * extension contains EtbGemeindekennzahlExtension named GKZ ..1 MS and
-    EtbGemeindeExtension named Gemeinde ..1 MS and
-    EtbAmtExtension named Amt ..1 MS
+  * extension contains StfGemeindekennzahlExtension named GKZ ..1 MS and
+    StfGemeindeExtension named Gemeinde ..1 MS and
+    StfAmtExtension named Amt ..1 MS
   * extension[Stadtteil] MS
   * type = #both
   * extension[Stadtteil] MS
@@ -93,9 +93,9 @@ Description: "Informationen zur verstorbenen Person"
   * postalCode MS
   * country MS
 
-Extension: EtbGemeindekennzahlExtension
-Id: EtbGemeindekennzahlExtension
-Title: "eTB Gemeindekennzahl Extension"
+Extension: StfGemeindekennzahlExtension
+Id: StfGemeindekennzahlExtension
+Title: "STF Gemeindekennzahl Extension"
 Description: "Abbildung der GKZ (Gemeindekennzahl) bestehend aus Bundesland (zweistellig), Regierungsbezirk (einstellig), Landkreis (Landkreis) und Gemeinde (zweistellig)"
 Context: Address
 * extension contains 
@@ -108,23 +108,23 @@ Context: Address
 * extension[Landkreis].value[x] only integer
 * extension[Gemeinde].value[x] only integer
 
-Extension: EtbGemeindeExtension //TODO Kadidat für DE-Basis
-Id: EtbGemeindeExtension
-Title: "eTB Gemeinde Extension"
+Extension: StfGemeindeExtension //TODO Kadidat für DE-Basis
+Id: StfGemeindeExtension
+Title: "STF Gemeinde Extension"
 Description: "Abbildung der Gemeinde für eine verstorbene Person"
 Context: Address
 * value[x] only string
 
-Extension: EtbAmtExtension
-Id: EtbAmtExtension
-Title: "eTB Amt Extension"
+Extension: StfAmtExtension
+Id: StfAmtExtension
+Title: "STF Amt Extension"
 Description: "Abbildung des zuständigen Amtes für eine verstorbene Person. Als Freitext oder in Form der Kreisnummer (Bundesland, Regierungsbezirk, Kreis) möglich."
 Context: Address
 * value[x] only string or integer
 
-Extension: EtbSterbedatumExtension
-Id: EtbSterbedatumExtension
-Title: "eTB Sterbedatum"
+Extension: StfSterbedatumExtension
+Id: StfSterbedatumExtension
+Title: "STF Sterbedatum"
 Description: ""
 Context: Patient
 * extension contains
@@ -135,9 +135,9 @@ Context: Patient
 * extension[FestgestelltDurch].valueReference only Reference(Practitioner)
 
 
-Extension: EtbSterbedatumModifiziertExtension
-Id: EtbSterbedatumModifiziertExtension
-Title: "eTB Sterbedatum modifiziert"
+Extension: StfSterbedatumModifiziertExtension
+Id: StfSterbedatumModifiziertExtension
+Title: "STF Sterbedatum modifiziert"
 Description: "Sterbedatum wurde modifiziert wegen unvollständiger Angabe auf dem Leichenschauschein"
 Context: Patient
 * value[x] only dateTime

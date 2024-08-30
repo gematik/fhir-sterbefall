@@ -1,9 +1,9 @@
-Profile: EtbArztZuordnung
+Profile: StfArztZuordnung
 Parent: PractitionerRole
-Id: EtbArztZuordnung
-Title: "eTB Arzt Zuordnung"
-Description: "Zuordnung von Ärztinnen und Ärzten zu Organisationen im Kontext der eTB"
+Id: StfArztZuordnung
+Title: "STF Arzt Zuordnung"
+Description: "Zuordnung von Ärztinnen und Ärzten zu Organisationen im Kontext der STF"
 * practitioner MS
 * organization MS
 * specialty MS
-* specialty from EtbFacharztgruppe
+* specialty from StfFacharztgruppe

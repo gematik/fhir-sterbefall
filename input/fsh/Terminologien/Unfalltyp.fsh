@@ -1,6 +1,6 @@
-CodeSystem: EtbUnfallKategorieCS
-Id: EtbUnfallKategorieCS
-Title: "eTB Unfalltyp"
+CodeSystem: StfUnfallKategorieCS
+Id: StfUnfallKategorieCS
+Title: "STF Unfalltyp"
 * #ArbeitsDienstunfall "Arbeits- oder Dienstunfall (ohne Wegeunfall)"
 * #HaeslicherUnfall "häuslicher Unfall"
 * #Schulunfall "Schulunfall (ohne Wegeunfall)"
@@ -10,7 +10,7 @@ Title: "eTB Unfalltyp"
 * #VerkehrsunfallPrivatweg "Verkehrsunfall (auf nicht öffentl. Verkehrsweg)"
 * #VerkehrsunfallWegeunfall "Verkehrsunfall (einschl. Wegeunfall)"
 
-ValueSet: EtbUnfallKategorie
-Id: EtbUnfallKategorieVS
-Title: "eTB Unfalltyp"
-* include codes from system EtbUnfallKategorieCS
+ValueSet: StfUnfallKategorie
+Id: StfUnfallKategorieVS
+Title: "STF Unfalltyp"
+* include codes from system StfUnfallKategorieCS
