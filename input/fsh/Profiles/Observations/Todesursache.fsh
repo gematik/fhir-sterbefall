@@ -12,7 +12,7 @@ Description: "Todesursache (kompatibel zu [MII PR Onkologie Tod](https://www.med
 * subject only Reference(Patient)
 * effective[x] 1.. MS
 * effective[x] only dateTime
-* value[x] 1.. MS
+* value[x] 0.. MS
 * value[x] only CodeableConcept
 * value[x] from $icd-10-gm (required)
 * value[x].coding.system 1.. MS
@@ -25,6 +25,7 @@ Description: "Todesursache (kompatibel zu [MII PR Onkologie Tod](https://www.med
 * hasMember.extension contains StfTodesursacheTypExtension named TodesursacheTyp 1..1 MS
 * performer MS
 * performer.extension contains StfFestlegungTodesursacheExtension named FestlegungTodesursache ..1 MS
+* note MS
 
 Extension: NichtNatuerlicherTod
 Id: NichtNatuerlicherTod
@@ -45,7 +46,7 @@ Id: StfTodesursacheTypExtension
 Title: "Todesursache Typ"
 Context: Observation.hasMember
 * value[x] only CodeableConcept
-* valueCodeableConcept from StfTodesursacheCode (required)
+* valueCodeableConcept from StfTodesursacheCode (extensible)
 
 Extension: StfFestlegungTodesursacheExtension
 Id: StfFestlegungTodesursacheExtension

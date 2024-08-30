@@ -8,3 +8,6 @@ Context: Patient
   auszugsdatum ..1
 * extension[status].value[x] only Coding //TODO ValueSet?
 * extension[auszugsdatum].value[x] only date
+
+//TODO Status Extension an address
+//TODO address.period MS

@@ -7,3 +7,5 @@ Description: "Abbildung einer medizinischen Maßnahme im Kontext des STF"
 * performed[x] only dateTime
 * performedDateTime MS
 * reasonCode.coding.display MS
+
+//TODO data-absent-reason hier

@@ -3,22 +3,18 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: spec-etb-krebsregister
-canonical: http://example.org
-name: spec-eTB-Krebsregister
+id: sterbefall
+canonical: http://gematik.de/fhir/oegd/stf
+name: Sterbefall
 status: draft # draft | active | retired | unknown
-version: 1.0.0
+version: 0.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
-releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
-publisher:
-  name: oegd
-  url: http://example.org/example-publisher
-  # email: test@example.org
 dependencies:
   de.basisprofil.r4: 1.5.0
 instanceOptions:
   manualSliceOrdering: true # true | false
+FSHOnly: true
   # Determines for which types of Instances SUSHI will automatically set meta.profile
   # if InstanceOf references a profile:
   #

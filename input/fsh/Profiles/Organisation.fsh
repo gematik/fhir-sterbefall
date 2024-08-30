@@ -7,12 +7,13 @@ Description: "Informationen über Ärzte und Ärztinnen, die im Kontext der STF 
 * identifier MS
 * name MS
 * type MS
-* type from StfOrganisationsTyp
+* type from StfOrganisationsTyp (extensible)
 * address MS
 * address only $de.basis-address
 * address.extension contains StfBundeslandExtension named Bundesland ..1 MS
 * contact MS
 * contact.name MS
+* partOf MS
 
 Extension: StfBundeslandExtension
 Id: StfBundeslandExtension

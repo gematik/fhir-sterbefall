@@ -15,10 +15,13 @@ Description: "Dieses Profil stellt die Basis Observation im Kontext der STF dar.
 * valueDateTime MS
 * valueQuantity MS
 * valueCodeableConcept MS
+* valueCodeableConcept.text MS
 * valueString MS
 * note MS
 * hasMember MS
 * hasMember only Reference(Observation)
+
+//TODO data-absent-reason in Observations
 
 ValueSet: StfObservationCodes
 Id: StfObservationCodes

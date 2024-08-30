@@ -93,6 +93,8 @@ Description: "Informationen zur verstorbenen Person"
   * postalCode MS
   * country MS
 
+// TODO  deceased[x]
+
 Extension: StfGemeindekennzahlExtension
 Id: StfGemeindekennzahlExtension
 Title: "STF Gemeindekennzahl Extension"
@@ -108,7 +110,7 @@ Context: Address
 * extension[Landkreis].value[x] only integer
 * extension[Gemeinde].value[x] only integer
 
-Extension: StfGemeindeExtension //TODO Kadidat für DE-Basis
+Extension: StfGemeindeExtension //TODO Kadidat für DE-Basis -> Issue bei allen Kandidaten
 Id: StfGemeindeExtension
 Title: "STF Gemeinde Extension"
 Description: "Abbildung der Gemeinde für eine verstorbene Person"
@@ -131,9 +133,8 @@ Context: Patient
   Datum 1..1 MS and
   FestgestelltDurch ..1 MS
 * extension[Datum].value[x] only dateTime
-* extension[FestgestelltDurch].value[x] only Reference or string //TODO wollen wir String wirklich zulassen?
+* extension[FestgestelltDurch].value[x] only Reference //TODO wollen wir String wirklich zulassen? Display noch mit MS flaggen
 * extension[FestgestelltDurch].valueReference only Reference(Practitioner)
-
 
 Extension: StfSterbedatumModifiziertExtension
 Id: StfSterbedatumModifiziertExtension

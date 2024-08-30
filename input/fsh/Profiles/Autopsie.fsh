@@ -24,5 +24,3 @@ Description: "Abbildung der Informationen zu einer Autopsie im Kontext der STF"
 * performer[GerichtsmedizinischesInstitut].function = #GerichtsmedInst
 * performer[PathologischesInstitut].function = #PathINst
 * report MS
-
-//TODO: Unterschied Obduktion und Autopsie?

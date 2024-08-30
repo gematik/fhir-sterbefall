@@ -29,6 +29,7 @@ Description: "Informationen über Ärzte und Ärztinnen, die im Kontext der STF 
 * name[name] only $de.basis-humanName
 * name[name]
   * use = #official
+  * text MS
   * family MS
   * given MS
   * prefix MS
