@@ -55,7 +55,7 @@ Description: ""
 * #sicherTod "Sicher Tod"
 * #todesanzeichen "Anzeichen für den Tod"
 * #aussereUrsache "Äußeren Ursache"
-* #unikausaleTodesursache "Unikausale Todesursache" //TODO Eigenes Profil ICD10
+* #unikausaleTodesursache "Unikausale Todesursache"
 * #totgeburt "Totgeburt"
 * #totgeburt #totgeburtLebensdauer "Lebensdauer einer Totgeburt"
 * #totgeburt #totgeburtMehrlingsgeburt "Totgeburt Mehrlingsgeburt"

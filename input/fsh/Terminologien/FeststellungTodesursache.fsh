@@ -10,5 +10,3 @@ ValueSet: EtbFestlegungTodesursache
 Id: EtbFestlegungTodesursacheVS
 Title: "eTB Festlegung der Todesursache"
 * include codes from system EtbFestlegungTodesursacheCS
-
-//TODO Todesursache Observation .performer Extension
