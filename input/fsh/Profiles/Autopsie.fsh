@@ -1,7 +1,7 @@
 Profile: StfAutopsie
 Parent: Procedure
 Id: StfAutopsie
-Title: "StfAutopsie"
+Title: "STF Autopsie"
 Description: "Abbildung der Informationen zu einer Autopsie im Kontext der STF"
 * status MS
 * code MS
@@ -24,3 +24,12 @@ Description: "Abbildung der Informationen zu einer Autopsie im Kontext der STF"
 * performer[GerichtsmedizinischesInstitut].function = #GerichtsmedInst
 * performer[PathologischesInstitut].function = #PathINst
 * report MS
+
+Profile: StfAutopsieAnfrage
+Parent: ServiceRequest
+Id: StfAutopsieAnfrage
+Title: "STF Autopsie Anfrage"
+Description: ""
+* status MS
+* intent MS
+* subject MS

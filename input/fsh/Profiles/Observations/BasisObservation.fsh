@@ -20,6 +20,9 @@ Description: "Dieses Profil stellt die Basis Observation im Kontext der STF dar.
 * note MS
 * hasMember MS
 * hasMember only Reference(Observation)
+* component MS
+* component.code MS
+* component.valueCoding MS
 
 //TODO data-absent-reason in Observations
 
@@ -59,11 +62,16 @@ Description: ""
 * #todesanzeichen "Anzeichen für den Tod"
 * #aussereUrsache "Äußeren Ursache"
 * #unikausaleTodesursache "Unikausale Todesursache"
-* #totgeburt "Totgeburt"
+/** #totgeburt "Totgeburt"
 * #totgeburt #totgeburtLebensdauer "Lebensdauer einer Totgeburt"
 * #totgeburt #totgeburtMehrlingsgeburt "Totgeburt Mehrlingsgeburt"
 * #totgeburt #totgeburtSchwangerschaftswoche "Totgeburt Schwangerschaftswoche"
 * #totgeburt #totgeburtLaenge "Totgeburt Länge"
-* #totgeburt #totgeburtGewicht "Totgeburt Gewicht"
+* #totgeburt #totgeburtGewicht "Totgeburt Gewicht"*/
 * #leichenfund "Leichenfund"
 * #bemerkungStaLa "Bemerkungen des Statistischen Landesamtes" "Bemerkungen des Statistischen Landesamtes zur Verarbeitung der Bescheinigung"
+* #schwangerschaft
+* #schwangerschaft #entbindungKuerzlich "kürzliche Entbindung (in letzten drei Monaten)"
+* #schwangerschaft #abortKuerzlich "kürzlicher Abort (in letzten drei Monaten)"
+* #schwangerschaft #interruptioKuerzlich "kürzliche Interruptio (in letzten drei Monaten)"
+* #schwangerschaft #beitragZumTod "Hat die Schwangerschaft zum Tod beigetragen?"

@@ -7,7 +7,6 @@ Description: "Informationen zur verstorbenen Person"
   $core-patient-birthPlace named Geburtsort ..1 MS and
   $core-patient-nationality named Nationalität ..1 MS and
   StfWohnungsSituationExtension named WohnungsSituation ..1 MS and
-  StfSterbedatumExtension named Sterbedatum ..1 MS and
   StfSterbedatumModifiziertExtension named Sterbedatum-Modifiziert ..1 MS
 * extension[Geburtsort].valueAddress MS
 * extension[Geburtsort].valueAddress only $de.basis-address
@@ -41,7 +40,7 @@ Description: "Informationen zur verstorbenen Person"
 * name[name] only $de.basis-humanName
 * name[name]
   * use = #official
-  * family MS //TODO: Sollen die Extensions genutzt werden?
+  * family MS
   * given MS
   * prefix MS
 * name[geburtsname] only $de.basis-humanName
@@ -58,6 +57,10 @@ Description: "Informationen zur verstorbenen Person"
   * prefix MS
 * gender MS
 * birthDate MS
+* deceased[x] MS
+* deceased[x].extension contains StfSterbedatumFeststellungExtension named Festgestellt_durch ..1 MS
+* deceased[x].extension[Festgestellt_durch].valueReference.display MS
+* deceasedDateTime MS
 * maritalStatus from $de.basis-marital-status (extensible)
 * address ^slicing.discriminator.type = #value
 * address ^slicing.discriminator.path = "type"
@@ -124,17 +127,13 @@ Description: "Abbildung des zuständigen Amtes für eine verstorbene Person. Als
 Context: Address
 * value[x] only string or integer
 
-Extension: StfSterbedatumExtension
-Id: StfSterbedatumExtension
-Title: "STF Sterbedatum"
+Extension: StfSterbedatumFeststellungExtension
+Id: StfSterbedatumFeststellungExtension
+Title: "STF Sterbedatum Feststellung"
 Description: ""
-Context: Patient
-* extension contains
-  Datum 1..1 MS and
-  FestgestelltDurch ..1 MS
-* extension[Datum].value[x] only dateTime
-* extension[FestgestelltDurch].value[x] only Reference //TODO wollen wir String wirklich zulassen? Display noch mit MS flaggen
-* extension[FestgestelltDurch].valueReference only Reference(Practitioner)
+Context: Patient.deceased
+* value[x] only Reference
+* valueReference only Reference(Practitioner)
 
 Extension: StfSterbedatumModifiziertExtension
 Id: StfSterbedatumModifiziertExtension

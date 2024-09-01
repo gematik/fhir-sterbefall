@@ -55,3 +55,24 @@ Id: StfObservationBestattung
 Title: "STF Observation Bestattung"
 Description: ""
 * insert CodConObsExt($sct, 52373005, StfBestattungsart)
+
+Profile: StfObservationEntbindungKuerzlich
+Parent: StfBasisObservation
+Id: StfObservationEntbindungKuerzlich
+Title: "STF Observation kürzliche Entbindung"
+Description: ""
+* insert CodConObsReq(StfObservationCodesErweiterungCS, entbindungKuerzlich, StfJaNeinUnbekannt)
+
+Profile: StfObservationAbortKuerzlich
+Parent: StfBasisObservation
+Id: StfObservationAbortKuerzlich
+Title: "STF Observation kürzlicher Abort"
+Description: ""
+* insert CodConObsReq(StfObservationCodesErweiterungCS, abortKuerzlich, StfJaNeinUnbekannt)
+
+Profile: StfObservationInterruptioKuerzlich
+Parent: StfBasisObservation
+Id: StfObservationInterruptioKuerzlich
+Title: "STF Observation kürzliche Interruptio"
+Description: ""
+* insert CodConObsReq(StfObservationCodesErweiterungCS, interruptioKuerzlich, StfJaNeinUnbekannt)
