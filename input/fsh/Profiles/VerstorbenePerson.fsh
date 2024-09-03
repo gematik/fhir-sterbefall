@@ -58,8 +58,8 @@ Description: "Informationen zur verstorbenen Person"
 * gender MS
 * birthDate MS
 * deceased[x] MS
-* deceased[x].extension contains StfSterbedatumFeststellungExtension named Festgestellt_durch ..1 MS
-* deceased[x].extension[Festgestellt_durch].valueReference.display MS
+* deceasedDateTime.extension contains StfSterbedatumFeststellungExtension named Festgestellt_durch ..1 MS
+* deceasedDateTime.extension[Festgestellt_durch].valueReference.display MS
 * deceasedDateTime MS
 * maritalStatus from $de.basis-marital-status (extensible)
 * address ^slicing.discriminator.type = #value
@@ -131,7 +131,7 @@ Extension: StfSterbedatumFeststellungExtension
 Id: StfSterbedatumFeststellungExtension
 Title: "STF Sterbedatum Feststellung"
 Description: ""
-Context: Patient.deceased
+Context: Patient.deceasedDateTime
 * value[x] only Reference
 * valueReference only Reference(Practitioner)
 

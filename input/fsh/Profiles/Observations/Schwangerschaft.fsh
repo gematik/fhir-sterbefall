@@ -17,5 +17,5 @@ Description: ""
 * component[BeitragZumTod]
   * code from StfObservationCodes (extensible)
   * code = StfObservationCodesErweiterungCS#beitragZumTod
-  * value[x] only Coding
-  * valueCoding from StfJaNeinUnbekannt (required)
+  * value[x] only CodeableConcept
+  * valueCodeableConcept from StfJaNeinUnbekannt (required)

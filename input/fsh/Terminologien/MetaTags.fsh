@@ -8,4 +8,4 @@ ValueSet: StfMetaTags
 Id: StfMetaTagsVS
 Title: "STF Meta Tags"
 Description: ""
-* include codes from system StfOrganisationsTypCS
+* include codes from system StfMetaTagsCS

@@ -22,7 +22,7 @@ Description: "Dieses Profil stellt die Basis Observation im Kontext der STF dar.
 * hasMember only Reference(Observation)
 * component MS
 * component.code MS
-* component.valueCoding MS
+* component.value[x] MS
 
 //TODO data-absent-reason in Observations
 
