@@ -24,15 +24,22 @@ Description: "Todesursache (kompatibel zu [MII PR Onkologie Tod](https://www.med
 * performer MS
 * performer.extension contains StfFestlegungTodesursacheExtension named FestlegungTodesursache ..1 MS
 * note MS
+* component MS
+* component.code from StfObservationCodes (extensible)
+* component.code MS
+* component.value[x] MS
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component contains
-  NichtNatuerlicherTod ..1 MS
+  NichtNatuerlicherTod ..1 MS and
+  Klassifikation ..1 MS
 * component[NichtNatuerlicherTod]
-  * code from StfObservationCodes (extensible)
   * code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
   * valueCodeableConcept from StfJaNeinUnbekannt (required)
+* component[Klassifikation]
+  * code = StfObservationCodesErweiterungCS#todesursacheKlassifikation
+  * valueCodeableConcept from $icd-10-gm (required)
 
 Extension: StfTodesursacheTypExtension
 Id: StfTodesursacheTypExtension

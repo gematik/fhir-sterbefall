@@ -76,3 +76,10 @@ Id: StfObservationInterruptioKuerzlich
 Title: "STF Observation kürzliche Interruptio"
 Description: "TBD"
 * insert CodConObsReq(StfObservationCodesErweiterungCS, interruptioKuerzlich, StfJaNeinUnbekannt)
+
+Profile: StfObservationKompletteUntersuchung
+Parent: StfBasisObservation
+Id: StfObservationKompletteUntersuchung
+Title: "STF Observation komplette Untersuchung"
+Description: "TBD"
+* insert CodConObsReq(StfObservationCodesErweiterungCS, kompletteUntersuchungFrage, StfJaNein)
