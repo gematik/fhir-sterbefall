@@ -29,7 +29,7 @@ Profile: StfAutopsieAnfrage
 Parent: ServiceRequest
 Id: StfAutopsieAnfrage
 Title: "STF Autopsie Anfrage"
-Description: ""
+Description: "TBD"
 * status MS
 * intent MS
 * subject MS

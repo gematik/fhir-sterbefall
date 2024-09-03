@@ -18,7 +18,7 @@ Description: "Informationen über Ärzte und Ärztinnen, die im Kontext der STF 
 Extension: StfBundeslandExtension
 Id: StfBundeslandExtension
 Title: "STF Bundesland Extension"
-Description: ""
+Description: "TBD"
 Context: Address
 * value[x] only Coding
 * valueCoding from $de.basis-bundeslaender
@@ -26,6 +26,6 @@ Context: Address
 Extension: StfPruefcodeExtension
 Id: StfPruefcodeExtension
 Title: "STF Prüfcode Extension"
-Description: ""
+Description: "TBD"
 Context: Organization
 * value[x] only string

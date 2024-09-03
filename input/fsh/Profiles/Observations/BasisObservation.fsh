@@ -29,7 +29,7 @@ Description: "Dieses Profil stellt die Basis Observation im Kontext der STF dar.
 ValueSet: StfObservationCodes
 Id: StfObservationCodes
 Title: "STF Observation Codes"
-Description: ""
+Description: "TBD"
 * $sct#184305005 "Cause of Death"
 * $sct#40733004 "Infektionskrankheit"
 * $sct#218209002 "Overexposure to radioactive isotopes"
@@ -56,7 +56,7 @@ Description: ""
 CodeSystem: StfObservationCodesErweiterungCS
 Id: StfObservationCodesErweiterungCS
 Title: "StfObservationCodesErweiterung"
-Description: ""
+Description: "TBD"
 * #sicherGelebt "Sicher Gelebt"
 * #sicherTod "Sicher Tod"
 * #todesanzeichen "Anzeichen für den Tod"

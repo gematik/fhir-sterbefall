@@ -51,7 +51,7 @@ Context: Observation.hasMember
 Extension: StfFestlegungTodesursacheExtension
 Id: StfFestlegungTodesursacheExtension
 Title: "STF Festlegung Todesursache Extension"
-Description: ""
+Description: "TBD"
 Context: Observation.performer
 * value[x] only Coding
 * valueCoding from StfFestlegungTodesursache

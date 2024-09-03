@@ -3,7 +3,7 @@ Parent: Patient
 Id: StfVerstorbenePerson
 Title: "STF Verstorbene Person"
 Description: "Informationen zur verstorbenen Person"
-* extension contains 
+* extension contains
   $core-patient-birthPlace named Geburtsort ..1 MS and
   $core-patient-nationality named Nationalität ..1 MS and
   StfWohnungsSituationExtension named WohnungsSituation ..1 MS and
@@ -103,7 +103,7 @@ Id: StfGemeindekennzahlExtension
 Title: "STF Gemeindekennzahl Extension"
 Description: "Abbildung der GKZ (Gemeindekennzahl) bestehend aus Bundesland (zweistellig), Regierungsbezirk (einstellig), Landkreis (Landkreis) und Gemeinde (zweistellig)"
 Context: Address
-* extension contains 
+* extension contains
   Bundesland 1..1 MS and
   Regierungsbezirk 1..1 MS and
   Landkreis 1..1 MS and
@@ -130,7 +130,7 @@ Context: Address
 Extension: StfSterbedatumFeststellungExtension
 Id: StfSterbedatumFeststellungExtension
 Title: "STF Sterbedatum Feststellung"
-Description: ""
+Description: "TBD"
 Context: Patient.deceasedDateTime
 * value[x] only Reference
 * valueReference only Reference(Practitioner)

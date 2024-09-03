@@ -2,7 +2,7 @@ Profile: StfObservationSchwanger
 Parent: StfBasisObservation
 Id: StfObservationSchwanger
 Title: "STF Observation Schwanger"
-Description: ""
+Description: "TBD"
 * code = $sct#77386006
 * value[x] only Quantity
 * valueQuantity

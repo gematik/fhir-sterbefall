@@ -2,7 +2,7 @@ Profile: StfObservationTotgeburt
 Parent: StfBasisObservation
 Id: StfObservationTotgeburt
 Title: "STF Observation Totgeburt"
-Description: ""
+Description: "TBD"
 * code = $sct#237364002
 * value[x] only CodeableConcept
 * valueCodeableConcept from StfAngabenTotgeburt (extensible)
@@ -10,7 +10,7 @@ Description: ""
 * hasMember ^slicing.discriminator.type = #pattern
 * hasMember ^slicing.discriminator.path = "extension:TodgeburtWeitereInformationen.valueCoding"
 * hasMember ^slicing.rules = #open
-* hasMember contains 
+* hasMember contains
   Gewicht ..1 MS and
   Länge ..1 MS and
   Lebensdauer ..1 MS and
@@ -31,7 +31,7 @@ Profile: StfObservationTotgeburtGewicht
 Parent: $de.basis-koerpergewicht
 Id: StfObservationTotgeburtGewicht
 Title: "STF Observation Totgeburt - Gewicht"
-Description: ""
+Description: "TBD"
 * status MS
 * category MS
 * code MS //TODO Sollen wir LOINC und SCT vorgeben?
@@ -55,7 +55,7 @@ Profile: StfObservationTotgeburtMehrlingsgeburt
 Parent: StfBasisObservation
 Id: StfObservationTotgeburtMehrlingsgeburt
 Title: "STF Observation Totgeburt - Mehrlingsgeburt"
-Description: ""
+Description: "TBD"
 * code = StfObservationCodesErweiterungCS#totgeburtMehrlingsgeburt
 * value[x] only CodeableConcept
 * valueCodeableConcept from StfJaNeinUnbekanntVS (required)
@@ -64,7 +64,7 @@ Profile: StfObservationTotgeburtSchwangerschaftswoche
 Parent: StfBasisObservation
 Id: StfObservationTotgeburtSchwangerschaftswoche
 Title: "STF Observation Totgeburt - Schwangerschaftswoche"
-Description: ""
+Description: "TBD"
 * code = StfObservationCodesErweiterungCS#totgeburtSchwangerschaftswoche
 * value[x] only Quantity
 * valueQuantity
@@ -76,7 +76,7 @@ Profile: StfObservationTotgeburtLaenge
 Parent: StfBasisObservation
 Id: StfObservationTotgeburtLaenge
 Title: "STF Observation Totgeburt - Länge"
-Description: ""
+Description: "TBD"
 * code = StfObservationCodesErweiterungCS#totgeburtLaenge
 * value[x] only Quantity
 * valueQuantity
@@ -87,7 +87,7 @@ Description: ""
 Extension: StfTotgeburtWeitereInformation
 Id: StfTotgeburtWeitereInformation
 Title: "STF Weitere Information zur Totgeburt"
-Description: ""
+Description: "TBD"
 Context: Observation.hasMember
 * value[x] only Coding
 * valueCoding from StfTotgeburtWeitereInformationVS
@@ -95,7 +95,7 @@ Context: Observation.hasMember
 ValueSet: StfTotgeburtWeitereInformationVS
 Id: StfTotgeburtWeitereInformationVS
 Title: "STF ValueSet mit Codes zu weiteren Information zur Totgeburt"
-Description: ""
+Description: "TBD"
 * StfObservationCodesErweiterungCS#totgeburtLebensdauer
 * StfObservationCodesErweiterungCS#totgeburtMehrlingsgeburt
 * StfObservationCodesErweiterungCS#totgeburtSchwangerschaftswoche

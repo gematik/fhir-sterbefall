@@ -1,7 +1,7 @@
 CodeSystem: StfOrteCS
 Id: StfOrteCS
 Title: "STF Orte"
-Description: ""
+Description: "TBD"
 * #auffindeort "Auffindeort"
 * #sterbeort "Sterbeort"
 * #ausstellort "Ausstellort"

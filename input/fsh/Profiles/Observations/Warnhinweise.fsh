@@ -2,7 +2,7 @@ Profile: StfWarnhinweis
 Parent: StfBasisObservation
 Id: StfWarnhinweis
 Title: "STF Warnhinweis"
-Description: ""
+Description: "TBD"
 * code from StfWarnhinweisCode (required)
 * value[x] only CodeableConcept
 * valueCodeableConcept.text MS
