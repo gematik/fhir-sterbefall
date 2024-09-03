@@ -3,13 +3,10 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: sterbefall
 canonical: http://gematik.de/fhir/oegd/stf
-name: Sterbefall
 status: draft # draft | active | retired | unknown
 version: 0.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
-copyrightYear: 2024+
 dependencies:
   de.basisprofil.r4: 1.5.0
 instanceOptions:
