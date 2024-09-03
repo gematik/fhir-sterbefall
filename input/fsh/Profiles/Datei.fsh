@@ -22,7 +22,7 @@ Description: "Metadaten zu Dateien, die im Kontext der STF Übermittlung relevan
 Extension: StfEingangVorgemerktExtension
 Id: StfEingangVorgemerktExtension
 Title: "StfEingangVorgemerktExtension"
-Description: ""
+Description: "TBD"
 Context: DocumentReference.identifier
 * value[x] only Coding
 * valueCoding from StfJaNeinUnbekannt (required)

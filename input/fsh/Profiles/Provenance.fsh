@@ -2,7 +2,7 @@ Profile: StfSterbeurkundeAusstellung
 Parent: Provenance
 Id: StfSterbeurkundeAusstellung
 Title: "STF Sterbeurkunde Ausstellung"
-Description: ""
+Description: "TBD"
 * recorded MS
 * agent MS
 * agent.who MS
