@@ -6,7 +6,6 @@ Description: "Informationen zur verstorbenen Person"
 * extension contains
   $core-patient-birthPlace named Geburtsort ..1 MS and
   $core-patient-nationality named Nationalität ..1 MS and
-  StfWohnungsSituationExtension named WohnungsSituation ..1 MS and
   StfSterbedatumModifiziertExtension named Sterbedatum-Modifiziert ..1 MS
 * extension[Geburtsort].valueAddress MS
 * extension[Geburtsort].valueAddress only $de.basis-address
@@ -19,7 +18,6 @@ Description: "Informationen zur verstorbenen Person"
   * state ^comment = "Kreis des Geburtsortes"
 * extension[Nationalität].extension[code].valueCodeableConcept from StfNationalitaet
 * extension[WohnungsSituation].extension[status] MS
-* extension[WohnungsSituation].extension[auszugsdatum] MS
 * extension[Sterbedatum-Modifiziert] ^comment = "Sterbedatum wurde modifiziert wegen unvollständiger Angabe auf dem Leichenschauschein"
 * identifier MS
 * identifier ^slicing.discriminator.type = #pattern
@@ -86,7 +84,8 @@ Description: "Informationen zur verstorbenen Person"
 * address[Strassenanschrift]
   * extension contains StfGemeindekennzahlExtension named GKZ ..1 MS and
     StfGemeindeExtension named Gemeinde ..1 MS and
-    StfAmtExtension named Amt ..1 MS
+    StfAmtExtension named Amt ..1 MS and
+    StfWohnungsSituationExtension named WohnungsSituation ..1 MS
   * extension[StfGemeindeExtension] ^comment = "Gemeindeschlüssel
 Stelle 1-2: Bundesland
 Stelle 3: Regierungsbezirk
@@ -105,6 +104,8 @@ Hamburg/RLP: Nur Kreis"
   * city MS
   * postalCode MS
   * country MS
+  * period MS
+  * period ^comment = "Auszugsdatum"
 * address[Postfach] only $de.basis-address
 * address[Postfach]
   * type = #postal
