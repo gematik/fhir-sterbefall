@@ -9,3 +9,4 @@ Description: "TBD"
 * performed[x] MS
 * performed[x] only dateTime
 * performedDateTime MS
+* performedDateTime ^comment = "Datum und optional Uhrzeit der Leichenschau"

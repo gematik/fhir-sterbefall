@@ -12,11 +12,16 @@ Description: "Informationen zur verstorbenen Person"
 * extension[Geburtsort].valueAddress only $de.basis-address
 * extension[Geburtsort].valueAddress
   * city MS
+  * city ^comment = "Geburtsort"
   * country MS
+  * country ^comment = "Geburtsland"
   * state MS
+  * state ^comment = "Kreis des Geburtsortes"
 * extension[Nationalität].extension[code].valueCodeableConcept from StfNationalitaet
 * extension[WohnungsSituation].extension[status] MS
 * extension[WohnungsSituation].extension[auszugsdatum] MS
+* extension[Sterbedatum-Modifiziert] ^comment = "Sterbedatum wurde modifiziert wegen unvollständiger Angabe auf dem Leichenschauschein"
+* identifier MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
@@ -27,9 +32,11 @@ Description: "Informationen zur verstorbenen Person"
 * identifier[KVNR] only $de.basis-identifier-kvid-10
 * identifier[KVNR].type = http://fhir.de/CodeSystem/identifier-type-de-basis#KVZ10
 * identifier[KVNR].assigner MS
+* identifier[KVNR].assigner ^comment = "IK-Nr. der krankenkasse des Patienten"
 * identifier[KVNR].assigner.identifier only $de.basis-identifier-iknr
 * identifier[KVNR].assigner.identifier.system MS
 * identifier[KVNR].assigner.identifier.value MS
+* name MS
 * name ^slicing.discriminator.type = #value
 * name ^slicing.discriminator.path = "use"
 * name ^slicing.rules = #open
@@ -41,12 +48,16 @@ Description: "Informationen zur verstorbenen Person"
 * name[name]
   * use = #official
   * family MS
+  * family ^comment = "Nachname"
   * given MS
+  * given ^comment = "Vorname"
   * prefix MS
+  * prefix ^comment = "Titel"
 * name[geburtsname] only $de.basis-humanName
 * name[geburtsname]
   * use = #maiden
   * family MS
+  * family ^comment = "Geburtsname"
   * given 0..0
   * prefix 0..0
 * name[weitere_namen] only $de.basis-humanName
@@ -60,8 +71,11 @@ Description: "Informationen zur verstorbenen Person"
 * deceased[x] MS
 * deceasedDateTime.extension contains StfSterbedatumFeststellungExtension named Festgestellt_durch ..1 MS
 * deceasedDateTime.extension[Festgestellt_durch].valueReference.display MS
+* deceasedDateTime.extension[Festgestellt_durch].valueReference.display ^comment = "Durch wen wurde die Feststellung des Sterbezeitpunktes bestimmt"
 * deceasedDateTime MS
+* deceasedDateTime ^comment = "TOD_Sterbe_Zeitpunkt"
 * maritalStatus from $de.basis-marital-status (extensible)
+* maritalStatus ^comment = "Familienstand"
 * address ^slicing.discriminator.type = #value
 * address ^slicing.discriminator.path = "type"
 * address ^slicing.rules = #open
@@ -73,6 +87,13 @@ Description: "Informationen zur verstorbenen Person"
   * extension contains StfGemeindekennzahlExtension named GKZ ..1 MS and
     StfGemeindeExtension named Gemeinde ..1 MS and
     StfAmtExtension named Amt ..1 MS
+  * extension[StfGemeindeExtension] ^comment = "Gemeindeschlüssel
+Stelle 1-2: Bundesland
+Stelle 3: Regierungsbezirk
+Stelle 4-5: Landkreis
+Stelle 6-8: Gemeinde
+Hamburg/RLP: Nur Kreis"
+  * extension[StfGemeindeExtension] ^comment = "Kreisnummer (Bundesland, Regierungsbezirk, Kreis)"
   * extension[Stadtteil] MS
   * type = #both
   * extension[Stadtteil] MS
@@ -95,8 +116,6 @@ Description: "Informationen zur verstorbenen Person"
   * city MS
   * postalCode MS
   * country MS
-
-// TODO  deceased[x]
 
 Extension: StfGemeindekennzahlExtension
 Id: StfGemeindekennzahlExtension

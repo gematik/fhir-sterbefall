@@ -5,6 +5,7 @@ Title: "STF Ort"
 * type MS
 * type from StfOrte (required)
 * description MS
+* description ^comment = "Angabe zu ungewöhnlichen Orten, z.B. Gemarkung, Flurstück, Kreis-/Land-/Bundesstrasse"
 * address MS
 * address only $de.basis-address
 * address
@@ -16,4 +17,5 @@ Title: "STF Ort"
   * line.extension[Hausnummer] MS
   * line.extension[Adresszusatz] MS
 * physicalType MS
+* physicalType ^comment = "Angaben zu Sterbeort als Kategorie"
 * physicalType from StfSterbeortKategorie (required)

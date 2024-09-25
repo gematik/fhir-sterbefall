@@ -5,6 +5,7 @@ Title: "STF Sterbeurkunde Ausstellung"
 Description: "TBD"
 * target only Reference(Patient)
 * recorded MS
+* recorded ^comment = "Sterbefall beurkundet Datum"
 * reason MS
 * reason = http://terminology.hl7.org/CodeSystem/v3-ActReason#DECSD
 * activity MS
@@ -13,3 +14,4 @@ Description: "TBD"
 * agent.who MS
 * agent.who only Reference(Organization)
 * location MS
+* location ^comment = "Ort der Feststellung der Leichenschau"

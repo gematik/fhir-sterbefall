@@ -41,10 +41,10 @@ Description: "TBD"
 * $sct#307078008 "Thought commentary"
 * $sct#87309006 "Death of unknown cause"
 * $sct#184971005 "Statement made to police"
-* $sct#439569004 "Resuscitation" //TODO Reanimation und Wiederbelebung in dem Fall das gleiche?
+* $sct#439569004 "Resuscitation"
 * $sct#419393000 "Dead - suspicious death"
 * $sct#75478009 "Vergiftung"
-* $sct#108369006 "Tumor" //TODO Klären, ob das nicht zu allgemein ist
+* $sct#108369006 "Tumor"
 * $sct#398299004 "Time of death"
 * $sct#55566008 "Accident"
 * $sct#418161006 "Vehicle accident"

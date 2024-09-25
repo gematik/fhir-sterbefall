@@ -9,7 +9,7 @@ Profile: StfObservationTodesanzeichen
 Parent: StfBasisObservation
 Id: StfObservationTodesanzeichen
 Title: "STF Observation Todesanzeichen"
-Description: "TBD"
+Description: "Informationen über die sicheren Zeichen des Todes"
 * insert CodConObsExt(StfObservationCodesErweiterungCS, todesanzeichen, StfTodesanzeichen)
 
 Profile: StfObservationAussereUrsache
@@ -32,7 +32,7 @@ Profile: StfObservationUnfallkategorie
 Parent: StfBasisObservation
 Id: StfObservationUnfallkategorie
 Title: "STF Observation Unfallkategorie"
-Description: "TBD"
+Description: "Weitere Angaben zur Klassifikation der Todesursache, z.B. bei Unfall, Vergiftung,  Gewalteinwirkung, Selbsttötung sowie bei Komplikationen medizinischer Behandlung"
 * insert CodConObsExt($sct, 55566008, StfUnfallKategorie)
 
 Profile: StfObservationUnnatuerlicheTodesursache
@@ -46,14 +46,14 @@ Profile: StfObservationVerkehrsunfall
 Parent: StfBasisObservation
 Id: StfObservationVerkehrsunfall
 Title: "STF Observation Verkehrsunfall"
-Description: "TBD"
+Description: "Bei Verkehrsunfällen die Fortbewegungsart des Unfallopfers"
 * insert CodConObsExt($sct, 418161006, StfVerkehrsunfallKategorie)
 
 Profile: StfObservationBestattung
 Parent: StfBasisObservation
 Id: StfObservationBestattung
 Title: "STF Observation Bestattung"
-Description: "TBD"
+Description: "Informationen zur Art der Bestattung"
 * insert CodConObsExt($sct, 52373005, StfBestattungsart)
 
 Profile: StfObservationEntbindungKuerzlich
@@ -81,5 +81,5 @@ Profile: StfObservationKompletteUntersuchung
 Parent: StfBasisObservation
 Id: StfObservationKompletteUntersuchung
 Title: "STF Observation komplette Untersuchung"
-Description: "TBD"
+Description: "Beantwortung der Frage, ob in die Untersuchung die gesamte Körperoberfläche mit Rücken, Kopfhaut und allen Körperöffnungen einbezogen wurden"
 * insert CodConObsReq(StfObservationCodesErweiterungCS, kompletteUntersuchungFrage, StfJaNein)
