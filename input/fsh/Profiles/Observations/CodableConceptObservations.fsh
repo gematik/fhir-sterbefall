@@ -3,7 +3,7 @@ Parent: StfBasisObservation
 Id: StfObservationIdentifikation
 Title: "STF Observation Identifikation"
 Description: "TBD"
-* insert CodConObsExt($sct, 43390006, StfIdentitaetFeststellungMethode)
+* insert CodConObsExt($sct, 372040007, StfIdentitaetFeststellungMethode)
 
 Profile: StfObservationTodesanzeichen
 Parent: StfBasisObservation

@@ -1,6 +1,11 @@
 ValueSet: StfUnnatuerlicheTodesursachen
 Id: StfUnnatuerlicheTodesursachenVS
 Title: "STF Unnatürliche Todesursachen"
-* $sct#44301001 "Suizid"
-* $sct#740603007 "Killed"
-* $sct#7878000 "Accidental death"
+* include codes from system StfUnnatuerlicheTodesursachenCS
+
+CodeSystem: StfUnnatuerlicheTodesursachenCS
+Id: StfUnnatuerlicheTodesursachenCS
+Title: "STF Unnatürliche Todesursachen"
+* #selbsttoetung "Selbsttötung"
+* #toetung "Tötung"
+* #unfalltod "Unfalltod"

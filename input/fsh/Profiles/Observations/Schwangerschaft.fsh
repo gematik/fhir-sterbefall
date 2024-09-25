@@ -9,6 +9,10 @@ Description: "TBD"
   * code = #mo
   * unit = "Monat"
   * system = "http://unitsofmeasure.org"
+* component MS
+* component.code MS
+* component.value[x] MS
+* component.valueCodeableConcept MS
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open

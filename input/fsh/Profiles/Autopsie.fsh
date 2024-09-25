@@ -3,6 +3,8 @@ Parent: Procedure
 Id: StfAutopsie
 Title: "STF Autopsie"
 Description: "Abbildung der Informationen zu einer Autopsie im Kontext der STF"
+* basedOn MS
+* basedOn only Reference(ServiceRequest)
 * status MS
 * code MS
 * code = $sct#29240004
@@ -32,4 +34,6 @@ Title: "STF Autopsie Anfrage"
 Description: "TBD"
 * status MS
 * intent MS
+* code MS
+* code = $sct#29240004
 * subject MS

@@ -7,7 +7,7 @@ Description: "Todesursache (kompatibel zu [MII PR Onkologie Tod](https://www.med
 * code.coding = $sct#184305005
 * subject 1.. MS
 * subject only Reference(Patient)
-* effective[x] 1.. MS
+* effective[x] MS
 * effective[x] only dateTime
 * value[x] 0.. MS
 * value[x] only CodeableConcept
@@ -28,16 +28,17 @@ Description: "Todesursache (kompatibel zu [MII PR Onkologie Tod](https://www.med
 * component.code from StfObservationCodes (extensible)
 * component.code MS
 * component.value[x] MS
+* component.valueCodeableConcept MS
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component contains
   NichtNatuerlicherTod ..1 MS and
-  Klassifikation ..1 MS
+  Details ..1 MS
 * component[NichtNatuerlicherTod]
   * code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
   * valueCodeableConcept from StfJaNeinUnbekannt (required)
-* component[Klassifikation]
+* component[Details]
   * code = StfObservationCodesErweiterungCS#todesursacheKlassifikation
   * valueCodeableConcept from $icd-10-gm (required)
 

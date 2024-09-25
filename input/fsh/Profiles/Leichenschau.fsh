@@ -4,7 +4,8 @@ Id: StfLeichenschau
 Title: "StfLeichenschau"
 Description: "TBD"
 * status MS
-* code MS //TODO passender Code
+* code MS
+* code = $sct#29240004
 * performed[x] MS
 * performed[x] only dateTime
 * performedDateTime MS

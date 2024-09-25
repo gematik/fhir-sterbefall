@@ -11,7 +11,6 @@ Description: "Dieses Profil stellt die Basis Observation im Kontext der STF dar.
 * effective[x] MS
 * effectiveDateTime MS
 * value[x] MS
-* value[x] only CodeableConcept or string or Quantity or dateTime
 * valueDateTime MS
 * valueQuantity MS
 * valueCodeableConcept MS
@@ -20,9 +19,9 @@ Description: "Dieses Profil stellt die Basis Observation im Kontext der STF dar.
 * note MS
 * hasMember MS
 * hasMember only Reference(Observation)
-* component MS
-* component.code MS
-* component.value[x] MS
+* component
+* component.code
+* component.value[x]
 
 //TODO data-absent-reason in Observations
 
