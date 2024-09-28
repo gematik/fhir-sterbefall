@@ -29,9 +29,6 @@ sonst n"
 * hasMember ^comment = "Verknüpfung von nachgelagerten Todesursachen"
 * hasMember.reference MS
 * hasMember.extension contains StfTodesursacheTypExtension named TodesursacheTyp 1..1 MS
-* performer MS
-* performer.extension contains StfFestlegungTodesursacheExtension named FestlegungTodesursache ..1 MS
-* performer.extension[FestlegungTodesursache] ^comment = "Durch wen wurde die Todesursache festegestellt"
 * note MS
 * note ^comment = "Nähere Angaben zur Todesursache und zu Begleiterkrankung (Epikrise)"
 * component MS
@@ -73,11 +70,3 @@ Title: "Todesursache Typ"
 Context: Observation.hasMember
 * value[x] only CodeableConcept
 * valueCodeableConcept from StfTodesursacheCode (extensible)
-
-Extension: StfFestlegungTodesursacheExtension
-Id: StfFestlegungTodesursacheExtension
-Title: "STF Festlegung Todesursache Extension"
-Description: "TBD"
-Context: Observation.performer
-* value[x] only Coding
-* valueCoding from StfFestlegungTodesursache

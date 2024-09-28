@@ -3,8 +3,6 @@ Parent: Organization
 Id: StfOrganisation
 Title: "STF Organisation"
 Description: "Informationen über Organisationen, die im Kontext der STF relevant sind"
-* extension contains StfPruefcodeExtension named Prüfcode ..1 MS
-* extension[Prüfcode] ^comment = "Beispielsweise Prüfcode der meldenden Stelle"
 * identifier MS
 * identifier ^comment = "Beispielsweise Melder ID der meldenden Stelle oder Nummer des Standesamtes"
 * name MS
