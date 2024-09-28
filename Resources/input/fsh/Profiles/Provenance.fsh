@@ -13,5 +13,4 @@ Description: "TBD"
 * agent MS
 * agent.who MS
 * agent.who only Reference(Organization)
-* location MS
-* location ^comment = "Ort der Feststellung der Leichenschau"
+* agent.who ^comment = "Verweis auf das beurkundende Standesamt"

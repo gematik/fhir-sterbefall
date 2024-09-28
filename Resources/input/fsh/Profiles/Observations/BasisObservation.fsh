@@ -18,8 +18,6 @@ Description: "Dieses Profil stellt die Basis Observation im Kontext der STF dar.
 * component.code
 * component.value[x]
 
-//TODO data-absent-reason in Observations
-
 ValueSet: StfObservationCodes
 Id: StfObservationCodes
 Title: "STF Observation Codes"

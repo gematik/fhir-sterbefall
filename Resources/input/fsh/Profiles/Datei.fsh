@@ -12,6 +12,9 @@ Description: "Metadaten zu Dateien, die im Kontext der STF Übermittlung relevan
 * subject only Reference(Patient)
 * author MS
 * author only Reference(Practitioner or Organization)
-* author ^comment = "Beispielsweise Verweis auf eine Organization, die Informationen zum Standesamt beinhaltet (Nr. und Name)"
+* author ^comment = "Beispielsweise Verweis auf eine Organization, die Informationen zum Standesamt beinhaltet (Nr. und Name). Im Kontext eines Obduktionsscheins der ausstellende Arzt oder Ärztin"
 * date MS
 * date ^comment = "Beispielsweise das Datum der Sterbeurkunde"
+* context MS
+* context.related MS
+* context.related ^comment = "Im Kontext eines Obduktionsscheins verweis auf eine Observation, welche die Todesursache abbildet"
