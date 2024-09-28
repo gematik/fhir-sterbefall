@@ -13,7 +13,7 @@ Description: "Todesursache (kompatibel zu [MII PR Onkologie Tod](https://www.med
 * effectiveDateTime ^comment = "Beginn der Krankheit"
 * value[x] 0.. MS
 * value[x] only CodeableConcept
-* value[x] from $icd-10-gm (required)
+* value[x] from $icd-10-who (required)
 * value[x].coding.system 1.. MS
 * value[x].coding.system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
 * value[x].coding.version 1.. MS
@@ -65,7 +65,7 @@ dann ka;"
 * component[Details]
   * ^comment = "Weitere Angaben zur Klassifikation der Todesursache, z.B. bei Unfall, Vergiftung,  Gewalteinwirkung, Selbsttötung sowie bei Komplikationen medizinischer Behandlung Äußere Ursache der Schädigung (Angaben über den Hergang); bei Vergiftungen zusätzlich Angabe des Mittels"
   * code = StfObservationCodesErweiterungCS#todesursacheKlassifikation
-  * valueCodeableConcept from $icd-10-gm (required)
+  * valueCodeableConcept from $icd-10-who (required)
 
 Extension: StfTodesursacheTypExtension
 Id: StfTodesursacheTypExtension

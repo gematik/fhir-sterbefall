@@ -26,7 +26,7 @@ Parent: StfBasisObservation
 Id: StfObservationUnikausaleTodesursache
 Title: "STF Observation unikausale Todesursache"
 Description: "TBD"
-* insert CodConObsReq(StfObservationCodesErweiterungCS, unikausaleTodesursache, $icd-10-gm)
+* insert CodConObsReq(StfObservationCodesErweiterungCS, unikausaleTodesursache, $icd-10-who)
 
 Profile: StfObservationUnfallkategorie
 Parent: StfBasisObservation

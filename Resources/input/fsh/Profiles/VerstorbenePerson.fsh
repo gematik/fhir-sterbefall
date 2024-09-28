@@ -17,7 +17,6 @@ Description: "Informationen zur verstorbenen Person"
   * state MS
   * state ^comment = "Kreis des Geburtsortes"
 * extension[Nationalität].extension[code].valueCodeableConcept from StfNationalitaet
-* extension[WohnungsSituation].extension[status] MS
 * extension[Sterbedatum-Modifiziert] ^comment = "Sterbedatum wurde modifiziert wegen unvollständiger Angabe auf dem Leichenschauschein"
 * identifier MS
 * identifier ^slicing.discriminator.type = #pattern

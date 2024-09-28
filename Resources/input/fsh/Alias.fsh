@@ -17,6 +17,6 @@ Alias: $core-observation-timeOffset = http://hl7.org/fhir/StructureDefinition/ob
 //Terminoligien
 Alias: $loinc = http://loinc.org
 Alias: $sct = http://snomed.info/sct
-Alias: $icd-10-gm = http://fhir.de/ValueSet/bfarm/icd-10-gm
+Alias: $icd-10-who = http://hl7.org/fhir/sid/icd-10
 Alias: $v2-0532 = http://terminology.hl7.org/CodeSystem/v2-0532
 Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason

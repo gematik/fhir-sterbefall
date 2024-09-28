@@ -6,7 +6,7 @@ Description: "Informationen über Organisationen, die im Kontext der STF relevan
 * extension contains StfPruefcodeExtension named Prüfcode ..1 MS
 * extension[Prüfcode] ^comment = "Beispielsweise Prüfcode der meldenden Stelle"
 * identifier MS
-* identifier ^comment = "Beispielsweise Melder ID der meldenden Stelle"
+* identifier ^comment = "Beispielsweise Melder ID der meldenden Stelle oder Nummer des Standesamtes"
 * name MS
 * name ^comment = "Name"
 * type MS

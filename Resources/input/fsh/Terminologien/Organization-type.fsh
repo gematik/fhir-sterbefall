@@ -17,8 +17,8 @@ Id: StfOrganisationsTypVS
 Title: "STF Typ einer Organisation"
 * include codes from system StfOrganisationsTypCS
 
-ValueSet: StfOrganisationsTypAutopsie
-Id: StfOrganisationsTypAutopsieVS
-Title: "STF Typ einer Organisation bei Autopsien"
+ValueSet: StfOrganisationsTypObduktion
+Id: StfOrganisationsTypObduktionVS
+Title: "STF Typ einer Organisation bei Obduktionn"
 * StfOrganisationsTypCS#PathInst
 * StfOrganisationsTypCS#GerichtsmedInst
