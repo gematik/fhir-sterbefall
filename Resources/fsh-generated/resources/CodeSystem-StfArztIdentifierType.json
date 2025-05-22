@@ -1,0 +1,22 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "StfArztIdentifierType",
+  "id": "StfArztIdentifierType",
+  "title": "StfArztIdentifierType",
+  "description": "Bis zur Klärung, welche konkrete ID gemeint ist, erfolgt die unterscheidung der Identifier über diese Codes",
+  "url": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztIdentifierType",
+  "concept": [
+    {
+      "code": "ArztId",
+      "display": "ID des Arztes laut Arztliste der Ärztekammer"
+    },
+    {
+      "code": "Zulassungsnr",
+      "display": "Zulassungsnummer",
+      "definition": "Nicht weiter spezifiziert"
+    }
+  ],
+  "count": 2
+}

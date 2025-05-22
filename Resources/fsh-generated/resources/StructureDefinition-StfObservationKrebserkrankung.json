@@ -1,0 +1,44 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "StfObservationKrebserkrankung",
+  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObservationKrebserkrankung",
+  "name": "StfObservationKrebserkrankung",
+  "title": "STF Observation Krebserkrankung",
+  "status": "draft",
+  "description": "Profil zur Abbildung der Fragestellung nach einer Krebserkrankuzng",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfBasisObservation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "108369006",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://gematik.de/fhir/oegd/stf/ValueSet/StfJaNeinUnbekanntVS"
+        }
+      }
+    ]
+  }
+}

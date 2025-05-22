@@ -1,0 +1,25 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ExportBundle",
+  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/ExportBundle",
+  "name": "ExportBundle",
+  "title": "Export Bundle",
+  "status": "draft",
+  "description": "TBD",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Bundle",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Bundle.timestamp",
+        "path": "Bundle.timestamp",
+        "comment": "Exportzeitpunkt",
+        "mustSupport": true
+      }
+    ]
+  }
+}

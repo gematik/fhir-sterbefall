@@ -1,0 +1,20 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "StfObservationCodesErweiterungCS",
+  "id": "StfObservationCodesErweiterungCS",
+  "title": "StfObservationCodesErweiterung",
+  "url": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS",
+  "concept": [
+    {
+      "code": "nichtNatuerlicherTod",
+      "display": "Nicht natürlicher Tod"
+    },
+    {
+      "code": "todesursacheKlassifikation",
+      "display": "Klassifikation der Todesursache"
+    }
+  ],
+  "count": 2
+}

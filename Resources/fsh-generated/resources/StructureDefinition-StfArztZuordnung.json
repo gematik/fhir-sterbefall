@@ -1,0 +1,40 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "StfArztZuordnung",
+  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArztZuordnung",
+  "name": "StfArztZuordnung",
+  "title": "STF Arzt Zuordnung",
+  "status": "draft",
+  "description": "Zuordnung von Ärztinnen und Ärzten zu Organisationen im Kontext der STF",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "PractitionerRole",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "PractitionerRole.practitioner",
+        "path": "PractitionerRole.practitioner",
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.organization",
+        "path": "PractitionerRole.organization",
+        "comment": "Institution des Arztes",
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.specialty",
+        "path": "PractitionerRole.specialty",
+        "comment": "Facharztgruppe",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://gematik.de/fhir/oegd/stf/ValueSet/StfFacharztgruppeVS"
+        }
+      }
+    ]
+  }
+}

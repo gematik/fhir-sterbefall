@@ -1,0 +1,58 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "StfDateiExample",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDateien"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "https://fhir.standesamt.de/NamingSystem/sterbebuchnummer",
+      "value": "2023-123456"
+    }
+  ],
+  "author": [
+    {
+      "reference": "Organization/StfOrganisationExample",
+      "display": "Standesamt Berlin-Mitte"
+    }
+  ],
+  "content": [
+    {
+      "attachment": {
+        "contentType": "application/pdf",
+        "title": "Sterbeurkunde_Erika_Mueller.pdf",
+        "creation": "2023-07-15"
+      },
+      "format": {
+        "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
+        "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
+        "display": "PDF"
+      }
+    }
+  ],
+  "context": {
+    "related": [
+      {
+        "reference": "Observation/StfTodesursacheExample",
+        "display": "Dokumentierte Todesursache"
+      }
+    ]
+  },
+  "status": "current",
+  "type": {
+    "coding": [
+      {
+        "code": "Sterbeurkunde",
+        "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS",
+        "display": "Sterbeurkunde"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/StfVerstorbenePersonExample",
+    "display": "Dr. Erika Müller"
+  },
+  "date": "2023-07-15T10:30:00+02:00"
+}
