@@ -1,0 +1,84 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "StfDateien",
+  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDateien",
+  "name": "StfDatei",
+  "title": "STF Dateien",
+  "status": "draft",
+  "description": "Metadaten zu Dateien, die im Kontext der STF Übermittlung relevant sind",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DocumentReference",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DocumentReference.identifier",
+        "path": "DocumentReference.identifier",
+        "comment": "Beispielsweise Sterbebuch Nummer oder StAmt_Aktenzeichen",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.status",
+        "path": "DocumentReference.status",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.type",
+        "path": "DocumentReference.type",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://gematik.de/fhir/oegd/stf/ValueSet/StfDateiTypVS"
+        }
+      },
+      {
+        "id": "DocumentReference.subject",
+        "path": "DocumentReference.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.date",
+        "path": "DocumentReference.date",
+        "comment": "Beispielsweise das Datum der Sterbeurkunde",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.author",
+        "path": "DocumentReference.author",
+        "comment": "Beispielsweise Verweis auf eine Organization, die Informationen zum Standesamt beinhaltet (Nr. und Name). Im Kontext eines Obduktionsscheins der ausstellende Arzt oder Ärztin",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.context",
+        "path": "DocumentReference.context",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.context.related",
+        "path": "DocumentReference.context.related",
+        "comment": "Im Kontext eines Obduktionsscheins verweis auf eine Observation, welche die Todesursache abbildet",
+        "mustSupport": true
+      }
+    ]
+  }
+}

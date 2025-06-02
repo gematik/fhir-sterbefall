@@ -1,0 +1,29 @@
+{
+  "resourceType": "Organization",
+  "id": "StadtKoeln",
+  "address": [
+    {
+      "line": [
+        "Historisches Rathaus"
+      ],
+      "type": "both",
+      "city": "Köln",
+      "postalCode": "50667",
+      "country": "DE"
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "+49 221 221-0",
+      "use": "work"
+    },
+    {
+      "system": "email",
+      "value": "stadt-koeln@stadt-koeln.de",
+      "use": "work"
+    }
+  ],
+  "name": "Stadt Köln",
+  "active": true
+}

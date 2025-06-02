@@ -1,0 +1,62 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "StfLeichenschau",
+  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfLeichenschau",
+  "name": "StfLeichenschau",
+  "title": "StfLeichenschau",
+  "status": "draft",
+  "description": "Mit diesem Profil wird eine Leichenschau im Kontext des Sterbefall abgebildet",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Procedure",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Procedure",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Procedure.status",
+        "path": "Procedure.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.code",
+        "path": "Procedure.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "29240004",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.performed[x]",
+        "path": "Procedure.performed[x]",
+        "comment": "Datum und optional Uhrzeit der Leichenschau",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.performer.actor",
+        "path": "Procedure.performer.actor",
+        "comment": "Optionale Verknüpfung mit dem durchführenden Arzt oder Ärztin",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

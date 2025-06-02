@@ -1,0 +1,50 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "StfPruefcodeExtension",
+  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfPruefcodeExtension",
+  "name": "StfPruefcodeExtension",
+  "title": "STF Prüfcode Extension",
+  "status": "draft",
+  "description": "TBD",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Organization",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "STF Prüfcode Extension",
+        "definition": "TBD"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfPruefcodeExtension"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

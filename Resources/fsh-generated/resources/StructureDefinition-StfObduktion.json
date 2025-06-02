@@ -1,0 +1,164 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "StfObduktion",
+  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObduktion",
+  "name": "StfObduktion",
+  "title": "STF Obduktion",
+  "status": "draft",
+  "description": "Abbildung der Informationen zu einer Obduktion im Kontext der STF",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Procedure",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Procedure",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Procedure.basedOn",
+        "path": "Procedure.basedOn",
+        "comment": "Zuordnung zum Antrag einer Obduktion",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/ServiceRequest"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.status",
+        "path": "Procedure.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.code",
+        "path": "Procedure.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "29240004",
+              "system": "http://snomed.info/sct"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.performed[x]",
+        "path": "Procedure.performed[x]",
+        "comment": "Uhrzeit der Obduktion",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.asserter",
+        "path": "Procedure.asserter",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.asserter.display",
+        "path": "Procedure.asserter.display",
+        "comment": "Bei wem die Obduktion beantragt wurde",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.performer",
+        "path": "Procedure.performer",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "function"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.performer.function",
+        "path": "Procedure.performer.function",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://gematik.de/fhir/oegd/stf/ValueSet/StfOrganisationsTypObduktionVS"
+        }
+      },
+      {
+        "id": "Procedure.performer.actor",
+        "path": "Procedure.performer.actor",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.performer.actor.display",
+        "path": "Procedure.performer.actor.display",
+        "comment": "Name Pathologisches Institut oder Gerichtsmedizinisches Institut",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.performer:GerichtsmedizinischesInstitut",
+        "path": "Procedure.performer",
+        "sliceName": "GerichtsmedizinischesInstitut",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.performer:GerichtsmedizinischesInstitut.function",
+        "path": "Procedure.performer.function",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "GerichtsmedInst"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Procedure.performer:PathologischesInstitut",
+        "path": "Procedure.performer",
+        "sliceName": "PathologischesInstitut",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.performer:PathologischesInstitut.function",
+        "path": "Procedure.performer.function",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "PathINst"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Procedure.location",
+        "path": "Procedure.location",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.location.display",
+        "path": "Procedure.location.display",
+        "comment": "Ort der Durchführung",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.report",
+        "path": "Procedure.report",
+        "comment": "Verlinkung auf den beiliegenden Obduktionsbericht",
+        "mustSupport": true
+      }
+    ]
+  }
+}

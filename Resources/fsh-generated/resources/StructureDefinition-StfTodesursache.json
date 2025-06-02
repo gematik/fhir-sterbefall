@@ -1,0 +1,248 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "StfTodesursache",
+  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache",
+  "name": "StfTodesursache",
+  "title": "STF Todesursache",
+  "status": "draft",
+  "description": "Todesursache (kompatibel zu [MII PR Onkologie Tod](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod) )",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfBasisObservation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "patternCoding": {
+          "code": "184305005",
+          "system": "http://snomed.info/sct"
+        }
+      },
+      {
+        "id": "Observation.effective[x]",
+        "path": "Observation.effective[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Observation.effective[x]:effectiveDateTime",
+        "path": "Observation.effective[x]",
+        "sliceName": "effectiveDateTime",
+        "comment": "Beginn der Krankheit",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/sid/icd-10"
+        }
+      },
+      {
+        "id": "Observation.value[x].coding.system",
+        "path": "Observation.value[x].coding.system",
+        "min": 1,
+        "patternUri": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].coding.version",
+        "path": "Observation.value[x].coding.version",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].coding.code",
+        "path": "Observation.value[x].coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].coding.display",
+        "path": "Observation.value[x].coding.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.dataAbsentReason",
+        "path": "Observation.dataAbsentReason",
+        "comment": "Todesart ungeklärt\nWenn Todesart = ungeklärt ODER\n= schwebende Ermittlung\ndann j\nsonst n",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.note",
+        "path": "Observation.note",
+        "comment": "Nähere Angaben zur Todesursache und zu Begleiterkrankung (Epikrise)"
+      },
+      {
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "comment": "Verknüpfung von nachgelagerten Todesursachen"
+      },
+      {
+        "id": "Observation.hasMember.extension",
+        "path": "Observation.hasMember.extension",
+        "min": 1
+      },
+      {
+        "id": "Observation.hasMember.extension:TodesursacheTyp",
+        "path": "Observation.hasMember.extension",
+        "sliceName": "TodesursacheTyp",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.hasMember.reference",
+        "path": "Observation.hasMember.reference",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "code"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.code",
+        "path": "Observation.component.code",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://gematik.de/fhir/oegd/stf/ValueSet/StfObservationCodes"
+        }
+      },
+      {
+        "id": "Observation.component.value[x]",
+        "path": "Observation.component.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component.value[x]:valueCodeableConcept",
+        "path": "Observation.component.value[x]",
+        "sliceName": "valueCodeableConcept",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:NichtNatuerlicherTod",
+        "path": "Observation.component",
+        "sliceName": "NichtNatuerlicherTod",
+        "comment": "Anhaltspunkte für einen nicht-natürlichen Tod\n\nWenn Todesart = natürlich, \ndann n\n\nWenn Todesart =  nicht natürlich ODER \n= Tötung ODER \n= Selbsttötung ODER \n= Unfall ODER\n= Komplikationen medizinischer Behandlungen ODER\n= Ereignis, dessen nähere Umstände unbestimmt dann j \n\nWenn Todesart = leer, \ndann ka;",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:NichtNatuerlicherTod.code",
+        "path": "Observation.component.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "nichtNatuerlicherTod",
+              "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:NichtNatuerlicherTod.value[x]:valueCodeableConcept",
+        "path": "Observation.component.value[x]",
+        "sliceName": "valueCodeableConcept",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://gematik.de/fhir/oegd/stf/ValueSet/StfJaNeinUnbekanntVS"
+        }
+      },
+      {
+        "id": "Observation.component:Details",
+        "path": "Observation.component",
+        "sliceName": "Details",
+        "comment": "Weitere Angaben zur Klassifikation der Todesursache, z.B. bei Unfall, Vergiftung,  Gewalteinwirkung, Selbsttötung sowie bei Komplikationen medizinischer Behandlung Äußere Ursache der Schädigung (Angaben über den Hergang); bei Vergiftungen zusätzlich Angabe des Mittels",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:Details.code",
+        "path": "Observation.component.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "todesursacheKlassifikation",
+              "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:Details.value[x]:valueCodeableConcept",
+        "path": "Observation.component.value[x]",
+        "sliceName": "valueCodeableConcept",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/sid/icd-10"
+        }
+      }
+    ]
+  }
+}

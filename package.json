@@ -1,0 +1,10 @@
+{
+  "name": "de.gematik.sterbefall",
+  "version": "0.1.0",
+  "fhirVersions": [
+    "4.0.1"
+  ],
+  "dependencies": {
+    "de.basisprofil.r4": "1.5.0"
+  }
+}

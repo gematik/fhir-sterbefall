@@ -1,0 +1,40 @@
+{
+  "resourceType": "Provenance",
+  "id": "StfSterbeurkundeAusstellungExample",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfSterbeurkundeAusstellung"
+    ]
+  },
+  "target": [
+    {
+      "reference": "http://gematik.de/fhir/oegd/stf/Patient/StfVerstorbenePersonExample"
+    }
+  ],
+  "reason": [
+    {
+      "coding": [
+        {
+          "code": "DECSD",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+        }
+      ]
+    }
+  ],
+  "agent": [
+    {
+      "who": {
+        "reference": "http://gematik.de/fhir/oegd/stf/Organization/StfOrganisationExample"
+      }
+    }
+  ],
+  "activity": {
+    "coding": [
+      {
+        "code": "LA",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion"
+      }
+    ]
+  },
+  "recorded": "2023-10-15T14:28:00Z"
+}

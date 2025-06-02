@@ -1,0 +1,82 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "StfSterbeurkundeAusstellung",
+  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfSterbeurkundeAusstellung",
+  "name": "StfSterbeurkundeAusstellung",
+  "title": "STF Sterbeurkunde Ausstellung",
+  "status": "draft",
+  "description": "TBD",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Provenance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Provenance.target",
+        "path": "Provenance.target",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Provenance.recorded",
+        "path": "Provenance.recorded",
+        "comment": "Sterbefall beurkundet Datum",
+        "mustSupport": true
+      },
+      {
+        "id": "Provenance.reason",
+        "path": "Provenance.reason",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "DECSD",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Provenance.activity",
+        "path": "Provenance.activity",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "LA",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Provenance.agent",
+        "path": "Provenance.agent",
+        "mustSupport": true
+      },
+      {
+        "id": "Provenance.agent.who",
+        "path": "Provenance.agent.who",
+        "comment": "Verweis auf das beurkundende Standesamt",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

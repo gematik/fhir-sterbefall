@@ -1,0 +1,52 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "StfTodesursacheTypExtension",
+  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
+  "name": "StfTodesursacheTypExtension",
+  "title": "Todesursache Typ",
+  "status": "draft",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Observation.hasMember",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Todesursache Typ"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://gematik.de/fhir/oegd/stf/ValueSet/StfTodesursacheCodeVS"
+        }
+      }
+    ]
+  }
+}

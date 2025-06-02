@@ -1,0 +1,54 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "StfBundeslandExtension",
+  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfBundeslandExtension",
+  "name": "StfBundeslandExtension",
+  "title": "STF Bundesland Extension",
+  "status": "draft",
+  "description": "TBD",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "expression": "Address",
+      "type": "element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "STF Bundesland Extension",
+        "definition": "TBD"
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfBundeslandExtension"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhir.de/ValueSet/iso/bundeslaender"
+        }
+      }
+    ]
+  }
+}

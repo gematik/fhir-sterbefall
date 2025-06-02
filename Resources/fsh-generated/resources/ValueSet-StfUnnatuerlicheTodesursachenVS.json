@@ -1,0 +1,15 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "StfUnnatuerlicheTodesursachen",
+  "id": "StfUnnatuerlicheTodesursachenVS",
+  "title": "STF Unnatürliche Todesursachen",
+  "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfUnnatuerlicheTodesursachenVS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfUnnatuerlicheTodesursachenCS"
+      }
+    ]
+  }
+}

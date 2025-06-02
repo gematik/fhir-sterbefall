@@ -23,6 +23,7 @@ Id: StfObservationCodes
 Title: "STF Observation Codes"
 Description: "Im Kontext des Sterbefall relevante Observation Codes"
 * $sct#108369006 "Tumor"
+* $sct#184305005 "Cause of Death"
 * include codes from system StfObservationCodesErweiterungCS
 
 CodeSystem: StfObservationCodesErweiterungCS
