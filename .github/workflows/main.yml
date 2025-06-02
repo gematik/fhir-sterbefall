@@ -8,8 +8,6 @@ on:
   push:
     paths:
     - 'Resources/**'
-    branches-ignore:
-    - 'main**'
   pull_request:
     branches:
     - 'main**'
@@ -29,9 +27,6 @@ jobs:
     steps:
       - name: Checkout code (PR)
         uses: actions/checkout@v4
-        if: github.event_name == 'pull_request'
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
         
       # Java and .NET are already installed on ubuntu-latest
         
