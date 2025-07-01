@@ -2,6 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "StfGemeindekennzahlExtension",
   "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfGemeindekennzahlExtension",
+  "version": "0.1.0",
   "name": "StfGemeindekennzahlExtension",
   "title": "STF Gemeindekennzahl Extension",
   "status": "draft",

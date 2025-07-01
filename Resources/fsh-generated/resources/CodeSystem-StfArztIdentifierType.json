@@ -6,6 +6,7 @@
   "id": "StfArztIdentifierType",
   "title": "StfArztIdentifierType",
   "description": "Bis zur Klärung, welche konkrete ID gemeint ist, erfolgt die unterscheidung der Identifier über diese Codes",
+  "version": "0.1.0",
   "url": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztIdentifierType",
   "concept": [
     {

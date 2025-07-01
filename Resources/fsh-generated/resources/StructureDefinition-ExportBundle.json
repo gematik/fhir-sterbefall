@@ -2,6 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "ExportBundle",
   "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/ExportBundle",
+  "version": "0.1.0",
   "name": "ExportBundle",
   "title": "Export Bundle",
   "status": "draft",

@@ -5,6 +5,7 @@
   "id": "StfDateiTypVS",
   "title": "STF Datei Typ",
   "description": "Typen von Dateien, die im Sterbefall Kontext vorkommen können",
+  "version": "0.1.0",
   "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfDateiTypVS",
   "compose": {
     "include": [

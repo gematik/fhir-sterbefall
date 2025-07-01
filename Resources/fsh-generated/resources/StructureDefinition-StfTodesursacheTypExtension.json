@@ -2,6 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "StfTodesursacheTypExtension",
   "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
+  "version": "0.1.0",
   "name": "StfTodesursacheTypExtension",
   "title": "Todesursache Typ",
   "status": "draft",

@@ -2,6 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "StfBasisObservation",
   "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfBasisObservation",
+  "version": "0.1.0",
   "name": "StfBasisObservation",
   "title": "STF Basis Observation",
   "status": "draft",

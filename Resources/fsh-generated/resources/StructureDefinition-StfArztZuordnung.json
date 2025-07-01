@@ -2,6 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "StfArztZuordnung",
   "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArztZuordnung",
+  "version": "0.1.0",
   "name": "StfArztZuordnung",
   "title": "STF Arzt Zuordnung",
   "status": "draft",

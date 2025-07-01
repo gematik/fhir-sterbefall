@@ -16,14 +16,14 @@ Description: "Informationen zur verstorbenen Person"
 * name ^slicing.discriminator.path = "use"
 * name ^slicing.rules = #open
 * name contains
-    name 0..1 MS and
+    name 1..1 MS and
     geburtsname ..1 MS
 * name[name] only $de.basis-humanName
 * name[name]
   * use = #official
-  * family MS
+  * family 1.. MS
   * family ^comment = "Nachname"
-  * given MS
+  * given 1.. MS
   * given ^comment = "Vorname"
   * prefix MS
   * prefix ^comment = "Titel"
@@ -34,27 +34,27 @@ Description: "Informationen zur verstorbenen Person"
   * family ^comment = "Geburtsname"
   * given 0..0
   * prefix 0..0
-* gender MS
-* birthDate MS
-* deceased[x] MS
-* deceasedDateTime MS
+* gender 1.. MS
+* birthDate 1.. MS
+* deceased[x] 1.. MS
+* deceasedDateTime 1.. MS
 * deceasedDateTime ^comment = "Sterbedatum"
 * address ^slicing.discriminator.type = #value
 * address ^slicing.discriminator.path = "type"
 * address ^slicing.rules = #open
 * address contains
-    Strassenanschrift 0..* MS
+    Strassenanschrift 1..* MS
 * address[Strassenanschrift] only $de.basis-address
 * address[Strassenanschrift]
   * extension contains StfGemeindekennzahlExtension named GKZ ..1 MS
   * type = #both
   * line MS
   * line.extension[Postfach] 0..0
-  * line.extension[Strasse] MS
-  * line.extension[Hausnummer] MS
+  * line.extension[Strasse] 1.. MS
+  * line.extension[Hausnummer] 1.. MS
   * line.extension[Adresszusatz] MS
-  * city MS
-  * postalCode MS
+  * city 1.. MS
+  * postalCode 1.. MS
   * country MS
 
 Extension: StfGemeindekennzahlExtension

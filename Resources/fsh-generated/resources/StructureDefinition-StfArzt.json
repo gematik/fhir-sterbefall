@@ -2,6 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "StfArzt",
   "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArzt",
+  "version": "0.1.0",
   "name": "StfArzt",
   "title": "STF Arzt",
   "status": "draft",
@@ -172,13 +173,14 @@
           ],
           "rules": "open"
         },
+        "min": 1,
         "mustSupport": true
       },
       {
         "id": "Practitioner.name:name",
         "path": "Practitioner.name",
         "sliceName": "name",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "type": [
           {
@@ -205,12 +207,14 @@
         "id": "Practitioner.name:name.family",
         "path": "Practitioner.name.family",
         "comment": "Nachname",
+        "min": 1,
         "mustSupport": true
       },
       {
         "id": "Practitioner.name:name.given",
         "path": "Practitioner.name.given",
         "comment": "Vorname",
+        "min": 1,
         "mustSupport": true
       },
       {
@@ -285,13 +289,14 @@
           ],
           "rules": "open"
         },
+        "min": 1,
         "mustSupport": true
       },
       {
         "id": "Practitioner.address:Strassenanschrift",
         "path": "Practitioner.address",
         "sliceName": "Strassenanschrift",
-        "min": 0,
+        "min": 1,
         "max": "*",
         "type": [
           {
@@ -316,15 +321,22 @@
         "mustSupport": true
       },
       {
+        "id": "Practitioner.address:Strassenanschrift.line.extension",
+        "path": "Practitioner.address.line.extension",
+        "min": 2
+      },
+      {
         "id": "Practitioner.address:Strassenanschrift.line.extension:Strasse",
         "path": "Practitioner.address.line.extension",
         "sliceName": "Strasse",
+        "min": 1,
         "mustSupport": true
       },
       {
         "id": "Practitioner.address:Strassenanschrift.line.extension:Hausnummer",
         "path": "Practitioner.address.line.extension",
         "sliceName": "Hausnummer",
+        "min": 1,
         "mustSupport": true
       },
       {
@@ -343,12 +355,14 @@
         "id": "Practitioner.address:Strassenanschrift.city",
         "path": "Practitioner.address.city",
         "comment": "Ort",
+        "min": 1,
         "mustSupport": true
       },
       {
         "id": "Practitioner.address:Strassenanschrift.postalCode",
         "path": "Practitioner.address.postalCode",
         "comment": "PLZ",
+        "min": 1,
         "mustSupport": true
       },
       {

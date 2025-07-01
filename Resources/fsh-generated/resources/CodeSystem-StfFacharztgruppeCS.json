@@ -5,6 +5,7 @@
   "name": "StfFacharztgruppeCS",
   "id": "StfFacharztgruppeCS",
   "title": "STF Facharztgruppe",
+  "version": "0.1.0",
   "url": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfFacharztgruppeCS",
   "concept": [
     {

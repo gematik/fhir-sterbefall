@@ -4,6 +4,7 @@
   "name": "StfJaNeinUnbekannt",
   "id": "StfJaNeinUnbekanntVS",
   "title": "STF JaNeinUnbekannt",
+  "version": "0.1.0",
   "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfJaNeinUnbekanntVS",
   "compose": {
     "include": [

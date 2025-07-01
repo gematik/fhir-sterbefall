@@ -4,6 +4,7 @@
   "name": "StfBerufsgruppe",
   "id": "StfBerufsgruppeVS",
   "title": "STF Berufsgruppe",
+  "version": "0.1.0",
   "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfBerufsgruppeVS",
   "compose": {
     "include": [

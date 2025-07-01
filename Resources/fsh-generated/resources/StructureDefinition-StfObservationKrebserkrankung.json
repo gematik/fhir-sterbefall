@@ -2,6 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "StfObservationKrebserkrankung",
   "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObservationKrebserkrankung",
+  "version": "0.1.0",
   "name": "StfObservationKrebserkrankung",
   "title": "STF Observation Krebserkrankung",
   "status": "draft",

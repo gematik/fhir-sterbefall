@@ -4,6 +4,7 @@
   "name": "StfOrganisationsTyp",
   "id": "StfOrganisationsTypVS",
   "title": "STF Typ einer Organisation",
+  "version": "0.1.0",
   "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfOrganisationsTypVS",
   "compose": {
     "include": [
