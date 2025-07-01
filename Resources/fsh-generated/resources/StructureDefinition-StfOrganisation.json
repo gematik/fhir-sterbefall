@@ -2,7 +2,6 @@
   "resourceType": "StructureDefinition",
   "id": "StfOrganisation",
   "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfOrganisation",
-  "version": "0.1.0",
   "name": "StfOrganisation",
   "title": "STF Organisation",
   "status": "draft",

@@ -2,7 +2,6 @@
   "resourceType": "StructureDefinition",
   "id": "StfArzt",
   "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArzt",
-  "version": "0.1.0",
   "name": "StfArzt",
   "title": "STF Arzt",
   "status": "draft",

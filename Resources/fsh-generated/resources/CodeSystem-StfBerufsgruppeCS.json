@@ -5,7 +5,6 @@
   "name": "StfBerufsgruppeCS",
   "id": "StfBerufsgruppeCS",
   "title": "STF Berufsgruppe",
-  "version": "0.1.0",
   "url": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfBerufsgruppeCS",
   "concept": [
     {

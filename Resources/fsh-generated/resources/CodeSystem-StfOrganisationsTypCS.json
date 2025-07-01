@@ -5,7 +5,6 @@
   "name": "StfOrganisationsTypCS",
   "id": "StfOrganisationsTypCS",
   "title": "STF Typ einer Organisation",
-  "version": "0.1.0",
   "url": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfOrganisationsTypCS",
   "concept": [
     {

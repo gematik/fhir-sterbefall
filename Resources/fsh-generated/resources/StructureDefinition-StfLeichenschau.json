@@ -2,7 +2,6 @@
   "resourceType": "StructureDefinition",
   "id": "StfLeichenschau",
   "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfLeichenschau",
-  "version": "0.1.0",
   "name": "StfLeichenschau",
   "title": "StfLeichenschau",
   "status": "draft",

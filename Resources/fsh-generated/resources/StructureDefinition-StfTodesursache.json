@@ -2,7 +2,6 @@
   "resourceType": "StructureDefinition",
   "id": "StfTodesursache",
   "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache",
-  "version": "0.1.0",
   "name": "StfTodesursache",
   "title": "STF Todesursache",
   "status": "draft",

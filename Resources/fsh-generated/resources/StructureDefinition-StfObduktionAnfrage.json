@@ -2,7 +2,6 @@
   "resourceType": "StructureDefinition",
   "id": "StfObduktionAnfrage",
   "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObduktionAnfrage",
-  "version": "0.1.0",
   "name": "StfObduktionAnfrage",
   "title": "STF Obduktion Anfrage",
   "status": "draft",

@@ -5,7 +5,6 @@
   "id": "StfObservationCodes",
   "title": "STF Observation Codes",
   "description": "Im Kontext des Sterbefall relevante Observation Codes",
-  "version": "0.1.0",
   "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfObservationCodes",
   "compose": {
     "include": [

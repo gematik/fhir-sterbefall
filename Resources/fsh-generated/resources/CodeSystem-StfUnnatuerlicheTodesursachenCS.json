@@ -5,7 +5,6 @@
   "name": "StfUnnatuerlicheTodesursachenCS",
   "id": "StfUnnatuerlicheTodesursachenCS",
   "title": "STF Unnatürliche Todesursachen",
-  "version": "0.1.0",
   "url": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfUnnatuerlicheTodesursachenCS",
   "concept": [
     {

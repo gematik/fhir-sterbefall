@@ -4,7 +4,6 @@
   "name": "StfTodesursacheCode",
   "id": "StfTodesursacheCodeVS",
   "title": "Warnhinweis Code",
-  "version": "0.1.0",
   "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfTodesursacheCodeVS",
   "compose": {
     "include": [

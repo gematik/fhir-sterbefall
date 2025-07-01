@@ -6,7 +6,6 @@
   "id": "StfTodesursacheCodeCS",
   "title": "STF Weitere Todesursachen",
   "description": "TBD",
-  "version": "0.1.0",
   "url": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
   "concept": [
     {

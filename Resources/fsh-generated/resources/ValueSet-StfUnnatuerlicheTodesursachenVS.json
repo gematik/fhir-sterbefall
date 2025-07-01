@@ -4,7 +4,6 @@
   "name": "StfUnnatuerlicheTodesursachen",
   "id": "StfUnnatuerlicheTodesursachenVS",
   "title": "STF Unnatürliche Todesursachen",
-  "version": "0.1.0",
   "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfUnnatuerlicheTodesursachenVS",
   "compose": {
     "include": [
