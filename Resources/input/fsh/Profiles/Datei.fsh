@@ -3,6 +3,7 @@ Parent: DocumentReference
 Id: StfDateien
 Title: "STF Dateien"
 Description: "Metadaten zu Dateien, die im Kontext der STF Übermittlung relevant sind"
+* insert Meta
 * identifier MS
 * identifier ^comment = "Beispielsweise Sterbebuch Nummer oder StAmt_Aktenzeichen"
 * status MS
