@@ -11,6 +11,8 @@ Description: "Todesursache (kompatibel zu [MII PR Onkologie Tod](https://www.med
 * effective[x] only dateTime
 * effectiveDateTime MS
 * effectiveDateTime ^comment = "Beginn der Krankheit"
+* performer MS
+  * ^comment = "Referenz auf den oder die ausstellende Arztin"
 * value[x] 0.. MS
 * value[x] only CodeableConcept
 * value[x] from $icd-10-who (required)
@@ -41,7 +43,8 @@ sonst n"
 * component ^slicing.rules = #open
 * component contains
   NichtNatuerlicherTod ..1 MS and
-  Details ..1 MS
+  Details ..1 MS and
+  Quelle ..1 MS
 * component[NichtNatuerlicherTod]
   * ^comment = "Anhaltspunkte für einen nicht-natürlichen Tod
 
@@ -63,6 +66,11 @@ dann ka;"
   * ^comment = "Weitere Angaben zur Klassifikation der Todesursache, z.B. bei Unfall, Vergiftung,  Gewalteinwirkung, Selbsttötung sowie bei Komplikationen medizinischer Behandlung Äußere Ursache der Schädigung (Angaben über den Hergang); bei Vergiftungen zusätzlich Angabe des Mittels"
   * code = StfObservationCodesErweiterungCS#todesursacheKlassifikation
   * valueCodeableConcept from $icd-10-who (required)
+* component[Quelle]
+  * ^comment = "Quellangabe der Information. Z.B. ob die Todesursache aus dem Leichenschauschein oder dem Obduktionsschein stammt."
+  * code = StfObservationCodesErweiterungCS#quelle
+  * valueCodeableConcept from StfDateiTyp (required)
+
 
 Extension: StfTodesursacheTypExtension
 Id: StfTodesursacheTypExtension

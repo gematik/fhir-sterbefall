@@ -31,3 +31,4 @@ Id: StfObservationCodesErweiterungCS
 Title: "StfObservationCodesErweiterung"
 * #nichtNatuerlicherTod "Nicht natürlicher Tod"
 * #todesursacheKlassifikation "Klassifikation der Todesursache"
+* #quelle "Quelle der Information"

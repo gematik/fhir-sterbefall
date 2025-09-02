@@ -4,6 +4,7 @@ Title: "STF Datei Typ CS"
 Description: "Typen von Dateien, die im Sterbefall Kontext vorkommen können"
 * #Sterbeurkunde "Sterbeurkunde"
 * #Obduktionsschein "Obduktionsschein"
+* #Leichenschauschein "Leichenschauschein"
 
 ValueSet: StfDateiTyp
 Id: StfDateiTypVS
