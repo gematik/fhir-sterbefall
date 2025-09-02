@@ -68,7 +68,7 @@
     }
   ],
   "partOf": {
-    "reference": "http://gematik.de/fhir/oegd/stf/Organization/StadtKoeln",
+    "reference": "Organization/StadtKoeln",
     "display": "Stadt Köln"
   },
   "extension": [

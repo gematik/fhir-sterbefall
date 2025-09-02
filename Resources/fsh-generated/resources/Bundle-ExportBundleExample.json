@@ -8,7 +8,7 @@
   },
   "entry": [
     {
-      "fullUrl": "http://gematik.de/fhir/oegd/stf/PractitionerRole/StfArztZuordnungExample",
+      "fullUrl": "https://mein.fhir-server.local/fhir/PractitionerRole/StfArztZuordnungExample",
       "resource": {
         "resourceType": "PractitionerRole",
         "id": "StfArztZuordnungExample",
@@ -37,7 +37,7 @@
       }
     },
     {
-      "fullUrl": "http://gematik.de/fhir/oegd/stf/Practitioner/StfArztExample",
+      "fullUrl": "https://mein.fhir-server.local/fhir/Practitioner/StfArztExample",
       "resource": {
         "resourceType": "Practitioner",
         "id": "StfArztExample",
@@ -162,7 +162,7 @@
       }
     },
     {
-      "fullUrl": "http://gematik.de/fhir/oegd/stf/DocumentReference/StfDateiExample",
+      "fullUrl": "https://mein.fhir-server.local/fhir/DocumentReference/StfDateiExample",
       "resource": {
         "resourceType": "DocumentReference",
         "id": "StfDateiExample",
@@ -223,7 +223,7 @@
       }
     },
     {
-      "fullUrl": "http://gematik.de/fhir/oegd/stf/Procedure/StfLeichenschauExample",
+      "fullUrl": "https://mein.fhir-server.local/fhir/Procedure/StfLeichenschauExample",
       "resource": {
         "resourceType": "Procedure",
         "id": "StfLeichenschauExample",
@@ -255,7 +255,7 @@
       }
     },
     {
-      "fullUrl": "http://gematik.de/fhir/oegd/stf/Organization/StfOrganisationExample",
+      "fullUrl": "https://mein.fhir-server.local/fhir/Organization/StfOrganisationExample",
       "resource": {
         "resourceType": "Organization",
         "id": "StfOrganisationExample",
@@ -326,7 +326,7 @@
           }
         ],
         "partOf": {
-          "reference": "http://gematik.de/fhir/oegd/stf/Organization/StadtKoeln",
+          "reference": "Organization/StadtKoeln",
           "display": "Stadt Köln"
         },
         "extension": [
@@ -339,7 +339,7 @@
       }
     },
     {
-      "fullUrl": "http://gematik.de/fhir/oegd/stf/Provenance/StfSterbeurkundeAusstellungExample",
+      "fullUrl": "https://mein.fhir-server.local/fhir/Provenance/StfSterbeurkundeAusstellungExample",
       "resource": {
         "resourceType": "Provenance",
         "id": "StfSterbeurkundeAusstellungExample",
@@ -350,7 +350,7 @@
         },
         "target": [
           {
-            "reference": "http://gematik.de/fhir/oegd/stf/Patient/StfVerstorbenePersonExample"
+            "reference": "Patient/StfVerstorbenePersonExample"
           }
         ],
         "reason": [
@@ -366,7 +366,7 @@
         "agent": [
           {
             "who": {
-              "reference": "http://gematik.de/fhir/oegd/stf/Organization/StfOrganisationExample"
+              "reference": "Organization/StfOrganisationExample"
             }
           }
         ],
@@ -382,7 +382,7 @@
       }
     },
     {
-      "fullUrl": "http://gematik.de/fhir/oegd/stf/Observation/StfTodesursacheExample",
+      "fullUrl": "https://mein.fhir-server.local/fhir/Observation/StfTodesursacheExample",
       "resource": {
         "resourceType": "Observation",
         "id": "StfTodesursacheExample",
@@ -483,7 +483,7 @@
       }
     },
     {
-      "fullUrl": "http://gematik.de/fhir/oegd/stf/Patient/StfVerstorbenePersonExample",
+      "fullUrl": "https://mein.fhir-server.local/fhir/Patient/StfVerstorbenePersonExample",
       "resource": {
         "resourceType": "Patient",
         "id": "StfVerstorbenePersonExample",
