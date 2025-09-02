@@ -3,6 +3,7 @@ Parent: Organization
 Id: StfOrganisation
 Title: "STF Organisation"
 Description: "Informationen über Organisationen, die im Kontext der STF relevant sind"
+* insert Meta
 * identifier MS
 * identifier ^comment = "Beispielsweise Melder ID der meldenden Stelle oder Nummer des Standesamtes"
 * name MS
@@ -22,6 +23,7 @@ Id: StfBundeslandExtension
 Title: "STF Bundesland Extension"
 Description: "TBD"
 Context: Address
+* insert Meta
 * value[x] only Coding
 * valueCoding from $de.basis-bundeslaender
 
@@ -30,4 +32,5 @@ Id: StfPruefcodeExtension
 Title: "STF Prüfcode Extension"
 Description: "TBD"
 Context: Organization
+* insert Meta
 * value[x] only string
