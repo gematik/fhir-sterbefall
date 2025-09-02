@@ -14,7 +14,11 @@
     {
       "code": "todesursacheKlassifikation",
       "display": "Klassifikation der Todesursache"
+    },
+    {
+      "code": "quelle",
+      "display": "Quelle der Information"
     }
   ],
-  "count": 2
+  "count": 3
 }
