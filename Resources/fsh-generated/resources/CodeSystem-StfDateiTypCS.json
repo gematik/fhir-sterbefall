@@ -15,7 +15,11 @@
     {
       "code": "Obduktionsschein",
       "display": "Obduktionsschein"
+    },
+    {
+      "code": "Leichenschauschein",
+      "display": "Leichenschauschein"
     }
   ],
-  "count": 2
+  "count": 3
 }
