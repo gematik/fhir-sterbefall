@@ -11,8 +11,8 @@ RuleSet: CodConObsReq(system, code, vs)
 * valueCodeableConcept from {vs} (required)
 
 RuleSet: Meta
-* ^version = "1.0.0" //TODO
+* ^version = "1.0.0-beta.1"
 * ^status = #active
 * ^experimental = false
-* ^publisher = "gematik GmbH" //TODO
+* ^publisher = "ELFA Maßnahme Interoperabilität"
 * ^date = "2025-09-05"
