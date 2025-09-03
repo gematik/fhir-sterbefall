@@ -1,8 +1,8 @@
-Profile: ExportBundle
+Profile: StfExportBundle
 Parent: Bundle
-Id: ExportBundle
-Title: "Export Bundle"
+Id: StfExportBundle
+Title: "STF Export Bundle"
 Description: "TBD"
 * timestamp MS
 * timestamp ^comment = "Exportzeitpunkt"
-//TODO Alle Ressourcen als Entry abbilden
+* entry.resource only StfArzt or StfVerstorbenePerson or StfArztZuordnung or StfDatei or StfLeichenschau or StfOrganisation or StfSterbeurkundeAusstellung or StfTodesursache
