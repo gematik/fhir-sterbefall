@@ -3,6 +3,7 @@ Parent: Patient
 Id: StfVerstorbenePerson
 Title: "STF Verstorbene Person"
 Description: "Informationen zur verstorbenen Person"
+* insert Meta
 * identifier MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type"
@@ -62,6 +63,7 @@ Id: StfGemeindekennzahlExtension
 Title: "STF Gemeindekennzahl Extension"
 Description: "Abbildung der GKZ (Gemeindekennzahl) bestehend aus Bundesland (zweistellig), Regierungsbezirk (einstellig), Landkreis (Landkreis) und Gemeinde (zweistellig)"
 Context: Address
+* insert Meta
 * extension contains
   Bundesland 1..1 MS and
   Regierungsbezirk 1..1 MS and

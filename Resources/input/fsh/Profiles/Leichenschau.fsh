@@ -3,6 +3,7 @@ Parent: Procedure
 Id: StfLeichenschau
 Title: "StfLeichenschau"
 Description: "Mit diesem Profil wird eine Leichenschau im Kontext des Sterbefall abgebildet"
+* insert Meta
 * status MS
 * code MS
 * code = $sct#29240004
