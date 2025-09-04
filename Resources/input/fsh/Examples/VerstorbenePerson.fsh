@@ -6,11 +6,13 @@ Usage: #example
 * meta.profile = Canonical(StfVerstorbenePerson)
 
 // Identifier
-* identifier[ID-Gesundheitsamt].system = "http://example.org/fhir/sid/gesundheitsamt-id"
-* identifier[ID-Gesundheitsamt].value = "GA78901"
-* identifier[ID-Gesundheitsamt].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[ID-Gesundheitsamt].type.coding.code = #PI
-* identifier[ID-Gesundheitsamt].type.coding.display = "Patient internal identifier"
+* identifier[IdImGesundheitsamt]
+  * value = "GA78901"
+  * type.coding[+] = http://terminology.hl7.org/CodeSystem/v2-0203#PI "Patient internal identifier"
+  * assigner.display = "Gesundheitsamt Musterstadt"
+* identifier[Sterbebuchnummer]
+  * value = "S4567/2025"
+  * type.coding[+] = http://terminology.hl7.org/CodeSystem/v2-0203#DC "Death Certificate ID"
 
 // Name (offizieller Name)
 * name[name].use = #official
