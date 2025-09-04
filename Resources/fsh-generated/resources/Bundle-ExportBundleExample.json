@@ -173,8 +173,16 @@
         },
         "identifier": [
           {
-            "system": "https://fhir.standesamt.de/NamingSystem/sterbebuchnummer",
-            "value": "2023-123456"
+            "type": {
+              "coding": [
+                {
+                  "code": "PI",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "display": "Patient internal identifier"
+                }
+              ]
+            },
+            "value": "S4567/2025"
           }
         ],
         "author": [
@@ -187,24 +195,12 @@
           {
             "attachment": {
               "contentType": "application/pdf",
-              "title": "Sterbeurkunde_Erika_Mueller.pdf",
-              "creation": "2023-07-15"
-            },
-            "format": {
-              "code": "urn:ihe:iti:xds:2017:mimeTypeSufficient",
-              "system": "http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem",
-              "display": "PDF"
+              "_data": {
+                "value": "U3RlcmJldXJrdW5kZSBTNDU2Ny8yMDI1"
+              }
             }
           }
         ],
-        "context": {
-          "related": [
-            {
-              "reference": "Observation/StfTodesursacheExample",
-              "display": "Dokumentierte Todesursache"
-            }
-          ]
-        },
         "status": "current",
         "type": {
           "coding": [
@@ -497,8 +493,8 @@
             "type": {
               "coding": [
                 {
-                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
                   "code": "PI",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
                   "display": "Patient internal identifier"
                 }
               ]
