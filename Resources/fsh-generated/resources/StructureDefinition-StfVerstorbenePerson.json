@@ -25,7 +25,7 @@
           "discriminator": [
             {
               "type": "pattern",
-              "path": "type"
+              "path": "$this"
             }
           ],
           "rules": "open"
@@ -33,12 +33,78 @@
         "mustSupport": true
       },
       {
-        "id": "Patient.identifier:ID-Gesundheitsamt",
+        "id": "Patient.identifier:IdImGesundheitsamt",
         "path": "Patient.identifier",
-        "sliceName": "ID-Gesundheitsamt",
+        "sliceName": "IdImGesundheitsamt",
         "comment": "ID der Person im Gesundheitsamt",
         "min": 0,
         "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:IdImGesundheitsamt.type",
+        "path": "Patient.identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "PI",
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:IdImGesundheitsamt.system",
+        "path": "Patient.identifier.system",
+        "comment": "Im Rahmen des Projektes wurde kein NamingSystem festgelegt. Aus diesem Grund ist die Angabe eines type verpflichtend.",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:IdImGesundheitsamt.assigner",
+        "path": "Patient.identifier.assigner",
+        "short": "Gesundheitsamt",
+        "comment": "Entweder wird die Referenz auf ein Gesundheitsamt, oder der display des Gesundheitsamt angegeben.",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:IdImGesundheitsamt.assigner.reference",
+        "path": "Patient.identifier.assigner.reference",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:IdImGesundheitsamt.assigner.display",
+        "path": "Patient.identifier.assigner.display",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:Sterbebuchnummer",
+        "path": "Patient.identifier",
+        "sliceName": "Sterbebuchnummer",
+        "comment": "Nummer der verstorbenen Person im Sterbebuch des zuständigen Gesundheitsamtes",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:Sterbebuchnummer.type",
+        "path": "Patient.identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "DC",
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.identifier:Sterbebuchnummer.system",
+        "path": "Patient.identifier.system",
+        "comment": "Im Rahmen des Projektes wurde kein NamingSystem festgelegt. Aus diesem Grund ist die Angabe eines type verpflichtend.",
         "mustSupport": true
       },
       {
