@@ -16,6 +16,6 @@ Description: "Dieses Profil bietet die Möglichkeit, eine Datei als base64-kodie
 * date MS
 * date ^comment = "Beispielsweise das Datum der Sterbeurkunde"
 * content MS
-  * attatchment MS
+  * attachment MS
     * contentType 1.. MS
     * data 1.. MS

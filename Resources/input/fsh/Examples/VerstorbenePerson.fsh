@@ -8,9 +8,7 @@ Usage: #example
 // Identifier
 * identifier[ID-Gesundheitsamt].system = "http://example.org/fhir/sid/gesundheitsamt-id"
 * identifier[ID-Gesundheitsamt].value = "GA78901"
-* identifier[ID-Gesundheitsamt].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
-* identifier[ID-Gesundheitsamt].type.coding.code = #PI
-* identifier[ID-Gesundheitsamt].type.coding.display = "Patient internal identifier"
+* identifier[ID-Gesundheitsamt].type.coding[+] = http://terminology.hl7.org/CodeSystem/v2-0203#PI "Patient internal identifier"
 
 // Name (offizieller Name)
 * name[name].use = #official
