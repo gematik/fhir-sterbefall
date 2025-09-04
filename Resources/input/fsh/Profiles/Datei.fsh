@@ -1,7 +1,7 @@
 Profile: StfDatei
 Parent: DocumentReference
-Id: StfDateien
-Title: "STF Dateien"
+Id: StfDatei
+Title: "STF Datei"
 Description: "Dieses Profil bietet die Möglichkeit, eine Datei als base64-kodierter Content zu komunizieren. Im Projekt sollte möglichst darauf verzichtet werden und die strukturierten Profile bevorzugt werden."
 * identifier MS
 * identifier ^comment = "Beispielsweise StAmt_Aktenzeichen"

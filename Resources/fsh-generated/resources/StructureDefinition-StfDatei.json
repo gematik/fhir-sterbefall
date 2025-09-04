@@ -1,9 +1,9 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "StfDateien",
-  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDateien",
+  "id": "StfDatei",
+  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDatei",
   "name": "StfDatei",
-  "title": "STF Dateien",
+  "title": "STF Datei",
   "status": "draft",
   "description": "Dieses Profil bietet die Möglichkeit, eine Datei als base64-kodierter Content zu komunizieren. Im Projekt sollte möglichst darauf verzichtet werden und die strukturierten Profile bevorzugt werden.",
   "fhirVersion": "4.0.1",

@@ -1,31 +1,34 @@
 Instance: ExportBundleExample
-InstanceOf: ExportBundle
+InstanceOf: StfExportBundle
 Title: "Beispiel Export Bundle"
 Description: "Beispiel Export Bundle"
 Usage: #example
 * timestamp = "2023-10-15T14:28:00Z"
 * type = #collection
 * entry[+]
-  * fullUrl = Canonical(StfArztZuordnungExample)
+  * insert ExampleFullUrl(PractitionerRole, StfArztZuordnungExample)
   * resource = StfArztZuordnungExample
 * entry[+]
-  * fullUrl = Canonical(StfArztExample)
+  * insert ExampleFullUrl(Practitioner, StfArztExample)
   * resource = StfArztExample
 * entry[+]
-  * fullUrl = Canonical(StfDateiExample)
+  * insert ExampleFullUrl(DocumentReference, StfDateiExample)
   * resource = StfDateiExample
 * entry[+]
-  * fullUrl = Canonical(StfLeichenschauExample)
+  * insert ExampleFullUrl(Procedure, StfLeichenschauExample)
   * resource = StfLeichenschauExample
 * entry[+]
-  * fullUrl = Canonical(StfOrganisationExample)
+  * insert ExampleFullUrl(Organization, StfOrganisationExample)
   * resource = StfOrganisationExample
 * entry[+]
-  * fullUrl = Canonical(StfSterbeurkundeAusstellungExample)
+  * insert ExampleFullUrl(Provenance, StfSterbeurkundeAusstellungExample)
   * resource = StfSterbeurkundeAusstellungExample
 * entry[+]
-  * fullUrl = Canonical(StfTodesursacheExample)
+  * insert ExampleFullUrl(Observation, StfTodesursacheExample)
   * resource = StfTodesursacheExample
 * entry[+]
-  * fullUrl = Canonical(StfVerstorbenePersonExample)
+  * insert ExampleFullUrl(Patient, StfVerstorbenePersonExample)
   * resource = StfVerstorbenePersonExample
+
+RuleSet: ExampleFullUrl(resource, id)
+* fullUrl = "https://mein.fhir-server.local/fhir/{resource}/{id}"

@@ -28,7 +28,7 @@ Usage: #example
 * contact.telecom[1].system = #email
 * contact.telecom[1].value = "max.mustermann@standesamt-musterstadt.de"
 * contact.telecom[1].use = #work
-* partOf.reference = Canonical(StadtKoeln)
+* partOf = Reference(Organization/StadtKoeln)
 * partOf.display = "Stadt Köln"
 * extension[StfPruefcodeExtension].valueString = "PCODE98765"
 

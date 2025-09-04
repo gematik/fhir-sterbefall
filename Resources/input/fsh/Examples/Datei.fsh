@@ -9,8 +9,8 @@ Usage: #example
   * value = "S4567/2025"
 * status = #current
 * type = StfDateiTypCS#Sterbeurkunde "Sterbeurkunde"
-* subject = Reference(StfVerstorbenePersonExample) "Dr. Erika Müller"
-* author = Reference(StfOrganisationExample) "Standesamt Berlin-Mitte"
+* subject = Reference(Patient/StfVerstorbenePersonExample) "Dr. Erika Müller"
+* author = Reference(Organization/StfOrganisationExample) "Standesamt Berlin-Mitte"
 * date = "2023-07-15T10:30:00+02:00"
 * content[0].attachment
   * contentType = #application/pdf
