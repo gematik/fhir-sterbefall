@@ -3,7 +3,7 @@
   "id": "ExportBundleExample",
   "meta": {
     "profile": [
-      "http://gematik.de/fhir/oegd/stf/StructureDefinition/ExportBundle"
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportBundle"
     ]
   },
   "entry": [
@@ -168,7 +168,7 @@
         "id": "StfDateiExample",
         "meta": {
           "profile": [
-            "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDateien"
+            "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDatei"
           ]
         },
         "identifier": [
@@ -587,6 +587,6 @@
       }
     }
   ],
-  "timestamp": "2023-10-15T14:28:00Z",
-  "type": "collection"
+  "type": "collection",
+  "timestamp": "2023-10-15T14:28:00Z"
 }

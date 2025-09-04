@@ -1,0 +1,95 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "StfExportBundle",
+  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportBundle",
+  "version": "1.0.0-beta.1",
+  "name": "StfExportBundle",
+  "title": "STF Export Bundle",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-09-05",
+  "publisher": "ELFA Maßnahme Interoperabilität",
+  "description": "TBD",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Bundle",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Bundle.type",
+        "path": "Bundle.type",
+        "patternCode": "collection",
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.timestamp",
+        "path": "Bundle.timestamp",
+        "comment": "Exportzeitpunkt",
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.entry",
+        "path": "Bundle.entry",
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.entry.resource",
+        "path": "Bundle.entry.resource",
+        "type": [
+          {
+            "code": "Practitioner",
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArzt"
+            ]
+          },
+          {
+            "code": "Patient",
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfVerstorbenePerson"
+            ]
+          },
+          {
+            "code": "PractitionerRole",
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArztZuordnung"
+            ]
+          },
+          {
+            "code": "DocumentReference",
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDatei"
+            ]
+          },
+          {
+            "code": "Procedure",
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfLeichenschau"
+            ]
+          },
+          {
+            "code": "Organization",
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfOrganisation"
+            ]
+          },
+          {
+            "code": "Provenance",
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfSterbeurkundeAusstellung"
+            ]
+          },
+          {
+            "code": "Observation",
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

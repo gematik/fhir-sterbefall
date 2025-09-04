@@ -3,7 +3,7 @@
   "id": "StfDateiExample",
   "meta": {
     "profile": [
-      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDateien"
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDatei"
     ]
   },
   "identifier": [
