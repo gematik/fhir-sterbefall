@@ -1,5 +1,5 @@
 Instance: ExportBundleExample
-InstanceOf: ExportBundle
+InstanceOf: StfExportBundle
 Title: "Beispiel Export Bundle"
 Description: "Beispiel Export Bundle"
 Usage: #example
