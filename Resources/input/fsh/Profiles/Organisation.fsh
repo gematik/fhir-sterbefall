@@ -21,7 +21,7 @@ Description: "Informationen über Organisationen, die im Kontext der STF relevan
 Extension: StfBundeslandExtension
 Id: StfBundeslandExtension
 Title: "STF Bundesland Extension"
-Description: "TBD"
+Description: "Mit dieser Extension ist es möglich, ein Coding für deutsche Bundesländer an einer Adresse zu ergänzen."
 Context: Address
 * insert Meta
 * value[x] only Coding
@@ -30,7 +30,7 @@ Context: Address
 Extension: StfPruefcodeExtension
 Id: StfPruefcodeExtension
 Title: "STF Prüfcode Extension"
-Description: "TBD"
+Description: "Mit dieser Extension kann ein Prüfcode an einer Organisation ergänzt werden."
 Context: Organization
 * insert Meta
 * value[x] only string
