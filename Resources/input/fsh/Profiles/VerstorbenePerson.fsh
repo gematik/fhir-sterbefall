@@ -6,12 +6,28 @@ Description: "Informationen zur verstorbenen Person"
 * insert Meta
 * identifier MS
 * identifier ^slicing.discriminator.type = #pattern
-* identifier ^slicing.discriminator.path = "type"
+* identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
 * identifier contains
-    ID-Gesundheitsamt ..1 MS
-* identifier[ID-Gesundheitsamt] MS
-* identifier[ID-Gesundheitsamt] ^comment = "ID der Person im Gesundheitsamt"
+    IdImGesundheitsamt ..1 MS and
+    Sterbebuchnummer ..1 MS
+* identifier[IdImGesundheitsamt] MS
+  * ^comment = "ID der Person im Gesundheitsamt"
+  * type 1.. MS
+  * type = http://terminology.hl7.org/CodeSystem/v2-0203#PI
+  * system MS
+    * ^comment = "Im Rahmen des Projektes wurde kein NamingSystem festgelegt. Aus diesem Grund ist die Angabe eines type verpflichtend."
+  * assigner MS
+    * ^short = "Gesundheitsamt"
+    * ^comment = "Entweder wird die Referenz auf ein Gesundheitsamt, oder der display des Gesundheitsamt angegeben."
+    * reference MS
+    * display MS
+* identifier[Sterbebuchnummer] MS
+  * ^comment = "Nummer der verstorbenen Person im Sterbebuch des zuständigen Gesundheitsamtes"
+  * system MS
+    * ^comment = "Im Rahmen des Projektes wurde kein NamingSystem festgelegt. Aus diesem Grund ist die Angabe eines type verpflichtend."
+  * type 1.. MS
+  * type = http://terminology.hl7.org/CodeSystem/v2-0203#DC
 * name MS
 * name ^slicing.discriminator.type = #value
 * name ^slicing.discriminator.path = "use"
