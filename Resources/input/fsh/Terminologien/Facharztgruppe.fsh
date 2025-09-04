@@ -1,6 +1,7 @@
 CodeSystem: StfFacharztgruppeCS
 Id: StfFacharztgruppeCS
 Title: "STF Facharztgruppe"
+* insert Meta
 * #Hausarzt "Hausarzt/-ärztin"
 * #Notarzt "Notarzt/-ärztin"
 * #Notdienstarzt "Arzt/Ärztin des kassenärztlichen Notdienstes"
@@ -11,4 +12,5 @@ Title: "STF Facharztgruppe"
 ValueSet: StfFacharztgruppe
 Id: StfFacharztgruppeVS
 Title: "STF Facharztgruppe"
+* insert Meta
 * include codes from system StfFacharztgruppeCS
