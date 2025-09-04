@@ -2,9 +2,9 @@ Profile: StfDatei
 Parent: DocumentReference
 Id: StfDateien
 Title: "STF Dateien"
-Description: "Metadaten zu Dateien, die im Kontext der STF Übermittlung relevant sind"
+Description: "Dieses Profil bietet die Möglichkeit, eine Datei als base64-kodierter Content zu komunizieren. Im Projekt sollte möglichst darauf verzichtet werden und die strukturierten Profile bevorzugt werden."
 * identifier MS
-* identifier ^comment = "Beispielsweise Sterbebuch Nummer oder StAmt_Aktenzeichen"
+* identifier ^comment = "Beispielsweise StAmt_Aktenzeichen"
 * status MS
 * type MS
 * type from StfDateiTyp (extensible)
@@ -15,6 +15,7 @@ Description: "Metadaten zu Dateien, die im Kontext der STF Übermittlung relevan
 * author ^comment = "Beispielsweise Verweis auf eine Organization, die Informationen zum Standesamt beinhaltet (Nr. und Name). Im Kontext eines Obduktionsscheins der ausstellende Arzt oder Ärztin"
 * date MS
 * date ^comment = "Beispielsweise das Datum der Sterbeurkunde"
-* context MS
-* context.related MS
-* context.related ^comment = "Im Kontext eines Obduktionsscheins verweis auf eine Observation, welche die Todesursache abbildet"
+* content MS
+  * attatchment MS
+    * contentType 1.. MS
+    * data 1.. MS
