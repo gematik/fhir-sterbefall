@@ -1,10 +1,14 @@
 {
   "resourceType": "ValueSet",
-  "status": "draft",
+  "status": "active",
   "name": "StfJaNeinUnbekannt",
   "id": "StfJaNeinUnbekanntVS",
   "title": "STF JaNeinUnbekannt",
   "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfJaNeinUnbekanntVS",
+  "version": "1.0.0-beta.1",
+  "experimental": false,
+  "publisher": "ELFA Maßnahme Interoperabilität",
+  "date": "2025-09-05",
   "compose": {
     "include": [
       {

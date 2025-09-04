@@ -1,10 +1,14 @@
 {
   "resourceType": "ValueSet",
-  "status": "draft",
+  "status": "active",
   "name": "StfBerufsgruppe",
   "id": "StfBerufsgruppeVS",
   "title": "STF Berufsgruppe",
   "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfBerufsgruppeVS",
+  "version": "1.0.0-beta.1",
+  "experimental": false,
+  "publisher": "ELFA Maßnahme Interoperabilität",
+  "date": "2025-09-05",
   "compose": {
     "include": [
       {
