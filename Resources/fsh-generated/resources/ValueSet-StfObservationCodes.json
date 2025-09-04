@@ -1,11 +1,15 @@
 {
   "resourceType": "ValueSet",
-  "status": "draft",
+  "status": "active",
   "name": "StfObservationCodes",
   "id": "StfObservationCodes",
   "title": "STF Observation Codes",
   "description": "Im Kontext des Sterbefall relevante Observation Codes",
   "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfObservationCodes",
+  "version": "1.0.0-beta.1",
+  "experimental": false,
+  "publisher": "ELFA Maßnahme Interoperabilität",
+  "date": "2025-09-05",
   "compose": {
     "include": [
       {

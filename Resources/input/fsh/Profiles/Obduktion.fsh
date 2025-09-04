@@ -3,6 +3,7 @@ Parent: Procedure
 Id: StfObduktion
 Title: "STF Obduktion"
 Description: "Abbildung der Informationen zu einer Obduktion im Kontext der STF"
+* insert Meta
 * basedOn MS
 * basedOn ^comment = "Zuordnung zum Antrag einer Obduktion"
 * basedOn only Reference(ServiceRequest)
@@ -41,6 +42,7 @@ Parent: ServiceRequest
 Id: StfObduktionAnfrage
 Title: "STF Obduktion Anfrage"
 Description: "Information über die Beantragung einer Obduktion"
+* insert Meta
 * status MS
 * intent MS
 * code MS

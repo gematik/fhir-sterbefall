@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "status": "draft",
+  "status": "active",
   "content": "complete",
   "name": "StfObservationCodesErweiterungCS",
   "id": "StfObservationCodesErweiterungCS",
@@ -16,5 +16,9 @@
       "display": "Klassifikation der Todesursache"
     }
   ],
+  "version": "1.0.0-beta.1",
+  "experimental": false,
+  "publisher": "ELFA Maßnahme Interoperabilität",
+  "date": "2025-09-05",
   "count": 2
 }

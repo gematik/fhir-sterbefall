@@ -3,6 +3,7 @@ Parent: StfBasisObservation
 Id: StfTodesursache
 Title: "STF Todesursache"
 Description: "Todesursache (kompatibel zu [MII PR Onkologie Tod](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod) )"
+* insert Meta
 * code MS
 * code.coding = $sct#184305005
 * subject 1.. MS
@@ -68,5 +69,6 @@ Extension: StfTodesursacheTypExtension
 Id: StfTodesursacheTypExtension
 Title: "Todesursache Typ"
 Context: Observation.hasMember
+* insert Meta
 * value[x] only CodeableConcept
 * valueCodeableConcept from StfTodesursacheCode (extensible)

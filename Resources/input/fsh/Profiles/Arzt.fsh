@@ -3,6 +3,7 @@ Parent: Practitioner
 Id: StfArzt
 Title: "STF Arzt"
 Description: "Informationen über Ärzte und Ärztinnen, die im Kontext der STF relevant sind"
+* insert Meta
 * identifier MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "$this"
@@ -103,5 +104,6 @@ CodeSystem: StfArztIdentifierType
 Id: StfArztIdentifierType
 Title: "StfArztIdentifierType"
 Description: "Bis zur Klärung, welche konkrete ID gemeint ist, erfolgt die unterscheidung der Identifier über diese Codes"
+* insert Meta
 * #ArztId "ID des Arztes laut Arztliste der Ärztekammer"
 * #Zulassungsnr "Zulassungsnummer" "Nicht weiter spezifiziert"

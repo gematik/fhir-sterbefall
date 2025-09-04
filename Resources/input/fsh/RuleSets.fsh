@@ -9,3 +9,10 @@ RuleSet: CodConObsReq(system, code, vs)
 * value[x] only CodeableConcept
 * valueCodeableConcept MS
 * valueCodeableConcept from {vs} (required)
+
+RuleSet: Meta
+* ^version = "1.0.0-beta.1"
+* ^status = #active
+* ^experimental = false
+* ^publisher = "ELFA Maßnahme Interoperabilität"
+* ^date = "2025-09-05"
