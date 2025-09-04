@@ -5,7 +5,7 @@
   "name": "StfTodesursacheCodeCS",
   "id": "StfTodesursacheCodeCS",
   "title": "STF Weitere Todesursachen",
-  "description": "TBD",
+  "description": "Dieses CodeSystem definiert ergänzende Todesursachen, die im Rahmen der standardisierten Dokumentation eines Sterbefalls verwendet werden. \nEs ermöglicht die strukturierte Erfassung mehrerer Ursachenketten.",
   "url": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
   "concept": [
     {
@@ -20,11 +20,11 @@
     },
     {
       "code": "TU4",
-      "display": "Todesursache_4"
+      "display": "Todesursache 4"
     },
     {
       "code": "TU5",
-      "display": "Todesursache_5"
+      "display": "Todesursache 5"
     },
     {
       "code": "GA",

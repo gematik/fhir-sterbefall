@@ -9,7 +9,7 @@
   "experimental": false,
   "date": "2025-09-05",
   "publisher": "ELFA Maßnahme Interoperabilität",
-  "description": "TBD",
+  "description": "Mit dieser Extension ist es möglich, ein Coding für deutsche Bundesländer an einer Adresse zu ergänzen.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -28,7 +28,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "STF Bundesland Extension",
-        "definition": "TBD"
+        "definition": "Mit dieser Extension ist es möglich, ein Coding für deutsche Bundesländer an einer Adresse zu ergänzen."
       },
       {
         "id": "Extension.extension",
