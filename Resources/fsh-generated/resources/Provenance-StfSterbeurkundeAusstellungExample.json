@@ -8,7 +8,7 @@
   },
   "target": [
     {
-      "reference": "http://gematik.de/fhir/oegd/stf/Patient/StfVerstorbenePersonExample"
+      "reference": "Patient/StfVerstorbenePersonExample"
     }
   ],
   "reason": [
@@ -24,7 +24,7 @@
   "agent": [
     {
       "who": {
-        "reference": "http://gematik.de/fhir/oegd/stf/Organization/StfOrganisationExample"
+        "reference": "Organization/StfOrganisationExample"
       }
     }
   ],

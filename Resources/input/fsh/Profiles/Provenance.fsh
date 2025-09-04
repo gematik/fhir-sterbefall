@@ -3,6 +3,7 @@ Parent: Provenance
 Id: StfSterbeurkundeAusstellung
 Title: "STF Sterbeurkunde Ausstellung"
 Description: "TBD"
+* insert Meta
 * target only Reference(Patient)
 * recorded MS
 * recorded ^comment = "Sterbefall beurkundet Datum"

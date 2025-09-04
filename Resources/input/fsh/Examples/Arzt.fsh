@@ -3,7 +3,6 @@ InstanceOf: StfArzt
 Title: "Beispiel STF Arzt"
 Description: "Beispielhafte Instanz eines Arztes im Kontext der STF"
 Usage: #example
-
 // Identifier
 * identifier[ID].system = "https://example.de/arztliste"
 * identifier[ID].value = "123456" // ID des Arztes laut Arztliste der Ärztekammer

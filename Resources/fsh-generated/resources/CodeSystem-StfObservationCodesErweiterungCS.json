@@ -1,6 +1,6 @@
 {
   "resourceType": "CodeSystem",
-  "status": "draft",
+  "status": "active",
   "content": "complete",
   "name": "StfObservationCodesErweiterungCS",
   "id": "StfObservationCodesErweiterungCS",
@@ -19,6 +19,5 @@
       "code": "quelle",
       "display": "Quelle der Information"
     }
-  ],
-  "count": 3
+  ]
 }

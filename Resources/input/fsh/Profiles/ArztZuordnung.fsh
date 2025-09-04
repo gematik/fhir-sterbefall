@@ -3,6 +3,7 @@ Parent: PractitionerRole
 Id: StfArztZuordnung
 Title: "STF Arzt Zuordnung"
 Description: "Zuordnung von Ärztinnen und Ärzten zu Organisationen im Kontext der STF"
+* insert Meta
 * practitioner MS
 * organization MS
 * organization ^comment = "Institution des Arztes"

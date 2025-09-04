@@ -3,6 +3,7 @@ Parent: Observation
 Id: StfBasisObservation
 Title: "STF Basis Observation"
 Description: "Dieses Profil stellt die Basis Observation im Kontext der STF dar. Alle weiteren Observation sind auf dieser Basis aufbauend."
+* insert Meta
 * status MS
 * code MS
 * code from StfObservationCodes
@@ -22,6 +23,7 @@ ValueSet: StfObservationCodes
 Id: StfObservationCodes
 Title: "STF Observation Codes"
 Description: "Im Kontext des Sterbefall relevante Observation Codes"
+* insert Meta
 * $sct#108369006 "Tumor"
 * $sct#184305005 "Cause of Death"
 * include codes from system StfObservationCodesErweiterungCS
@@ -29,6 +31,7 @@ Description: "Im Kontext des Sterbefall relevante Observation Codes"
 CodeSystem: StfObservationCodesErweiterungCS
 Id: StfObservationCodesErweiterungCS
 Title: "StfObservationCodesErweiterung"
+* insert Meta
 * #nichtNatuerlicherTod "Nicht natürlicher Tod"
 * #todesursacheKlassifikation "Klassifikation der Todesursache"
 * #quelle "Quelle der Information"
