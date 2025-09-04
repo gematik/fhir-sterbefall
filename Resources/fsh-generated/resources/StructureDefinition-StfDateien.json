@@ -2,14 +2,10 @@
   "resourceType": "StructureDefinition",
   "id": "StfDateien",
   "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDateien",
-  "version": "1.0.0-beta.1",
   "name": "StfDatei",
   "title": "STF Dateien",
-  "status": "active",
-  "experimental": false,
-  "date": "2025-09-05",
-  "publisher": "ELFA Maßnahme Interoperabilität",
-  "description": "Metadaten zu Dateien, die im Kontext der STF Übermittlung relevant sind",
+  "status": "draft",
+  "description": "Dieses Profil bietet die Möglichkeit, eine Datei als base64-kodierter Content zu komunizieren. Im Projekt sollte möglichst darauf verzichtet werden und die strukturierten Profile bevorzugt werden.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -21,7 +17,7 @@
       {
         "id": "DocumentReference.identifier",
         "path": "DocumentReference.identifier",
-        "comment": "Beispielsweise Sterbebuch Nummer oder StAmt_Aktenzeichen",
+        "comment": "Beispielsweise StAmt_Aktenzeichen",
         "mustSupport": true
       },
       {
@@ -73,14 +69,25 @@
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.context",
-        "path": "DocumentReference.context",
+        "id": "DocumentReference.content",
+        "path": "DocumentReference.content",
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.context.related",
-        "path": "DocumentReference.context.related",
-        "comment": "Im Kontext eines Obduktionsscheins verweis auf eine Observation, welche die Todesursache abbildet",
+        "id": "DocumentReference.content.attachment",
+        "path": "DocumentReference.content.attachment",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content.attachment.contentType",
+        "path": "DocumentReference.content.attachment.contentType",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content.attachment.data",
+        "path": "DocumentReference.content.attachment.data",
+        "min": 1,
         "mustSupport": true
       }
     ]
