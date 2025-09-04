@@ -8,6 +8,7 @@ Usage: #example
 * code = $sct#184305005 "Todesursache (Diagnose)"
 * subject = Reference(StfVerstorbenePersonExample) "Max Mustermann"
 * effectiveDateTime = "2023-07-10"  // Beginn der Krankheit
+* performer = Reference(StfArztExample)
 * valueCodeableConcept.coding.system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
 * valueCodeableConcept.coding.version = "2023"
 * valueCodeableConcept.coding.code = #I21.0
@@ -20,6 +21,8 @@ Usage: #example
 
 * component[Details].code = StfObservationCodesErweiterungCS#todesursacheKlassifikation
 * component[Details].valueCodeableConcept = $icd-10-who#I25.1 "Atherosklerose des Herzens"
+
+* component[Quelle].valueCodeableConcept = StfDateiTypCS#Obduktionsschein
 
 // Nachgelagerte Todesursache (Grundleiden)
 * hasMember = Reference(TodesursacheGrundleiden)
@@ -34,6 +37,7 @@ Usage: #example
 * code = $sct#184305005 "Todesursache (Diagnose)"
 * subject = Reference(StfVerstorbenePersonExample)
 * effectiveDateTime = "2020-01-15"  // Beginn des Grundleidens
+* performer = Reference(StfArztExample)
 * valueCodeableConcept.coding.system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
 * valueCodeableConcept.coding.version = "2023"
 * valueCodeableConcept.coding.code = #I25.9
@@ -42,3 +46,4 @@ Usage: #example
 // Component für natürlichen Tod auch hier setzen
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
 * component[NichtNatuerlicherTod].valueCodeableConcept = $v2-0532#N "Nein"
+* component[Quelle].valueCodeableConcept = StfDateiTypCS#Leichenschauschein

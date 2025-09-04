@@ -6,6 +6,11 @@
       "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
     ]
   },
+  "performer": [
+    {
+      "reference": "Practitioner/StfArztExample"
+    }
+  ],
   "valueCodeableConcept": {
     "coding": [
       {
@@ -32,6 +37,24 @@
             "code": "N",
             "system": "http://terminology.hl7.org/CodeSystem/v2-0532",
             "display": "Nein"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "quelle",
+            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+          }
+        ]
+      },
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "Leichenschauschein",
+            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
           }
         ]
       }
