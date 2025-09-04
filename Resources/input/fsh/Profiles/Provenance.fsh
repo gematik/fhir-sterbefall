@@ -2,7 +2,7 @@ Profile: StfSterbeurkundeAusstellung
 Parent: Provenance
 Id: StfSterbeurkundeAusstellung
 Title: "STF Sterbeurkunde Ausstellung"
-Description: "TBD"
+Description: "Mit diesem Provenance Profil kann die Ausstellung einer Sterbeurkunde dokumentiert werden."
 * insert Meta
 * target only Reference(Patient)
 * recorded MS

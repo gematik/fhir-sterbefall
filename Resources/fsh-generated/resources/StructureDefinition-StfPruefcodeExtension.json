@@ -9,7 +9,7 @@
   "experimental": false,
   "date": "2025-09-05",
   "publisher": "ELFA Maßnahme Interoperabilität",
-  "description": "TBD",
+  "description": "Mit dieser Extension kann ein Prüfcode an einer Organisation ergänzt werden.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
@@ -28,7 +28,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "STF Prüfcode Extension",
-        "definition": "TBD"
+        "definition": "Mit dieser Extension kann ein Prüfcode an einer Organisation ergänzt werden."
       },
       {
         "id": "Extension.extension",

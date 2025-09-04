@@ -9,7 +9,7 @@
   "experimental": false,
   "date": "2025-09-05",
   "publisher": "ELFA Maßnahme Interoperabilität",
-  "description": "TBD",
+  "description": "Das StfExportBundle dient als Container für den standardisierten Austausch von Daten im Rahmen des Sterbefallprozesses. \nEs basiert auf der Ressource `Bundle` und verwendet den Typ `collection`, um alle relevanten STF Ressourcen zu bündeln.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -27,12 +27,17 @@
       {
         "id": "Bundle.timestamp",
         "path": "Bundle.timestamp",
-        "comment": "Exportzeitpunkt",
+        "short": "Exportzeitpunkt",
         "mustSupport": true
       },
       {
         "id": "Bundle.entry",
         "path": "Bundle.entry",
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.entry.fullUrl",
+        "path": "Bundle.entry.fullUrl",
         "mustSupport": true
       },
       {
