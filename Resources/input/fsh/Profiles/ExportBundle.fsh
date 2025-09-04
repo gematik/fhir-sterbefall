@@ -8,7 +8,8 @@ Es basiert auf der Ressource `Bundle` und verwendet den Typ `collection`, um all
 * type MS
 * type = #collection
 * timestamp MS
-* timestamp ^comment = "Exportzeitpunkt"
+  * ^short = "Exportzeitpunkt"
 * entry MS
+  * fullUrl MS
   * resource MS
   * resource only StfArzt or StfVerstorbenePerson or StfArztZuordnung or StfDatei or StfLeichenschau or StfOrganisation or StfSterbeurkundeAusstellung or StfTodesursache
