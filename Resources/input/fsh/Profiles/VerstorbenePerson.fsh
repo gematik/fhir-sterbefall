@@ -9,9 +9,23 @@ Description: "Informationen zur verstorbenen Person"
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
 * identifier contains
-    ID-Gesundheitsamt ..1 MS
-* identifier[ID-Gesundheitsamt] MS
-* identifier[ID-Gesundheitsamt] ^comment = "ID der Person im Gesundheitsamt"
+    IdImGesundheitsamt ..1 MS and
+    Sterbebuchnummer ..1 MS
+* identifier[IdImGesundheitsamt] MS
+* identifier[IdImGesundheitsamt] ^comment = "ID der Person im Gesundheitsamt"
+* identifier[IdImGesundheitsamt]
+  * type MS
+  * type = http://terminology.hl7.org/CodeSystem/v2-0203#PI
+  * assigner MS
+    * ^short = "Gesundheitsamt"
+    * ^comment = "Entweder wird die Referenz auf ein Gesundheitsamt, oder der display des Gesundheitsamt angegeben."
+    * reference MS
+    * display MS
+* identifier[Sterbebuchnummer] MS
+* identifier[Sterbebuchnummer] ^comment = "Nummer der verstorbenen Person im Sterbebuch des zuständigen Gesundheitsamtes"
+* identifier[Sterbebuchnummer]
+  * type MS
+  * type = http://terminology.hl7.org/CodeSystem/v2-0203#DC
 * name MS
 * name ^slicing.discriminator.type = #value
 * name ^slicing.discriminator.path = "use"
