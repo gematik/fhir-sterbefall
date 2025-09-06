@@ -62,14 +62,17 @@ Wenn Todesart =  nicht natürlich ODER
 Wenn Todesart = leer, 
 dann ka;"
   * code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
+  * value[x] only CodeableConcept
   * valueCodeableConcept from StfJaNeinUnbekannt (required)
 * component[Details]
   * ^comment = "Weitere Angaben zur Klassifikation der Todesursache, z.B. bei Unfall, Vergiftung,  Gewalteinwirkung, Selbsttötung sowie bei Komplikationen medizinischer Behandlung Äußere Ursache der Schädigung (Angaben über den Hergang); bei Vergiftungen zusätzlich Angabe des Mittels"
   * code = StfObservationCodesErweiterungCS#todesursacheKlassifikation
+  * value[x] only CodeableConcept
   * valueCodeableConcept from $icd-10-who (required)
 * component[Quelle]
   * ^comment = "Quellangabe der Information. Z.B. ob die Todesursache aus dem Leichenschauschein oder dem Obduktionsschein stammt."
   * code = StfObservationCodesErweiterungCS#quelle
+  * value[x] only CodeableConcept
   * valueCodeableConcept from StfDateiTyp (required)
 
 
