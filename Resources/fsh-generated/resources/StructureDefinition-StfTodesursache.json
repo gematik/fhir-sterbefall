@@ -205,6 +205,15 @@
         }
       },
       {
+        "id": "Observation.component:NichtNatuerlicherTod.value[x]",
+        "path": "Observation.component.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
         "id": "Observation.component:NichtNatuerlicherTod.value[x]:valueCodeableConcept",
         "path": "Observation.component.value[x]",
         "sliceName": "valueCodeableConcept",
@@ -240,6 +249,15 @@
         }
       },
       {
+        "id": "Observation.component:Details.value[x]",
+        "path": "Observation.component.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
         "id": "Observation.component:Details.value[x]:valueCodeableConcept",
         "path": "Observation.component.value[x]",
         "sliceName": "valueCodeableConcept",
@@ -273,6 +291,15 @@
             }
           ]
         }
+      },
+      {
+        "id": "Observation.component:Quelle.value[x]",
+        "path": "Observation.component.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
       },
       {
         "id": "Observation.component:Quelle.value[x]:valueCodeableConcept",
