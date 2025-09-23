@@ -35,6 +35,16 @@
         "comment": "ID der Person im Gesundheitsamt",
         "min": 0,
         "max": "1",
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "PI",
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+              }
+            ]
+          }
+        },
         "mustSupport": true
       },
       {
@@ -81,6 +91,16 @@
         "comment": "Nummer der verstorbenen Person im Sterbebuch des zuständigen Gesundheitsamtes",
         "min": 0,
         "max": "1",
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "DC",
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+              }
+            ]
+          }
+        },
         "mustSupport": true
       },
       {
