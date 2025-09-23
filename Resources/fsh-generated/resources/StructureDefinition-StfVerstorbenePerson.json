@@ -108,6 +108,12 @@
         "mustSupport": true
       },
       {
+        "id": "Patient.active",
+        "path": "Patient.active",
+        "comment": "Als modifier-Element muss dieses Feld beachtet werden",
+        "mustSupport": true
+      },
+      {
         "id": "Patient.name",
         "path": "Patient.name",
         "slicing": {
@@ -256,7 +262,8 @@
           ],
           "rules": "open"
         },
-        "min": 1
+        "min": 1,
+        "mustSupport": true
       },
       {
         "id": "Patient.address:Strassenanschrift",
