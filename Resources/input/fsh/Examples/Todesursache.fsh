@@ -5,7 +5,7 @@ Description: "Beispielinstanz einer Todesursache nach dem StfTodesursache-Profil
 Usage: #example
 
 * status = #final
-* code = $sct#184305005 "Todesursache (Diagnose)"
+* code = $sct#184305005 "Cause of Death"
 * subject = Reference(StfVerstorbenePersonExample) "Max Mustermann"
 * effectiveDateTime = "2023-07-10"  // Beginn der Krankheit
 * performer = Reference(StfArztExample)
@@ -17,12 +17,12 @@ Usage: #example
 
 // Components
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
-* component[NichtNatuerlicherTod].valueCodeableConcept = $v2-0532#N "Nein"
+* component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N "Nein"
 
 * component[Details].code = StfObservationCodesErweiterungCS#todesursacheKlassifikation
-* component[Details].valueCodeableConcept = $icd-10-who#I25.1 "Atherosklerose des Herzens"
+* component[Details].valueCodeableConcept.coding = $icd-10-who#I25.1 "Atherosklerose des Herzens"
 
-* component[Quelle].valueCodeableConcept = StfDateiTypCS#Obduktionsschein
+* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Obduktionsschein
 
 // Nachgelagerte Todesursache (Grundleiden)
 * hasMember = Reference(TodesursacheGrundleiden)
@@ -34,7 +34,7 @@ InstanceOf: StfTodesursache
 Title: "Grundleiden der Todesursache"
 Usage: #example
 * status = #final
-* code = $sct#184305005 "Todesursache (Diagnose)"
+* code = $sct#184305005 "Cause of Death"
 * subject = Reference(StfVerstorbenePersonExample)
 * effectiveDateTime = "2020-01-15"  // Beginn des Grundleidens
 * performer = Reference(StfArztExample)
