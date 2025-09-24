@@ -16,12 +16,12 @@ Description: "Todesursache (kompatibel zu [MII PR Onkologie Tod](https://www.med
   * ^comment = "Referenz auf den oder die ausstellende Arztin"
 * value[x] 0.. MS
 * value[x] only CodeableConcept
-* value[x] from $icd-10-who (required)
-* value[x].coding.system 1.. MS
-* value[x].coding.system = "http://hl7.org/fhir/sid/icd-10"
-* value[x].coding.version 1.. MS
-* value[x].coding.code 1.. MS
-* value[x].coding.display 1.. MS
+* valueCodeableConcept from $icd-10-who (required)
+* valueCodeableConcept.coding.system 1.. MS
+* valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
+* valueCodeableConcept.coding.version 1.. MS
+* valueCodeableConcept.coding.code 1.. MS
+* valueCodeableConcept.coding.display 1.. MS
 * dataAbsentReason MS
 * dataAbsentReason ^comment = "Todesart ungeklärt
 Wenn Todesart = ungeklärt ODER
