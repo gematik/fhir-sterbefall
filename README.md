@@ -2,7 +2,7 @@
 
     
 
-<a href="https://simplifier.net/guide/sterbefall-krebsregistermeldung?version=current" class="btn btn-primary" >Zum Implementierungsleitfaden Sterbefall</a>
+<a href="https://simplifier.net/guide/sterbefall/Startseite" class="btn btn-primary" >Zum Implementierungsleitfaden Sterbefall</a>
 
 ### Zusammenfassung
 Die Dokumentation und Informationsübermittlung in einem Sterbefall umfasst verschiedene Organisationen und Institutionen, die jeweils einen bestimmten Teil der Informationen generieren oder / und verarbeiten. Ziel ist es, mit dieser FHIR - Spezifikation einen Standard zu entwickeln, mit dem eine interoperable Datenübertragung der notwendigen Daten aus der Todesbescheinigung an die Krebsregister erfolgen kann. Die Spezifikation wurde in enger Zusammenarbeit mit Fachpersonen aus dem Öffentlichen Gesundheitsdienst und den Krebsregistern sowie IT-Experten und FHIR-Spezialisten entwickelt und stellt sicher, dass Datenschutz und Sicherheit gewährleistet sind. 
