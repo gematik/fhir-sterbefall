@@ -18,7 +18,7 @@ Description: "Todesursache (kompatibel zu [MII PR Onkologie Tod](https://www.med
 * value[x] only CodeableConcept
 * value[x] from $icd-10-who (required)
 * value[x].coding.system 1.. MS
-* value[x].coding.system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
+* value[x].coding.system = "http://hl7.org/fhir/sid/icd-10"
 * value[x].coding.version 1.. MS
 * value[x].coding.code 1.. MS
 * value[x].coding.display 1.. MS

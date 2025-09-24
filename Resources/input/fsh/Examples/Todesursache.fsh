@@ -9,7 +9,7 @@ Usage: #example
 * subject = Reference(StfVerstorbenePersonExample) "Max Mustermann"
 * effectiveDateTime = "2023-07-10"  // Beginn der Krankheit
 * performer = Reference(StfArztExample)
-* valueCodeableConcept.coding.system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
+* valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version = "2023"
 * valueCodeableConcept.coding.code = #I21.0
 * valueCodeableConcept.coding.display = "Akuter transmuraler Myokardinfarkt der Vorderwand"
@@ -38,7 +38,7 @@ Usage: #example
 * subject = Reference(StfVerstorbenePersonExample)
 * effectiveDateTime = "2020-01-15"  // Beginn des Grundleidens
 * performer = Reference(StfArztExample)
-* valueCodeableConcept.coding.system = "http://fhir.de/CodeSystem/bfarm/icd-10-gm"
+* valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version = "2023"
 * valueCodeableConcept.coding.code = #I25.9
 * valueCodeableConcept.coding.display = "Chronische ischämische Herzkrankheit, nicht näher bezeichnet"
