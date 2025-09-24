@@ -69,7 +69,7 @@
         "id": "Observation.value[x].coding.system",
         "path": "Observation.value[x].coding.system",
         "min": 1,
-        "patternUri": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+        "patternUri": "http://hl7.org/fhir/sid/icd-10",
         "mustSupport": true
       },
       {
