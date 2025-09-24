@@ -16,7 +16,7 @@ Description: "Todesursache (kompatibel zu [MII PR Onkologie Tod](https://www.med
   * ^comment = "Referenz auf den oder die ausstellende Arztin"
 * value[x] 0.. MS
 * value[x] only CodeableConcept
-* valueCodeableConcept from $icd-10-who (required)
+//* valueCodeableConcept from $icd-10-who (required)
 * valueCodeableConcept.coding.system 1.. MS
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version 1.. MS
@@ -63,12 +63,17 @@ Wenn Todesart = leer,
 dann ka;"
   * code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
   * value[x] only CodeableConcept
-  * valueCodeableConcept from StfJaNeinUnbekannt (required)
+  * valueCodeableConcept.coding from StfJaNeinUnbekannt (required)
 * component[Details]
   * ^comment = "Weitere Angaben zur Klassifikation der Todesursache, z.B. bei Unfall, Vergiftung,  Gewalteinwirkung, Selbsttötung sowie bei Komplikationen medizinischer Behandlung Äußere Ursache der Schädigung (Angaben über den Hergang); bei Vergiftungen zusätzlich Angabe des Mittels"
   * code = StfObservationCodesErweiterungCS#todesursacheKlassifikation
   * value[x] only CodeableConcept
-  * valueCodeableConcept from $icd-10-who (required)
+  //* valueCodeableConcept from $icd-10-who (required)
+  * valueCodeableConcept.coding.system 1.. MS
+  * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
+  * valueCodeableConcept.coding.version 1.. MS
+  * valueCodeableConcept.coding.code 1.. MS
+  * valueCodeableConcept.coding.display 1.. MS
 * component[Quelle]
   * ^comment = "Quellangabe der Information. Z.B. ob die Todesursache aus dem Leichenschauschein oder dem Obduktionsschein stammt."
   * code = StfObservationCodesErweiterungCS#quelle

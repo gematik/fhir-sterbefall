@@ -21,6 +21,7 @@ Usage: #example
 
 * component[Details].code = StfObservationCodesErweiterungCS#todesursacheKlassifikation
 * component[Details].valueCodeableConcept.coding = $icd-10-who#I25.1 "Atherosklerose des Herzens"
+* component[Details].valueCodeableConcept.coding.version = "2023"
 
 * component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Obduktionsschein
 
@@ -45,5 +46,5 @@ Usage: #example
 
 // Component für natürlichen Tod auch hier setzen
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
-* component[NichtNatuerlicherTod].valueCodeableConcept = $v2-0532#N "Nein"
+* component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N "Nein"
 * component[Quelle].valueCodeableConcept = StfDateiTypCS#Leichenschauschein
