@@ -13,6 +13,7 @@ Description: "Informationen zur verstorbenen Person"
     Sterbebuchnummer ..1 MS
 * identifier[IdImGesundheitsamt] MS
   * ^comment = "ID der Person im Gesundheitsamt"
+  * ^patternIdentifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#PI
   * type 1.. MS
   * type = http://terminology.hl7.org/CodeSystem/v2-0203#PI
   * system MS
@@ -24,6 +25,7 @@ Description: "Informationen zur verstorbenen Person"
     * display MS
 * identifier[Sterbebuchnummer] MS
   * ^comment = "Nummer der verstorbenen Person im Sterbebuch des zuständigen Gesundheitsamtes"
+  * ^patternIdentifier.type = http://terminology.hl7.org/CodeSystem/v2-0203#DC
   * system MS
     * ^comment = "Im Rahmen des Projektes wurde kein NamingSystem festgelegt. Aus diesem Grund ist die Angabe eines type verpflichtend."
   * type 1.. MS

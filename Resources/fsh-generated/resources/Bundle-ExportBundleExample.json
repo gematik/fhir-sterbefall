@@ -395,7 +395,7 @@
         "valueCodeableConcept": {
           "coding": [
             {
-              "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+              "system": "http://hl7.org/fhir/sid/icd-10",
               "version": "2023",
               "code": "I21.0",
               "display": "Akuter transmuraler Myokardinfarkt der Vorderwand"
@@ -409,14 +409,6 @@
         ],
         "component": [
           {
-            "code": {
-              "coding": [
-                {
-                  "code": "nichtNatuerlicherTod",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                }
-              ]
-            },
             "valueCodeableConcept": {
               "coding": [
                 {
@@ -425,9 +417,27 @@
                   "display": "Nein"
                 }
               ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "nichtNatuerlicherTod",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                }
+              ]
             }
           },
           {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "code": "I25.1",
+                  "display": "Atherosklerose des Herzens",
+                  "version": "2023"
+                }
+              ]
+            },
             "code": {
               "coding": [
                 {
@@ -435,31 +445,22 @@
                   "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
                 }
               ]
-            },
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "I25.1",
-                  "system": "http://hl7.org/fhir/sid/icd-10",
-                  "display": "Atherosklerose des Herzens"
-                }
-              ]
             }
           },
           {
-            "code": {
-              "coding": [
-                {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                }
-              ]
-            },
             "valueCodeableConcept": {
               "coding": [
                 {
                   "code": "Obduktionsschein",
                   "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
+                }
+              ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "quelle",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
                 }
               ]
             }
@@ -490,7 +491,7 @@
             {
               "code": "184305005",
               "system": "http://snomed.info/sct",
-              "display": "Todesursache (Diagnose)"
+              "display": "Cause of Death"
             }
           ]
         },
