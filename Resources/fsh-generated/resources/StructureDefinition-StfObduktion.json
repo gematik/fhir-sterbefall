@@ -121,7 +121,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "GerichtsmedInst"
+              "code": "GerichtsmedInst",
+              "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfOrganisationsTypCS"
             }
           ]
         }
@@ -141,7 +142,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "PathINst"
+              "code": "PathInst",
+              "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfOrganisationsTypCS"
             }
           ]
         }
