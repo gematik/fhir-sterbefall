@@ -1,0 +1,32 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "StfObduktionAnfrageExample",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObduktionAnfrage"
+    ]
+  },
+  "requester": {
+    "display": "Dr. Schmidt, Gesundheitsamt Musterstadt"
+  },
+  "reasonCode": [
+    {
+      "text": "Unklare Todesursache, Verdacht auf nicht-natürlichen Tod"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "29240004",
+        "system": "http://snomed.info/sct",
+        "display": "Autopsy examination"
+      }
+    ]
+  },
+  "status": "completed",
+  "intent": "order",
+  "subject": {
+    "reference": "Patient/StfVerstorbenePersonExample"
+  },
+  "authoredOn": "2025-03-01T10:00:00+01:00"
+}

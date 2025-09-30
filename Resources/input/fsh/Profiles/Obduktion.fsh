@@ -32,8 +32,8 @@ Description: "Abbildung der Informationen zu einer Obduktion im Kontext der STF"
 * performer contains
   GerichtsmedizinischesInstitut ..1 MS and
   PathologischesInstitut ..1 MS
-* performer[GerichtsmedizinischesInstitut].function = #GerichtsmedInst
-* performer[PathologischesInstitut].function = #PathINst
+* performer[GerichtsmedizinischesInstitut].function = StfOrganisationsTypCS#GerichtsmedInst
+* performer[PathologischesInstitut].function = StfOrganisationsTypCS#PathInst
 * report MS
 * report ^comment = "Verlinkung auf den beiliegenden Obduktionsbericht"
 
