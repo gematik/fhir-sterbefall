@@ -66,15 +66,14 @@ jobs:
           filters: |
             # Struktur: fileName|messageId|detailsWildcard|location
 
-      - name: Prepare PR summary comment
-        if: always() && github.event_name == 'pull_request'
-        run: |
-          echo '<!-- fhir-validation-summary -->' > pr-summary.md
-          echo '## FHIR Validation Results' >> pr-summary.md
-          # attache Job Summary to PR
-          cat "$GITHUB_STEP_SUMMARY" >> pr-summary.md
-          echo '' >> pr-summary.md
-          echo '<!-- fhir-validation-summary -->' >> pr-summary.md
+      - name: Convert Validation Report
+        uses: patrick-werner/validation-outcome-markdown-renderer@v1
+        with:
+          bundle-file: validation.json
+          include: warnings
+          pr-summary-path: pr-summary.md
+          filters: |
+            # Struktur: fileName|messageId|detailsWildcard|location
 
       - name: Find existing summary comment
         if: always() && github.event_name == 'pull_request'
@@ -82,7 +81,7 @@ jobs:
         uses: peter-evans/find-comment@v3
         with:
           issue-number: ${{ github.event.pull_request.number }}
-          body-includes: "<!-- fhir-validation-summary -->"
+          body-includes: '<!-- fhir-validation-summary -->'
 
       - name: Create or update PR comment
         if: always() && github.event_name == 'pull_request'
