@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "StfPruefcodeExtension",
   "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfPruefcodeExtension",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.3",
   "name": "StfPruefcodeExtension",
   "title": "STF Prüfcode Extension",
   "status": "active",

@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "StfDatei",
   "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDatei",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.3",
   "name": "StfDatei",
   "title": "STF Datei",
   "status": "active",

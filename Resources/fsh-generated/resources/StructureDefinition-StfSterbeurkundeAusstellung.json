@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "StfSterbeurkundeAusstellung",
   "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfSterbeurkundeAusstellung",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.3",
   "name": "StfSterbeurkundeAusstellung",
   "title": "STF Sterbeurkunde Ausstellung",
   "status": "active",

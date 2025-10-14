@@ -104,6 +104,7 @@ Parent: Patient
 Id: StfVerstorbenePersonPseudonymisiert
 Title: "STF pseudonymisierte Verstorbene Person"
 Description: "Informationen zur verstorbenen Person, allerdings beschränkt auf minimale Informationen, die zur Verarbeitung benötigt werden"
+* insert Meta
 * insert Patient-identifier
 * name 0..0
 * address 0..0
