@@ -14,4 +14,4 @@ Usage: #example
 * date = "2023-07-15T10:30:00+02:00"
 * content[0].attachment
   * contentType = #application/pdf
-  * data.value = "U3RlcmJldXJrdW5kZSBTNDU2Ny8yMDI1"
+  * data = "U3RlcmJldXJrdW5kZSBTNDU2Ny8yMDI1"

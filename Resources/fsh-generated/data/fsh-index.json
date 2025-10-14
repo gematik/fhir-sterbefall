@@ -12,8 +12,8 @@
     "fshName": "StfArztIdentifierType",
     "fshType": "CodeSystem",
     "fshFile": "Profiles/Arzt.fsh",
-    "startLine": 102,
-    "endLine": 107
+    "startLine": 103,
+    "endLine": 109
   },
   {
     "outputFile": "CodeSystem-StfBerufsgruppeCS.json",
@@ -21,7 +21,7 @@
     "fshType": "CodeSystem",
     "fshFile": "Terminologien/Berufsgruppe.fsh",
     "startLine": 1,
-    "endLine": 8
+    "endLine": 9
   },
   {
     "outputFile": "CodeSystem-StfDateiTypCS.json",
@@ -29,7 +29,7 @@
     "fshType": "CodeSystem",
     "fshFile": "Terminologien/DateiTyp.fsh",
     "startLine": 1,
-    "endLine": 6
+    "endLine": 8
   },
   {
     "outputFile": "CodeSystem-StfFacharztgruppeCS.json",
@@ -37,15 +37,15 @@
     "fshType": "CodeSystem",
     "fshFile": "Terminologien/Facharztgruppe.fsh",
     "startLine": 1,
-    "endLine": 9
+    "endLine": 10
   },
   {
     "outputFile": "CodeSystem-StfObservationCodesErweiterungCS.json",
     "fshName": "StfObservationCodesErweiterungCS",
     "fshType": "CodeSystem",
     "fshFile": "Profiles/Observations/BasisObservation.fsh",
-    "startLine": 29,
-    "endLine": 33
+    "startLine": 31,
+    "endLine": 37
   },
   {
     "outputFile": "CodeSystem-StfOrganisationsTypCS.json",
@@ -53,7 +53,7 @@
     "fshType": "CodeSystem",
     "fshFile": "Terminologien/Organization-type.fsh",
     "startLine": 1,
-    "endLine": 13
+    "endLine": 14
   },
   {
     "outputFile": "CodeSystem-StfTodesursacheCodeCS.json",
@@ -61,15 +61,15 @@
     "fshType": "CodeSystem",
     "fshFile": "Terminologien/TodesursacheComponent.fsh",
     "startLine": 1,
-    "endLine": 9
+    "endLine": 11
   },
   {
     "outputFile": "CodeSystem-StfUnnatuerlicheTodesursachenCS.json",
     "fshName": "StfUnnatuerlicheTodesursachenCS",
     "fshType": "CodeSystem",
     "fshFile": "Terminologien/UnnatürlicheTodesursache.fsh",
-    "startLine": 6,
-    "endLine": 11
+    "startLine": 7,
+    "endLine": 13
   },
   {
     "outputFile": "DocumentReference-StfDateiExample.json",
@@ -77,7 +77,23 @@
     "fshType": "Instance",
     "fshFile": "Examples/Datei.fsh",
     "startLine": 1,
-    "endLine": 18
+    "endLine": 17
+  },
+  {
+    "outputFile": "Observation-StfObservationKeineKrebserkrankungExample.json",
+    "fshName": "StfObservationKeineKrebserkrankungExample",
+    "fshType": "Instance",
+    "fshFile": "Examples/ObservationKrebserkrankung.fsh",
+    "startLine": 19,
+    "endLine": 32
+  },
+  {
+    "outputFile": "Observation-StfObservationKrebserkrankungExample.json",
+    "fshName": "StfObservationKrebserkrankungExample",
+    "fshType": "Instance",
+    "fshFile": "Examples/ObservationKrebserkrankung.fsh",
+    "startLine": 2,
+    "endLine": 15
   },
   {
     "outputFile": "Observation-StfTodesursacheExample.json",
@@ -85,15 +101,23 @@
     "fshType": "Instance",
     "fshFile": "Examples/Todesursache.fsh",
     "startLine": 1,
-    "endLine": 26
+    "endLine": 30
   },
   {
     "outputFile": "Observation-TodesursacheGrundleiden.json",
     "fshName": "TodesursacheGrundleiden",
     "fshType": "Instance",
     "fshFile": "Examples/Todesursache.fsh",
-    "startLine": 29,
-    "endLine": 44
+    "startLine": 33,
+    "endLine": 50
+  },
+  {
+    "outputFile": "OperationDefinition-StfReceiveBundle.json",
+    "fshName": "StfReceiveBundle",
+    "fshType": "Instance",
+    "fshFile": "Operations/ReceiveBundle.fsh",
+    "startLine": 1,
+    "endLine": 31
   },
   {
     "outputFile": "Organization-StadtKoeln.json",
@@ -117,7 +141,7 @@
     "fshType": "Instance",
     "fshFile": "Examples/VerstorbenePerson.fsh",
     "startLine": 1,
-    "endLine": 46
+    "endLine": 48
   },
   {
     "outputFile": "Practitioner-StfArztExample.json",
@@ -125,7 +149,7 @@
     "fshType": "Instance",
     "fshFile": "Examples/Arzt.fsh",
     "startLine": 1,
-    "endLine": 46
+    "endLine": 45
   },
   {
     "outputFile": "PractitionerRole-StfArztZuordnungExample.json",
@@ -144,6 +168,14 @@
     "endLine": 10
   },
   {
+    "outputFile": "Procedure-StfObduktionExample.json",
+    "fshName": "StfObduktionExample",
+    "fshType": "Instance",
+    "fshFile": "Examples/Obduktion.fsh",
+    "startLine": 2,
+    "endLine": 35
+  },
+  {
     "outputFile": "Provenance-StfSterbeurkundeAusstellungExample.json",
     "fshName": "StfSterbeurkundeAusstellungExample",
     "fshType": "Instance",
@@ -152,12 +184,12 @@
     "endLine": 9
   },
   {
-    "outputFile": "StructureDefinition-ExportBundle.json",
-    "fshName": "ExportBundle",
-    "fshType": "Profile",
-    "fshFile": "Profiles/ExportBundle.fsh",
-    "startLine": 1,
-    "endLine": 7
+    "outputFile": "ServiceRequest-StfObduktionAnfrageExample.json",
+    "fshName": "StfObduktionAnfrageExample",
+    "fshType": "Instance",
+    "fshFile": "Examples/ObduktionAnfrage.fsh",
+    "startLine": 2,
+    "endLine": 15
   },
   {
     "outputFile": "StructureDefinition-StfArzt.json",
@@ -165,7 +197,7 @@
     "fshType": "Profile",
     "fshFile": "Profiles/Arzt.fsh",
     "startLine": 1,
-    "endLine": 100
+    "endLine": 101
   },
   {
     "outputFile": "StructureDefinition-StfArztZuordnung.json",
@@ -173,7 +205,7 @@
     "fshType": "Profile",
     "fshFile": "Profiles/ArztZuordnung.fsh",
     "startLine": 1,
-    "endLine": 11
+    "endLine": 12
   },
   {
     "outputFile": "StructureDefinition-StfBasisObservation.json",
@@ -181,31 +213,39 @@
     "fshType": "Profile",
     "fshFile": "Profiles/Observations/BasisObservation.fsh",
     "startLine": 1,
-    "endLine": 19
+    "endLine": 20
   },
   {
     "outputFile": "StructureDefinition-StfBundeslandExtension.json",
     "fshName": "StfBundeslandExtension",
     "fshType": "Extension",
     "fshFile": "Profiles/Organisation.fsh",
-    "startLine": 20,
-    "endLine": 26
+    "startLine": 21,
+    "endLine": 28
   },
   {
-    "outputFile": "StructureDefinition-StfDateien.json",
+    "outputFile": "StructureDefinition-StfDatei.json",
     "fshName": "StfDatei",
     "fshType": "Profile",
     "fshFile": "Profiles/Datei.fsh",
     "startLine": 1,
-    "endLine": 20
+    "endLine": 22
+  },
+  {
+    "outputFile": "StructureDefinition-StfExportBundle.json",
+    "fshName": "StfExportBundle",
+    "fshType": "Profile",
+    "fshFile": "Profiles/ExportBundle.fsh",
+    "startLine": 1,
+    "endLine": 15
   },
   {
     "outputFile": "StructureDefinition-StfGemeindekennzahlExtension.json",
     "fshName": "StfGemeindekennzahlExtension",
     "fshType": "Extension",
     "fshFile": "Profiles/VerstorbenePerson.fsh",
-    "startLine": 60,
-    "endLine": 73
+    "startLine": 85,
+    "endLine": 99
   },
   {
     "outputFile": "StructureDefinition-StfLeichenschau.json",
@@ -213,7 +253,7 @@
     "fshType": "Profile",
     "fshFile": "Profiles/Leichenschau.fsh",
     "startLine": 1,
-    "endLine": 15
+    "endLine": 16
   },
   {
     "outputFile": "StructureDefinition-StfObduktion.json",
@@ -221,15 +261,15 @@
     "fshType": "Profile",
     "fshFile": "Profiles/Obduktion.fsh",
     "startLine": 1,
-    "endLine": 37
+    "endLine": 38
   },
   {
     "outputFile": "StructureDefinition-StfObduktionAnfrage.json",
     "fshName": "StfObduktionAnfrage",
     "fshType": "Profile",
     "fshFile": "Profiles/Obduktion.fsh",
-    "startLine": 39,
-    "endLine": 48
+    "startLine": 40,
+    "endLine": 50
   },
   {
     "outputFile": "StructureDefinition-StfObservationKrebserkrankung.json",
@@ -237,7 +277,7 @@
     "fshType": "Profile",
     "fshFile": "Profiles/Observations/CodableConceptObservations.fsh",
     "startLine": 1,
-    "endLine": 6
+    "endLine": 7
   },
   {
     "outputFile": "StructureDefinition-StfOrganisation.json",
@@ -245,15 +285,15 @@
     "fshType": "Profile",
     "fshFile": "Profiles/Organisation.fsh",
     "startLine": 1,
-    "endLine": 18
+    "endLine": 19
   },
   {
     "outputFile": "StructureDefinition-StfPruefcodeExtension.json",
     "fshName": "StfPruefcodeExtension",
     "fshType": "Extension",
     "fshFile": "Profiles/Organisation.fsh",
-    "startLine": 28,
-    "endLine": 33
+    "startLine": 30,
+    "endLine": 36
   },
   {
     "outputFile": "StructureDefinition-StfSterbeurkundeAusstellung.json",
@@ -261,7 +301,7 @@
     "fshType": "Profile",
     "fshFile": "Profiles/Provenance.fsh",
     "startLine": 1,
-    "endLine": 16
+    "endLine": 17
   },
   {
     "outputFile": "StructureDefinition-StfTodesursache.json",
@@ -269,15 +309,15 @@
     "fshType": "Profile",
     "fshFile": "Profiles/Observations/Todesursache.fsh",
     "startLine": 1,
-    "endLine": 65
+    "endLine": 81
   },
   {
     "outputFile": "StructureDefinition-StfTodesursacheTypExtension.json",
     "fshName": "StfTodesursacheTypExtension",
     "fshType": "Extension",
     "fshFile": "Profiles/Observations/Todesursache.fsh",
-    "startLine": 67,
-    "endLine": 72
+    "startLine": 84,
+    "endLine": 90
   },
   {
     "outputFile": "StructureDefinition-StfVerstorbenePerson.json",
@@ -285,31 +325,39 @@
     "fshType": "Profile",
     "fshFile": "Profiles/VerstorbenePerson.fsh",
     "startLine": 1,
-    "endLine": 58
+    "endLine": 55
+  },
+  {
+    "outputFile": "StructureDefinition-StfVerstorbenePersonPseudonymisiert.json",
+    "fshName": "StfVerstorbenePersonPseudonymisiert",
+    "fshType": "Profile",
+    "fshFile": "Profiles/VerstorbenePerson.fsh",
+    "startLine": 102,
+    "endLine": 121
   },
   {
     "outputFile": "ValueSet-StfBerufsgruppeVS.json",
     "fshName": "StfBerufsgruppe",
     "fshType": "ValueSet",
     "fshFile": "Terminologien/Berufsgruppe.fsh",
-    "startLine": 10,
-    "endLine": 13
+    "startLine": 11,
+    "endLine": 15
   },
   {
     "outputFile": "ValueSet-StfDateiTypVS.json",
     "fshName": "StfDateiTyp",
     "fshType": "ValueSet",
     "fshFile": "Terminologien/DateiTyp.fsh",
-    "startLine": 8,
-    "endLine": 12
+    "startLine": 10,
+    "endLine": 15
   },
   {
     "outputFile": "ValueSet-StfFacharztgruppeVS.json",
     "fshName": "StfFacharztgruppe",
     "fshType": "ValueSet",
     "fshFile": "Terminologien/Facharztgruppe.fsh",
-    "startLine": 11,
-    "endLine": 14
+    "startLine": 12,
+    "endLine": 16
   },
   {
     "outputFile": "ValueSet-StfJaNeinUnbekanntVS.json",
@@ -317,47 +365,47 @@
     "fshType": "ValueSet",
     "fshFile": "Terminologien/JaNeinUnbekannt.fsh",
     "startLine": 1,
-    "endLine": 6
+    "endLine": 7
   },
   {
     "outputFile": "ValueSet-StfJaNeinVS.json",
     "fshName": "StfJaNein",
     "fshType": "ValueSet",
     "fshFile": "Terminologien/JaNeinUnbekannt.fsh",
-    "startLine": 8,
-    "endLine": 12
+    "startLine": 9,
+    "endLine": 14
   },
   {
     "outputFile": "ValueSet-StfObservationCodes.json",
     "fshName": "StfObservationCodes",
     "fshType": "ValueSet",
     "fshFile": "Profiles/Observations/BasisObservation.fsh",
-    "startLine": 21,
-    "endLine": 27
+    "startLine": 22,
+    "endLine": 29
   },
   {
     "outputFile": "ValueSet-StfOrganisationsTypObduktionVS.json",
     "fshName": "StfOrganisationsTypObduktion",
     "fshType": "ValueSet",
     "fshFile": "Terminologien/Organization-type.fsh",
-    "startLine": 20,
-    "endLine": 24
+    "startLine": 22,
+    "endLine": 27
   },
   {
     "outputFile": "ValueSet-StfOrganisationsTypVS.json",
     "fshName": "StfOrganisationsTyp",
     "fshType": "ValueSet",
     "fshFile": "Terminologien/Organization-type.fsh",
-    "startLine": 15,
-    "endLine": 18
+    "startLine": 16,
+    "endLine": 20
   },
   {
     "outputFile": "ValueSet-StfTodesursacheCodeVS.json",
     "fshName": "StfTodesursacheCode",
     "fshType": "ValueSet",
     "fshFile": "Terminologien/TodesursacheComponent.fsh",
-    "startLine": 11,
-    "endLine": 14
+    "startLine": 13,
+    "endLine": 17
   },
   {
     "outputFile": "ValueSet-StfUnnatuerlicheTodesursachenVS.json",
@@ -365,6 +413,6 @@
     "fshType": "ValueSet",
     "fshFile": "Terminologien/UnnatürlicheTodesursache.fsh",
     "startLine": 1,
-    "endLine": 4
+    "endLine": 5
   }
 ]

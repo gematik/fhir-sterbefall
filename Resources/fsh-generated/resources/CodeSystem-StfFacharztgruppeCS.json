@@ -5,6 +5,7 @@
   "name": "StfFacharztgruppeCS",
   "id": "StfFacharztgruppeCS",
   "title": "STF Facharztgruppe",
+  "version": "1.0.0-beta.3",
   "url": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfFacharztgruppeCS",
   "concept": [
     {
@@ -32,7 +33,6 @@
       "display": "Sonstiges"
     }
   ],
-  "version": "1.0.0-beta.1",
   "experimental": false,
   "publisher": "ELFA Maßnahme Interoperabilität",
   "date": "2025-09-05",

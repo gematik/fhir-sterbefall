@@ -2,6 +2,10 @@
 
 #### [de.gematik.sterbefall](https://simplifier.net/packages/de.gematik.sterbefall)
 
+### Version 1.0.0-beta.3
+
+* fix: Bundle Example attachment.data syntax
+
 ### Version 1.0.0-beta.2
 
 * Profil `StfVerstorbenePerson`: Identifier-Slicing in das RuleSet `Patient-identifier` ueberfuehrt und `active` sowie `address` als Must-Support hervorgehoben, damit Pflichtangaben klar dokumentiert sind.

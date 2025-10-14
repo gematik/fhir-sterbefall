@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "StfExportBundle",
   "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportBundle",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.3",
   "name": "StfExportBundle",
   "title": "STF Export Bundle",
   "status": "active",
