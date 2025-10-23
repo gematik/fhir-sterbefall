@@ -70,7 +70,7 @@ RuleSet: Patient-identifier
   * system MS
     * ^comment = "Im Rahmen des Projektes wurde kein NamingSystem festgelegt. Aus diesem Grund ist die Angabe eines type verpflichtend."
   * value 1.. MS
-    ^comment = "Hier ist der Identifier selber angegeben. Diese Angabe ist verpflichtend."
+    * ^comment = "Hier ist der Identifier selber angegeben. Diese Angabe ist verpflichtend."
   * assigner MS
     * ^short = "Gesundheitsamt"
     * ^comment = "Entweder wird die Referenz auf ein Gesundheitsamt, oder der display des Gesundheitsamt angegeben."
