@@ -13,3 +13,9 @@ Die FHIR-Spezifikation für den Sterbefall ist für verschiedene Akteure im Gesu
 
 
 Die Interaktionen zwischen diesen Akteuren erfolgen in erster Linie über den Datenaustausch. Die Gesundheitsämter sammeln und verwalten die Daten zum Sterbefall, Ärzte führen Untersuchungen durch und dokumentieren die Ergebnisse digital. Landeskrebregister erhalten Zugang zu den Gesundheitsdaten der verstorbenen Krebspatienten und verarbeiten diese im Rahmen ihres gesetzlichen Auftrags.
+
+### Workflow-Abbildung
+
+Zum besseren Verständnis wurde der Workflow, der in diesem IG beschrieben ist, in folgendem Diagramm visualisiert:
+
+{{render:Images/Workflow.png}}
