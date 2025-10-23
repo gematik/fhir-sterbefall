@@ -105,3 +105,4 @@ jobs:
           committer_email: ActionBot@github.com
           add: Resources/fsh-generated/resources/
           message: auto-generated FHIR files by GitHub Actions (CI FSH to FHIR Validation)
+          push: origin HEAD:${{ github.ref_name }}
