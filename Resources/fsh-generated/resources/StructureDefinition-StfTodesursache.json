@@ -89,7 +89,7 @@
       {
         "id": "Observation.dataAbsentReason",
         "path": "Observation.dataAbsentReason",
-        "comment": "Todesart ungeklärt\r\nWenn Todesart = ungeklärt ODER\r\n= schwebende Ermittlung\r\ndann j\r\nsonst n",
+        "comment": "Todesart ungeklärt\nWenn Todesart = ungeklärt ODER\n= schwebende Ermittlung\ndann j\nsonst n",
         "mustSupport": true
       },
       {
@@ -183,7 +183,7 @@
         "id": "Observation.component:NichtNatuerlicherTod",
         "path": "Observation.component",
         "sliceName": "NichtNatuerlicherTod",
-        "comment": "Anhaltspunkte für einen nicht-natürlichen Tod\r\n\r\nWenn Todesart = natürlich, \r\ndann n\r\n\r\nWenn Todesart =  nicht natürlich ODER \r\n= Tötung ODER \r\n= Selbsttötung ODER \r\n= Unfall ODER\r\n= Komplikationen medizinischer Behandlungen ODER\r\n= Ereignis, dessen nähere Umstände unbestimmt dann j \r\n\r\nWenn Todesart = leer, \r\ndann ka;",
+        "comment": "Anhaltspunkte für einen nicht-natürlichen Tod\n\nWenn Todesart = natürlich, \ndann n\n\nWenn Todesart =  nicht natürlich ODER \n= Tötung ODER \n= Selbsttötung ODER \n= Unfall ODER\n= Komplikationen medizinischer Behandlungen ODER\n= Ereignis, dessen nähere Umstände unbestimmt dann j \n\nWenn Todesart = leer, \ndann ka;",
         "min": 0,
         "max": "1",
         "mustSupport": true
