@@ -18,4 +18,4 @@ Die Interaktionen zwischen diesen Akteuren erfolgen in erster Linie über den Da
 
 Zum besseren Verständnis wurde der Workflow, der in diesem IG beschrieben ist, in folgendem Diagramm visualisiert:
 
-{{render:stf-krebsregister-informationsmodell}}
+{{render:images-workflow}}
