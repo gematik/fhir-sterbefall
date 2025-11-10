@@ -18,3 +18,6 @@ Usage: #example
 * entry[+]
   * insert ExampleFullUrl(Observation, Todesursache-3-HE1)
   * resource = Todesursache-3-HE1
+* entry[+]
+  * insert ExampleFullUrl(Observation, StfObservationKrebserkrankung-HE1)
+  * resource = StfObservationKrebserkrankung-HE1
