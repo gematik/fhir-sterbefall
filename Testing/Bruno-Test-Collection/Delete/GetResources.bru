@@ -1,0 +1,65 @@
+meta {
+  name: GetResources
+  type: http
+  seq: 4
+  tags: [
+    kr
+  ]
+}
+
+post {
+  url: {{host}}/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {{deleteBatchRequestBody}}
+}
+
+script:pre-request {
+  const step1 = bru.getVar("Persistence_Step1");
+  
+  if (step1 !== "success") {
+    throw new Error("[SKIP] Dependency Request Step 1 failed — skipping execution.");
+  }
+}
+
+tests {
+  test("DELETE: All batch-response entries are 410 Gone", () => {
+    const body = res.getBody();
+  
+    expect(body.resourceType).to.equal("Bundle");
+    expect(body.type).to.equal("batch-response");
+    expect(body.entry).to.be.an("array").that.is.not.empty;
+  
+    const entries = body.entry || [];
+  
+    // Sammle alle Statuscodes und finde die, die NICHT 410 Gone sind
+    const nonGone = entries
+      .map((e, idx) => ({
+        index: idx,
+        status: e.response?.status || "(missing)"
+      }))
+      .filter(e => e.status !== "410 Gone");
+  
+    console.log("🔎 Gefundene Statuscodes:", entries.map(e => e.response?.status));
+  
+    expect(
+      nonGone.length,
+      nonGone.length > 0
+        ? `Erwarte für alle Einträge Status "410 Gone", aber folgende sind anders: ` +
+          nonGone
+            .map(e => `Entry[${e.index}]: ${e.status}`)
+            .join(", ")
+        : "Alle Einträge sind 410 Gone."
+    ).to.equal(0);
+  
+    console.log("✅ Alle Einträge im batch-response sind 410 Gone.");
+  });
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
