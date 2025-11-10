@@ -3,7 +3,6 @@ InstanceOf: StfExportBundle
 Usage: #example
 * type = #collection
 * timestamp = "2025-01-01T01:17:00+01:00"
-
 * entry[+]
   * insert ExampleFullUrl(Patient, StfVerstorbenePerson-HE1)
   * resource = StfVerstorbenePerson-HE1
