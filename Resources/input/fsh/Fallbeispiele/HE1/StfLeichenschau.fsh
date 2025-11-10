@@ -1,0 +1,7 @@
+Instance: StfLeichenschau-HE1
+InstanceOf: StfLeichenschau
+Usage: #example
+* status = #completed
+* code = $sct#29240004 "Postmortem examination"
+* performedDateTime = "2023-07-15T11:00:00+01:00"
+* subject.reference = "VerstorbenePerson-HE1"
