@@ -5,8 +5,8 @@ Usage: #example
 * identifier[Sterbebuchnummer].system = "urn:gesundheitsamt:sterbebuch"
 * identifier[Sterbebuchnummer].value = "S183/2025"
 * name[name].use = #official
-* name[name].family = "Birgit"
-* name[name].given = "Strauch"
+* name[name].family = "Strauch"
+* name[name].given = "Birgit"
 * gender = #female
 * birthDate = "1934-05-23"
 * deceasedDateTime = "2025-09-23T09:42:00+01:00"
