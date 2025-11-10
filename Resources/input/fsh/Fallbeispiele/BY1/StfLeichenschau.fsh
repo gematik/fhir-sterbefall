@@ -1,7 +1,5 @@
 Instance: StfLeichenschau-Test-BY1
 InstanceOf: StfLeichenschau
-Title: "Leichenschau Beispielinstanz"
-Description: "Datum und Uhrzeit der Leichenschau"
 Usage: #example
 * status = #completed
 * code = $sct#29240004 "Postmortem examination"
