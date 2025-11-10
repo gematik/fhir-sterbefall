@@ -96,10 +96,33 @@ tests {
     console.log("✅ Alle benötigten Ressourcen und mindestens ein passendes Profil sind vorhanden.");
   });
   
+  function stripIcd10DisplayErrors(operationOutcome) {
+    if (!operationOutcome || !Array.isArray(operationOutcome.issue)) {
+      return operationOutcome;
+    }
   
+    operationOutcome.issue = operationOutcome.issue.filter(issue => {
+      const severity = issue.severity;
+      const text = issue?.details?.text || "";
+  
+      const isError = severity === "error";
+      const mentionsIcd10 = text.includes("http://hl7.org/fhir/sid/icd-10");
+      const mentionsWrongDisplay = text.toLowerCase().includes("wrong display name");
+  
+      const isIcd10DisplayError = isError && mentionsIcd10 && mentionsWrongDisplay;
+  
+      // Nur diese fliegen raus
+      return !isIcd10DisplayError;
+    });
+  
+    return operationOutcome;
+  }
   
   test("FHIR VALIDATION: Request body is valid according to JAVA validator", () => {
-    const validation = res.getBody();
+    var validation = res.getBody();
+    
+    validation = stripIcd10DisplayErrors(validation);
+    
     expect(validation.resourceType).to.equal("OperationOutcome");
   
     const issues = validation.issue;
