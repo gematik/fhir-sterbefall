@@ -1,0 +1,28 @@
+meta {
+  name: Valid Auth
+  type: http
+  seq: 1
+  tags: [
+    ga
+    kr
+  ]
+}
+
+post {
+  url: {{host}}/$receiveBundle
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {{validExportBundle}}
+}
+
+assert {
+  res.status: eq 200
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

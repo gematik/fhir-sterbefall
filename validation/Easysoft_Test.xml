@@ -1,0 +1,459 @@
+﻿<Bundle xmlns="http://hl7.org/fhir">
+  <id value="ExportBundleExample" />
+  <meta>
+    <profile value="http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportBundle" />
+  </meta>
+  <type value="collection" />
+  <timestamp value="2025-10-20T13:00:03+02:00" />
+  <entry>
+    <fullUrl value="https://mein.fhir-server.local/fhir/PractitionerRole/StfArztZuordnungExample" />
+    <resource>
+      <PractitionerRole>
+        <id value="StfArztZuordnungExample" />
+        <meta>
+          <profile value="http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArztZuordnung" />
+        </meta>
+        <practitioner>
+          <reference value="Practitioner/StfArztExample" />
+        </practitioner>
+        <organization>
+          <reference value="Organization/StfOrganisationExample" />
+        </organization>
+        <specialty>
+          <coding>
+            <system value="http://gematik.de/fhir/oegd/stf/CodeSystem/StfFacharztgruppeCS" />
+            <code value="Krankenhausarzt" />
+            <display value="diensthabender Arzt/Ärztin im Krankenhaus" />
+          </coding>
+        </specialty>
+      </PractitionerRole>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://mein.fhir-server.local/fhir/Practitioner/StfArztExample" />
+    <resource>
+      <Practitioner>
+        <id value="StfArztExample" />
+        <meta>
+          <profile value="http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArzt" />
+        </meta>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztIdentifierType" />
+              <code value="ArztId" />
+            </coding>
+          </type>
+          <system value="https://example.de/arztliste" />
+          <value value="123456" />
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+              <code value="LANR" />
+            </coding>
+          </type>
+          <system value="https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR" />
+          <value value="987654321" />
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztIdentifierType" />
+              <code value="Zulassungsnr" />
+            </coding>
+          </type>
+          <system value="https://example.de/zulassung" />
+          <value value="ZUL123456" />
+        </identifier>
+        <name>
+          <use value="official" />
+          <text value="Dr. med. Hans Müller" />
+          <family value="Müller" />
+          <given value="Hans" />
+          <prefix value="Dr. med.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+              <valueCode value="AC" />
+            </extension>
+          </prefix>
+        </name>
+        <telecom>
+          <system value="phone" />
+          <value value="+49-123-456789" />
+        </telecom>
+        <telecom>
+          <system value="fax" />
+          <value value="+49-123-456788" />
+        </telecom>
+        <address>
+          <type value="both" />
+          <line value="Hauptstraße 1">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+              <valueString value="Hauptstraße" />
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+              <valueString value="1" />
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+              <valueString value="EG" />
+            </extension>
+          </line>
+          <city value="Musterstadt" />
+          <postalCode value="12345" />
+          <country value="DE" />
+        </address>
+        <qualification>
+          <code>
+            <coding>
+              <system value="http://gematik.de/fhir/oegd/stf/CodeSystem/StfBerufsgruppeCS" />
+              <code value="Krankenhaus" />
+              <display value="Krankenhaus" />
+            </coding>
+          </code>
+        </qualification>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://mein.fhir-server.local/fhir/DocumentReference/StfDateiExample" />
+    <resource>
+      <DocumentReference>
+        <id value="StfDateiExample" />
+        <meta>
+          <profile value="http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDatei" />
+        </meta>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+              <code value="PI" />
+              <display value="Patient internal identifier" />
+            </coding>
+          </type>
+          <value value="S4567/2025" />
+        </identifier>
+        <status value="current" />
+        <type>
+          <coding>
+            <system value="http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS" />
+            <code value="Sterbeurkunde" />
+            <display value="Sterbeurkunde" />
+          </coding>
+        </type>
+        <subject>
+          <reference value="Patient/StfVerstorbenePersonExample" />
+          <display value="Dr. Erika Müller" />
+        </subject>
+        <date value="2023-07-15T10:30:00+02:00" />
+        <author>
+          <reference value="Organization/StfOrganisationExample" />
+          <display value="Standesamt Berlin-Mitte" />
+        </author>
+        <content>
+          <attachment>
+            <contentType value="application/pdf" />
+            <data value="U3RlcmJldXJrdW5kZSBTNDU2Ny8yMDI1" />
+          </attachment>
+        </content>
+      </DocumentReference>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://mein.fhir-server.local/fhir/Procedure/StfLeichenschauExample" />
+    <resource>
+      <Procedure>
+        <id value="StfLeichenschauExample" />
+        <meta>
+          <profile value="http://gematik.de/fhir/oegd/stf/StructureDefinition/StfLeichenschau" />
+        </meta>
+        <status value="completed" />
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="29240004" />
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/StfVerstorbenePersonExample" />
+        </subject>
+        <performedDateTime value="2025-03-01T10:00:00+01:00" />
+        <performer>
+          <actor>
+            <reference value="Practitioner/DrErikaMueller" />
+          </actor>
+        </performer>
+      </Procedure>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://mein.fhir-server.local/fhir/Organization/StfOrganisationExample" />
+    <resource>
+      <Organization>
+        <id value="StfOrganisationExample" />
+        <meta>
+          <profile value="http://gematik.de/fhir/oegd/stf/StructureDefinition/StfOrganisation" />
+        </meta>
+        <extension url="http://gematik.de/fhir/oegd/stf/StructureDefinition/StfPruefcodeExtension">
+          <valueString value="PCODE98765" />
+        </extension>
+        <identifier>
+          <system value="https://fhir.gematik.de/sid/standesamt" />
+          <value value="SA12345" />
+        </identifier>
+        <type>
+          <coding>
+            <system value="http://gematik.de/fhir/oegd/stf/ValueSet/StfOrganisationsTypVS" />
+            <code value="standesamt" />
+            <display value="Standesamt" />
+          </coding>
+        </type>
+        <name value="Standesamt Musterstadt" />
+        <address>
+          <extension url="http://gematik.de/fhir/oegd/stf/StructureDefinition/StfBundeslandExtension">
+            <valueCoding>
+              <code value="DE-NW" />
+              <display value="Nordrhein-Westfalen" />
+            </valueCoding>
+          </extension>
+          <type value="both" />
+          <line value="Rathausplatz 1" />
+          <city value="Musterstadt" />
+          <postalCode value="12345" />
+          <country value="DE" />
+        </address>
+        <partOf>
+          <reference value="Organization/StadtKoeln" />
+          <display value="Stadt Köln" />
+        </partOf>
+        <contact>
+          <name>
+            <use value="official" />
+            <text value="Max Mustermann" />
+            <family value="Mustermann" />
+            <given value="Max" />
+          </name>
+          <telecom>
+            <system value="phone" />
+            <value value="+49 123 456789" />
+            <use value="work" />
+          </telecom>
+          <telecom>
+            <system value="email" />
+            <value value="max.mustermann@standesamt-musterstadt.de" />
+            <use value="work" />
+          </telecom>
+        </contact>
+      </Organization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://mein.fhir-server.local/fhir/Provenance/StfSterbeurkundeAusstellungExample" />
+    <resource>
+      <Provenance>
+        <id value="StfSterbeurkundeAusstellungExample" />
+        <meta>
+          <profile value="http://gematik.de/fhir/oegd/stf/StructureDefinition/StfSterbeurkundeAusstellung" />
+        </meta>
+        <target>
+          <reference value="Patient/StfVerstorbenePersonExample" />
+        </target>
+        <recorded value="2023-10-15T14:28:00+00:00" />
+        <reason>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason" />
+            <code value="DECSD" />
+          </coding>
+        </reason>
+        <activity>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion" />
+            <code value="LA" />
+          </coding>
+        </activity>
+        <agent>
+          <who>
+            <reference value="Organization/StfOrganisationExample" />
+          </who>
+        </agent>
+      </Provenance>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://mein.fhir-server.local/fhir/Observation/StfTodesursacheExample" />
+    <resource>
+      <Observation>
+        <id value="StfTodesursacheExample" />
+        <meta>
+          <profile value="http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache" />
+        </meta>
+        <status value="final" />
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="184305005" />
+            <display value="Cause of Death" />
+          </coding>
+        </code>
+        <subject>
+          <reference value="Patient/StfVerstorbenePersonExample" />
+          <display value="Hans Mustermann" />
+        </subject>
+        <effectiveDateTime value="2025-10-21" />
+        <performer>
+          <reference value="Practitioner/StfArztExample" />
+        </performer>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://hl7.org/fhir/sid/icd-10" />
+            <version value="2023" />
+            <code value="I21.0" />
+            <display value="Akuter transmuraler Myokardinfarkt der Vorderwand" />
+          </coding>
+        </valueCodeableConcept>
+        <note>
+          <text value="Patient erlitt einen massiven Herzinfarkt nach längerer kardialer Vorgeschichte mit koronarer Herzkrankheit und Bluthochdruck." />
+        </note>
+        <hasMember>
+          <extension url="http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS" />
+                <code value="TU3" />
+                <display value="Todesursache 3" />
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <reference value="Observation/TodesursacheGrundleiden" />
+        </hasMember>
+        <component>
+          <code>
+            <coding>
+              <system value="http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS" />
+              <code value="nichtNatuerlicherTod" />
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0532" />
+              <code value="N" />
+              <display value="Nein" />
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS" />
+              <code value="todesursacheKlassifikation" />
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://hl7.org/fhir/sid/icd-10" />
+              <version value="2023" />
+              <code value="I25.1" />
+              <display value="Atherosklerose des Herzens" />
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS" />
+              <code value="quelle" />
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS" />
+              <code value="Obduktionsschein" />
+            </coding>
+          </valueCodeableConcept>
+        </component>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://mein.fhir-server.local/fhir/Patient/StfVerstorbenePersonExample" />
+    <resource>
+      <Patient>
+        <id value="StfVerstorbenePersonExample" />
+        <meta>
+          <profile value="http://gematik.de/fhir/oegd/stf/StructureDefinition/StfVerstorbenePerson" />
+        </meta>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+              <code value="PI" />
+              <display value="Patient internal identifier" />
+            </coding>
+          </type>
+          <value value="GA78901" />
+          <assigner>
+            <display value="Gesundheitsamt Musterstadt" />
+          </assigner>
+        </identifier>
+        <identifier>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+              <code value="DC" />
+              <display value="Death Certificate ID" />
+            </coding>
+          </type>
+          <value value="S4567/2025" />
+        </identifier>
+        <name>
+          <use value="official" />
+          <family value="Müller" />
+          <given value="Erika" />
+          <prefix value="Dr.">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+              <valueCode value="AC" />
+            </extension>
+          </prefix>
+        </name>
+        <name>
+          <use value="maiden" />
+          <family value="Schmidt" />
+        </name>
+        <gender value="female" />
+        <birthDate value="1945-03-15" />
+        <deceasedDateTime value="2025-03-01T08:30:00+01:00" />
+        <address>
+          <extension url="http://gematik.de/fhir/oegd/stf/StructureDefinition/StfGemeindekennzahlExtension">
+            <extension url="Bundesland">
+              <valueInteger value="5" />
+            </extension>
+            <extension url="Regierungsbezirk">
+              <valueInteger value="1" />
+            </extension>
+            <extension url="Landkreis">
+              <valueInteger value="62" />
+            </extension>
+            <extension url="Gemeinde">
+              <valueInteger value="14" />
+            </extension>
+          </extension>
+          <type value="both" />
+          <line value="Musterweg 123">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+              <valueString value="Musterweg" />
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+              <valueString value="123" />
+            </extension>
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+              <valueString value="2. Stock" />
+            </extension>
+          </line>
+          <city value="Musterstadt" />
+          <postalCode value="12345" />
+          <country value="DE" />
+        </address>
+      </Patient>
+    </resource>
+  </entry>
+</Bundle>

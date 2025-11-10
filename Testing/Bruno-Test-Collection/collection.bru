@@ -1,0 +1,176 @@
+auth {
+  mode: basic
+}
+
+auth:basic {
+  username: 
+  password: 
+}
+
+vars:pre-request {
+  ~host: http://localhost:8080/fhir
+}
+
+docs {
+  # 🧪 Bruno Test Collection – Dokumentation
+  
+  ## Übersicht
+  
+  Diese Sammlung wurde für die Validierung und Testung von FHIR-Endpunkten (insbesondere `$receiveBundle` und `Patient`-Ressourcen) konzipiert.  
+  Sie deckt **Authentifizierung**, **Validierung**, **Fehlerbehandlung**, **Persistenz** und **mehrfache Request-Szenarien** ab.  
+  Die Tests wurden in **Bruno** (einem API-Testtool ähnlich wie Postman) erstellt und verwenden überwiegend FHIR-spezifische Assertions.
+  
+  ---
+  
+  ## 🌍 Umgebungsvariablen
+  
+  | Variable | Beschreibung | Beispielwert |
+  |-----------|---------------|---------------|
+  | `host` | Basis-URL des FHIR-Servers | `http://localhost:8080/fhir` |
+  | `validExportBundle` | JSON des gültigen STF-ExportBundles (wird in Tests eingebunden) | Siehe „Input-Data“ |
+  
+  ---
+  
+  ##Vorgehen
+  
+  Die folgenden Schritte sind für die Ausführung der Tests notwendig.
+  
+  1. Auf oberster Ebene der 'Bruno-Test-Collection'
+    - Unter 'Vars' `host` richtig setzen
+    - Unter 'Auth' Basic-Auth Benutzer und Kennwort setzen
+  2. (optional) Im Request des Ordner 'Input-Data' ein eigenes, valides Bundle hinzufügen
+  3. Rechtsklick auf 'Bruno-Test-Collection' und 'Run'
+    - hier 'Filter requests with tag' anhaken
+    - `ga` oder `kr` als Included Tag setzen, je nach Ort der Ausführung
+    - das jeweils andere als Excluded Tag setzen
+    - Wichtig! Nach eingabe des Tag noch Enter drücken, damit der Tag eingeloggt ist
+  4. 'Run collection' klicken 
+  
+  ---
+  
+  ## 📂 Struktur der Collection
+  
+  ### 1. **Input-Data**
+  
+  Beinhaltet das vollständige und valide Beispiel-ExportBundle (`Complete and Valid Export-Bundle.bru`).
+  
+  - **Zweck:** Bereitstellung eines korrekt aufgebauten Bundles mit allen benötigten STF-Ressourcen.
+  - **Ressourcen enthalten:**
+    - Practitioner, PractitionerRole, Organization, Patient, Observation, Procedure, Provenance, DocumentReference
+  - **Verwendung:** Das Bundle wird über `bru.setVar("validExportBundle")` für nachfolgende Tests gespeichert.
+  
+  > Hier können Hersteller ihre selbst erzeugten Export-Bundle hinterlegen.
+  
+  ---
+  
+  ### 2. **Basic Auth**
+  
+  Prüft Zugriff auf `/Patient`-Endpoint mit verschiedenen Authentifizierungsvarianten.
+  
+  | Testname | Beschreibung | Erwarteter Status |
+  |-----------|---------------|------------------|
+  | `Valid Auth` | Zugriff mit korrekten Basic-Auth-Daten | `200 OK` |
+  | `Wrong Auth` | Zugriff mit falschen Zugangsdaten | `401 Unauthorized` |
+  | `Only $receiveBundle accessible` | Testet eingeschränkten Zugriff und prüft strukturierte Response (`Bundle` oder `OperationOutcome`) | `401` oder `200` |
+  
+  Besonderheit: Enthält strukturierte Validierung für unterschiedliche `resourceType`-Antworten und Logging für `OperationOutcome`-Issues.
+  
+  > Die Zugangsdaten könenn auf oberster Ebene der Collection gesetzt werden.
+  
+  ---
+  
+  ### 3. **Validation**
+  
+  Prüft die Validität eines FHIR-Bundles gegen lokale und definierte STF-Profile.
+  
+  - **Endpoint:** `http://localhost:8080/validateResource`
+  - **Tests:**
+    - Prüft Vorhandensein aller erforderlichen Ressourcen (`Patient`, `Practitioner`, `Organization`, …)
+    - Validiert Profilzuweisungen in `meta.profile`
+    - Bewertet HAPI-Validator-Ausgabe (`OperationOutcome`)
+  - **Erwartetes Ergebnis:** Keine Fehler (`error`) in der Antwort, maximal `warning`.
+  
+  > In der Zip mit den Testdaten ist validation.ps1, mit der ein lokaler JAVA Validierungs Client heruntergeladen und gestartet werden kann. (nur für Windows)
+  
+  ---
+  
+  ### 4. **$receiveBundle Tests**
+  
+  Testet verschiedene Szenarien für den `$receiveBundle`-Endpunkt:
+  
+  | Testname | Beschreibung | Erwarteter Status |
+  |-----------|---------------|------------------|
+  | `Erfolgsfall Bundle` | Sendet korrektes Bundle und prüft vollständige Transaktion | `200 OK` |
+  | `Fehlerfall ungültiger JSON` | Ungültige JSON-Struktur – HAPI-Fehler `HAPI-0450` erwartet | `400 Bad Request` |
+  | `Fehlerfall fehlende Referenz` | Referenzierte Ressource fehlt – HAPI-Fehler `HAPI-1094` erwartet | `422 Unprocessable Entity` |
+  | `Fehlerfall Attachment` | Attachment ohne Base64-Daten – prüft OperationOutcome mit `DocumentReference.content.attachment.data` | `422 Unprocessable Entity` |
+  
+  ---
+  
+  ### 5. **$receiveBundle – send two times the same**
+  
+  Simuliert wiederholtes Senden des gleichen Bundles.
+  
+  - **1st try:** Erwartet erfolgreichen `201 Created`-Response für jede Ressource.
+  - **2nd try:** Wiederholter Versand – validiert korrekte Reaktion des Servers (erneute erfolgreiche Verarbeitung ohne Dublettenfehler).
+  
+  Tests vergleichen Anzahl von Anfrage- und Antwort-Entries und überprüfen Status-Codes.
+  
+  ---
+  
+  ### 6. **Persistence**
+  
+  Testet Speicherung und Wiederabruf gesendeter Daten.
+  
+  #### Schritt 1 – `Erfolgsfall Bundle`
+  - Sendet Bundle an `$receiveBundle`.
+  - Extrahiert erzeugte Ressourcen-URLs aus `transaction-response`.
+  - Baut daraus ein `batch`-Bundle für den Folge-Request.
+  - Speichert `batchRequestBody` für Wiederverwendung.
+  
+  #### Schritt 2 – `GetResources`
+  - Sendet gespeichertes Batch-Bundle.
+  - Prüft:
+    - `Bundle.type = batch-response`
+    - Alle angefragten Ressourcen werden zurückgegeben.
+  
+  ---
+  
+  ## ✅ Wichtige Assertions und Testlogik
+  
+  | Typ | Beschreibung |
+  |------|---------------|
+  | `res.status eq <code>` | Erwarteter HTTP-Status |
+  | `expect(resourceType).to.equal("OperationOutcome")` | Validierung FHIR-Response |
+  | Vergleich von `entry.length` zwischen Request und Response | Konsistenzprüfung |
+  | Prüfungen auf `meta.profile` | Validierung STF-konformer Profile |
+  | Dynamische Variablen (`bru.setVar`, `bru.getVar`) | Zustand zwischen Requests |
+  
+  ---
+  
+  ## 🧩 Besondere technische Merkmale
+  
+  - **Bruno-spezifische Features:**
+    - Nutzung von `bru.setVar` / `bru.getVar` für Zwischenspeicherung.
+    - Automatische Weitergabe von Variablen zwischen Requests.
+  - **FHIR-Spezifika:**
+    - Nutzung offizieller STF-Profile (`StfVerstorbenePerson`, `StfArzt`, `StfDatei`, usw.).
+    - Strukturierte Prüfung auf `Bundle`, `OperationOutcome`, `transaction-response`, etc.
+  - **Error Handling:**
+    - Validiert gezielt bekannte HAPI-Fehlercodes (`HAPI-0450`, `HAPI-1094`).
+  
+  ---
+  
+  ## 🔎 Zusammenfassung
+  
+  Diese Bruno-Collection ermöglicht eine umfassende End-to-End-Validierung des `$receiveBundle`-Workflows im FHIR-Kontext.  
+  Sie deckt folgende Aspekte ab:
+  
+  - **Authentifizierung**
+  - **Validität des Bundles und Profiles**
+  - **Fehlerbehandlung**
+  - **Persistenz- und Wiederholtests**
+  
+  Damit dient sie als **automatisierte Qualitätssicherung** für FHIR-basierte Übertragungen im STF-Kontext der Gematik.
+  
+}

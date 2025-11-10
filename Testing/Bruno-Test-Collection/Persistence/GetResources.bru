@@ -1,0 +1,69 @@
+meta {
+  name: GetResources
+  type: http
+  seq: 2
+  tags: [
+    kr
+  ]
+}
+
+post {
+  url: {{host}}/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {{batchRequestBody}}
+}
+
+script:pre-request {
+  const step1 = bru.getVar("Persistence_Step1");
+  
+  if (step1 !== "success") {
+    throw new Error("[SKIP] Dependency Request Step 1 failed — skipping execution.");
+  }
+}
+
+tests {
+  test("RESPONSE: Correct Bundle Type", () => {
+    const jsonData = res.getBody();
+    const bundleType = jsonData.type;
+  
+    expect(bundleType).to.equal("batch-response");
+  });
+  
+  test("RESPONSE: All requested resources are returned", () => {
+    const requestData = req.getBody();
+    const responseData = res.getBody();
+  
+    expect(requestData.resourceType).to.equal("Bundle");
+    expect(requestData.type).to.equal("batch");
+    expect(responseData.resourceType).to.equal("Bundle");
+    expect(responseData.type).to.equal("batch-response");
+  
+    const requestedUrls = requestData.entry
+      .map(e => e.request?.url)
+      .filter(Boolean)
+      .map(url => url.replace(/^\//, ""));
+  
+    const returnedUrls = responseData.entry
+      .map(e => e.resource ? `${e.resource.resourceType}/${e.resource.id}` : null)
+      .filter(Boolean);
+  
+    const missing = requestedUrls.filter(url => !returnedUrls.includes(url));
+  
+    expect(
+      missing.length,
+      `❌ Missing resources in response: ${missing.join(", ")}`
+    ).to.equal(0);
+  
+    console.log(`✅ All ${requestedUrls.length} requested resources were returned.`);
+  });
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

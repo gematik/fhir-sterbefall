@@ -1,0 +1,29 @@
+meta {
+  name: Wrong Auth
+  type: http
+  seq: 2
+  tags: [
+    ga
+    kr
+  ]
+}
+
+get {
+  url: {{host}}/Patient
+  body: none
+  auth: basic
+}
+
+auth:basic {
+  username: wrong
+  password: definitely wrong
+}
+
+assert {
+  res.status: eq 401
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

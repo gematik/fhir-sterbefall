@@ -1,0 +1,646 @@
+meta {
+  name: Complete and Valid Export-Bundle
+  type: http
+  seq: 1
+  tags: [
+    ga
+    kr
+  ]
+}
+
+get {
+  url: {{host}}/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "resourceType": "Bundle",
+    "id": "ExportBundleExample",
+    "meta": {
+      "profile": [
+        "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportBundle"
+      ]
+    },
+    "entry": [
+      {
+        "fullUrl": "urn:uuid:41afdf2a-a1ab-483a-ae30-f4302c5bef46",
+        "resource": {
+          "resourceType": "PractitionerRole",
+          "id": "41afdf2a-a1ab-483a-ae30-f4302c5bef46",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArztZuordnung"
+            ]
+          },
+          "specialty": [
+            {
+              "coding": [
+                {
+                  "code": "Krankenhausarzt",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfFacharztgruppeCS",
+                  "display": "diensthabender Arzt/Ärztin im Krankenhaus"
+                }
+              ]
+            }
+          ],
+          "practitioner": {
+            "reference": "urn:uuid:f55058d9-ea20-482b-8ec6-045be8ac69f1"
+          },
+          "organization": {
+            "reference": "urn:uuid:1147216d-4e9f-4ffc-9a10-1b79bd667277"
+          }
+        }
+      },
+      {
+        "fullUrl": "urn:uuid:f55058d9-ea20-482b-8ec6-045be8ac69f1",
+        "resource": {
+          "resourceType": "Practitioner",
+          "id": "f55058d9-ea20-482b-8ec6-045be8ac69f1",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArzt"
+            ]
+          },
+          "identifier": [
+            {
+              "type": {
+                "coding": [
+                  {
+                    "code": "ArztId",
+                    "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztIdentifierType"
+                  }
+                ]
+              },
+              "system": "https://example.de/arztliste",
+              "value": "123456"
+            },
+            {
+              "type": {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                    "code": "LANR"
+                  }
+                ]
+              },
+              "system": "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR",
+              "value": "987654321"
+            },
+            {
+              "type": {
+                "coding": [
+                  {
+                    "code": "Zulassungsnr",
+                    "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztIdentifierType"
+                  }
+                ]
+              },
+              "system": "https://example.de/zulassung",
+              "value": "ZUL123456"
+            }
+          ],
+          "name": [
+            {
+              "given": [
+                "Hans"
+              ],
+              "prefix": [
+                "Dr. med."
+              ],
+              "_prefix": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                      "valueCode": "AC"
+                    }
+                  ]
+                }
+              ],
+              "use": "official",
+              "text": "Dr. med. Hans Müller",
+              "family": "Müller"
+            }
+          ],
+          "address": [
+            {
+              "line": [
+                "Hauptstraße 1"
+              ],
+              "_line": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                      "valueString": "Hauptstraße"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                      "valueString": "1"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
+                      "valueString": "EG"
+                    }
+                  ]
+                }
+              ],
+              "type": "both",
+              "city": "Musterstadt",
+              "postalCode": "12345",
+              "country": "DE"
+            }
+          ],
+          "telecom": [
+            {
+              "system": "phone",
+              "value": "+49-123-456789"
+            },
+            {
+              "system": "fax",
+              "value": "+49-123-456788"
+            }
+          ],
+          "qualification": [
+            {
+              "code": {
+                "coding": [
+                  {
+                    "code": "Krankenhaus",
+                    "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfBerufsgruppeCS",
+                    "display": "Krankenhaus"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "fullUrl": "urn:uuid:cabda3e0-609f-4549-83ec-a9883f754f2e",
+        "resource": {
+          "resourceType": "DocumentReference",
+          "id": "cabda3e0-609f-4549-83ec-a9883f754f2e",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDatei"
+            ]
+          },
+          "identifier": [
+            {
+              "type": {
+                "coding": [
+                  {
+                    "code": "PI",
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                    "display": "Patient internal identifier"
+                  }
+                ]
+              },
+              "value": "S4567/2025"
+            }
+          ],
+          "author": [
+            {
+              "reference": "urn:uuid:1147216d-4e9f-4ffc-9a10-1b79bd667277",
+              "display": "Standesamt Berlin-Mitte"
+            }
+          ],
+          "content": [
+            {
+              "attachment": {
+                "contentType": "application/pdf",
+                "data": "U3RlcmJldXJrdW5kZSBTNDU2Ny8yMDI1"
+              }
+            }
+          ],
+          "status": "current",
+          "type": {
+            "coding": [
+              {
+                "code": "Sterbeurkunde",
+                "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS",
+                "display": "Sterbeurkunde"
+              }
+            ]
+          },
+          "subject": {
+            "reference": "urn:uuid:45396da2-34e8-4b57-b2b3-3af03923ed6a",
+            "display": "Dr. Erika Müller"
+          },
+          "date": "2023-07-15T10:30:00+02:00"
+        }
+      },
+      {
+        "fullUrl": "urn:uuid:31773f34-377f-4e46-b353-0f58f42f9637",
+        "resource": {
+          "resourceType": "Procedure",
+          "id": "31773f34-377f-4e46-b353-0f58f42f9637",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfLeichenschau"
+            ]
+          },
+          "subject": {
+            "reference": "urn:uuid:45396da2-34e8-4b57-b2b3-3af03923ed6a"
+          },
+          "code": {
+            "coding": [
+              {
+                "code": "29240004",
+                "system": "http://snomed.info/sct"
+              }
+            ]
+          },
+          "status": "completed",
+          "performedDateTime": "2025-03-01T10:00:00+01:00"
+        }
+      },
+      {
+        "fullUrl": "urn:uuid:1147216d-4e9f-4ffc-9a10-1b79bd667277",
+        "resource": {
+          "resourceType": "Organization",
+          "id": "1147216d-4e9f-4ffc-9a10-1b79bd667277",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfOrganisation"
+            ]
+          },
+          "identifier": [
+            {
+              "system": "https://fhir.gematik.de/sid/standesamt",
+              "value": "SA12345"
+            }
+          ],
+          "type": [
+            {
+              "coding": [
+                {
+                  "system": "http://gematik.de/fhir/oegd/stf/ValueSet/StfOrganisationsTypVS",
+                  "code": "standesamt",
+                  "display": "Standesamt"
+                }
+              ]
+            }
+          ],
+          "address": [
+            {
+              "line": [
+                "Rathausplatz 1"
+              ],
+              "extension": [
+                {
+                  "valueCoding": {
+                    "code": "DE-NW",
+                    "display": "Nordrhein-Westfalen"
+                  },
+                  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfBundeslandExtension"
+                }
+              ],
+              "type": "both",
+              "city": "Musterstadt",
+              "postalCode": "12345",
+              "country": "DE"
+            }
+          ],
+          "contact": [
+            {
+              "name": {
+                "given": [
+                  "Max"
+                ],
+                "use": "official",
+                "text": "Max Mustermann",
+                "family": "Mustermann"
+              },
+              "telecom": [
+                {
+                  "system": "phone",
+                  "value": "+49 123 456789",
+                  "use": "work"
+                },
+                {
+                  "system": "email",
+                  "value": "max.mustermann@standesamt-musterstadt.de",
+                  "use": "work"
+                }
+              ]
+            }
+          ],
+          "partOf": {
+            "display": "Stadt Köln"
+          },
+          "extension": [
+            {
+              "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfPruefcodeExtension",
+              "valueString": "PCODE98765"
+            }
+          ],
+          "name": "Standesamt Musterstadt"
+        }
+      },
+      {
+        "fullUrl": "urn:uuid:69fa4ca2-b7e0-4bc9-80c4-f6d22d18aa12",
+        "resource": {
+          "resourceType": "Provenance",
+          "id": "69fa4ca2-b7e0-4bc9-80c4-f6d22d18aa12",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfSterbeurkundeAusstellung"
+            ]
+          },
+          "target": [
+            {
+              "reference": "urn:uuid:45396da2-34e8-4b57-b2b3-3af03923ed6a"
+            }
+          ],
+          "reason": [
+            {
+              "coding": [
+                {
+                  "code": "DECSD",
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+                }
+              ]
+            }
+          ],
+          "agent": [
+            {
+              "who": {
+                "reference": "urn:uuid:1147216d-4e9f-4ffc-9a10-1b79bd667277"
+              }
+            }
+          ],
+          "activity": {
+            "coding": [
+              {
+                "code": "LA",
+                "system": "http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion"
+              }
+            ]
+          },
+          "recorded": "2023-10-15T14:28:00Z"
+        }
+      },
+      {
+        "fullUrl": "urn:uuid:a8085a69-66a4-478b-8f25-1ee2d0a09090",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "a8085a69-66a4-478b-8f25-1ee2d0a09090",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
+            ]
+          },
+          "performer": [
+            {
+              "reference": "urn:uuid:f55058d9-ea20-482b-8ec6-045be8ac69f1"
+            }
+          ],
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "version": "2023",
+                "code": "I21.0",
+                "display": "Akuter transmuraler Myokardinfarkt der Vorderwand"
+              }
+            ]
+          },
+          "note": [
+            {
+              "text": "Patient erlitt einen massiven Herzinfarkt nach längerer kardialer Vorgeschichte mit koronarer Herzkrankheit und Bluthochdruck."
+            }
+          ],
+          "component": [
+            {
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "N",
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0532",
+                    "display": "Nein"
+                  }
+                ]
+              },
+              "code": {
+                "coding": [
+                  {
+                    "code": "nichtNatuerlicherTod",
+                    "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                  }
+                ]
+              }
+            },
+            {
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/sid/icd-10",
+                    "code": "I25.1",
+                    "display": "Atherosklerose des Herzens",
+                    "version": "2023"
+                  }
+                ]
+              },
+              "code": {
+                "coding": [
+                  {
+                    "code": "todesursacheKlassifikation",
+                    "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                  }
+                ]
+              }
+            },
+            {
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "Obduktionsschein",
+                    "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
+                  }
+                ]
+              },
+              "code": {
+                "coding": [
+                  {
+                    "code": "quelle",
+                    "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                  }
+                ]
+              }
+            }
+          ],
+          "hasMember": [
+            {
+              "extension": [
+                {
+                  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "code": "TU3",
+                        "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
+                        "display": "Todesursache 3"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "status": "final",
+          "code": {
+            "coding": [
+              {
+                "code": "184305005",
+                "system": "http://snomed.info/sct",
+                "display": "Cause of Death"
+              }
+            ]
+          },
+          "subject": {
+            "reference": "urn:uuid:45396da2-34e8-4b57-b2b3-3af03923ed6a",
+            "display": "Max Mustermann"
+          },
+          "effectiveDateTime": "2023-07-10"
+        }
+      },
+      {
+        "fullUrl": "urn:uuid:45396da2-34e8-4b57-b2b3-3af03923ed6a",
+        "resource": {
+          "resourceType": "Patient",
+          "id": "45396da2-34e8-4b57-b2b3-3af03923ed6a",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfVerstorbenePerson"
+            ]
+          },
+          "identifier": [
+            {
+              "type": {
+                "coding": [
+                  {
+                    "code": "PI",
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                    "display": "Patient internal identifier"
+                  }
+                ]
+              },
+              "assigner": {
+                "display": "Gesundheitsamt Musterstadt"
+              },
+              "value": "GA78901"
+            },
+            {
+              "type": {
+                "coding": [
+                  {
+                    "code": "DC",
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                    "display": "Death Certificate ID"
+                  }
+                ]
+              },
+              "value": "S4567/2025"
+            }
+          ],
+          "name": [
+            {
+              "given": [
+                "Erika"
+              ],
+              "prefix": [
+                "Dr."
+              ],
+              "_prefix": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                      "valueCode": "AC"
+                    }
+                  ]
+                }
+              ],
+              "use": "official",
+              "family": "Müller"
+            },
+            {
+              "use": "maiden",
+              "family": "Schmidt"
+            }
+          ],
+          "address": [
+            {
+              "line": [
+                "Musterweg 123"
+              ],
+              "_line": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                      "valueString": "Musterweg"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                      "valueString": "123"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
+                      "valueString": "2. Stock"
+                    }
+                  ]
+                }
+              ],
+              "extension": [
+                {
+                  "extension": [
+                    {
+                      "url": "Bundesland",
+                      "valueInteger": 5
+                    },
+                    {
+                      "url": "Regierungsbezirk",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "Landkreis",
+                      "valueInteger": 62
+                    },
+                    {
+                      "url": "Gemeinde",
+                      "valueInteger": 14
+                    }
+                  ],
+                  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfGemeindekennzahlExtension"
+                }
+              ],
+              "type": "both",
+              "city": "Musterstadt",
+              "postalCode": "12345",
+              "country": "DE"
+            }
+          ],
+          "gender": "female",
+          "birthDate": "1945-03-15",
+          "deceasedDateTime": "2025-03-01T08:30:00+01:00"
+        }
+      }
+    ],
+    "type": "collection",
+    "timestamp": "2023-10-15T14:28:00Z"
+  }
+}
+
+script:pre-request {
+  bru.setVar("validExportBundle", JSON.stringify(req.getBody(), null, 2));
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

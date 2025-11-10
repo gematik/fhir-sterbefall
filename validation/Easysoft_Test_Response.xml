@@ -1,0 +1,468 @@
+<Bundle xmlns="http://hl7.org/fhir">
+    <type value="transaction-response"/>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="PractitionerRole/110/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2025-10-20T13:12:13.923+02:00"/>
+            <outcome>
+                <OperationOutcome xmlns="http://hl7.org/fhir">
+                    <issue>
+                        <severity value="information"/>
+                        <code value="informational"/>
+                        <details>
+                            <coding>
+                                <system value="https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code"/>
+                                <code value="SUCCESSFUL_CREATE"/>
+                                <display value="Create succeeded."/>
+                            </coding>
+                        </details>
+                        <diagnostics value="Successfully created resource &quot;PractitionerRole/110/_history/1&quot;. Took 10ms."/>
+                    </issue>
+                    <issue>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+                            <valueInteger value="1"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+                            <valueInteger value="467"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id">
+                            <valueString value="http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"/>
+                        </extension>
+                        <severity value="warning"/>
+                        <code value="processing"/>
+                        <details>
+                            <coding>
+                                <system value="http://hl7.org/fhir/java-core-messageId"/>
+                                <code value="http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"/>
+                            </coding>
+                        </details>
+                        <diagnostics value="Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)"/>
+                        <location value="PractitionerRole"/>
+                        <location value="Line[1] Col[467]"/>
+                        <expression value="PractitionerRole"/>
+                    </issue>
+                </OperationOutcome>
+            </outcome>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Practitioner/111/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2025-10-20T13:12:13.923+02:00"/>
+            <outcome>
+                <OperationOutcome xmlns="http://hl7.org/fhir">
+                    <issue>
+                        <severity value="information"/>
+                        <code value="informational"/>
+                        <details>
+                            <coding>
+                                <system value="https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code"/>
+                                <code value="SUCCESSFUL_CREATE"/>
+                                <display value="Create succeeded."/>
+                            </coding>
+                        </details>
+                        <diagnostics value="Successfully created resource &quot;Practitioner/111/_history/1&quot;. Took 9ms."/>
+                    </issue>
+                    <issue>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+                            <valueInteger value="1"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+                            <valueInteger value="1605"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id">
+                            <valueString value="http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"/>
+                        </extension>
+                        <severity value="warning"/>
+                        <code value="processing"/>
+                        <details>
+                            <coding>
+                                <system value="http://hl7.org/fhir/java-core-messageId"/>
+                                <code value="http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"/>
+                            </coding>
+                        </details>
+                        <diagnostics value="Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)"/>
+                        <location value="Practitioner"/>
+                        <location value="Line[1] Col[1605]"/>
+                        <expression value="Practitioner"/>
+                    </issue>
+                </OperationOutcome>
+            </outcome>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="DocumentReference/112/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2025-10-20T13:12:13.923+02:00"/>
+            <outcome>
+                <OperationOutcome xmlns="http://hl7.org/fhir">
+                    <issue>
+                        <severity value="information"/>
+                        <code value="informational"/>
+                        <details>
+                            <coding>
+                                <system value="https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code"/>
+                                <code value="SUCCESSFUL_CREATE"/>
+                                <display value="Create succeeded."/>
+                            </coding>
+                        </details>
+                        <diagnostics value="Successfully created resource &quot;DocumentReference/112/_history/1&quot;. Took 8ms."/>
+                    </issue>
+                    <issue>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+                            <valueInteger value="1"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+                            <valueInteger value="799"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id">
+                            <valueString value="http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"/>
+                        </extension>
+                        <severity value="warning"/>
+                        <code value="processing"/>
+                        <details>
+                            <coding>
+                                <system value="http://hl7.org/fhir/java-core-messageId"/>
+                                <code value="http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"/>
+                            </coding>
+                        </details>
+                        <diagnostics value="Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)"/>
+                        <location value="DocumentReference"/>
+                        <location value="Line[1] Col[799]"/>
+                        <expression value="DocumentReference"/>
+                    </issue>
+                </OperationOutcome>
+            </outcome>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Procedure/113/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2025-10-20T13:12:13.923+02:00"/>
+            <outcome>
+                <OperationOutcome xmlns="http://hl7.org/fhir">
+                    <issue>
+                        <severity value="information"/>
+                        <code value="informational"/>
+                        <details>
+                            <coding>
+                                <system value="https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code"/>
+                                <code value="SUCCESSFUL_CREATE"/>
+                                <display value="Create succeeded."/>
+                            </coding>
+                        </details>
+                        <diagnostics value="Successfully created resource &quot;Procedure/113/_history/1&quot;. Took 6ms."/>
+                    </issue>
+                    <issue>
+                        <severity value="warning"/>
+                        <code value="not-found"/>
+                        <diagnostics value="Unauflösbare Referenz: Practitioner/DrErikaMueller"/>
+                    </issue>
+                    <issue>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+                            <valueInteger value="1"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+                            <valueInteger value="423"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id">
+                            <valueString value="http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"/>
+                        </extension>
+                        <severity value="warning"/>
+                        <code value="processing"/>
+                        <details>
+                            <coding>
+                                <system value="http://hl7.org/fhir/java-core-messageId"/>
+                                <code value="http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"/>
+                            </coding>
+                        </details>
+                        <diagnostics value="Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)"/>
+                        <location value="Procedure"/>
+                        <location value="Line[1] Col[423]"/>
+                        <expression value="Procedure"/>
+                    </issue>
+                </OperationOutcome>
+            </outcome>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Organization/114/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2025-10-20T13:12:13.923+02:00"/>
+            <outcome>
+                <OperationOutcome xmlns="http://hl7.org/fhir">
+                    <issue>
+                        <severity value="information"/>
+                        <code value="informational"/>
+                        <details>
+                            <coding>
+                                <system value="https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code"/>
+                                <code value="SUCCESSFUL_CREATE"/>
+                                <display value="Create succeeded."/>
+                            </coding>
+                        </details>
+                        <diagnostics value="Successfully created resource &quot;Organization/114/_history/1&quot;. Took 4ms."/>
+                    </issue>
+                    <issue>
+                        <severity value="warning"/>
+                        <code value="not-found"/>
+                        <diagnostics value="Unauflösbare Referenz: Organization/StadtKoeln"/>
+                    </issue>
+                    <issue>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+                            <valueInteger value="1"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+                            <valueInteger value="708"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id">
+                            <valueString value="Details_for__matching_against_Profile_"/>
+                        </extension>
+                        <severity value="information"/>
+                        <code value="processing"/>
+                        <details>
+                            <coding>
+                                <system value="http://hl7.org/fhir/java-core-messageId"/>
+                                <code value="Details_for__matching_against_Profile_"/>
+                            </coding>
+                        </details>
+                        <diagnostics value="!!Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://fhir.de/StructureDefinition/address-de-basis|1.5.0 überein. - Stimmt nicht mit Slice 'Stadtteil' überein"/>
+                        <location value="Organization.address[0].extension[0]"/>
+                        <location value="Line[1] Col[708]"/>
+                        <expression value="Organization.address[0].extension[0]"/>
+                    </issue>
+                    <issue>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+                            <valueInteger value="1"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+                            <valueInteger value="707"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id">
+                            <valueString value="TERMINOLOGY_TX_SYSTEM_NO_CODE"/>
+                        </extension>
+                        <severity value="warning"/>
+                        <code value="processing"/>
+                        <details>
+                            <coding>
+                                <system value="http://hl7.org/fhir/java-core-messageId"/>
+                                <code value="TERMINOLOGY_TX_SYSTEM_NO_CODE"/>
+                            </coding>
+                        </details>
+                        <diagnostics value="!!Ein Code ohne System hat keine definierte Bedeutung. Es sollte ein System angegeben werden"/>
+                        <location value="Organization.address[0].extension[0].value.ofType(Coding)"/>
+                        <location value="Line[1] Col[707]"/>
+                        <expression value="Organization.address[0].extension[0].value.ofType(Coding)"/>
+                    </issue>
+                    <issue>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+                            <valueInteger value="1"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+                            <valueInteger value="1135"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id">
+                            <valueString value="http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"/>
+                        </extension>
+                        <severity value="warning"/>
+                        <code value="processing"/>
+                        <details>
+                            <coding>
+                                <system value="http://hl7.org/fhir/java-core-messageId"/>
+                                <code value="http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"/>
+                            </coding>
+                        </details>
+                        <diagnostics value="Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)"/>
+                        <location value="Organization"/>
+                        <location value="Line[1] Col[1135]"/>
+                        <expression value="Organization"/>
+                    </issue>
+                </OperationOutcome>
+            </outcome>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Provenance/115/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2025-10-20T13:12:13.923+02:00"/>
+            <outcome>
+                <OperationOutcome xmlns="http://hl7.org/fhir">
+                    <issue>
+                        <severity value="information"/>
+                        <code value="informational"/>
+                        <details>
+                            <coding>
+                                <system value="https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code"/>
+                                <code value="SUCCESSFUL_CREATE"/>
+                                <display value="Create succeeded."/>
+                            </coding>
+                        </details>
+                        <diagnostics value="Successfully created resource &quot;Provenance/115/_history/1&quot;. Took 3ms."/>
+                    </issue>
+                    <issue>
+                        <severity value="warning"/>
+                        <code value="not-found"/>
+                        <diagnostics value="Unauflösbare Referenz: Organization/StadtKoeln"/>
+                    </issue>
+                    <issue>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+                            <valueInteger value="1"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+                            <valueInteger value="559"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id">
+                            <valueString value="http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"/>
+                        </extension>
+                        <severity value="warning"/>
+                        <code value="processing"/>
+                        <details>
+                            <coding>
+                                <system value="http://hl7.org/fhir/java-core-messageId"/>
+                                <code value="http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"/>
+                            </coding>
+                        </details>
+                        <diagnostics value="Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)"/>
+                        <location value="Provenance"/>
+                        <location value="Line[1] Col[559]"/>
+                        <expression value="Provenance"/>
+                    </issue>
+                </OperationOutcome>
+            </outcome>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Observation/116/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2025-10-20T13:12:13.923+02:00"/>
+            <outcome>
+                <OperationOutcome xmlns="http://hl7.org/fhir">
+                    <issue>
+                        <severity value="information"/>
+                        <code value="informational"/>
+                        <details>
+                            <coding>
+                                <system value="https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code"/>
+                                <code value="SUCCESSFUL_CREATE"/>
+                                <display value="Create succeeded."/>
+                            </coding>
+                        </details>
+                        <diagnostics value="Successfully created resource &quot;Observation/116/_history/1&quot;. Took 9ms."/>
+                    </issue>
+                    <issue>
+                        <severity value="warning"/>
+                        <code value="not-found"/>
+                        <diagnostics value="Unauflösbare Referenz: Observation/TodesursacheGrundleiden"/>
+                    </issue>
+                    <issue>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+                            <valueInteger value="1"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+                            <valueInteger value="1932"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id">
+                            <valueString value="http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"/>
+                        </extension>
+                        <severity value="warning"/>
+                        <code value="processing"/>
+                        <details>
+                            <coding>
+                                <system value="http://hl7.org/fhir/java-core-messageId"/>
+                                <code value="http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"/>
+                            </coding>
+                        </details>
+                        <diagnostics value="Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)"/>
+                        <location value="Observation"/>
+                        <location value="Line[1] Col[1932]"/>
+                        <expression value="Observation"/>
+                    </issue>
+                </OperationOutcome>
+            </outcome>
+        </response>
+    </entry>
+    <entry>
+        <response>
+            <status value="201 Created"/>
+            <location value="Patient/117/_history/1"/>
+            <etag value="1"/>
+            <lastModified value="2025-10-20T13:12:13.923+02:00"/>
+            <outcome>
+                <OperationOutcome xmlns="http://hl7.org/fhir">
+                    <issue>
+                        <severity value="information"/>
+                        <code value="informational"/>
+                        <details>
+                            <coding>
+                                <system value="https://hapifhir.io/fhir/CodeSystem/hapi-fhir-storage-response-code"/>
+                                <code value="SUCCESSFUL_CREATE"/>
+                                <display value="Create succeeded."/>
+                            </coding>
+                        </details>
+                        <diagnostics value="Successfully created resource &quot;Patient/117/_history/1&quot;. Took 6ms."/>
+                    </issue>
+                    <issue>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+                            <valueInteger value="1"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+                            <valueInteger value="1133"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id">
+                            <valueString value="Details_for__matching_against_Profile_"/>
+                        </extension>
+                        <severity value="information"/>
+                        <code value="processing"/>
+                        <details>
+                            <coding>
+                                <system value="http://hl7.org/fhir/java-core-messageId"/>
+                                <code value="Details_for__matching_against_Profile_"/>
+                            </coding>
+                        </details>
+                        <diagnostics value="!!Dieses Element stimmt mit keinem bekannten Slicedefined in the profile http://fhir.de/StructureDefinition/address-de-basis|1.5.0 überein. - Stimmt nicht mit Slice 'Stadtteil' überein"/>
+                        <location value="Patient.address[0].extension[0]"/>
+                        <location value="Line[1] Col[1133]"/>
+                        <expression value="Patient.address[0].extension[0]"/>
+                    </issue>
+                    <issue>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-line">
+                            <valueInteger value="1"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-col">
+                            <valueInteger value="1563"/>
+                        </extension>
+                        <extension url="http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id">
+                            <valueString value="http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"/>
+                        </extension>
+                        <severity value="warning"/>
+                        <code value="processing"/>
+                        <details>
+                            <coding>
+                                <system value="http://hl7.org/fhir/java-core-messageId"/>
+                                <code value="http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6"/>
+                            </coding>
+                        </details>
+                        <diagnostics value="Constraint failed: dom-6: 'A resource should have narrative for robust management' (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)"/>
+                        <location value="Patient"/>
+                        <location value="Line[1] Col[1563]"/>
+                        <expression value="Patient"/>
+                    </issue>
+                </OperationOutcome>
+            </outcome>
+        </response>
+    </entry>
+</Bundle>
