@@ -36,24 +36,24 @@ Kommt ein HAPI-FHIR-Server zum Einsatz, heißt das konkret:
 - Als erstes wird ein Soft-Delete ausgeführt für den Patient und alle zugehörigen Ressourcen
 
 ```
-DELETE Patient/[ID]?_cascade=delete
+DELETE Provenance/[ID]?_cascade=delete
 ```
 
 - In regelmäßigen Abständen wird ein $expunge ausgeführt, um die gelöschten Ressourcen zu entfernen.
 
 ```
-POST [base]/Patient/[ID]/$expunge
+POST [base]/$expunge
 Content-Type: application/fhir+json
 
 {
   "resourceType": "Parameters",
   "parameter": [
     {
-      "name": "limit",
-      "valueInteger": 1000
+      "name": "expungeDeletedResources",
+      "valueBoolean": true
     },
     {
-      "name": "expungeDeletedResources",
+      "name": "expungePreviousVersions",
       "valueBoolean": true
     }
   ]
