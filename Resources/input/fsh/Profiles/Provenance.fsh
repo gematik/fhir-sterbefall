@@ -7,9 +7,9 @@ Description: "Mit diesem Provenance Profil kann die Ausstellung einer Sterbeurku
 * target only Reference(Patient)
 * recorded MS
 * recorded ^comment = "Sterbefall beurkundet Datum"
-* reason MS
+* reason 1.. MS
 * reason = http://terminology.hl7.org/CodeSystem/v3-ActReason#DECSD
-* activity MS
+* activity 1.. MS
 * activity = http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion#LA
 * agent MS
 * agent.who MS
