@@ -1,10 +1,6 @@
-Instance: StfVerstorbenePerson-Test-BY1
+Instance: StfVerstorbenePerson-BY1
 InstanceOf: StfVerstorbenePerson
 Usage: #example
-// * identifier[IdImGesundheitsamt].type = http://terminology.hl7.org/CodeSystem/v2-0203#PI
-// * identifier[IdImGesundheitsamt].system = "urn:gesundheitsamt:id"
-// * identifier[IdImGesundheitsamt].value = "13041938"
-// * identifier[IdImGesundheitsamt].assigner.display = "Gesundheitsamt Regensburg"
 * identifier[Sterbebuchnummer].type = http://terminology.hl7.org/CodeSystem/v2-0203#DC
 * identifier[Sterbebuchnummer].system = "urn:gesundheitsamt:sterbebuch"
 * identifier[Sterbebuchnummer].value = "S5485/2025"
