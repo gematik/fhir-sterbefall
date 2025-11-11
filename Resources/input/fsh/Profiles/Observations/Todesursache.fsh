@@ -21,7 +21,8 @@ Description: "Todesursache (kompatibel zu [MII PR Onkologie Tod](https://www.med
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version 1.. MS
 * valueCodeableConcept.coding.code 1.. MS
-* valueCodeableConcept.coding.display 1.. MS
+* valueCodeableConcept.coding.display MS
+  * ^comment = "Im Display sind nur die offiziell in ICD-10 gelisteten Bezeichnungen zu verwenden. Freitexte sind im Text-Element zu hinterlegen."
 * valueCodeableConcept.text MS
 * dataAbsentReason MS
 * dataAbsentReason ^comment = "Todesart ungeklärt
