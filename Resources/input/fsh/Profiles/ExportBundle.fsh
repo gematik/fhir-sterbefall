@@ -12,4 +12,4 @@ Es basiert auf der Ressource `Bundle` und verwendet den Typ `collection`, um all
 * entry MS
   * fullUrl MS
   * resource MS
-  * resource only StfArzt or StfVerstorbenePerson or StfArztZuordnung or StfDatei or StfLeichenschau or StfOrganisation or StfSterbeurkundeAusstellung or StfTodesursache
+  * resource only StfArzt or StfVerstorbenePerson or StfArztZuordnung or StfDatei or StfLeichenschau or StfOrganisation or StfSterbeurkundeAusstellung or StfBasisObservation
