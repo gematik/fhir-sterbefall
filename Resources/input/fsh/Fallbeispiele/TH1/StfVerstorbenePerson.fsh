@@ -8,6 +8,7 @@ Usage: #example
 * birthDate = "1965-05-13"
 * deceasedDateTime = "2024-04-02T21:33:00+01:00"
 * address[Strassenanschrift].type = #both
+* address[Strassenanschrift].line = "Gartenweg 7"
 * address[Strassenanschrift].line.extension[Strasse].valueString = "Gartenweg"
 * address[Strassenanschrift].line.extension[Hausnummer].valueString = "7"
 * address[Strassenanschrift].city = "Mühlhausen"
