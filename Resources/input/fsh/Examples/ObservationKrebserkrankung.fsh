@@ -11,7 +11,7 @@ Usage: #example
 * subject = Reference(StfVerstorbenePersonExample)
 * effectiveDateTime = "2025-03-02T14:30:00+01:00"
 * performer = Reference(Practitioner/rechtsmediziner-beispiel)
-* valueCodeableConcept = $v2-0532#Y "Ja"
+* valueCodeableConcept = $v2-0532#Y
 * note.text = "Bronchialkarzinom im Oberlappen der rechten Lunge festgestellt bei der Obduktion"
 
 
@@ -28,5 +28,5 @@ Usage: #example
 * subject = Reference(StfVerstorbenePersonExample)
 * effectiveDateTime = "2025-03-02T14:30:00+01:00"
 * performer = Reference(Practitioner/rechtsmediziner-beispiel)
-* valueCodeableConcept = $v2-0532#N "Nein"
+* valueCodeableConcept = $v2-0532#N
 * note.text = "Keine Hinweise auf maligne Tumorerkrankung bei der Obduktion"
