@@ -1,4 +1,4 @@
-Instance: StfTodesursacheExample
+Instance: StfTodesursache-Example
 InstanceOf: StfTodesursache
 Title: "Beispiel STF Todesursache"
 Description: "Beispielinstanz einer Todesursache nach dem StfTodesursache-Profil"
@@ -6,9 +6,9 @@ Usage: #example
 
 * status = #final
 * code = $sct#184305005 "Cause of Death"
-* subject = Reference(StfVerstorbenePersonExample) "Max Mustermann"
+* subject = Reference(Patient/StfVerstorbenePerson-Example) "Max Mustermann"
 * effectiveDateTime = "2023-07-10"  // Beginn der Krankheit
-* performer = Reference(StfArztExample)
+* performer = Reference(Practitioner/StfArzt-Example)
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version = "2023"
 * valueCodeableConcept.coding.code = #I21.0
@@ -26,19 +26,19 @@ Usage: #example
 * component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Obduktionsschein
 
 // Nachgelagerte Todesursache (Grundleiden)
-* hasMember = Reference(TodesursacheGrundleiden)
+* hasMember = Reference(StfTodesursache-Grundleiden-Example)
 * hasMember.extension[TodesursacheTyp].valueCodeableConcept = StfTodesursacheCodeCS#TU3 "Todesursache 3"
 
 // Referenzierte Instanz für Grundleiden
-Instance: TodesursacheGrundleiden
+Instance: StfTodesursache-Grundleiden-Example
 InstanceOf: StfTodesursache
 Title: "Grundleiden der Todesursache"
 Usage: #example
 * status = #final
 * code = $sct#184305005 "Cause of Death"
-* subject = Reference(StfVerstorbenePersonExample)
+* subject = Reference(Patient/StfVerstorbenePerson-Example)
 * effectiveDateTime = "2020-01-15"  // Beginn des Grundleidens
-* performer = Reference(StfArztExample)
+* performer = Reference(Practitioner/StfArzt-Example)
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version = "2023"
 * valueCodeableConcept.coding.code = #I25.9

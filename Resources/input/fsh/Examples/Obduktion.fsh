@@ -1,5 +1,5 @@
 // Beispiel für eine durchgeführte Obduktion
-Instance: StfObduktionExample
+Instance: StfObduktion-Example
 InstanceOf: StfObduktion
 Title: "Beispiel STF Obduktion"
 Description: "Beispielhafte Instanz einer durchgeführten Obduktion"
@@ -7,12 +7,12 @@ Usage: #example
 * meta.profile = Canonical(StfObduktion)
 
 // Verweis auf die Obduktionsanfrage
-* basedOn = Reference(StfObduktionAnfrageExample)
+* basedOn = Reference(StfObduktionAnfrage-Example)
 
 * status = #completed
 * code = $sct#29240004 "Autopsy examination"
 
-* subject = Reference(StfVerstorbenePersonExample)
+* subject = Reference(Patient/StfVerstorbenePerson-Example)
 
 // Zeitpunkt der Obduktion
 * performedDateTime = "2025-03-02T14:30:00+01:00"

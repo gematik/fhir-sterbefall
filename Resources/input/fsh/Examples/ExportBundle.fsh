@@ -1,4 +1,4 @@
-Instance: ExportBundleExample
+Instance: StfExportBundle-Example
 InstanceOf: StfExportBundle
 Title: "Beispiel Export Bundle"
 Description: "Beispiel Export Bundle"
@@ -6,56 +6,59 @@ Usage: #example
 * timestamp = "2023-10-15T14:28:00Z"
 * type = #collection
 * entry[+]
-  * insert ExampleFullUrl(PractitionerRole, StfArztZuordnungExample)
-  * resource = StfArztZuordnungExample
+  * insert ExampleFullUrl(PractitionerRole, StfArztZuordnung-Example)
+  * resource = StfArztZuordnung-Example
 * entry[+]
-  * insert ExampleFullUrl(Practitioner, StfArztExample)
-  * resource = StfArztExample
+  * insert ExampleFullUrl(Practitioner, StfArzt-Example)
+  * resource = StfArzt-Example
 * entry[+]
-  * insert ExampleFullUrl(DocumentReference, StfDateiExample)
-  * resource = StfDateiExample
+  * insert ExampleFullUrl(DocumentReference, StfDatei-Example)
+  * resource = StfDatei-Example
 * entry[+]
-  * insert ExampleFullUrl(Procedure, StfLeichenschauExample)
-  * resource = StfLeichenschauExample
+  * insert ExampleFullUrl(Procedure, StfLeichenschau-Example)
+  * resource = StfLeichenschau-Example
 * entry[+]
-  * insert ExampleFullUrl(Organization, StfOrganisationExample)
-  * resource = StfOrganisationExample
+  * insert ExampleFullUrl(Organization, StfOrganisation-Example)
+  * resource = StfOrganisation-Example
 * entry[+]
-  * insert ExampleFullUrl(Provenance, StfSterbeurkundeAusstellungExample)
-  * resource = StfSterbeurkundeAusstellungExample
+  * insert ExampleFullUrl(Provenance, StfSterbeurkundeAusstellung-Example)
+  * resource = StfSterbeurkundeAusstellung-Example
 * entry[+]
-  * insert ExampleFullUrl(Observation, StfTodesursacheExample)
-  * resource = StfTodesursacheExample
+  * insert ExampleFullUrl(Observation, StfTodesursache-Example)
+  * resource = StfTodesursache-Example
 * entry[+]
-  * insert ExampleFullUrl(Observation, TodesursacheGrundleiden)
-  * resource = TodesursacheGrundleiden
+  * insert ExampleFullUrl(Observation, StfTodesursache-Grundleiden-Example)
+  * resource = StfTodesursache-Grundleiden-Example
 * entry[+]
-  * insert ExampleFullUrl(Patient, StfVerstorbenePersonExample)
-  * resource = StfVerstorbenePersonExample
+  * insert ExampleFullUrl(Patient, StfVerstorbenePerson-Example)
+  * resource = StfVerstorbenePerson-Example
 * entry[+]
   * insert ExampleFullUrl(Organization, StfOrganisationGesundheitsamtRegensburg)
   * resource = StfOrganisationGesundheitsamtRegensburg
 * entry[+]
-  * insert ExampleFullUrl(Provenance, StfExportProvenanceExample)
-  * resource = StfExportProvenanceExample
+  * insert ExampleFullUrl(Provenance, StfExportProvenance-Example)
+  * resource = StfExportProvenance-Example
 * entry[+]
   * insert ExampleFullUrl(ServiceRequest, StfObduktionAnfrageExample)
   * resource = StfObduktionAnfrageExample
 
-Instance: StfExportProvenanceExample
+Instance: StfExportProvenance-Example
 InstanceOf: StfExportProvenance
 Usage: #example
-* target[+] = Reference(StfArztZuordnungExample)
-* target[+] = Reference(StfArztExample)
-* target[+] = Reference(StfDateiExample)
-* target[+] = Reference(StfLeichenschauExample)
-* target[+] = Reference(StfOrganisationExample)
-* target[+] = Reference(StfSterbeurkundeAusstellungExample)
-* target[+] = Reference(StfTodesursacheExample)
-* target[+] = Reference(TodesursacheGrundleiden)
-* target[+] = Reference(StfVerstorbenePersonExample)
+* target[+] = Reference(StfArztZuordnung-Example)
+* target[+] = Reference(StfArzt-Example)
+* target[+] = Reference(StfDatei-Example)
+* target[+] = Reference(StfLeichenschau-Example)
+* target[+] = Reference(StfOrganisation-Example)
+* target[+] = Reference(StfSterbeurkundeAusstellung-Example)
+* target[+] = Reference(StfTodesursache-Example)
+* target[+] = Reference(StfTodesursache-Grundleiden-Example)
+* target[+] = Reference(StfVerstorbenePerson-Example)
 * target[+] = Reference(StfOrganisationGesundheitsamtRegensburg)
-* target[+] = Reference(StfObduktionAnfrageExample)
+* target[+] = Reference(StfObduktionAnfrage-Example)
 * recorded = "2025-11-06T12:49:00Z"
 * agent[+].who.display = "Sterbefall-Management-Software v1.0"
 * agent[=].onBehalfOf = Reference(StfOrganisationGesundheitsamtRegensburg)
+
+RuleSet: ExampleFullUrl(resource, id)
+* fullUrl = "https://mein.fhir-server.local/fhir/{resource}/{id}"
