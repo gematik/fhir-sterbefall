@@ -1,4 +1,4 @@
-Instance: StfVerstorbenePerson-Test-VB1
+Instance: StfVerstorbenePerson-VB1
 InstanceOf: StfVerstorbenePerson
 Usage: #example
 * identifier[Sterbebuchnummer].type = http://terminology.hl7.org/CodeSystem/v2-0203#DC
