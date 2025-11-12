@@ -30,10 +30,10 @@ Usage: #example
   * insert ExampleFullUrl(Patient, StfVerstorbenePersonExample)
   * resource = StfVerstorbenePersonExample
 * entry[+]
-  * insert ExampleFullUrl(Patient, StfOrganisationGesundheitsamtRegensburg)
+  * insert ExampleFullUrl(Organization, StfOrganisationGesundheitsamtRegensburg)
   * resource = StfOrganisationGesundheitsamtRegensburg
 * entry[+]
-  * insert ExampleFullUrl(Patient, StfExportProvenanceExample)
+  * insert ExampleFullUrl(Provenance, StfExportProvenanceExample)
   * resource = StfExportProvenanceExample
 
 Instance: StfExportProvenanceExample

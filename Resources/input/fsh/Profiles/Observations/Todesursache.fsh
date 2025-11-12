@@ -81,7 +81,8 @@ dann ka;"
   * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
   * valueCodeableConcept.coding.version 1.. MS
   * valueCodeableConcept.coding.code 1.. MS
-  * valueCodeableConcept.coding.display 1.. MS
+  * valueCodeableConcept.coding.display MS
+  * valueCodeableConcept.text MS
 * component[Quelle]
   * ^comment = "Quellangabe der Information. Z.B. ob die Todesursache aus dem Leichenschauschein oder dem Obduktionsschein stammt."
   * code = StfObservationCodesErweiterungCS#quelle
