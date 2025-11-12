@@ -31,7 +31,7 @@ Wenn Todesart = ungeklärt ODER
 dann j
 sonst n"
 * hasMember MS
-* hasMember ^comment = "Verknüpfung von nachgelagerten Todesursachen"
+* hasMember ^comment = "Verknüpfung von nachgelagerten Todesursachen. Alle weiteren Todesursachen, die zur Haupttodesursache geführt haben, werden über hasMember referenziert. Jede dieser Todesursachen enthält eine Extension, die den Typ der Todesursache (z.B. Todesursache 2, Todesursache 3 etc.) angibt. Die weiteren Todesursachen selber dürfen keine hasMember Referenzen enthalten."
 * hasMember.reference MS
 * hasMember.extension contains StfTodesursacheTypExtension named TodesursacheTyp 1..1 MS
 * note MS
