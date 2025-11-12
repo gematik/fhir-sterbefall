@@ -65,7 +65,7 @@ script:post-response {
   // Patient-ID separat speichern
   bru.setVar("createdPatientId", patientId);
   bru.setVar("deleteBatchRequestBody", JSON.stringify(batchBundle, null, 2));
-  bru.setVar("Persistence_Step1", "success");
+  bru.setVar("Delete_Step1", "success");
   console.log("✅ Built batch bundle with", getUrls.length, "entries.");
   
 }
