@@ -1,25 +1,20 @@
 {
   "resourceType": "Observation",
-  "id": "TodesursacheGrundleiden",
+  "id": "Todesursache-2-Test-BY1",
   "meta": {
     "profile": [
       "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
     ]
   },
-  "performer": [
-    {
-      "reference": "Practitioner/StfArztExample"
-    }
-  ],
   "valueCodeableConcept": {
     "coding": [
       {
         "system": "http://hl7.org/fhir/sid/icd-10",
-        "version": "2023",
-        "code": "I25.9"
+        "version": "2022",
+        "code": "N19"
       }
     ],
-    "text": "Chronische ischämische Herzkrankheit, nicht näher bezeichnet"
+    "text": "Nierenversagen"
   },
   "component": [
     {
@@ -41,19 +36,19 @@
       }
     },
     {
-      "code": {
-        "coding": [
-          {
-            "code": "quelle",
-            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-          }
-        ]
-      },
       "valueCodeableConcept": {
         "coding": [
           {
             "code": "Leichenschauschein",
             "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
+          }
+        ]
+      },
+      "code": {
+        "coding": [
+          {
+            "code": "quelle",
+            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
           }
         ]
       }
@@ -70,7 +65,6 @@
     ]
   },
   "subject": {
-    "reference": "Patient/StfVerstorbenePersonExample"
-  },
-  "effectiveDateTime": "2020-01-15"
+    "reference": "Patient/StfVerstorbenePerson-Test-BY1"
+  }
 }

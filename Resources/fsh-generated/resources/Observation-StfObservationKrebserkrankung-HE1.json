@@ -1,19 +1,14 @@
 {
   "resourceType": "Observation",
-  "id": "StfObservationKrebserkrankungExample",
+  "id": "StfObservationKrebserkrankung-HE1",
   "meta": {
     "profile": [
       "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObservationKrebserkrankung"
     ]
   },
-  "performer": [
-    {
-      "reference": "Practitioner/rechtsmediziner-beispiel"
-    }
-  ],
   "note": [
     {
-      "text": "Bronchialkarzinom im Oberlappen der rechten Lunge festgestellt bei der Obduktion"
+      "text": "Magenkarzinom"
     }
   ],
   "code": {
@@ -27,9 +22,8 @@
   },
   "status": "final",
   "subject": {
-    "reference": "Patient/StfVerstorbenePersonExample"
+    "reference": "Patient/StfVerstorbenePerson-HE1"
   },
-  "effectiveDateTime": "2025-03-02T14:30:00+01:00",
   "valueCodeableConcept": {
     "coding": [
       {

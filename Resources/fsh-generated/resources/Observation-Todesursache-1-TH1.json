@@ -1,25 +1,20 @@
 {
   "resourceType": "Observation",
-  "id": "TodesursacheGrundleiden",
+  "id": "Todesursache-1-TH1",
   "meta": {
     "profile": [
       "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
     ]
   },
-  "performer": [
-    {
-      "reference": "Practitioner/StfArztExample"
-    }
-  ],
   "valueCodeableConcept": {
     "coding": [
       {
         "system": "http://hl7.org/fhir/sid/icd-10",
-        "version": "2023",
-        "code": "I25.9"
+        "version": "2022",
+        "code": "K57.2"
       }
     ],
-    "text": "Chronische ischämische Herzkrankheit, nicht näher bezeichnet"
+    "text": "Septischer Schock"
   },
   "component": [
     {
@@ -41,14 +36,6 @@
       }
     },
     {
-      "code": {
-        "coding": [
-          {
-            "code": "quelle",
-            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-          }
-        ]
-      },
       "valueCodeableConcept": {
         "coding": [
           {
@@ -56,7 +43,34 @@
             "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
           }
         ]
+      },
+      "code": {
+        "coding": [
+          {
+            "code": "quelle",
+            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+          }
+        ]
       }
+    }
+  ],
+  "hasMember": [
+    {
+      "extension": [
+        {
+          "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "TU5",
+                "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
+                "display": "Todesursache 5"
+              }
+            ]
+          }
+        }
+      ],
+      "reference": "Observation/Todesursache-5-TH1"
     }
   ],
   "status": "final",
@@ -70,7 +84,6 @@
     ]
   },
   "subject": {
-    "reference": "Patient/StfVerstorbenePersonExample"
-  },
-  "effectiveDateTime": "2020-01-15"
+    "reference": "Patient/StfVerstorbenePerson-TH1"
+  }
 }

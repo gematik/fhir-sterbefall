@@ -1,0 +1,23 @@
+{
+  "resourceType": "Procedure",
+  "id": "StfLeichenschau-TH1",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfLeichenschau"
+    ]
+  },
+  "subject": {
+    "reference": "Patient/StfVerstorbenePerson-TH1"
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "29240004",
+        "system": "http://snomed.info/sct",
+        "display": "Autopsy examination"
+      }
+    ]
+  },
+  "status": "completed",
+  "performedDateTime": "2024-10-30T22:27:00+01:00"
+}

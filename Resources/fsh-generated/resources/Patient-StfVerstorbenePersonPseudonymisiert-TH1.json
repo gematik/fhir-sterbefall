@@ -1,0 +1,23 @@
+{
+  "resourceType": "Patient",
+  "id": "StfVerstorbenePersonPseudonymisiert-TH1",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfVerstorbenePersonPseudonymisiert"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "DC",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+          }
+        ]
+      },
+      "system": "urn:gesundheitsamt:sterbebuch",
+      "value": "2613"
+    }
+  ]
+}

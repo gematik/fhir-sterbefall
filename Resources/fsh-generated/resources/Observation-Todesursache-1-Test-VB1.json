@@ -1,31 +1,21 @@
 {
   "resourceType": "Observation",
-  "id": "StfTodesursacheExample",
+  "id": "Todesursache-1-Test-VB1",
   "meta": {
     "profile": [
       "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
     ]
   },
-  "performer": [
-    {
-      "reference": "Practitioner/StfArztExample"
-    }
-  ],
   "valueCodeableConcept": {
     "coding": [
       {
         "system": "http://hl7.org/fhir/sid/icd-10",
-        "version": "2023",
-        "code": "I21.0"
+        "version": "2022",
+        "code": "J18.0"
       }
     ],
-    "text": "Akuter transmuraler Myokardinfarkt der Vorderwand"
+    "text": "Exitus letalis bei Bronchopneumonie (beidseitig)"
   },
-  "note": [
-    {
-      "text": "Patient erlitt einen massiven Herzinfarkt nach längerer kardialer Vorgeschichte mit koronarer Herzkrankheit und Bluthochdruck."
-    }
-  ],
   "component": [
     {
       "valueCodeableConcept": {
@@ -49,26 +39,7 @@
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "http://hl7.org/fhir/sid/icd-10",
-            "code": "I25.1",
-            "version": "2023"
-          }
-        ]
-      },
-      "code": {
-        "coding": [
-          {
-            "code": "todesursacheKlassifikation",
-            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-          }
-        ]
-      }
-    },
-    {
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "Obduktionsschein",
+            "code": "Leichenschauschein",
             "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
           }
         ]
@@ -83,6 +54,11 @@
       }
     }
   ],
+  "note": [
+    {
+      "text": "Weitere relevante Erkrankungen: COPD, Vorhofflimmern, Diabetes mellitus Typ 2"
+    }
+  ],
   "hasMember": [
     {
       "extension": [
@@ -91,15 +67,15 @@
           "valueCodeableConcept": {
             "coding": [
               {
-                "code": "TU3",
+                "code": "TU4",
                 "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
-                "display": "Todesursache 3"
+                "display": "Todesursache 4"
               }
             ]
           }
         }
       ],
-      "reference": "Observation/TodesursacheGrundleiden"
+      "reference": "Observation/Todesursache-4-Test-VB1"
     }
   ],
   "status": "final",
@@ -113,8 +89,6 @@
     ]
   },
   "subject": {
-    "reference": "Patient/StfVerstorbenePersonExample",
-    "display": "Max Mustermann"
-  },
-  "effectiveDateTime": "2023-07-10"
+    "reference": "Patient/StfVerstorbenePerson-Test-VB1"
+  }
 }
