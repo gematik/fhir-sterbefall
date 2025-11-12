@@ -66,7 +66,7 @@ Usage: #example
 * effectiveDateTime = "2022"
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version = "2022"
-* valueCodeableConcept.coding.code = #I44.9
+* valueCodeableConcept.coding.code = #I44
 * valueCodeableConcept.text = "COPD"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N

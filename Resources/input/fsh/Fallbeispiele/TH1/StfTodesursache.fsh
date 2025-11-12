@@ -53,7 +53,7 @@ Usage: #example
 * subject = Reference(StfVerstorbenePerson-TH1)
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version = "2022"
-* valueCodeableConcept.coding.code = #T42.9 //Habe ich im CodeSystem beim Bfarm so nicht gefunden
+* valueCodeableConcept.coding.code = #T42.0 //Habe ich im CodeSystem beim Bfarm so nicht gefunden
 * valueCodeableConcept.text = "Kardiomyopathie, septisch"
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
 * component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
@@ -64,7 +64,7 @@ Usage: #example
 * status = #final
 * code = $sct#184305005 "Cause of Death"
 * subject = Reference(StfVerstorbenePerson-TH1)
-* insert ExampleKrankheitCode(#150.14, "Linksherzinsuffizienz")
+* insert ExampleKrankheitCode(#I50.0, "Linksherzinsuffizienz")
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
 * component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 
