@@ -5,7 +5,7 @@ Title: "STF ExportBundle Provenance"
 Description: "Die StfExportProvenance Ressource dokumentiert die Herkunft und den Erstellungsprozess der im StfExportBundle enthaltenen Ressourcen. Außerdem wird die Ressource technisch für den Löschprozess benötigt."
 * insert Meta
 * target MS
-* target only Reference(StfArzt or StfVerstorbenePerson or StfArztZuordnung or StfDatei or StfLeichenschau or StfOrganisation or StfSterbeurkundeAusstellung or StfBasisObservation)
+* target only Reference(StfArzt or StfVerstorbenePerson or StfArztZuordnung or StfDatei or StfLeichenschau or StfOrganisation or StfSterbeurkundeAusstellung or StfBasisObservation or StfObduktionAnfrage)
   * ^comment = "Verweis auf die Ressource im StfExportBundle, für die diese Provenance Ressource erstellt wurde"
 * recorded MS
 * reason 1.. MS

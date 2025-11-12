@@ -27,6 +27,9 @@ Usage: #example
   * insert ExampleFullUrl(Observation, StfTodesursacheExample)
   * resource = StfTodesursacheExample
 * entry[+]
+  * insert ExampleFullUrl(Observation, TodesursacheGrundleiden)
+  * resource = TodesursacheGrundleiden
+* entry[+]
   * insert ExampleFullUrl(Patient, StfVerstorbenePersonExample)
   * resource = StfVerstorbenePersonExample
 * entry[+]
@@ -35,6 +38,9 @@ Usage: #example
 * entry[+]
   * insert ExampleFullUrl(Provenance, StfExportProvenanceExample)
   * resource = StfExportProvenanceExample
+* entry[+]
+  * insert ExampleFullUrl(ServiceRequest, StfObduktionAnfrageExample)
+  * resource = StfObduktionAnfrageExample
 
 Instance: StfExportProvenanceExample
 InstanceOf: StfExportProvenance
@@ -46,8 +52,10 @@ Usage: #example
 * target[+] = Reference(StfOrganisationExample)
 * target[+] = Reference(StfSterbeurkundeAusstellungExample)
 * target[+] = Reference(StfTodesursacheExample)
+* target[+] = Reference(TodesursacheGrundleiden)
 * target[+] = Reference(StfVerstorbenePersonExample)
 * target[+] = Reference(StfOrganisationGesundheitsamtRegensburg)
+* target[+] = Reference(StfObduktionAnfrageExample)
 * recorded = "2025-11-06T12:49:00Z"
 * agent[+].who.display = "Sterbefall-Management-Software v1.0"
 * agent[=].onBehalfOf = Reference(StfOrganisationGesundheitsamtRegensburg)

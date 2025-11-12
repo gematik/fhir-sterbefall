@@ -6,5 +6,5 @@ Usage: #example
 * status = #completed
 * code = $sct#29240004
 * performedDateTime = "2025-03-01T10:00:00+01:00"
-* performer.actor.reference = "Practitioner/DrErikaMueller"
+* performer.actor.reference = "Practitioner/StfArztExample"
 * subject.reference = "Patient/StfVerstorbenePersonExample"
