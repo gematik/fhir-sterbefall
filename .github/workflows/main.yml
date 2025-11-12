@@ -69,6 +69,7 @@ jobs:
           filters: |
             # Struktur: fileName|messageId|detailsWildcard|location
             |Display_Name_for__should_be_one_of__instead_of|*Wrong Display Name*|
+            |Unknown_Code_in_Version|*http://hl7.org/fhir/sid/icd-10*|
 
       - name: Append pipeline summary link
         if: always() && github.event_name == 'pull_request'
