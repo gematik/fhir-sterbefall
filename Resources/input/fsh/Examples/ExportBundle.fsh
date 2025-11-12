@@ -29,6 +29,25 @@ Usage: #example
 * entry[+]
   * insert ExampleFullUrl(Patient, StfVerstorbenePersonExample)
   * resource = StfVerstorbenePersonExample
+* entry[+]
+  * insert ExampleFullUrl(Patient, StfOrganisationGesundheitsamtRegensburg)
+  * resource = StfOrganisationGesundheitsamtRegensburg
+* entry[+]
+  * insert ExampleFullUrl(Patient, StfExportProvenanceExample)
+  * resource = StfExportProvenanceExample
 
-RuleSet: ExampleFullUrl(resource, id)
-* fullUrl = "https://mein.fhir-server.local/fhir/{resource}/{id}"
+Instance: StfExportProvenanceExample
+InstanceOf: StfExportProvenance
+Usage: #example
+* target[+] = Reference(StfArztZuordnungExample)
+* target[+] = Reference(StfArztExample)
+* target[+] = Reference(StfDateiExample)
+* target[+] = Reference(StfLeichenschauExample)
+* target[+] = Reference(StfOrganisationExample)
+* target[+] = Reference(StfSterbeurkundeAusstellungExample)
+* target[+] = Reference(StfTodesursacheExample)
+* target[+] = Reference(StfVerstorbenePersonExample)
+* target[+] = Reference(StfOrganisationGesundheitsamtRegensburg)
+* recorded = "2025-11-06T12:49:00Z"
+* agent[+].who.display = "Sterbefall-Management-Software v1.0"
+* agent[=].onBehalfOf = Reference(StfOrganisationGesundheitsamtRegensburg)

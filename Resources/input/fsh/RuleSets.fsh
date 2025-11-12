@@ -16,3 +16,6 @@ RuleSet: Meta
 * ^experimental = false
 * ^publisher = "ELFA Maßnahme Interoperabilität"
 * ^date = "2025-09-05"
+
+RuleSet: ExampleFullUrl(resource, id)
+* fullUrl = "https://mein.fhir-server.local/fhir/{resource}/{id}"

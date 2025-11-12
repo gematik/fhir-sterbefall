@@ -49,3 +49,10 @@ Description: "Stadt Köln als übergeordnete Organisation für die Standesämter
 * telecom[1].value = "stadt-koeln@stadt-koeln.de"
 * telecom[1].use = #work
 * active = true
+
+Instance: StfOrganisationGesundheitsamtRegensburg
+InstanceOf: StfOrganisation
+Usage: #example
+Title: "StfOrganisation-GA-Test-BY1"
+* name = "Gesundheitsamt Regensburg"
+* type = StfOrganisationsTypCS#GA
