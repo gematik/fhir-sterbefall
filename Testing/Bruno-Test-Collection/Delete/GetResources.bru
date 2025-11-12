@@ -35,28 +35,44 @@ tests {
   
     const entries = body.entry || [];
   
-    // Sammle alle Statuscodes und finde die, die NICHT 410 Gone sind
     const nonGone = entries
-      .map((e, idx) => ({
-        index: idx,
-        status: e.response?.status || "(missing)"
-      }))
+      .map((e, idx) => {
+        const status = e.response?.status || "(missing)";
+        const res = e.resource;
+        const resourceLabel = res
+          ? `${res.resourceType}/${res.id || "?"}`
+          : "(kein Resource-Body)";
+        return {
+          index: idx,
+          status,
+          resourceLabel
+        };
+      })
       .filter(e => e.status !== "410 Gone");
   
-    console.log("🔎 Gefundene Statuscodes:", entries.map(e => e.response?.status));
+    // Debug-Übersicht
+    console.log(
+      "🔎 Status pro Entry:",
+      entries.map((e, idx) => {
+        const res = e.resource;
+        const label = res ? `${res.resourceType}/${res.id || "?"}` : `(Entry[${idx}] ohne Resource)`;
+        return `${idx}: ${label} -> ${e.response?.status || "(missing)"}`;
+      })
+    );
   
     expect(
       nonGone.length,
       nonGone.length > 0
-        ? `Erwarte für alle Einträge Status "410 Gone", aber folgende sind anders: ` +
+        ? `Erwarte für alle Einträge Status "410 Gone". Abweichungen:\n` +
           nonGone
-            .map(e => `Entry[${e.index}]: ${e.status}`)
-            .join(", ")
+            .map(e => `Entry[${e.index}] ${e.resourceLabel}: ${e.status}`)
+            .join("\n")
         : "Alle Einträge sind 410 Gone."
     ).to.equal(0);
   
     console.log("✅ Alle Einträge im batch-response sind 410 Gone.");
   });
+  
 }
 
 settings {
