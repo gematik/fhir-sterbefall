@@ -1,14 +1,14 @@
 meta {
   name: GetResources cascade-parameter
   type: http
-  seq: 3
+  seq: 4
   tags: [
     kr
   ]
 }
 
 delete {
-  url: {{host}}/Patient/{{createdPatientId}}?_cascade=delete
+  url: {{host}}/Provenance/{{createdProvenanceId}}?_cascade=delete
   body: none
   auth: inherit
 }

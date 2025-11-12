@@ -1,15 +1,14 @@
 meta {
-  name: Complete and Valid Export-Bundle
+  name: Fehlerfall Wrong-Provenance Error (Relative References)
   type: http
-  seq: 1
+  seq: 6
   tags: [
     ga
-    kr
   ]
 }
 
-get {
-  url: {{host}}/
+post {
+  url: {{host}}/$receiveBundle
   body: json
   auth: inherit
 }
@@ -337,6 +336,7 @@ body:json {
             }
           ],
           "partOf": {
+            "reference": "Organization/StadtKoeln",
             "display": "Stadt Köln"
           },
           "extension": [
@@ -739,6 +739,38 @@ body:json {
         }
       },
       {
+        "fullUrl": "https://mein.fhir-server.local/fhir/Organization/StadtKoeln",
+        "resource": {
+          "resourceType": "Organization",
+          "id": "StadtKoeln",
+          "address": [
+            {
+              "line": [
+                "Historisches Rathaus"
+              ],
+              "type": "both",
+              "city": "Köln",
+              "postalCode": "50667",
+              "country": "DE"
+            }
+          ],
+          "telecom": [
+            {
+              "system": "phone",
+              "value": "+49 221 221-0",
+              "use": "work"
+            },
+            {
+              "system": "email",
+              "value": "stadt-koeln@stadt-koeln.de",
+              "use": "work"
+            }
+          ],
+          "name": "Stadt Köln",
+          "active": true
+        }
+      },
+      {
         "fullUrl": "https://mein.fhir-server.local/fhir/Provenance/StfExportProvenanceExample",
         "resource": {
           "resourceType": "Provenance",
@@ -774,13 +806,10 @@ body:json {
               "reference": "Observation/TodesursacheGrundleiden"
             },
             {
-              "reference": "Patient/StfVerstorbenePersonExample"
-            },
-            {
               "reference": "Organization/StfOrganisationGesundheitsamtRegensburg"
             },
             {
-              "reference": "ServiceRequest/StfObduktionAnfrageExample"
+              "reference": "Organization/StadtKoeln"
             }
           ],
           "agent": [
@@ -813,41 +842,6 @@ body:json {
           },
           "recorded": "2025-11-06T12:49:00Z"
         }
-      },
-      {
-        "fullUrl": "https://mein.fhir-server.local/fhir/ServiceRequest/StfObduktionAnfrageExample",
-        "resource": {
-          "resourceType": "ServiceRequest",
-          "id": "StfObduktionAnfrageExample",
-          "meta": {
-            "profile": [
-              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObduktionAnfrage"
-            ]
-          },
-          "requester": {
-            "display": "Dr. Schmidt, Gesundheitsamt Musterstadt"
-          },
-          "reasonCode": [
-            {
-              "text": "Unklare Todesursache, Verdacht auf nicht-natürlichen Tod"
-            }
-          ],
-          "code": {
-            "coding": [
-              {
-                "code": "29240004",
-                "system": "http://snomed.info/sct",
-                "display": "Autopsy examination"
-              }
-            ]
-          },
-          "status": "completed",
-          "intent": "order",
-          "subject": {
-            "reference": "Patient/StfVerstorbenePersonExample"
-          },
-          "authoredOn": "2025-03-01T10:00:00+01:00"
-        }
       }
     ],
     "type": "collection",
@@ -856,8 +850,26 @@ body:json {
   
 }
 
-script:pre-request {
-  bru.setVar("validExportBundle", JSON.stringify(req.getBody(), null, 2));
+assert {
+  res.status: eq 422
+}
+
+tests {
+  test("FHIR VALIDATION: Request body is valid according to JAVA validator", () => {
+    const validation = res.getBody();
+    expect(validation.resourceType).to.equal("OperationOutcome");
+  
+    const issues = validation.issue;
+    const errors = issues.filter(i => i.severity === "error");
+    const warnings = issues.filter(i => i.severity === "warning");
+  
+    console.log(errors.map(e => e.diagnostics).join("\n "));
+    
+    console.log(`FHIR Validation found ${errors.length} errors and ${warnings.length} warnings.`);
+  
+    expect(errors.length, `FHIR validation failed with expected 2 error: ${errors.map(e => e.diagnostics).join(" —— ")}`).to.equal(1);
+    expect(errors[0].diagnostics).to.contains("Patient/StfVerstorbenePersonExample");
+  });
 }
 
 settings {
