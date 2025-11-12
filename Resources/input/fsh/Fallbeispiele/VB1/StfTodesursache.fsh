@@ -7,13 +7,8 @@ Usage: #example
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version = "2022"
 * valueCodeableConcept.coding.code = #J18.0
-<<<<<<< HEAD
 * valueCodeableConcept.text = "Exitus letalis bei Bronchopneumonie (beidseitig)"
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
-=======
-* valueCodeableConcept.coding.display = "Exitus letalis bei Bronchopneumonie (beidseitig)"
-* component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N "Nein"
->>>>>>> acbd8fc938a75801893ee8cee23b73c3db9881f2
 * component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 * note.text = "Weitere relevante Erkrankungen: COPD, Vorhofflimmern, Diabetes mellitus Typ 2"
 * hasMember = Reference(Todesursache-2-Test-VB1)

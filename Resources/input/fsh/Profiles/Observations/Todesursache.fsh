@@ -47,6 +47,7 @@ sonst n"
 * component contains
   NichtNatuerlicherTod ..1 MS and
   Details ..1 MS and
+  ZeitdauerBeginnBisTod ..1 MS and
   Quelle ..1 MS
 * component[NichtNatuerlicherTod]
   * ^comment = "Anhaltspunkte für einen nicht-natürlichen Tod
@@ -66,6 +67,11 @@ dann ka;"
   * code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
   * value[x] only CodeableConcept
   * valueCodeableConcept.coding from StfJaNeinUnbekannt (required)
+* component[ZeitdauerBeginnBisTod]
+  * ^comment = "Angabe der Zeitdauer von Beginn der Krankheit bis zum Tod in beliebiger Angabe"
+  * code = StfObservationCodesErweiterungCS#zeitdauerBeginnBisTod
+  * value[x] only string
+  * valueString MS
 * component[Details]
   * ^comment = "Weitere Angaben zur Klassifikation der Todesursache, z.B. bei Unfall, Vergiftung,  Gewalteinwirkung, Selbsttötung sowie bei Komplikationen medizinischer Behandlung Äußere Ursache der Schädigung (Angaben über den Hergang); bei Vergiftungen zusätzlich Angabe des Mittels"
   * code = StfObservationCodesErweiterungCS#todesursacheKlassifikation
