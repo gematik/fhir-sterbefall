@@ -9,7 +9,7 @@ Usage: #definition
 * publisher = "ELFA Maßnahme Interoperabilität"
 * description = "Löscht alle Ressourcen, die innerhalb einer Provenance Ressource als `target` referenziert sind, aus dem FHIR-Server. Die Löschung ist final und kein sgn. Soft-Delete."
 * code = #deleteBundle
-* comment = "Die Operation löscht alle Ressourcen und gibt als Antwort ein 410 Gone zurück. Schlägt die Löschung fehl, wird ein OperationOutcome mit dem HTTP-Statuscode 422 (Unprocessable Entity) zurückgegeben."
+* comment = "Die Operation löscht alle Ressourcen und gibt als Antwort pro gelöschter Ressource ein 410 Gone zurück. Schlägt die Löschung fehl, wird ein OperationOutcome mit dem HTTP-Statuscode 422 (Unprocessable Entity) zurückgegeben."
 * resource = #Provenance
 * system = false
 * type = false
