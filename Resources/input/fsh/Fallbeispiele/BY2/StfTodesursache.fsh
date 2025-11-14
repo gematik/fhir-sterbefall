@@ -9,7 +9,7 @@ Usage: #example
 * valueCodeableConcept.coding.code = #S06.5
 * valueCodeableConcept.text = "akutes subdurales Hämatom"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
-* component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#Y "Ja"
+* component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#Y
 * component[Details].code = StfObservationCodesErweiterungCS#todesursacheKlassifikation
 * component[Details].valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * component[Details].valueCodeableConcept.coding.version = "2022"
@@ -36,7 +36,7 @@ Usage: #example
 * valueCodeableConcept.coding.code = #S72.0
 * valueCodeableConcept.text = "Schenkelhalsfraktur"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
-* component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#Y "Ja"
+* component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#Y
 * component[Details].code = StfObservationCodesErweiterungCS#todesursacheKlassifikation
 * component[Details].valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * component[Details].valueCodeableConcept.coding.version = "2022"
@@ -56,7 +56,7 @@ Usage: #example
 * valueCodeableConcept.coding.code = #F03.9
 * valueCodeableConcept.text = "Demenz"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
-* component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N "Nein"
+* component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
 * component[Quelle].code = StfObservationCodesErweiterungCS#quelle
 * component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 
@@ -71,7 +71,7 @@ Usage: #example
 * valueCodeableConcept.coding.code = #C50.9
 * valueCodeableConcept.text = "Mamma-CA"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
-* component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N "Nein"
+* component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
 * component[Quelle].code = StfObservationCodesErweiterungCS#quelle
 * component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 * note.text = "Maligne Neubildung der Brust (Krebs)"
