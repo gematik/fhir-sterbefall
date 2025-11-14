@@ -19,3 +19,43 @@ Die Interaktionen zwischen diesen Akteuren erfolgen in erster Linie über den Da
 Zum besseren Verständnis wurde der Workflow, der in diesem IG beschrieben ist, in folgendem Diagramm visualisiert:
 
 {{render:images-workflow}}
+
+### Beschreibung des Lösch-Workflow
+
+Aus dem Workflow ist zu entnehmen, dass die Export-Bundle nur temporär auf dem FHIR-Server des Landeskrebsregister persistiert werden. Sobald eine erfolgreiche Verarbeitung stattgefunden hat, werden alle Ressourcen zu einem Export-Bundle gehörend, gelöscht.
+
+Dafür wird eine Lösch-Interaktion auf Basis der Provenance-Instanz (valide zum Profil StfExportProvenance) als eindeutiges Element innerhalb des Export-Bundle getriggert. Alle im `target`-Element refernzierten Ressourcen müssen dabei kaskadierend gelöscht werden.
+Diese Löschung muss final sein (kein Soft-Delete).
+
+Je nach verwendeter Infrastruktur muss somit nach einem Soft-Delete in regelmäßigen Abständen ein Cleanup Erfolgen, welches den Soft-Delete in einen Hard-Delete umwandelt.
+
+#### Technische Implementierung anhand eines Beispiel
+
+Kommt ein HAPI-FHIR-Server zum Einsatz, heißt das konkret: 
+
+- Als erstes wird ein Soft-Delete ausgeführt für den Patient und alle zugehörigen Ressourcen
+
+```
+DELETE Provenance/[ID]?_cascade=delete
+```
+
+- In regelmäßigen Abständen wird ein $expunge ausgeführt, um die gelöschten Ressourcen zu entfernen.
+
+```
+POST [base]/$expunge
+Content-Type: application/fhir+json
+
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "expungeDeletedResources",
+      "valueBoolean": true
+    },
+    {
+      "name": "expungePreviousVersions",
+      "valueBoolean": true
+    }
+  ]
+}
+```

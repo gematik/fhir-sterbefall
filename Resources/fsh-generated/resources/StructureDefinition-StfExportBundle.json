@@ -63,7 +63,8 @@
           {
             "code": "Patient",
             "profile": [
-              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfVerstorbenePerson"
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfVerstorbenePerson",
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfVerstorbenePersonPseudonymisiert"
             ]
           },
           {
@@ -81,7 +82,8 @@
           {
             "code": "Procedure",
             "profile": [
-              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfLeichenschau"
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfLeichenschau",
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObduktion"
             ]
           },
           {

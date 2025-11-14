@@ -424,6 +424,17 @@
             }
           },
           {
+            "code": {
+              "coding": [
+                {
+                  "code": "zeitdauerBeginnBisTod",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                }
+              ]
+            },
+            "valueString": "1-2 Wochen"
+          },
+          {
             "valueCodeableConcept": {
               "coding": [
                 {

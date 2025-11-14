@@ -19,6 +19,9 @@ Usage: #example
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
 
+* component[ZeitdauerBeginnBisTod].code = StfObservationCodesErweiterungCS#zeitdauerBeginnBisTod
+* component[ZeitdauerBeginnBisTod].valueString = "1-2 Wochen"
+
 * component[Details].code = StfObservationCodesErweiterungCS#todesursacheKlassifikation
 * component[Details].valueCodeableConcept.coding = $icd-10-who#I25.1
 * component[Details].valueCodeableConcept.coding.version = "2023"
