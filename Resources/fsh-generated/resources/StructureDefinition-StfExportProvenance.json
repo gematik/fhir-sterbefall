@@ -34,7 +34,9 @@
               "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfOrganisation",
               "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfSterbeurkundeAusstellung",
               "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfBasisObservation",
-              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObduktionAnfrage"
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObduktionAnfrage",
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObduktion",
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfVerstorbenePersonPseudonymisiert"
             ]
           }
         ],
