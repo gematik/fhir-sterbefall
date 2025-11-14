@@ -17,6 +17,10 @@
       "display": "Klassifikation der Todesursache"
     },
     {
+      "code": "zeitdauerBeginnBisTod",
+      "display": "Zeitdauer von Beginn der Krankheit bis Tod"
+    },
+    {
       "code": "quelle",
       "display": "Quelle der Information"
     }
@@ -24,5 +28,5 @@
   "experimental": false,
   "publisher": "ELFA Maßnahme Interoperabilität",
   "date": "2025-09-05",
-  "count": 3
+  "count": 4
 }

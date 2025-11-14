@@ -68,7 +68,6 @@
     }
   ],
   "partOf": {
-    "reference": "Organization/StadtKoeln",
     "display": "Stadt Köln"
   },
   "extension": [

@@ -21,7 +21,9 @@ Description: "Todesursache (kompatibel zu [MII PR Onkologie Tod](https://www.med
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version 1.. MS
 * valueCodeableConcept.coding.code 1.. MS
-* valueCodeableConcept.coding.display 1.. MS
+* valueCodeableConcept.coding.display MS
+  * ^comment = "Im Display sind nur die offiziell in ICD-10 gelisteten Bezeichnungen zu verwenden. Freitexte sind im Text-Element zu hinterlegen."
+* valueCodeableConcept.text MS
 * dataAbsentReason MS
 * dataAbsentReason ^comment = "Todesart ungeklärt
 Wenn Todesart = ungeklärt ODER
@@ -29,7 +31,7 @@ Wenn Todesart = ungeklärt ODER
 dann j
 sonst n"
 * hasMember MS
-* hasMember ^comment = "Verknüpfung von nachgelagerten Todesursachen"
+* hasMember ^comment = "Verknüpfung von nachgelagerten Todesursachen. Alle weiteren Todesursachen, die zur Haupttodesursache geführt haben, werden über hasMember referenziert. Jede dieser Todesursachen enthält eine Extension, die den Typ der Todesursache (z.B. Todesursache 2, Todesursache 3 etc.) angibt. Die weiteren Todesursachen selber dürfen keine hasMember Referenzen enthalten."
 * hasMember.reference MS
 * hasMember.extension contains StfTodesursacheTypExtension named TodesursacheTyp 1..1 MS
 * note MS
@@ -45,6 +47,7 @@ sonst n"
 * component contains
   NichtNatuerlicherTod ..1 MS and
   Details ..1 MS and
+  ZeitdauerBeginnBisTod ..1 MS and
   Quelle ..1 MS
 * component[NichtNatuerlicherTod]
   * ^comment = "Anhaltspunkte für einen nicht-natürlichen Tod
@@ -64,6 +67,11 @@ dann ka;"
   * code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
   * value[x] only CodeableConcept
   * valueCodeableConcept.coding from StfJaNeinUnbekannt (required)
+* component[ZeitdauerBeginnBisTod]
+  * ^comment = "Angabe der Zeitdauer von Beginn der Krankheit bis zum Tod in beliebiger Angabe"
+  * code = StfObservationCodesErweiterungCS#zeitdauerBeginnBisTod
+  * value[x] only string
+  * valueString MS
 * component[Details]
   * ^comment = "Weitere Angaben zur Klassifikation der Todesursache, z.B. bei Unfall, Vergiftung,  Gewalteinwirkung, Selbsttötung sowie bei Komplikationen medizinischer Behandlung Äußere Ursache der Schädigung (Angaben über den Hergang); bei Vergiftungen zusätzlich Angabe des Mittels"
   * code = StfObservationCodesErweiterungCS#todesursacheKlassifikation
@@ -73,7 +81,8 @@ dann ka;"
   * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
   * valueCodeableConcept.coding.version 1.. MS
   * valueCodeableConcept.coding.code 1.. MS
-  * valueCodeableConcept.coding.display 1.. MS
+  * valueCodeableConcept.coding.display MS
+  * valueCodeableConcept.text MS
 * component[Quelle]
   * ^comment = "Quellangabe der Information. Z.B. ob die Todesursache aus dem Leichenschauschein oder dem Obduktionsschein stammt."
   * code = StfObservationCodesErweiterungCS#quelle

@@ -16,10 +16,10 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10",
         "version": "2023",
-        "code": "I21.0",
-        "display": "Akuter transmuraler Myokardinfarkt der Vorderwand"
+        "code": "I21.0"
       }
-    ]
+    ],
+    "text": "Akuter transmuraler Myokardinfarkt der Vorderwand"
   },
   "note": [
     {
@@ -32,8 +32,7 @@
         "coding": [
           {
             "code": "N",
-            "system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-            "display": "Nein"
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0532"
           }
         ]
       },
@@ -47,12 +46,22 @@
       }
     },
     {
+      "code": {
+        "coding": [
+          {
+            "code": "zeitdauerBeginnBisTod",
+            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+          }
+        ]
+      },
+      "valueString": "1-2 Wochen"
+    },
+    {
       "valueCodeableConcept": {
         "coding": [
           {
             "system": "http://hl7.org/fhir/sid/icd-10",
             "code": "I25.1",
-            "display": "Atherosklerose des Herzens",
             "version": "2023"
           }
         ]

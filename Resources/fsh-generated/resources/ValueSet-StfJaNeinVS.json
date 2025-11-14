@@ -15,12 +15,10 @@
         "system": "http://terminology.hl7.org/CodeSystem/v2-0532",
         "concept": [
           {
-            "code": "Y",
-            "display": "Ja"
+            "code": "Y"
           },
           {
-            "code": "N",
-            "display": "Nein"
+            "code": "N"
           }
         ]
       }

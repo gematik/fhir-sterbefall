@@ -39,6 +39,7 @@
       {
         "id": "Provenance.reason",
         "path": "Provenance.reason",
+        "min": 1,
         "patternCodeableConcept": {
           "coding": [
             {
@@ -52,6 +53,7 @@
       {
         "id": "Provenance.activity",
         "path": "Provenance.activity",
+        "min": 1,
         "patternCodeableConcept": {
           "coding": [
             {

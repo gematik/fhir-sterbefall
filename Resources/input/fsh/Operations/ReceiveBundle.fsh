@@ -7,7 +7,9 @@ Usage: #definition
 * kind = #operation
 * experimental = false
 * publisher = "ELFA Maßnahme Interoperabilität"
-* description = "Validiert das Eingangs-Bundle, protokolliert bzw. gibt das Validierungsergebnis aus, wandelt es in ein Transaktions-Bundle um und führt die Transaktion aus."
+* description = "Validiert das Eingangs-Bundle, protokolliert bzw. gibt das Validierungsergebnis aus, wandelt es in ein Transaktions-Bundle um und führt die Transaktion aus.
+
+Das mitgegebene Bundle muss eine Provenance Ressource enthalten, die alle Ressourcen im Bundle (Ausnahme sich selber) referenziert. Die Provenance Ressource muss dem Profil StfProvenance entsprechen."
 * code = #receiveBundle
 * comment = "Diese Operation validiert das eingehende Bundle, konvertiert es in ein FHIR-Transaktions-Bundle und fuehrt es aus. Die Antwort ist das Ergebnis-Bundle der Transaktion. Schlägt die Transaktion fehl, wird ein OperationOutcome mit dem HTTP-Statuscode 422 (Unprocessable Entity) zurückgegeben."
 * system = true

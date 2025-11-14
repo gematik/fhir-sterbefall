@@ -28,24 +28,12 @@ Usage: #example
 * contact.telecom[1].system = #email
 * contact.telecom[1].value = "max.mustermann@standesamt-musterstadt.de"
 * contact.telecom[1].use = #work
-* partOf = Reference(Organization/StadtKoeln)
 * partOf.display = "Stadt Köln"
 * extension[StfPruefcodeExtension].valueString = "PCODE98765"
 
-Instance: StadtKoeln
-InstanceOf: Organization
-Title: "Stadt Köln"
-Description: "Stadt Köln als übergeordnete Organisation für die Standesämter"
-* name = "Stadt Köln"
-* address.type = #both
-* address.line = "Historisches Rathaus"
-* address.city = "Köln"
-* address.postalCode = "50667"
-* address.country = "DE"
-* telecom[0].system = #phone
-* telecom[0].value = "+49 221 221-0"
-* telecom[0].use = #work
-* telecom[1].system = #email
-* telecom[1].value = "stadt-koeln@stadt-koeln.de"
-* telecom[1].use = #work
-* active = true
+Instance: StfOrganisationGesundheitsamtRegensburg
+InstanceOf: StfOrganisation
+Usage: #example
+Title: "StfOrganisation-GA-Test-BY1"
+* name = "Gesundheitsamt Regensburg"
+* type = StfOrganisationsTypCS#GA

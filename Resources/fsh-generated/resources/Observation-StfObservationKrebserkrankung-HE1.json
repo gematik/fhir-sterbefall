@@ -1,0 +1,35 @@
+{
+  "resourceType": "Observation",
+  "id": "StfObservationKrebserkrankung-HE1",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObservationKrebserkrankung"
+    ]
+  },
+  "note": [
+    {
+      "text": "Magenkarzinom"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "108369006",
+        "system": "http://snomed.info/sct",
+        "display": "Tumor"
+      }
+    ]
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/StfVerstorbenePerson-HE1"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "Y",
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0532"
+      }
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 meta {
   name: GetResources
   type: http
-  seq: 4
+  seq: 5
   tags: [
     kr
   ]
@@ -18,15 +18,15 @@ body:json {
 }
 
 script:pre-request {
-  const step1 = bru.getVar("Persistence_Step1");
+  const step1 = bru.getVar("Delete_Step2");
   
   if (step1 !== "success") {
-    throw new Error("[SKIP] Dependency Request Step 1 failed — skipping execution.");
+    throw new Error("[SKIP] Dependency Request Step 2 failed — skipping execution.");
   }
 }
 
 tests {
-  test("DELETE: All batch-response entries are 410 Gone", () => {
+  test("DELETE: All batch-response entries are 404 Not Found", () => {
     const body = res.getBody();
   
     expect(body.resourceType).to.equal("Bundle");
@@ -36,19 +36,11 @@ tests {
     const entries = body.entry || [];
   
     const nonGone = entries
-      .map((e, idx) => {
-        const status = e.response?.status || "(missing)";
-        const res = e.resource;
-        const resourceLabel = res
-          ? `${res.resourceType}/${res.id || "?"}`
-          : "(kein Resource-Body)";
-        return {
-          index: idx,
-          status,
-          resourceLabel
-        };
-      })
-      .filter(e => e.status !== "410 Gone");
+      .map((e, idx) => ({
+        index: idx,
+        status: e.response?.status || "(missing)"
+      }))
+      .filter(e => e.status !== "404 Not Found");
   
     // Debug-Übersicht
     console.log(

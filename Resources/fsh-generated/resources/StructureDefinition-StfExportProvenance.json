@@ -1,0 +1,118 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "StfExportProvenance",
+  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportProvenance",
+  "version": "1.0.0-beta.3",
+  "name": "StfExportProvenance",
+  "title": "STF ExportBundle Provenance",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-09-05",
+  "publisher": "ELFA Maßnahme Interoperabilität",
+  "description": "Die StfExportProvenance Ressource dokumentiert die Herkunft und den Erstellungsprozess der im StfExportBundle enthaltenen Ressourcen. Außerdem wird die Ressource technisch für den Löschprozess benötigt.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Provenance",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Provenance",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Provenance.target",
+        "path": "Provenance.target",
+        "comment": "Verweis auf die Ressource im StfExportBundle, für die diese Provenance Ressource erstellt wurde",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArzt",
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfVerstorbenePerson",
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArztZuordnung",
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDatei",
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfLeichenschau",
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfOrganisation",
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfSterbeurkundeAusstellung",
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfBasisObservation",
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObduktionAnfrage",
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObduktion",
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfVerstorbenePersonPseudonymisiert"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Provenance.recorded",
+        "path": "Provenance.recorded",
+        "mustSupport": true
+      },
+      {
+        "id": "Provenance.reason",
+        "path": "Provenance.reason",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "DECSD",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Provenance.activity",
+        "path": "Provenance.activity",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Provenance.agent",
+        "path": "Provenance.agent",
+        "mustSupport": true
+      },
+      {
+        "id": "Provenance.agent.who",
+        "path": "Provenance.agent.who",
+        "mustSupport": true
+      },
+      {
+        "id": "Provenance.agent.who.display",
+        "path": "Provenance.agent.who.display",
+        "comment": "Name der generierenden Software",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Provenance.agent.onBehalfOf",
+        "path": "Provenance.agent.onBehalfOf",
+        "comment": "Verweis auf die Organisation des Gesundheitsamtes",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfOrganisation"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Provenance.agent.onBehalfOf.reference",
+        "path": "Provenance.agent.onBehalfOf.reference",
+        "min": 1,
+        "mustSupport": true
+      }
+    ]
+  }
+}

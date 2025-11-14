@@ -1,0 +1,35 @@
+meta {
+  name: FindProvenance copy
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{host}}/Provenance?target:Patient={{createdpatientId}}&_profile=http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportProvenance
+  body: none
+  auth: inherit
+}
+
+params:query {
+  "target:Patient": {{createdpatientId}}
+  _profile: http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportProvenance
+}
+
+script:post-response {
+  const json = res.getBody();
+  
+  const provenanceRef = json.entry?.[0].fullUrl;
+  if (!provenanceRef) {
+    bru.setVar("Delete_Step2", "failed");
+    throw new Error("No Provenance resource found from step 2!");
+  }
+  bru.setVar("Delete_Step2", "success");
+  const provenanceId = provenanceRef.split("/")[5];
+  // Patient-ID separat speichern
+  bru.setVar("createdProvenanceId", provenanceId);
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

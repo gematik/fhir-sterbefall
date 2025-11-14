@@ -12,15 +12,18 @@ Usage: #example
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version = "2023"
 * valueCodeableConcept.coding.code = #I21.0
-* valueCodeableConcept.coding.display = "Akuter transmuraler Myokardinfarkt der Vorderwand"
+* valueCodeableConcept.text = "Akuter transmuraler Myokardinfarkt der Vorderwand"
 * note.text = "Patient erlitt einen massiven Herzinfarkt nach längerer kardialer Vorgeschichte mit koronarer Herzkrankheit und Bluthochdruck."
 
 // Components
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
-* component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N "Nein"
+* component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
+
+* component[ZeitdauerBeginnBisTod].code = StfObservationCodesErweiterungCS#zeitdauerBeginnBisTod
+* component[ZeitdauerBeginnBisTod].valueString = "1-2 Wochen"
 
 * component[Details].code = StfObservationCodesErweiterungCS#todesursacheKlassifikation
-* component[Details].valueCodeableConcept.coding = $icd-10-who#I25.1 "Atherosklerose des Herzens"
+* component[Details].valueCodeableConcept.coding = $icd-10-who#I25.1
 * component[Details].valueCodeableConcept.coding.version = "2023"
 
 * component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Obduktionsschein
@@ -42,9 +45,9 @@ Usage: #example
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version = "2023"
 * valueCodeableConcept.coding.code = #I25.9
-* valueCodeableConcept.coding.display = "Chronische ischämische Herzkrankheit, nicht näher bezeichnet"
+* valueCodeableConcept.text = "Chronische ischämische Herzkrankheit, nicht näher bezeichnet"
 
 // Component für natürlichen Tod auch hier setzen
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
-* component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N "Nein"
+* component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
 * component[Quelle].valueCodeableConcept = StfDateiTypCS#Leichenschauschein

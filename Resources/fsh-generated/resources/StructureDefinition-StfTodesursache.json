@@ -83,7 +83,12 @@
       {
         "id": "Observation.value[x].coding.display",
         "path": "Observation.value[x].coding.display",
-        "min": 1,
+        "comment": "Im Display sind nur die offiziell in ICD-10 gelisteten Bezeichnungen zu verwenden. Freitexte sind im Text-Element zu hinterlegen.",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.value[x].text",
+        "path": "Observation.value[x].text",
         "mustSupport": true
       },
       {
@@ -100,7 +105,7 @@
       {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
-        "comment": "Verknüpfung von nachgelagerten Todesursachen"
+        "comment": "Verknüpfung von nachgelagerten Todesursachen. Alle weiteren Todesursachen, die zur Haupttodesursache geführt haben, werden über hasMember referenziert. Jede dieser Todesursachen enthält eine Extension, die den Typ der Todesursache (z.B. Todesursache 2, Todesursache 3 etc.) angibt. Die weiteren Todesursachen selber dürfen keine hasMember Referenzen enthalten."
       },
       {
         "id": "Observation.hasMember.extension",
@@ -289,7 +294,54 @@
       {
         "id": "Observation.component:Details.value[x]:valueCodeableConcept.coding.display",
         "path": "Observation.component.value[x].coding.display",
-        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:Details.value[x]:valueCodeableConcept.text",
+        "path": "Observation.component.value[x].text",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:ZeitdauerBeginnBisTod",
+        "path": "Observation.component",
+        "sliceName": "ZeitdauerBeginnBisTod",
+        "comment": "Angabe der Zeitdauer von Beginn der Krankheit bis zum Tod in beliebiger Angabe",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:ZeitdauerBeginnBisTod.code",
+        "path": "Observation.component.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "zeitdauerBeginnBisTod",
+              "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:ZeitdauerBeginnBisTod.value[x]",
+        "path": "Observation.component.value[x]",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:ZeitdauerBeginnBisTod.value[x]:valueString",
+        "path": "Observation.component.value[x]",
+        "sliceName": "valueString",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
         "mustSupport": true
       },
       {

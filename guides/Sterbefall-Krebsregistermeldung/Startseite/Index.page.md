@@ -24,7 +24,7 @@ Enddatum: Noch nicht geplant
 
 ### Status
 
-Version: 0.1.0
+Version: 1.0.0-beta.3
 
 Reifegrad: Draft 
 

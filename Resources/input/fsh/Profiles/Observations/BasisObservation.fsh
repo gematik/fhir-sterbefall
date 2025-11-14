@@ -34,4 +34,5 @@ Title: "StfObservationCodesErweiterung"
 * insert Meta
 * #nichtNatuerlicherTod "Nicht natürlicher Tod"
 * #todesursacheKlassifikation "Klassifikation der Todesursache"
+* #zeitdauerBeginnBisTod "Zeitdauer von Beginn der Krankheit bis Tod"
 * #quelle "Quelle der Information"

@@ -1,0 +1,70 @@
+{
+  "resourceType": "Observation",
+  "id": "Todesursache-3-TH1",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
+    ]
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10",
+        "version": "2022",
+        "code": "N17.9"
+      }
+    ],
+    "text": "Akutes Nierenversagen"
+  },
+  "component": [
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "N",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0532"
+          }
+        ]
+      },
+      "code": {
+        "coding": [
+          {
+            "code": "nichtNatuerlicherTod",
+            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+          }
+        ]
+      }
+    },
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "Leichenschauschein",
+            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
+          }
+        ]
+      },
+      "code": {
+        "coding": [
+          {
+            "code": "quelle",
+            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+          }
+        ]
+      }
+    }
+  ],
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "184305005",
+        "system": "http://snomed.info/sct",
+        "display": "Cause of Death"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/StfVerstorbenePerson-TH1"
+  }
+}

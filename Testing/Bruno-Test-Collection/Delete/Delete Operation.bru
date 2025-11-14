@@ -1,0 +1,104 @@
+meta {
+  name: Delete Operation
+  type: http
+  seq: 3
+  tags: [
+    kr
+  ]
+}
+
+post {
+  url: {{host}}/Provenance/{{createdProvenanceId}}/$deleteBundle
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {{batchRequestBody}}
+}
+
+assert {
+  res.status: eq 200
+}
+
+script:pre-request {
+  const step1 = bru.getVar("Delete_Step2");
+  
+  if (step1 !== "success") {
+    throw new Error("[SKIP] Dependency Request Step 1 failed — skipping execution.");
+  }
+}
+
+tests {
+  test("DELETE: All transaction-response entries show SUCCESSFUL_DELETE or SUCCESSFUL_DELETE_ALREADY_DELETED", () => {
+    const body = res.getBody();
+  
+    // 🔹 Grundstruktur prüfen
+    expect(body.resourceType).to.equal("Bundle");
+    expect(body.type).to.equal("transaction-response");
+    expect(body.entry).to.be.an("array").that.is.not.empty;
+  
+    const entries = body.entry || [];
+  
+    // 🔍 Finde alle Einträge, die KEINEN erfolgreichen Lösch-Code haben
+    const invalidDeletes = entries
+      .map((e, idx) => {
+        const status = e.response?.status || "(missing)";
+        const location = e.response?.location || `(Entry[${idx}] ohne location)`;
+        const issues = e.response?.outcome?.issue || [];
+  
+        // Suche in den OperationOutcome-Issues nach den erlaubten Codes
+        const hasSuccessfulDelete = issues.some(issue =>
+          Array.isArray(issue.details?.coding) &&
+          issue.details.coding.some(c => c.code === "SUCCESSFUL_DELETE")
+        );
+  
+        const hasSuccessfulAlreadyDeleted = issues.some(issue =>
+          Array.isArray(issue.details?.coding) &&
+          issue.details.coding.some(c => c.code === "SUCCESSFUL_DELETE_ALREADY_DELETED")
+        );
+  
+        const ok = hasSuccessfulDelete || hasSuccessfulAlreadyDeleted;
+  
+        return {
+          index: idx,
+          location,
+          status,
+          ok,
+          code: hasSuccessfulDelete ? "SUCCESSFUL_DELETE" :
+                hasSuccessfulAlreadyDeleted ? "SUCCESSFUL_DELETE_ALREADY_DELETED" :
+                "(none)"
+        };
+      })
+      .filter(e => !e.ok);
+  
+    // 🔧 Debug-Übersicht
+    console.log(
+      "🔎 Delete-Status pro Entry:",
+      entries.map((e, idx) => {
+        const loc = e.response?.location || `(Entry[${idx}] ohne location)`;
+        const code =
+          e.response?.outcome?.issue?.[0]?.details?.coding?.[0]?.code || "(no code)";
+        return `${idx}: ${loc} -> ${code}`;
+      })
+    );
+  
+    // 🧩 Erwartung: Alle Einträge müssen SUCCESSFUL_DELETE oder SUCCESSFUL_DELETE_ALREADY_DELETED haben
+    expect(
+      invalidDeletes.length,
+      invalidDeletes.length > 0
+        ? `Erwarte für alle Einträge SUCCESSFUL_DELETE oder SUCCESSFUL_DELETE_ALREADY_DELETED.\nAbweichungen:\n${invalidDeletes
+            .map(e => `Entry[${e.index}] ${e.location} -> ${e.status} (code=${e.code})`)
+            .join("\n")}`
+        : "Alle Einträge zeigen korrekten Delete-Code."
+    ).to.equal(0);
+  
+    console.log("✅ Alle Einträge im transaction-response enthalten SUCCESSFUL_DELETE oder SUCCESSFUL_DELETE_ALREADY_DELETED.");
+  });
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
