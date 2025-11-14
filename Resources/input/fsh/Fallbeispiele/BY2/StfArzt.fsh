@@ -8,3 +8,10 @@ Usage: #example
 * address[Strassenanschrift].type = #both
 * address[Strassenanschrift].city = "Musterstadt"
 * address[Strassenanschrift].postalCode = "12345"
+
+Instance: StfArztZuordnung-BY2
+InstanceOf: StfArztZuordnung
+Usage: #example
+* practitioner = Reference(Practitioner/StfArzt-BY2)
+* organization = Reference(Organization/StfOrganisation-Klinik-BY2)
+// * specialty = StfFacharztgruppeCS#Krankenhausarzt "diensthabender Arzt/Ärztin im Krankenhaus"

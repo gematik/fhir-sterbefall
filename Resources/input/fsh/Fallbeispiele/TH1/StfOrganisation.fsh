@@ -5,7 +5,7 @@ Title: "StfOrganisation-GA-TH1"
 * name = "Gesundheitsamt Mühlhausen"
 * type = StfOrganisationsTypCS#GA
 
-Instance: StfOrganisationStandesamt-TH1
+Instance: StfOrganisation-Standesamt-TH1
 InstanceOf: StfOrganisation
 Title: "Standesamt Erfurt"
 Usage: #example
@@ -21,7 +21,7 @@ Usage: #example
 * type.coding.display = "Standesamt"
 * name = "Standesamt Erfurt"
 
-Instance: StfOrganisationKlinik-TH1
+Instance: StfOrganisation-Klinik-TH1
 InstanceOf: StfOrganisation
 Title: "Heliosklinikum Erfurt"
 Usage: #example
