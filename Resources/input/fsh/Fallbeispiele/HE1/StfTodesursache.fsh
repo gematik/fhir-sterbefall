@@ -14,6 +14,8 @@ Usage: #example
 * hasMember[+] = Reference(Todesursache-3-HE1)
 * hasMember[=].extension[TodesursacheTyp].valueCodeableConcept = StfTodesursacheCodeCS#TU3 "Todesursache 3"
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
+* component[ZeitdauerBeginnBisTod].code = StfObservationCodesErweiterungCS#zeitdauerBeginnBisTod
+* component[ZeitdauerBeginnBisTod].valueString = "Stunden"
 * component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 
 Instance: Todesursache-2-HE1

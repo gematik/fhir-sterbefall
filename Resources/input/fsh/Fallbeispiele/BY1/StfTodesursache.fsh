@@ -10,6 +10,8 @@ Usage: #example
 * valueCodeableConcept.text = "Multiorganversagen"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
+* component[ZeitdauerBeginnBisTod].code = StfObservationCodesErweiterungCS#zeitdauerBeginnBisTod
+* component[ZeitdauerBeginnBisTod].valueString = "1 Woche"
 * component[Quelle].code = StfObservationCodesErweiterungCS#quelle
 * component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 * note.text = "Multiorganversagen, Nierenversagen, Herzinsuffizienz, COPD, Vorhofflimmern"
@@ -34,6 +36,8 @@ Usage: #example
 * valueCodeableConcept.text = "Nierenversagen"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
+* component[ZeitdauerBeginnBisTod].code = StfObservationCodesErweiterungCS#zeitdauerBeginnBisTod
+* component[ZeitdauerBeginnBisTod].valueString = "1-2 Wochen"
 * component[Quelle].code = StfObservationCodesErweiterungCS#quelle
 * component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 
