@@ -20,7 +20,7 @@ Usage: #example
   * resource = Todesursache-3-VB1
 * entry[+]
   * insert ExampleFullUrl(Observation, Todesursache-4-VB1)
-  * resource = Todesursache-4-Test-VB1
+  * resource = Todesursache-4-VB1
 * entry[+]
   * insert ExampleFullUrl(Organization, StfOrganisation-GA-VB1)
   * resource = StfOrganisation-GA-VB1

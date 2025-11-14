@@ -39,8 +39,8 @@ Usage: #example
   * insert ExampleFullUrl(Provenance, StfExportProvenance-Example)
   * resource = StfExportProvenance-Example
 * entry[+]
-  * insert ExampleFullUrl(ServiceRequest, StfObduktionAnfrageExample)
-  * resource = StfObduktionAnfrageExample
+  * insert ExampleFullUrl(ServiceRequest, StfObduktionAnfrage-Example)
+  * resource = StfObduktionAnfrage-Example
 
 Instance: StfExportProvenance-Example
 InstanceOf: StfExportProvenance
@@ -59,6 +59,3 @@ Usage: #example
 * recorded = "2025-11-06T12:49:00Z"
 * agent[+].who.display = "Sterbefall-Management-Software v1.0"
 * agent[=].onBehalfOf = Reference(StfOrganisationGesundheitsamtRegensburg)
-
-RuleSet: ExampleFullUrl(resource, id)
-* fullUrl = "https://mein.fhir-server.local/fhir/{resource}/{id}"
