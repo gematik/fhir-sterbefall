@@ -9,7 +9,7 @@
 * CodeSystem `StfObservationCodesErweiterungCS`: Um den Code `zeitdauerBeginnBisTod` erweitert, um Verlaufseinschätzungen strukturiert übermitteln zu können.
 * Profil `StfTodesursache`: ICD-10-Displays dürfen nur offizielle Bezeichnungen zeigen (Freitexte wandern in `text`), zusätzliche Freitextpflicht für Details, neue Komponente `ZeitdauerBeginnBisTod` auf Basis des neuen Codes sowie präzisierte Beschreibung der `hasMember`-Verknüpfungen.
 * Profil `StfSterbeurkundeAusstellung`: `reason` und `activity` sind jetzt als Kardinalität 1..1 ausgeprägt und sichern damit die verpflichtende Kodierung der Ausstellungsgründe und des Abschlussstatus.
-
+* Neue Operation `$deleteBundle`: Löscht basieren auf einer Provenance einen kompletten Datensatz aus dem FHIR-Server. 
 
 ### Version 1.0.0-beta.2
 
