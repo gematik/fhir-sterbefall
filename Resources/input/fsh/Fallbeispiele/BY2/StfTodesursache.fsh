@@ -7,14 +7,14 @@ Usage: #example
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version = "2022"
 * valueCodeableConcept.coding.code = #S06.5
-* valueCodeableConcept.coding.display = "akutes subdurales Hämatom"
+* valueCodeableConcept.text = "akutes subdurales Hämatom"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#Y "Ja"
 * component[Details].code = StfObservationCodesErweiterungCS#todesursacheKlassifikation
 * component[Details].valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * component[Details].valueCodeableConcept.coding.version = "2022"
 * component[Details].valueCodeableConcept.coding.code = #W19
-* component[Details].valueCodeableConcept.coding.display = "Sturz von unbestimmter Höhe"
+* component[Details].valueCodeableConcept.text = "Sturz von unbestimmter Höhe"
 * component[Quelle].code = StfObservationCodesErweiterungCS#quelle
 * component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 * note.text = "Sturz im Krankenhaus auf dem Weg zur Toilette"
@@ -34,14 +34,14 @@ Usage: #example
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version = "2022"
 * valueCodeableConcept.coding.code = #S72.0
-* valueCodeableConcept.coding.display = "Schenkelhalsfraktur"
+* valueCodeableConcept.text = "Schenkelhalsfraktur"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#Y "Ja"
 * component[Details].code = StfObservationCodesErweiterungCS#todesursacheKlassifikation
 * component[Details].valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * component[Details].valueCodeableConcept.coding.version = "2022"
 * component[Details].valueCodeableConcept.coding.code = #W19
-* component[Details].valueCodeableConcept.coding.display = "Sturz von unbestimmter Höhe"
+* component[Details].valueCodeableConcept.text = "Sturz von unbestimmter Höhe"
 * component[Quelle].code = StfObservationCodesErweiterungCS#quelle
 * component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 
@@ -54,7 +54,7 @@ Usage: #example
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version = "2022"
 * valueCodeableConcept.coding.code = #F03.9
-* valueCodeableConcept.coding.display = "Demenz"
+* valueCodeableConcept.text = "Demenz"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N "Nein"
 * component[Quelle].code = StfObservationCodesErweiterungCS#quelle
@@ -69,7 +69,7 @@ Usage: #example
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version = "2022"
 * valueCodeableConcept.coding.code = #C50.9
-* valueCodeableConcept.coding.display = "Mamma-CA"
+* valueCodeableConcept.text = "Mamma-CA"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N "Nein"
 * component[Quelle].code = StfObservationCodesErweiterungCS#quelle
