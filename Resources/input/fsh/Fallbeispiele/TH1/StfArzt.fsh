@@ -15,4 +15,3 @@ InstanceOf: StfArztZuordnung
 Usage: #example
 * practitioner = Reference(Practitioner/StfArzt-TH1)
 * organization = Reference(Organization/StfOrganisation-Klinik-BY2)
-// * specialty = StfFacharztgruppeCS#Krankenhausarzt "diensthabender Arzt/Ärztin im Krankenhaus"
