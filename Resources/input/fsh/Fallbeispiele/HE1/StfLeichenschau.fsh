@@ -4,4 +4,5 @@ Usage: #example
 * status = #completed
 * code = $sct#29240004 "Autopsy examination"
 * performedDateTime = "2023-07-15T11:00:00+01:00"
+* performer.actor.reference = "Practitioner/StfArzt-HE1"
 * subject.reference = "Patient/StfVerstorbenePerson-HE1"

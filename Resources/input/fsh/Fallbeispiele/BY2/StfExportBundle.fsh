@@ -24,3 +24,21 @@ Usage: #example
 * entry[+]
   * insert ExampleFullUrl(Observation, StfObservationKrebserkrankung-BY2)
   * resource = StfObservationKrebserkrankung-BY2
+* entry[+]
+  * insert ExampleFullUrl(Organization, StfArzt-BY2)
+  * resource = StfArzt-BY2
+
+Instance: StfExportProvenanceExample-BY2
+InstanceOf: StfExportProvenance
+Usage: #example
+* target[+] = Reference(StfVerstorbenePerson-BY2)
+* target[+] = Reference(StfLeichenschau-BY2)
+* target[+] = Reference(Todesursache-1-BY2)
+* target[+] = Reference(Todesursache-2-BY2)
+* target[+] = Reference(Todesursache-4-BY2)
+* target[+] = Reference(Todesursache-5-BY2)
+* target[+] = Reference(StfObservationKrebserkrankung-BY2)
+* target[+] = Reference(StfArzt-BY2)
+* recorded = "2025-11-06T12:49:00Z"
+* agent[+].who.display = "Sterbefall-Management-Software v1.0"
+* agent[=].onBehalfOf = Reference(StfOrganisation-GA-BY2)

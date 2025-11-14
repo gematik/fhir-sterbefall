@@ -27,6 +27,9 @@ Usage: #example
 * entry[+]
   * insert ExampleFullUrl(Provenance, StfExportProvenanceExample-HE1)
   * resource = StfExportProvenanceExample-HE1
+* entry[+]
+  * insert ExampleFullUrl(Organization, StfArzt-HE1)
+  * resource = StfArzt-HE1
 
 Instance: StfExportProvenanceExample-HE1
 InstanceOf: StfExportProvenance
@@ -38,6 +41,7 @@ Usage: #example
 * target[+] = Reference(Todesursache-3-HE1)
 * target[+] = Reference(StfObservationKrebserkrankung-HE1)
 * target[+] = Reference(StfOrganisation-GA-HE1)
+* target[+] = Reference(StfArzt-HE1)
 * recorded = "2025-11-06T12:49:00Z"
 * agent[+].who.display = "Sterbefall-Management-Software v1.0"
 * agent[=].onBehalfOf = Reference(StfOrganisation-GA-HE1)
