@@ -5,7 +5,7 @@ Usage: #example
 * code = $sct#184305005 "Cause of Death"
 * subject = Reference(StfVerstorbenePerson-BY1)
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
-* valueCodeableConcept.coding.version = "2022" //TODO-DB: Woher kommt diese Version?
+* valueCodeableConcept.coding.version = "2026" //TODO-DB: Woher kommt diese Version?
 * valueCodeableConcept.coding.code = #R68.8
 * valueCodeableConcept.text = "Multiorganversagen"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
@@ -29,7 +29,7 @@ Usage: #example
 * code = $sct#184305005 "Cause of Death"
 * subject = Reference(StfVerstorbenePerson-BY1)
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
-* valueCodeableConcept.coding.version = "2022"
+* valueCodeableConcept.coding.version = "2026"
 * valueCodeableConcept.coding.code = #N19
 * valueCodeableConcept.text = "Nierenversagen"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
@@ -44,7 +44,7 @@ Usage: #example
 * code = $sct#184305005 "Cause of Death"
 * subject = Reference(StfVerstorbenePerson-BY1)
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
-* valueCodeableConcept.coding.version = "2022"
+* valueCodeableConcept.coding.version = "2026"
 * valueCodeableConcept.coding.code = #I50.0
 * valueCodeableConcept.text = "Herzinsuffizienz"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
@@ -60,7 +60,7 @@ Usage: #example
 * subject = Reference(StfVerstorbenePerson-BY1)
 * effectiveDateTime = "2022"
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
-* valueCodeableConcept.coding.version = "2022"
+* valueCodeableConcept.coding.version = "2026"
 * valueCodeableConcept.coding.code = #I44
 * valueCodeableConcept.text = "COPD"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
@@ -76,7 +76,7 @@ Usage: #example
 * subject = Reference(StfVerstorbenePerson-BY1)
 * effectiveDateTime = "2018"
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
-* valueCodeableConcept.coding.version = "2022"
+* valueCodeableConcept.coding.version = "2026"
 * valueCodeableConcept.coding.code = #I48.9
 * valueCodeableConcept.text = "Vorhofflimmern"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
