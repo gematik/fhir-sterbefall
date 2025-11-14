@@ -18,12 +18,12 @@ Usage: #example
 * component[Quelle].code = StfObservationCodesErweiterungCS#quelle
 * component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 * note.text = "Sturz im Krankenhaus auf dem Weg zur Toilette"
-* hasMember = Reference(Todesursache-2-BY2)
-* hasMember.extension[TodesursacheTyp].valueCodeableConcept = StfTodesursacheCodeCS#TU2 "Todesursache 2"
-* hasMember = Reference(Todesursache-4-BY2)
-* hasMember.extension[TodesursacheTyp].valueCodeableConcept = StfTodesursacheCodeCS#TU4 "Todesursache 4"
-* hasMember = Reference(Todesursache-5-BY2)
-* hasMember.extension[TodesursacheTyp].valueCodeableConcept = StfTodesursacheCodeCS#TU5 "Todesursache 5"
+* hasMember[+] = Reference(Todesursache-2-BY2)
+* hasMember[=].extension[TodesursacheTyp].valueCodeableConcept = StfTodesursacheCodeCS#TU2 "Todesursache 2"
+* hasMember[+] = Reference(Todesursache-4-BY2)
+* hasMember[=].extension[TodesursacheTyp].valueCodeableConcept = StfTodesursacheCodeCS#TU4 "Todesursache 4"
+* hasMember[+] = Reference(Todesursache-5-BY2)
+* hasMember[=].extension[TodesursacheTyp].valueCodeableConcept = StfTodesursacheCodeCS#TU5 "Todesursache 5"
 
 Instance: Todesursache-2-BY2
 InstanceOf: StfTodesursache

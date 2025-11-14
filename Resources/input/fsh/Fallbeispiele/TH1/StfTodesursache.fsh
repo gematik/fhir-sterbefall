@@ -10,14 +10,14 @@ Usage: #example
 * valueCodeableConcept.text = "Septischer Schock"
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
 * component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
-* hasMember = Reference(Todesursache-2-TH1)
-* hasMember.extension[TodesursacheTyp].valueCodeableConcept = StfTodesursacheCodeCS#TU2 "Todesursache 2"
-* hasMember = Reference(Todesursache-3-TH1)
-* hasMember.extension[TodesursacheTyp].valueCodeableConcept = StfTodesursacheCodeCS#TU3 "Todesursache 3"
-* hasMember = Reference(Todesursache-4-TH1)
-* hasMember.extension[TodesursacheTyp].valueCodeableConcept = StfTodesursacheCodeCS#TU4 "Todesursache 4"
-* hasMember = Reference(Todesursache-5-TH1)
-* hasMember.extension[TodesursacheTyp].valueCodeableConcept = StfTodesursacheCodeCS#TU5 "Todesursache 5"
+* hasMember[+] = Reference(Todesursache-2-TH1)
+* hasMember[=].extension[TodesursacheTyp].valueCodeableConcept = StfTodesursacheCodeCS#TU2 "Todesursache 2"
+* hasMember[+] = Reference(Todesursache-3-TH1)
+* hasMember[=].extension[TodesursacheTyp].valueCodeableConcept = StfTodesursacheCodeCS#TU3 "Todesursache 3"
+* hasMember[+] = Reference(Todesursache-4-TH1)
+* hasMember[=].extension[TodesursacheTyp].valueCodeableConcept = StfTodesursacheCodeCS#TU4 "Todesursache 4"
+* hasMember[+] = Reference(Todesursache-5-TH1)
+* hasMember[=].extension[TodesursacheTyp].valueCodeableConcept = StfTodesursacheCodeCS#TU5 "Todesursache 5"
 
 Instance: Todesursache-2-TH1
 InstanceOf: StfTodesursache

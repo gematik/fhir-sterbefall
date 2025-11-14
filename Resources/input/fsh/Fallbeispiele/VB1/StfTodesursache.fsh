@@ -11,12 +11,12 @@ Usage: #example
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
 * component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 * note.text = "Weitere relevante Erkrankungen: COPD, Vorhofflimmern, Diabetes mellitus Typ 2"
-* hasMember = Reference(Todesursache-2-VB1)
-* hasMember.extension[TodesursacheTyp].valueCodeableConcept = StfTodesursacheCodeCS#TU2 "Todesursache 2"
-* hasMember = Reference(Todesursache-3-VB1)
-* hasMember.extension[TodesursacheTyp].valueCodeableConcept = StfTodesursacheCodeCS#TU3 "Todesursache 3"
-* hasMember = Reference(Todesursache-4-VB1)
-* hasMember.extension[TodesursacheTyp].valueCodeableConcept = StfTodesursacheCodeCS#TU4 "Todesursache 4"
+* hasMember[+] = Reference(Todesursache-2-VB1)
+* hasMember[=].extension[TodesursacheTyp].valueCodeableConcept = StfTodesursacheCodeCS#TU2 "Todesursache 2"
+* hasMember[+] = Reference(Todesursache-3-VB1)
+* hasMember[=].extension[TodesursacheTyp].valueCodeableConcept = StfTodesursacheCodeCS#TU3 "Todesursache 3"
+* hasMember[+] = Reference(Todesursache-4-VB1)
+* hasMember[=].extension[TodesursacheTyp].valueCodeableConcept = StfTodesursacheCodeCS#TU4 "Todesursache 4"
 
 Instance: Todesursache-2-VB1
 InstanceOf: StfTodesursache
