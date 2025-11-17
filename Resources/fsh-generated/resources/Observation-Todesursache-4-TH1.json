@@ -10,8 +10,8 @@
     "coding": [
       {
         "system": "http://hl7.org/fhir/sid/icd-10",
-        "version": "2022",
-        "code": "T42.0"
+        "version": "2019",
+        "code": "I42.9"
       }
     ],
     "text": "Kardiomyopathie, septisch"

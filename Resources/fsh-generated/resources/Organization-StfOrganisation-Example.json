@@ -1,0 +1,80 @@
+{
+  "resourceType": "Organization",
+  "id": "StfOrganisation-Example",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfOrganisation"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "https://fhir.gematik.de/sid/standesamt",
+      "value": "SA12345"
+    }
+  ],
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://gematik.de/fhir/oegd/stf/ValueSet/StfOrganisationsTypVS",
+          "code": "StAmt",
+          "display": "Standesamt"
+        }
+      ]
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "Rathausplatz 1"
+      ],
+      "extension": [
+        {
+          "valueCoding": {
+            "code": "DE-NW",
+            "display": "Nordrhein-Westfalen"
+          },
+          "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfBundeslandExtension"
+        }
+      ],
+      "type": "both",
+      "city": "Musterstadt",
+      "postalCode": "12345",
+      "country": "DE"
+    }
+  ],
+  "contact": [
+    {
+      "name": {
+        "given": [
+          "Max"
+        ],
+        "use": "official",
+        "text": "Max Mustermann",
+        "family": "Mustermann"
+      },
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "+49 123 456789",
+          "use": "work"
+        },
+        {
+          "system": "email",
+          "value": "max.mustermann@standesamt-musterstadt.de",
+          "use": "work"
+        }
+      ]
+    }
+  ],
+  "partOf": {
+    "display": "Stadt Köln"
+  },
+  "extension": [
+    {
+      "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfPruefcodeExtension",
+      "valueString": "PCODE98765"
+    }
+  ],
+  "name": "Standesamt Musterstadt"
+}

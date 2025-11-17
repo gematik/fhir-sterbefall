@@ -1,0 +1,30 @@
+{
+  "resourceType": "Procedure",
+  "id": "StfLeichenschau-BY2",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfLeichenschau"
+    ]
+  },
+  "performer": [
+    {
+      "actor": {
+        "reference": "Practitioner/StfArzt-BY2"
+      }
+    }
+  ],
+  "subject": {
+    "reference": "Patient/StfVerstorbenePerson-BY2"
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "29240004",
+        "system": "http://snomed.info/sct",
+        "display": "Autopsy examination"
+      }
+    ]
+  },
+  "status": "completed",
+  "performedDateTime": "2025-05-22T00:00:00+02:00"
+}

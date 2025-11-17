@@ -1,0 +1,67 @@
+{
+  "resourceType": "Procedure",
+  "id": "StfObduktion-Example",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObduktion"
+    ]
+  },
+  "basedOn": [
+    {
+      "reference": "ServiceRequest/StfObduktionAnfrage-Example"
+    }
+  ],
+  "asserter": {
+    "display": "Staatsanwaltschaft Musterstadt"
+  },
+  "performer": [
+    {
+      "actor": {
+        "display": "Institut für Rechtsmedizin Universitätsklinikum Musterstadt"
+      },
+      "function": {
+        "coding": [
+          {
+            "code": "GerichtsmedInst",
+            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfOrganisationsTypCS"
+          }
+        ]
+      }
+    },
+    {
+      "actor": {
+        "display": "Institut für Pathologie Universitätsklinikum Musterstadt"
+      },
+      "function": {
+        "coding": [
+          {
+            "code": "PathInst",
+            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfOrganisationsTypCS"
+          }
+        ]
+      }
+    }
+  ],
+  "location": {
+    "display": "Prosektur, Universitätsklinikum Musterstadt, Gebäude 15"
+  },
+  "report": [
+    {
+      "reference": "DiagnosticReport/obduktionsbericht-beispiel-001"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "29240004",
+        "system": "http://snomed.info/sct",
+        "display": "Autopsy examination"
+      }
+    ]
+  },
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/StfVerstorbenePerson-Example"
+  },
+  "performedDateTime": "2025-03-02T14:30:00+01:00"
+}

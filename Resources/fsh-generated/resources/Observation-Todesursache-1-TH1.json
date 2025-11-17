@@ -10,7 +10,7 @@
     "coding": [
       {
         "system": "http://hl7.org/fhir/sid/icd-10",
-        "version": "2022",
+        "version": "2019",
         "code": "K57.2"
       }
     ],
@@ -55,6 +55,57 @@
     }
   ],
   "hasMember": [
+    {
+      "extension": [
+        {
+          "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "TU2",
+                "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
+                "display": "Todesursache 2"
+              }
+            ]
+          }
+        }
+      ],
+      "reference": "Observation/Todesursache-2-TH1"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "TU3",
+                "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
+                "display": "Todesursache 3"
+              }
+            ]
+          }
+        }
+      ],
+      "reference": "Observation/Todesursache-3-TH1"
+    },
+    {
+      "extension": [
+        {
+          "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "TU4",
+                "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
+                "display": "Todesursache 4"
+              }
+            ]
+          }
+        }
+      ],
+      "reference": "Observation/Todesursache-4-TH1"
+    },
     {
       "extension": [
         {

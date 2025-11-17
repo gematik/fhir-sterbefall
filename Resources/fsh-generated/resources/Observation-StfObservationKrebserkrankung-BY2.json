@@ -1,0 +1,35 @@
+{
+  "resourceType": "Observation",
+  "id": "StfObservationKrebserkrankung-BY2",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObservationKrebserkrankung"
+    ]
+  },
+  "note": [
+    {
+      "text": "Mamma-CA"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "108369006",
+        "system": "http://snomed.info/sct",
+        "display": "Tumor"
+      }
+    ]
+  },
+  "status": "final",
+  "subject": {
+    "reference": "Patient/StfVerstorbenePerson-BY2"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "Y",
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0532"
+      }
+    ]
+  }
+}

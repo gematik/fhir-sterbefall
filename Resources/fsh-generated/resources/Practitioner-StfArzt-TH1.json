@@ -1,0 +1,29 @@
+{
+  "resourceType": "Practitioner",
+  "id": "StfArzt-TH1",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArzt"
+    ]
+  },
+  "name": [
+    {
+      "given": [
+        "My Vu"
+      ],
+      "prefix": [
+        "Dr."
+      ],
+      "use": "official",
+      "text": "Dr. Uyen My Vu",
+      "family": "Uyen"
+    }
+  ],
+  "address": [
+    {
+      "type": "both",
+      "city": "Musterstadt",
+      "postalCode": "12345"
+    }
+  ]
+}

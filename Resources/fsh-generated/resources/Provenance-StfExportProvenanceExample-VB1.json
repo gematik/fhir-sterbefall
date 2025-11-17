@@ -8,25 +8,28 @@
   },
   "target": [
     {
-      "reference": "Patient/StfVerstorbenePerson-Test-VB1"
+      "reference": "Patient/StfVerstorbenePerson-VB1"
     },
     {
-      "reference": "Procedure/StfLeichenschau-Test-VB1"
+      "reference": "Procedure/StfLeichenschau-VB1"
     },
     {
-      "reference": "Observation/Todesursache-1-Test-VB1"
+      "reference": "Observation/Todesursache-1-VB1"
     },
     {
-      "reference": "Observation/Todesursache-2-Test-VB1"
+      "reference": "Observation/Todesursache-2-VB1"
     },
     {
-      "reference": "Observation/Todesursache-3-Test-VB1"
+      "reference": "Observation/Todesursache-3-VB1"
     },
     {
-      "reference": "Observation/Todesursache-4-Test-VB1"
+      "reference": "Observation/Todesursache-4-VB1"
     },
     {
       "reference": "Organization/StfOrganisation-GA-VB1"
+    },
+    {
+      "reference": "Practitioner/StfArzt-VB1"
     }
   ],
   "agent": [

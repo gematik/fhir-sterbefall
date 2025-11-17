@@ -30,6 +30,15 @@
     },
     {
       "reference": "Organization/StfOrganisation-GA-TH1"
+    },
+    {
+      "reference": "Practitioner/StfArzt-TH1"
+    },
+    {
+      "reference": "PractitionerRole/StfArztZuordnung-TH1"
+    },
+    {
+      "reference": "Organization/StfOrganisation-Klinik-TH1"
     }
   ],
   "agent": [

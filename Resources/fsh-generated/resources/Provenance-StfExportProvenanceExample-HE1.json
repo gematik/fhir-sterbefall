@@ -27,6 +27,9 @@
     },
     {
       "reference": "Organization/StfOrganisation-GA-HE1"
+    },
+    {
+      "reference": "Practitioner/StfArzt-HE1"
     }
   ],
   "agent": [

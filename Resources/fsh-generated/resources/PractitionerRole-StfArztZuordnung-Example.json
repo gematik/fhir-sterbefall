@@ -1,0 +1,26 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "StfArztZuordnung-Example",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArztZuordnung"
+    ]
+  },
+  "specialty": [
+    {
+      "coding": [
+        {
+          "code": "Krankenhausarzt",
+          "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfFacharztgruppeCS",
+          "display": "diensthabender Arzt/Ärztin im Krankenhaus"
+        }
+      ]
+    }
+  ],
+  "practitioner": {
+    "reference": "Practitioner/StfArzt-Example"
+  },
+  "organization": {
+    "reference": "Organization/StfOrganisation-Example"
+  }
+}
