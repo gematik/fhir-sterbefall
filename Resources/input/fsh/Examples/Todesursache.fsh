@@ -10,7 +10,7 @@ Usage: #example
 * effectiveDateTime = "2023-07-10"  // Beginn der Krankheit
 * performer = Reference(Practitioner/StfArzt-Example)
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
-* valueCodeableConcept.coding.version = "2023"
+* valueCodeableConcept.coding.version = "2019"
 * valueCodeableConcept.coding.code = #I21.0
 * valueCodeableConcept.text = "Akuter transmuraler Myokardinfarkt der Vorderwand"
 * note.text = "Patient erlitt einen massiven Herzinfarkt nach längerer kardialer Vorgeschichte mit koronarer Herzkrankheit und Bluthochdruck."
@@ -24,7 +24,7 @@ Usage: #example
 
 * component[Details].code = StfObservationCodesErweiterungCS#todesursacheKlassifikation
 * component[Details].valueCodeableConcept.coding = $icd-10-who#I25.1
-* component[Details].valueCodeableConcept.coding.version = "2023"
+* component[Details].valueCodeableConcept.coding.version = "2019"
 
 * component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Obduktionsschein
 
@@ -43,7 +43,7 @@ Usage: #example
 * effectiveDateTime = "2020-01-15"  // Beginn des Grundleidens
 * performer = Reference(Practitioner/StfArzt-Example)
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
-* valueCodeableConcept.coding.version = "2023"
+* valueCodeableConcept.coding.version = "2019"
 * valueCodeableConcept.coding.code = #I25.9
 * valueCodeableConcept.text = "Chronische ischämische Herzkrankheit, nicht näher bezeichnet"
 

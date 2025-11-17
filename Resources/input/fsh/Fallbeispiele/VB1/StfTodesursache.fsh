@@ -5,7 +5,7 @@ Usage: #example
 * code = $sct#184305005 "Cause of Death"
 * subject = Reference(StfVerstorbenePerson-VB1)
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
-* valueCodeableConcept.coding.version = "2026"
+* valueCodeableConcept.coding.version = "2019"
 * valueCodeableConcept.coding.code = #J18.0
 * valueCodeableConcept.text = "Exitus letalis bei Bronchopneumonie (beidseitig)"
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
@@ -25,7 +25,7 @@ Usage: #example
 * code = $sct#184305005 "Cause of Death"
 * subject = Reference(StfVerstorbenePerson-VB1)
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
-* valueCodeableConcept.coding.version = "2026"
+* valueCodeableConcept.coding.version = "2019"
 * valueCodeableConcept.coding.code = #I50.1
 * valueCodeableConcept.text = "Dekompensierte Herzinsuffizienz"
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
@@ -38,7 +38,7 @@ Usage: #example
 * code = $sct#184305005 "Cause of Death"
 * subject = Reference(StfVerstorbenePerson-VB1)
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
-* valueCodeableConcept.coding.version = "2026"
+* valueCodeableConcept.coding.version = "2019"
 * valueCodeableConcept.coding.code = #N17.9
 * valueCodeableConcept.text = "Akutes Nierenversagen"
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
@@ -51,7 +51,7 @@ Usage: #example
 * code = $sct#184305005 "Cause of Death"
 * subject = Reference(StfVerstorbenePerson-VB1)
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
-* valueCodeableConcept.coding.version = "2026"
+* valueCodeableConcept.coding.version = "2019"
 * valueCodeableConcept.coding.code = #I10
 * valueCodeableConcept.text = "Arterielle Hypertonie"
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
