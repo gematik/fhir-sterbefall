@@ -2,7 +2,6 @@ Instance: StfVerstorbenePerson-BY1
 InstanceOf: StfVerstorbenePerson
 Usage: #example
 * identifier[Sterbebuchnummer].type = http://terminology.hl7.org/CodeSystem/v2-0203#DC
-* identifier[Sterbebuchnummer].system = "urn:gesundheitsamt:sterbebuch"
 * identifier[Sterbebuchnummer].value = "S5485/2025"
 * name[name].use = #official
 * name[name].family = "Vogel"
