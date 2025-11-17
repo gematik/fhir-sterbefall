@@ -4,5 +4,5 @@ Usage: #example
 * status = #final
 * code = $sct#108369006 "Tumor"
 * subject = Reference(StfVerstorbenePerson-BY2)
-* valueCodeableConcept = $v2-0532#Y "Ja"
+* valueCodeableConcept = $v2-0532#Y
 * note.text = "Mamma-CA"

@@ -53,7 +53,7 @@ Usage: #example
 * subject = Reference(StfVerstorbenePerson-BY2)
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version = "2019"
-* valueCodeableConcept.coding.code = #F03.9
+* valueCodeableConcept.coding.code = #F03
 * valueCodeableConcept.text = "Demenz"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N

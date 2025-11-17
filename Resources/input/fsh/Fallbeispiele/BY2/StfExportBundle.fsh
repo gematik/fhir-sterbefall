@@ -25,7 +25,7 @@ Usage: #example
   * insert ExampleFullUrl(Observation, StfObservationKrebserkrankung-BY2)
   * resource = StfObservationKrebserkrankung-BY2
 * entry[+]
-  * insert ExampleFullUrl(Organization, StfArzt-BY2)
+  * insert ExampleFullUrl(Practitioner, StfArzt-BY2)
   * resource = StfArzt-BY2
 * entry[+]
   * insert ExampleFullUrl(PractitionerRole, StfArztZuordnung-BY2)
@@ -33,6 +33,9 @@ Usage: #example
 * entry[+]
   * insert ExampleFullUrl(Organization, StfOrganisation-Klinik-BY2)
   * resource = StfOrganisation-Klinik-BY2
+* entry[+]
+  * insert ExampleFullUrl(Provenance, StfExportProvenanceExample-BY2)
+  * resource = StfExportProvenanceExample-BY2
 
 Instance: StfExportProvenanceExample-BY2
 InstanceOf: StfExportProvenance

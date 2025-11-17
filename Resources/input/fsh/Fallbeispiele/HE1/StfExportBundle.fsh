@@ -28,7 +28,7 @@ Usage: #example
   * insert ExampleFullUrl(Provenance, StfExportProvenanceExample-HE1)
   * resource = StfExportProvenanceExample-HE1
 * entry[+]
-  * insert ExampleFullUrl(Organization, StfArzt-HE1)
+  * insert ExampleFullUrl(Practitioner, StfArzt-HE1)
   * resource = StfArzt-HE1
 
 Instance: StfExportProvenanceExample-HE1
