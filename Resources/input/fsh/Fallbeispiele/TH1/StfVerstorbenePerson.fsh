@@ -15,5 +15,4 @@ Usage: #example
 * address[Strassenanschrift].postalCode = "99974"
 * address[Strassenanschrift].country = "DE"
 * identifier[Sterbebuchnummer].type = http://terminology.hl7.org/CodeSystem/v2-0203#DC
-* identifier[Sterbebuchnummer].system = "urn:gesundheitsamt:sterbebuch"
 * identifier[Sterbebuchnummer].value = "2613"

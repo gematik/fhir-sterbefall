@@ -1,0 +1,685 @@
+{
+  "resourceType": "Bundle",
+  "id": "StfExportBundle-BY2",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportBundle"
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "https://mein.fhir-server.local/fhir/Patient/StfVerstorbenePerson-BY2",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "StfVerstorbenePerson-BY2",
+        "meta": {
+          "profile": [
+            "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfVerstorbenePerson"
+          ]
+        },
+        "name": [
+          {
+            "given": [
+              "Carina"
+            ],
+            "use": "official",
+            "family": "Herzog"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Feldstr. 5"
+            ],
+            "_line": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                    "valueString": "Feldstr."
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                    "valueString": "5"
+                  }
+                ]
+              }
+            ],
+            "type": "both",
+            "city": "Regensburg",
+            "postalCode": "93059",
+            "country": "DE"
+          }
+        ],
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "DC",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "display": "Death Certificate ID"
+                }
+              ]
+            },
+            "value": "S3526/2025"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1933-12-25",
+        "deceasedDateTime": "2025-05-22T18:00:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://mein.fhir-server.local/fhir/Procedure/StfLeichenschau-BY2",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "StfLeichenschau-BY2",
+        "meta": {
+          "profile": [
+            "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfLeichenschau"
+          ]
+        },
+        "performer": [
+          {
+            "actor": {
+              "reference": "Practitioner/StfArzt-BY2"
+            }
+          }
+        ],
+        "subject": {
+          "reference": "Patient/StfVerstorbenePerson-BY2"
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "29240004",
+              "system": "http://snomed.info/sct",
+              "display": "Autopsy examination"
+            }
+          ]
+        },
+        "status": "completed",
+        "performedDateTime": "2025-05-22T00:00:00+02:00"
+      }
+    },
+    {
+      "fullUrl": "https://mein.fhir-server.local/fhir/Observation/Todesursache-1-BY2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Todesursache-1-BY2",
+        "meta": {
+          "profile": [
+            "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
+          ]
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "version": "2019",
+              "code": "S06.5"
+            }
+          ],
+          "text": "akutes subdurales Hämatom"
+        },
+        "component": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "Y",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0532"
+                }
+              ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "nichtNatuerlicherTod",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                }
+              ]
+            }
+          },
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "version": "2019",
+                  "code": "W19"
+                }
+              ],
+              "text": "Sturz von unbestimmter Höhe"
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "todesursacheKlassifikation",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                }
+              ]
+            }
+          },
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "Leichenschauschein",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
+                }
+              ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "quelle",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                }
+              ]
+            }
+          }
+        ],
+        "note": [
+          {
+            "text": "Sturz im Krankenhaus auf dem Weg zur Toilette"
+          }
+        ],
+        "hasMember": [
+          {
+            "extension": [
+              {
+                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "TU2",
+                      "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
+                      "display": "Todesursache 2"
+                    }
+                  ]
+                }
+              }
+            ],
+            "reference": "Observation/Todesursache-2-BY2"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "TU4",
+                      "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
+                      "display": "Todesursache 4"
+                    }
+                  ]
+                }
+              }
+            ],
+            "reference": "Observation/Todesursache-4-BY2"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "TU5",
+                      "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
+                      "display": "Todesursache 5"
+                    }
+                  ]
+                }
+              }
+            ],
+            "reference": "Observation/Todesursache-5-BY2"
+          }
+        ],
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "code": "184305005",
+              "system": "http://snomed.info/sct",
+              "display": "Cause of Death"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/StfVerstorbenePerson-BY2"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://mein.fhir-server.local/fhir/Observation/Todesursache-2-BY2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Todesursache-2-BY2",
+        "meta": {
+          "profile": [
+            "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
+          ]
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "version": "2019",
+              "code": "S72.0"
+            }
+          ],
+          "text": "Schenkelhalsfraktur"
+        },
+        "component": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "Y",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0532"
+                }
+              ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "nichtNatuerlicherTod",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                }
+              ]
+            }
+          },
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/icd-10",
+                  "version": "2019",
+                  "code": "W19"
+                }
+              ],
+              "text": "Sturz von unbestimmter Höhe"
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "todesursacheKlassifikation",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                }
+              ]
+            }
+          },
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "Leichenschauschein",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
+                }
+              ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "quelle",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                }
+              ]
+            }
+          }
+        ],
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "code": "184305005",
+              "system": "http://snomed.info/sct",
+              "display": "Cause of Death"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/StfVerstorbenePerson-BY2"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://mein.fhir-server.local/fhir/Observation/Todesursache-4-BY2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Todesursache-4-BY2",
+        "meta": {
+          "profile": [
+            "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
+          ]
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "version": "2019",
+              "code": "F03"
+            }
+          ],
+          "text": "Demenz"
+        },
+        "component": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "N",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0532"
+                }
+              ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "nichtNatuerlicherTod",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                }
+              ]
+            }
+          },
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "Leichenschauschein",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
+                }
+              ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "quelle",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                }
+              ]
+            }
+          }
+        ],
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "code": "184305005",
+              "system": "http://snomed.info/sct",
+              "display": "Cause of Death"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/StfVerstorbenePerson-BY2"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://mein.fhir-server.local/fhir/Observation/Todesursache-5-BY2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Todesursache-5-BY2",
+        "meta": {
+          "profile": [
+            "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
+          ]
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10",
+              "version": "2019",
+              "code": "C50.9"
+            }
+          ],
+          "text": "Mamma-CA"
+        },
+        "component": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "N",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0532"
+                }
+              ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "nichtNatuerlicherTod",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                }
+              ]
+            }
+          },
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "Leichenschauschein",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
+                }
+              ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "quelle",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                }
+              ]
+            }
+          }
+        ],
+        "note": [
+          {
+            "text": "Maligne Neubildung der Brust (Krebs)"
+          }
+        ],
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "code": "184305005",
+              "system": "http://snomed.info/sct",
+              "display": "Cause of Death"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/StfVerstorbenePerson-BY2"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://mein.fhir-server.local/fhir/Observation/StfObservationKrebserkrankung-BY2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "StfObservationKrebserkrankung-BY2",
+        "meta": {
+          "profile": [
+            "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObservationKrebserkrankung"
+          ]
+        },
+        "note": [
+          {
+            "text": "Mamma-CA"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "108369006",
+              "system": "http://snomed.info/sct",
+              "display": "Tumor"
+            }
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/StfVerstorbenePerson-BY2"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "Y",
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0532"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "https://mein.fhir-server.local/fhir/Practitioner/StfArzt-BY2",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "StfArzt-BY2",
+        "meta": {
+          "profile": [
+            "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArzt"
+          ]
+        },
+        "name": [
+          {
+            "given": [
+              "Leitender OA Klinikum Regensburg"
+            ],
+            "use": "official",
+            "text": "Leitender OA Klinikum Regensburg",
+            "family": "Leitender OA Klinikum Regensburg"
+          }
+        ],
+        "address": [
+          {
+            "type": "both",
+            "city": "Musterstadt",
+            "postalCode": "12345"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://mein.fhir-server.local/fhir/PractitionerRole/StfArztZuordnung-BY2",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "StfArztZuordnung-BY2",
+        "meta": {
+          "profile": [
+            "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArztZuordnung"
+          ]
+        },
+        "practitioner": {
+          "reference": "Practitioner/StfArzt-BY2"
+        },
+        "organization": {
+          "reference": "Organization/StfOrganisation-Klinik-BY2"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://mein.fhir-server.local/fhir/Organization/StfOrganisation-Klinik-BY2",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "StfOrganisation-Klinik-BY2",
+        "meta": {
+          "profile": [
+            "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfOrganisation"
+          ]
+        },
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "Klinik",
+                "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfOrganisationsTypCS"
+              }
+            ]
+          }
+        ],
+        "name": "Klinikum Regensburg"
+      }
+    },
+    {
+      "fullUrl": "https://mein.fhir-server.local/fhir/Provenance/StfExportProvenanceExample-BY2",
+      "resource": {
+        "resourceType": "Provenance",
+        "id": "StfExportProvenanceExample-BY2",
+        "meta": {
+          "profile": [
+            "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportProvenance"
+          ]
+        },
+        "target": [
+          {
+            "reference": "Patient/StfVerstorbenePerson-BY2"
+          },
+          {
+            "reference": "Procedure/StfLeichenschau-BY2"
+          },
+          {
+            "reference": "Observation/Todesursache-1-BY2"
+          },
+          {
+            "reference": "Observation/Todesursache-2-BY2"
+          },
+          {
+            "reference": "Observation/Todesursache-4-BY2"
+          },
+          {
+            "reference": "Observation/Todesursache-5-BY2"
+          },
+          {
+            "reference": "Observation/StfObservationKrebserkrankung-BY2"
+          },
+          {
+            "reference": "Practitioner/StfArzt-BY2"
+          },
+          {
+            "reference": "PractitionerRole/StfArztZuordnung-BY2"
+          },
+          {
+            "reference": "Organization/StfOrganisation-Klinik-BY2"
+          }
+        ],
+        "agent": [
+          {
+            "who": {
+              "display": "Sterbefall-Management-Software v1.0"
+            },
+            "onBehalfOf": {
+              "reference": "Organization/StfOrganisation-GA-BY2"
+            }
+          }
+        ],
+        "reason": [
+          {
+            "coding": [
+              {
+                "code": "DECSD",
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+              }
+            ]
+          }
+        ],
+        "activity": {
+          "coding": [
+            {
+              "code": "CREATE",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
+            }
+          ]
+        },
+        "recorded": "2025-11-06T12:49:00Z"
+      }
+    }
+  ],
+  "type": "collection",
+  "timestamp": "2025-05-22T19:05:00+02:00"
+}

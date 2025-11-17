@@ -30,6 +30,15 @@ Usage: #example
 * entry[+]
   * insert ExampleFullUrl(Provenance, StfExportProvenanceExample-TH1)
   * resource = StfExportProvenanceExample-TH1
+* entry[+]
+  * insert ExampleFullUrl(Practitioner, StfArzt-TH1)
+  * resource = StfArzt-TH1
+* entry[+]
+  * insert ExampleFullUrl(PractitionerRole, StfArztZuordnung-TH1)
+  * resource = StfArztZuordnung-TH1
+* entry[+]
+  * insert ExampleFullUrl(Organization, StfOrganisation-Klinik-TH1)
+  * resource = StfOrganisation-Klinik-TH1
 
 Instance: StfExportProvenanceExample-TH1
 InstanceOf: StfExportProvenance
@@ -42,6 +51,9 @@ Usage: #example
 * target[+] = Reference(Todesursache-4-TH1)
 * target[+] = Reference(Todesursache-5-TH1)
 * target[+] = Reference(StfOrganisation-GA-TH1)
+* target[+] = Reference(StfArzt-TH1)
+* target[+] = Reference(StfArztZuordnung-TH1)
+* target[+] = Reference(StfOrganisation-Klinik-TH1)
 * recorded = "2025-11-06T12:49:00Z"
 * agent[+].who.display = "Sterbefall-Management-Software v1.0"
 * agent[=].onBehalfOf = Reference(StfOrganisation-GA-TH1)

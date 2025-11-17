@@ -10,7 +10,7 @@
     "coding": [
       {
         "system": "http://hl7.org/fhir/sid/icd-10",
-        "version": "2022",
+        "version": "2019",
         "code": "I61.3"
       }
     ],
@@ -75,6 +75,17 @@
           }
         ]
       }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "zeitdauerBeginnBisTod",
+            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+          }
+        ]
+      },
+      "valueString": "Stunden"
     },
     {
       "valueCodeableConcept": {

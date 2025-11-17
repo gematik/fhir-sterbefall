@@ -66,7 +66,6 @@
                 }
               ]
             },
-            "system": "urn:gesundheitsamt:sterbebuch",
             "value": "S1/2025"
           }
         ],
@@ -85,6 +84,13 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfLeichenschau"
           ]
         },
+        "performer": [
+          {
+            "actor": {
+              "reference": "Practitioner/StfArzt-HE1"
+            }
+          }
+        ],
         "subject": {
           "reference": "Patient/StfVerstorbenePerson-HE1"
         },
@@ -115,7 +121,7 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/sid/icd-10",
-              "version": "2022",
+              "version": "2019",
               "code": "I61.3"
             }
           ],
@@ -182,6 +188,17 @@
             }
           },
           {
+            "code": {
+              "coding": [
+                {
+                  "code": "zeitdauerBeginnBisTod",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                }
+              ]
+            },
+            "valueString": "Stunden"
+          },
+          {
             "valueCodeableConcept": {
               "coding": [
                 {
@@ -229,7 +246,7 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/sid/icd-10",
-              "version": "2022",
+              "version": "2019",
               "code": "I64"
             }
           ],
@@ -302,7 +319,7 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/sid/icd-10",
-              "version": "2022",
+              "version": "2019",
               "code": "I21.4"
             }
           ],
@@ -453,6 +470,9 @@
           },
           {
             "reference": "Organization/StfOrganisation-GA-HE1"
+          },
+          {
+            "reference": "Practitioner/StfArzt-HE1"
           }
         ],
         "agent": [
@@ -484,6 +504,35 @@
           ]
         },
         "recorded": "2025-11-06T12:49:00Z"
+      }
+    },
+    {
+      "fullUrl": "https://mein.fhir-server.local/fhir/Practitioner/StfArzt-HE1",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "StfArzt-HE1",
+        "meta": {
+          "profile": [
+            "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArzt"
+          ]
+        },
+        "name": [
+          {
+            "given": [
+              "Musterarzt"
+            ],
+            "use": "official",
+            "text": "Musterarzt",
+            "family": "Musterarzt"
+          }
+        ],
+        "address": [
+          {
+            "type": "both",
+            "city": "Musterstadt",
+            "postalCode": "12345"
+          }
+        ]
       }
     }
   ],

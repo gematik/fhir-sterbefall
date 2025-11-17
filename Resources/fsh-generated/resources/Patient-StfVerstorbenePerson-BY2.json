@@ -1,0 +1,60 @@
+{
+  "resourceType": "Patient",
+  "id": "StfVerstorbenePerson-BY2",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfVerstorbenePerson"
+    ]
+  },
+  "name": [
+    {
+      "given": [
+        "Carina"
+      ],
+      "use": "official",
+      "family": "Herzog"
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "Feldstr. 5"
+      ],
+      "_line": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString": "Feldstr."
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString": "5"
+            }
+          ]
+        }
+      ],
+      "type": "both",
+      "city": "Regensburg",
+      "postalCode": "93059",
+      "country": "DE"
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "DC",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "display": "Death Certificate ID"
+          }
+        ]
+      },
+      "value": "S3526/2025"
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1933-12-25",
+  "deceasedDateTime": "2025-05-22T18:00:00+02:00"
+}

@@ -1,4 +1,4 @@
-Instance: StfArztExample
+Instance: StfArzt-Example
 InstanceOf: StfArzt
 Title: "Beispiel STF Arzt"
 Description: "Beispielhafte Instanz eines Arztes im Kontext der STF"

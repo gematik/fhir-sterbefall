@@ -1,0 +1,26 @@
+{
+  "resourceType": "Practitioner",
+  "id": "StfArzt-HE1",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArzt"
+    ]
+  },
+  "name": [
+    {
+      "given": [
+        "Musterarzt"
+      ],
+      "use": "official",
+      "text": "Musterarzt",
+      "family": "Musterarzt"
+    }
+  ],
+  "address": [
+    {
+      "type": "both",
+      "city": "Musterstadt",
+      "postalCode": "12345"
+    }
+  ]
+}

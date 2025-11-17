@@ -1,0 +1,29 @@
+{
+  "resourceType": "Procedure",
+  "id": "StfLeichenschau-Example",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfLeichenschau"
+    ]
+  },
+  "performer": [
+    {
+      "actor": {
+        "reference": "Practitioner/StfArzt-Example"
+      }
+    }
+  ],
+  "subject": {
+    "reference": "Patient/StfVerstorbenePerson-Example"
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "29240004",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "status": "completed",
+  "performedDateTime": "2025-03-01T10:00:00+01:00"
+}

@@ -6,6 +6,13 @@
       "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfLeichenschau"
     ]
   },
+  "performer": [
+    {
+      "actor": {
+        "reference": "Practitioner/StfArzt-TH1"
+      }
+    }
+  ],
   "subject": {
     "reference": "Patient/StfVerstorbenePerson-TH1"
   },

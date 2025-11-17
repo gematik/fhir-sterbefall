@@ -1,4 +1,4 @@
-Instance: StfVerstorbenePersonExample
+Instance: StfVerstorbenePerson-Example
 InstanceOf: StfVerstorbenePerson
 Title: "Beispiel STF Verstorbene Person"
 Description: "Beispielhafte Instanz einer verstorbenen Person"

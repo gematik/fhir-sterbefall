@@ -1,5 +1,5 @@
 // Beispiel für eine Krebserkrankung Observation
-Instance: StfObservationKrebserkrankungExample
+Instance: StfObservationKrebserkrankung-Ja-Example
 InstanceOf: StfObservationKrebserkrankung
 Title: "Beispiel STF Observation Krebserkrankung"
 Description: "Beispielhafte Instanz einer Observation zur Krebserkrankung"
@@ -8,7 +8,7 @@ Usage: #example
 
 * status = #final
 * code = $sct#108369006 "Tumor"
-* subject = Reference(StfVerstorbenePersonExample)
+* subject = Reference(Patient/StfVerstorbenePerson-Example)
 * effectiveDateTime = "2025-03-02T14:30:00+01:00"
 * performer = Reference(Practitioner/rechtsmediziner-beispiel)
 * valueCodeableConcept = $v2-0532#Y
@@ -16,7 +16,7 @@ Usage: #example
 
 
 // Beispiel für eine Krebserkrankung - Verneinung
-Instance: StfObservationKeineKrebserkrankungExample
+Instance: StfObservationKrebserkrankung-Nein-Example
 InstanceOf: StfObservationKrebserkrankung
 Title: "Beispiel STF Observation keine Krebserkrankung"
 Description: "Beispielhafte Instanz einer Observation ohne Krebserkrankung"
@@ -25,7 +25,7 @@ Usage: #example
 
 * status = #final
 * code = $sct#108369006 "Tumor"
-* subject = Reference(StfVerstorbenePersonExample)
+* subject = Reference(Patient/StfVerstorbenePerson-Example)
 * effectiveDateTime = "2025-03-02T14:30:00+01:00"
 * performer = Reference(Practitioner/rechtsmediziner-beispiel)
 * valueCodeableConcept = $v2-0532#N

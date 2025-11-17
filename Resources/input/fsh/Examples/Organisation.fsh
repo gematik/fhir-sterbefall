@@ -1,4 +1,4 @@
-Instance: StfOrganisationExample
+Instance: StfOrganisation-Example
 InstanceOf: StfOrganisation
 Title: "Example STF Organisation"
 Description: "Beispielhafte Instanz einer STF Organisation"
@@ -7,7 +7,7 @@ Usage: #example
 * identifier.system = "https://fhir.gematik.de/sid/standesamt"
 * identifier.value = "SA12345"
 * type.coding.system = Canonical(StfOrganisationsTyp)
-* type.coding.code = #standesamt
+* type.coding.code = #StAmt
 * type.coding.display = "Standesamt"
 * name = "Standesamt Musterstadt"
 * address.type = #both

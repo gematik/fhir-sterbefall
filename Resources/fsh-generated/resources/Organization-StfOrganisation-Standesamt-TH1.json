@@ -1,0 +1,43 @@
+{
+  "resourceType": "Organization",
+  "id": "StfOrganisation-Standesamt-TH1",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfOrganisation"
+    ]
+  },
+  "address": [
+    {
+      "extension": [
+        {
+          "valueCoding": {
+            "code": "DE-TH",
+            "display": "Thüringen"
+          },
+          "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfBundeslandExtension"
+        }
+      ],
+      "type": "both",
+      "city": "Erfurt",
+      "country": "DE"
+    }
+  ],
+  "identifier": [
+    {
+      "system": "https://fhir.gematik.de/sid/standesamt",
+      "value": "16051000"
+    }
+  ],
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://gematik.de/fhir/oegd/stf/ValueSet/StfOrganisationsTypVS",
+          "code": "StAmt",
+          "display": "Standesamt"
+        }
+      ]
+    }
+  ],
+  "name": "Standesamt Erfurt"
+}

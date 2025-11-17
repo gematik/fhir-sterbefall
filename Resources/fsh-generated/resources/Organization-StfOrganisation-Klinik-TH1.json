@@ -1,0 +1,37 @@
+{
+  "resourceType": "Organization",
+  "id": "StfOrganisation-Klinik-TH1",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfOrganisation"
+    ]
+  },
+  "address": [
+    {
+      "extension": [
+        {
+          "valueCoding": {
+            "code": "DE-TH",
+            "display": "Thüringen"
+          },
+          "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfBundeslandExtension"
+        }
+      ],
+      "type": "both",
+      "city": "Erfurt",
+      "country": "DE"
+    }
+  ],
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://gematik.de/fhir/oegd/stf/ValueSet/StfOrganisationsTypVS",
+          "code": "Klinik",
+          "display": "Klinik"
+        }
+      ]
+    }
+  ],
+  "name": "Heliosklinikum Erfurt"
+}

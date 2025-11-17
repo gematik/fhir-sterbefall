@@ -1,0 +1,15 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "StfArztZuordnung-TH1",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArztZuordnung"
+    ]
+  },
+  "practitioner": {
+    "reference": "Practitioner/StfArzt-TH1"
+  },
+  "organization": {
+    "reference": "Organization/StfOrganisation-Klinik-BY2"
+  }
+}

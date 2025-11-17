@@ -1,5 +1,5 @@
 // Beispiel für eine Obduktionsanfrage
-Instance: StfObduktionAnfrageExample
+Instance: StfObduktionAnfrage-Example
 InstanceOf: StfObduktionAnfrage
 Title: "Beispiel STF Obduktion Anfrage"
 Description: "Beispielhafte Instanz einer Obduktionsanfrage"
@@ -9,7 +9,7 @@ Usage: #example
 * status = #completed
 * intent = #order
 * code = $sct#29240004 "Autopsy examination"
-* subject = Reference(StfVerstorbenePersonExample)
+* subject = Reference(Patient/StfVerstorbenePerson-Example)
 * authoredOn = "2025-03-01T10:00:00+01:00"
 * requester.display = "Dr. Schmidt, Gesundheitsamt Musterstadt"
 * reasonCode.text = "Unklare Todesursache, Verdacht auf nicht-natürlichen Tod"

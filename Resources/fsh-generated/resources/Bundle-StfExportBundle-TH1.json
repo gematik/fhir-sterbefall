@@ -62,7 +62,6 @@
                 }
               ]
             },
-            "system": "urn:gesundheitsamt:sterbebuch",
             "value": "2613"
           }
         ],
@@ -81,6 +80,13 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfLeichenschau"
           ]
         },
+        "performer": [
+          {
+            "actor": {
+              "reference": "Practitioner/StfArzt-TH1"
+            }
+          }
+        ],
         "subject": {
           "reference": "Patient/StfVerstorbenePerson-TH1"
         },
@@ -111,7 +117,7 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/sid/icd-10",
-              "version": "2022",
+              "version": "2019",
               "code": "K57.2"
             }
           ],
@@ -163,6 +169,57 @@
                 "valueCodeableConcept": {
                   "coding": [
                     {
+                      "code": "TU2",
+                      "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
+                      "display": "Todesursache 2"
+                    }
+                  ]
+                }
+              }
+            ],
+            "reference": "Observation/Todesursache-2-TH1"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "TU3",
+                      "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
+                      "display": "Todesursache 3"
+                    }
+                  ]
+                }
+              }
+            ],
+            "reference": "Observation/Todesursache-3-TH1"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "TU4",
+                      "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
+                      "display": "Todesursache 4"
+                    }
+                  ]
+                }
+              }
+            ],
+            "reference": "Observation/Todesursache-4-TH1"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
                       "code": "TU5",
                       "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
                       "display": "Todesursache 5"
@@ -203,7 +260,7 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/sid/icd-10",
-              "version": "2022",
+              "version": "2019",
               "code": "A46"
             }
           ],
@@ -276,7 +333,7 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/sid/icd-10",
-              "version": "2022",
+              "version": "2019",
               "code": "N17.9"
             }
           ],
@@ -349,8 +406,8 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/sid/icd-10",
-              "version": "2022",
-              "code": "T42.0"
+              "version": "2019",
+              "code": "I42.9"
             }
           ],
           "text": "Kardiomyopathie, septisch"
@@ -422,7 +479,7 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/sid/icd-10",
-              "version": "2022",
+              "version": "2019",
               "code": "I50.0"
             }
           ],
@@ -538,6 +595,15 @@
           },
           {
             "reference": "Organization/StfOrganisation-GA-TH1"
+          },
+          {
+            "reference": "Practitioner/StfArzt-TH1"
+          },
+          {
+            "reference": "PractitionerRole/StfArztZuordnung-TH1"
+          },
+          {
+            "reference": "Organization/StfOrganisation-Klinik-TH1"
           }
         ],
         "agent": [
@@ -569,6 +635,96 @@
           ]
         },
         "recorded": "2025-11-06T12:49:00Z"
+      }
+    },
+    {
+      "fullUrl": "https://mein.fhir-server.local/fhir/Practitioner/StfArzt-TH1",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "StfArzt-TH1",
+        "meta": {
+          "profile": [
+            "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArzt"
+          ]
+        },
+        "name": [
+          {
+            "given": [
+              "My Vu"
+            ],
+            "prefix": [
+              "Dr."
+            ],
+            "use": "official",
+            "text": "Dr. Uyen My Vu",
+            "family": "Uyen"
+          }
+        ],
+        "address": [
+          {
+            "type": "both",
+            "city": "Musterstadt",
+            "postalCode": "12345"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://mein.fhir-server.local/fhir/PractitionerRole/StfArztZuordnung-TH1",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "StfArztZuordnung-TH1",
+        "meta": {
+          "profile": [
+            "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArztZuordnung"
+          ]
+        },
+        "practitioner": {
+          "reference": "Practitioner/StfArzt-TH1"
+        },
+        "organization": {
+          "reference": "Organization/StfOrganisation-Klinik-BY2"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://mein.fhir-server.local/fhir/Organization/StfOrganisation-Klinik-TH1",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "StfOrganisation-Klinik-TH1",
+        "meta": {
+          "profile": [
+            "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfOrganisation"
+          ]
+        },
+        "address": [
+          {
+            "extension": [
+              {
+                "valueCoding": {
+                  "code": "DE-TH",
+                  "display": "Thüringen"
+                },
+                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfBundeslandExtension"
+              }
+            ],
+            "type": "both",
+            "city": "Erfurt",
+            "country": "DE"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://gematik.de/fhir/oegd/stf/ValueSet/StfOrganisationsTypVS",
+                "code": "Klinik",
+                "display": "Klinik"
+              }
+            ]
+          }
+        ],
+        "name": "Heliosklinikum Erfurt"
       }
     }
   ],
