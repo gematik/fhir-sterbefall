@@ -42,7 +42,7 @@ Description: "Informationen über Ärzte und Ärztinnen, die im Kontext der STF 
   * text MS
   * family 1.. MS
   * family ^comment = "Nachname"
-  * given 1.. MS
+  * given 0.. MS
   * given ^comment = "Vorname"
   * prefix MS
   * prefix ^comment = "Titel"
@@ -51,7 +51,7 @@ Description: "Informationen über Ärzte und Ärztinnen, die im Kontext der STF 
 * address ^slicing.discriminator.path = "type"
 * address ^slicing.rules = #open
 * address contains
-    Strassenanschrift 1..* MS and
+    Strassenanschrift 0..* MS and
     Postfach 0..* MS
 * address[Strassenanschrift] only $de.basis-address
 * address[Strassenanschrift]
@@ -62,9 +62,9 @@ Description: "Informationen über Ärzte und Ärztinnen, die im Kontext der STF 
   * line.extension[Strasse] 1.. MS
   * line.extension[Hausnummer] 1.. MS
   * line.extension[Adresszusatz] MS
-  * city 1.. MS
+  * city 0.. MS
   * city ^comment = "Ort"
-  * postalCode 1.. MS
+  * postalCode 0.. MS
   * postalCode ^comment = "PLZ"
   * country MS
   * country ^comment = "Land der Anschrift"
