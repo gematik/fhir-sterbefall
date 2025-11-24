@@ -10,7 +10,7 @@ Usage: #example
 * basedOn = Reference(StfObduktionAnfrage-Example)
 
 * status = #completed
-* code = $sct#29240004 "Autopsy examination"
+* code = $sct#168461002 "Postmortem examination (procedure)"
 
 * subject = Reference(Patient/StfVerstorbenePerson-Example)
 

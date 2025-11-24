@@ -8,7 +8,7 @@ Usage: #example
 
 * status = #completed
 * intent = #order
-* code = $sct#29240004 "Autopsy examination"
+* code = $sct#168461002 "Postmortem examination (procedure)"
 * subject = Reference(Patient/StfVerstorbenePerson-Example)
 * authoredOn = "2025-03-01T10:00:00+01:00"
 * requester.display = "Dr. Schmidt, Gesundheitsamt Musterstadt"

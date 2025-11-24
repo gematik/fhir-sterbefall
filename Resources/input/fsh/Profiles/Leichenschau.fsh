@@ -6,7 +6,7 @@ Description: "Mit diesem Profil wird eine Leichenschau im Kontext des Sterbefall
 * insert Meta
 * status MS
 * code MS
-* code = $sct#29240004
+* code = $sct#168461002 "Postmortem examination (procedure)"
 * performed[x] MS
 * performed[x] only dateTime
 * performedDateTime MS
