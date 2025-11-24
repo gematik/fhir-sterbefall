@@ -5,7 +5,6 @@ Title: "Beispiel STF Obduktion Anfrage"
 Description: "Beispielhafte Instanz einer Obduktionsanfrage"
 Usage: #example
 * meta.profile = Canonical(StfObduktionAnfrage)
-
 * status = #completed
 * intent = #order
 * code = $sct#168461002 "Postmortem examination (procedure)"

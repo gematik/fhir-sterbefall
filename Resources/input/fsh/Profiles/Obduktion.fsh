@@ -9,7 +9,7 @@ Description: "Abbildung der Informationen zu einer Obduktion im Kontext der STF"
 * basedOn only Reference(ServiceRequest)
 * status MS
 * code MS
-* code = $sct#29240004
+* code = $sct#168461002 "Postmortem examination (procedure)"
 * performed[x] MS
 * performed[x] only dateTime
 * performedDateTime MS
@@ -46,5 +46,5 @@ Description: "Information über die Beantragung einer Obduktion"
 * status MS
 * intent MS
 * code MS
-* code = $sct#29240004
+* code = $sct#168461002 "Postmortem examination (procedure)"
 * subject MS
