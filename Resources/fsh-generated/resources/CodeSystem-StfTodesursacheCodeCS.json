@@ -6,7 +6,7 @@
   "id": "StfTodesursacheCodeCS",
   "title": "STF Weitere Todesursachen",
   "description": "Dieses CodeSystem definiert ergänzende Todesursachen, die im Rahmen der standardisierten Dokumentation eines Sterbefalls verwendet werden. \nEs ermöglicht die strukturierte Erfassung mehrerer Ursachenketten.",
-  "version": "1.0.0-beta.3",
+  "version": "1.0.0-ballot",
   "url": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
   "concept": [
     {
@@ -34,6 +34,6 @@
   ],
   "experimental": false,
   "publisher": "ELFA Maßnahme Interoperabilität",
-  "date": "2025-09-05",
+  "date": "2025-12-05",
   "count": 5
 }

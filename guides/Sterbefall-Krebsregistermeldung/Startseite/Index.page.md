@@ -24,7 +24,7 @@ Enddatum: Noch nicht geplant
 
 ### Status
 
-Version: 1.0.0-beta.3
+Version: 1.0.0-ballot
 
 Reifegrad: Draft 
 

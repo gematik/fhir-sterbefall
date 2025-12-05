@@ -4,4 +4,4 @@ if [ ! -f "./validator_cli.jar" ]; then
     echo "Download abgeschlossen."
 fi
 
-java -jar validator_cli.jar -ig "de.gematik.sterbefall#1.0.0-beta.3" -language "de" -server 8081
+java -jar validator_cli.jar -ig "de.gematik.sterbefall#1.0.0-ballot" -language "de" -server 8081

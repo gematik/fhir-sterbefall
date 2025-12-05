@@ -2,6 +2,13 @@
 
 #### [de.gematik.sterbefall](https://simplifier.net/packages/de.gematik.sterbefall)
 
+### Version 1.0.0-ballot
+
+Dies ist die Version für das Abstimmungsverfahren im Zeitraum 12/2025-01/2026.
+
+* Profil `StfArzt`: Die Kardinalitäts-Anforderungen der Datenelemente wurde gelockert, es ist nunmehr nur noch die Angabe eines Nachnamens verpflichtend.
+* Profil `StfLeichenschau`: Der festgelegte SNOMED-CT-Code wurde korrigiert auf 168461002.
+
 ### Version 1.0.0-beta.3
 
 * Profil `StfExportBundle`: Unterstützt nun zusätzliche Ressourcentypen (`StfBasisObservation`, `StfExportProvenance`, `StfObduktionAnfrage`, `StfObduktion`, `StfVerstorbenePersonPseudonymisiert`) und verlangt per Slicing genau einen Provenance-Eintrag, der zwingend das neue Profil `StfExportProvenance` nutzt.

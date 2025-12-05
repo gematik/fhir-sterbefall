@@ -17,9 +17,9 @@
   "code": {
     "coding": [
       {
-        "code": "168461002",
+        "code": "29240004",
         "system": "http://snomed.info/sct",
-        "display": "Postmortem examination (procedure)"
+        "display": "Autopsy examination (procedure)"
       }
     ]
   },

@@ -3,4 +3,4 @@ if (-not (Test-Path .\validator_cli.jar)){
 	Write-Host "Downloaded validator_cli.jar"
 }
 
-java -jar validator_cli.jar -ig de.gematik.sterbefall#1.0.0-beta.3 -language de -server 8081
+java -jar validator_cli.jar -ig de.gematik.sterbefall#1.0.0-ballot -language de -server 8081
