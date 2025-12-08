@@ -45,3 +45,21 @@ Die Quelle haben wir ja zum Glück in der Observation stehen
 - bei "Weitere Angaben zur Klassifikation der Todesursache bei Anhaltspunkten für einen nicht natürlichen Tod" sind mehr Angaben, als wir aktuell abbilden können. Den ICD-10 Code haben wir als component Slice mit Namen Details, aber dann gibts neben dem ICD-Freitext noch einen weiteren Freitext.
 
 - Ich weiß, wir hatten das schon, aber ist Todesbescheinigung = Sterbeurkunde?
+
+- Unser "NichtNatuerlicherTod" braucht glaube ich noch etwas guidance: Wir können da ja/nein machen, im Formular ist an einer Stelle "Anhaltspunkte für einen nicht natürlichen Tod". Ist es dann bei uns noch "Nein", solange der Verdacht nicht bestätigt ist? Sollen wir das Verdacht auf irgendwo abbilden?´
+
+- Es gibt einen Vertrauliche Teil 1 und Teil 2. Was steckt dahinter. Ersetzen die Angaben im Text "Epikrise: Weitere Angaben zur Todesursache und zu Begleiterkrankungen" die Angaben in Teil 1? Oder ergänzen sie? Oder ist das was ganz neues?
+
+# Verstorbene Person
+
+- Ist die "Beurkundung zurückgestellt, Nummer" die IdImGesundheitsamt?
+
+- Geburtsort steht im Formular, die entsprechende Core Extension haben wir aber nicht drin. Ist es korrekt, dass wir die Info fallen lassen?
+
+- Wir sollten unbedingt die Gemeindekennzahl abbilden. Die ist nicht im Beispiel. Können wir da noch eine sinnvolle Zahl bekommen?
+
+- Ist die Angabe "Nach eigenen Feststellungen/Nach Angaben von Angehörigen/Dritten" beim Sterbezeitpunkt irrelevant?
+
+# Nicht zugeordnet
+
+- Das Felt "Weitere Angaben zur Klassifikation beim Tod von Frauen und Kindern" ist leer. Wenn da was drin ist, ignorieren wir das? Wenn nein, wo würde es landen?
