@@ -28,7 +28,7 @@ Version: 1.0.0-beta.3
 
 Reifegrad: Draft 
 
-Abstimmungsverfahren: geplant
+Ballotierungverfahren an HL7 angelehnt: angekündigt
 
 ### Review und Kommentierung
 
@@ -42,5 +42,5 @@ Leitfaden für Kommentierende:
 
 ### Fürsorger
 <!-- Namen und Kontaktdaten der verantwortlichen Personen /Ansprechpartner-->
-* Stefan Lang (stefan.lang@lang-hitc.de)
-* Rüdiger Hochscheidt (ruediger.hochscheidt@H-IT-Beratung.de) bis 30.09.2024
+* Stefan Lang (sl@gefyra.de)
+* Jonas Schön (js@gefyra.de)
