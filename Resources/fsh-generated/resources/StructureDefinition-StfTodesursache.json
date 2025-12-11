@@ -19,11 +19,15 @@
   "differential": {
     "element": [
       {
-        "id": "Observation.code.coding",
-        "path": "Observation.code.coding",
-        "patternCoding": {
-          "code": "184305005",
-          "system": "http://snomed.info/sct"
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "184305005",
+              "system": "http://snomed.info/sct"
+            }
+          ]
         }
       },
       {

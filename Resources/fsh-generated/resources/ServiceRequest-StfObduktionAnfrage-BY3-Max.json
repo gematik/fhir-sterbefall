@@ -1,0 +1,14 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "StfObduktionAnfrage-BY3-Max",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObduktionAnfrage"
+    ]
+  },
+  "status": "completed",
+  "intent": "order",
+  "subject": {
+    "reference": "Patient/StfVerstorbenePerson-BY3-Max"
+  }
+}

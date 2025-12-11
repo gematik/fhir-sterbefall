@@ -1,0 +1,40 @@
+{
+  "resourceType": "Provenance",
+  "id": "StfSterbeurkundeAusstellung-BY3-Max",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfSterbeurkundeAusstellung"
+    ]
+  },
+  "target": [
+    {
+      "reference": "Patient/StfVerstorbenePerson-BY3-Max"
+    }
+  ],
+  "agent": [
+    {
+      "who": {
+        "reference": "Organization/StfOrganisation-BY3-Max"
+      }
+    }
+  ],
+  "reason": [
+    {
+      "coding": [
+        {
+          "code": "DECSD",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+        }
+      ]
+    }
+  ],
+  "activity": {
+    "coding": [
+      {
+        "code": "LA",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion"
+      }
+    ]
+  },
+  "recorded": "2025-01-07T10:00:00+01:00"
+}

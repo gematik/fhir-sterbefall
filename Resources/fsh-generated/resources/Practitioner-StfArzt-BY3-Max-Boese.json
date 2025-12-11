@@ -1,0 +1,113 @@
+{
+  "resourceType": "Practitioner",
+  "id": "StfArzt-BY3-Max-Boese",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArzt"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "ArztId",
+            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztIdentifierType"
+          }
+        ]
+      },
+      "system": "https://github.com/gematik/fhir-sterbefall/issues/62",
+      "value": "123"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "LANR"
+          }
+        ]
+      },
+      "system": "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR",
+      "value": "456"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "Zulassungsnr",
+            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztIdentifierType"
+          }
+        ]
+      },
+      "system": "https://github.com/gematik/fhir-sterbefall/issues/62",
+      "value": "789"
+    }
+  ],
+  "name": [
+    {
+      "given": [
+        "Kamilla"
+      ],
+      "prefix": [
+        "Dr."
+      ],
+      "_prefix": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+              "valueCode": "AC"
+            }
+          ]
+        }
+      ],
+      "use": "official",
+      "text": "Dr. Kamilla Böse",
+      "family": "Böse"
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "Kilianstr. 5"
+      ],
+      "_line": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString": "Kilianstr."
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString": "5"
+            }
+          ]
+        }
+      ],
+      "type": "both",
+      "city": "Nürnberg",
+      "postalCode": "90425",
+      "country": "DE"
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "0911/488356"
+    }
+  ],
+  "qualification": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "Niedergelassen",
+            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfBerufsgruppeCS"
+          }
+        ]
+      }
+    }
+  ]
+}
