@@ -8,15 +8,15 @@ Usage: #example
 * name[name]
   * family = "Meyer"
   * given = "Markus"
-  * name = "Markus Meyer"
+  * text = "Markus Meyer"
 * active = true
 * gender = #male
 * birthDate = "1953-07-01"
 * deceasedDateTime = "2025-01-01T17:00:00+01:00"
 * address[Strassenanschrift]
   * line = "Friedrich-Peter-Str. 25"
-  * line.extension[Strasse] = "Friedrich-Peter-Str."
-  * line.extension[Hausnummer] = "25"
+  * line.extension[Strasse].valueString = "Friedrich-Peter-Str."
+  * line.extension[Hausnummer].valueString = "25"
   * city = "Nürnberg"
   * postalCode = "90403"
   * country = "DE"

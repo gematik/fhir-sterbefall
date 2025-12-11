@@ -26,6 +26,6 @@ Usage: #example
 * target[+] = Reference(StfVerstorbenePersonPseudonymisiert-BY3-Max)
 * target[+] = Reference(StfSterbeurkundeAusstellung-BY3-Max)
 * recorded = "2025-06-01T12:00:00+02:00"
-* agent MS
+* agent
   * who.display = "Software des GA Nürnberg"
   * onBehalfOf = Reference(StfOrganisation-GA-BY3-Max)
