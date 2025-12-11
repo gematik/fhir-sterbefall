@@ -4,11 +4,11 @@ Usage: #example
 * identifier.system = "http://myGesundheitsamt.de/fhir/organisationen"
 * identifier.value = "123456"
 * name = "Standesamt Nürnberg"
-* type = StfOrganisationsTypCS#Standesamt
+* type = StfOrganisationsTypCS#StAmt
 * address
   * line = "Hirschelgasse 32"
-  * line.extension[Straße]valueString = "Hirschelgasse"
-  * line.extension[Hausnummer]valueString = "32"
+  * line.extension[Strasse].valueString = "Hirschelgasse"
+  * line.extension[Hausnummer].valueString = "32"
   * postalCode = "90403"
   * city = "Nürnberg"
   * country = "DE"
@@ -23,8 +23,8 @@ Usage: #example
 * type = StfOrganisationsTypCS#GA
 * address
   * line = "Hirschelgasse 32"
-  * line.extension[Straße]valueString = "Hirschelgasse"
-  * line.extension[Hausnummer]valueString = "32"
+  * line.extension[Strasse].valueString = "Hirschelgasse"
+  * line.extension[Hausnummer].valueString = "32"
   * postalCode = "90403"
   * city = "Nürnberg"
   * country = "DE"
@@ -39,8 +39,8 @@ Usage: #example
 * type = StfOrganisationsTypCS#GerichtsmedInst
 * address
   * line = "Hirschelgasse 32"
-  * line.extension[Straße]valueString = "Hirschelgasse"
-  * line.extension[Hausnummer]valueString = "32"
+  * line.extension[Strasse].valueString = "Hirschelgasse"
+  * line.extension[Hausnummer].valueString = "32"
   * postalCode = "90403"
   * city = "Nürnberg"
   * country = "DE"

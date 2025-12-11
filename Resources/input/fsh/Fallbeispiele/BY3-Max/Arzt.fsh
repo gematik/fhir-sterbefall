@@ -1,9 +1,13 @@
 Instance: StfArzt-BY3-Max-Boese
 InstanceOf: StfArzt
 Usage: #example
-* identifier[ID] = "123"
-* identifier[ANR] = "456"
-* identifier[Zulassungsnummer] = "789"
+* identifier[ID]
+  * system = "https://github.com/gematik/fhir-sterbefall/issues/62"
+  * value = "123"
+* identifier[ANR].value = "456"
+* identifier[Zulassungsnummer]
+  * system = "https://github.com/gematik/fhir-sterbefall/issues/62"
+  * value = "789"
 * name[name]
   * text = "Dr. Kamilla Böse"
   * family = "Böse"
@@ -12,8 +16,8 @@ Usage: #example
   * prefix.extension[prefix-qualifier].valueCode = #AC
 * address[Strassenanschrift]
   * line = "Kilianstr. 5"
-  * line.extension[Strasse] = "Kilianstr."
-  * line.extension[Hausnummer] = "5"
+  * line.extension[Strasse].valueString = "Kilianstr."
+  * line.extension[Hausnummer].valueString = "5"
   * city = "Nürnberg"
   * postalCode = "90425"
   * country = "DE"
@@ -24,9 +28,13 @@ Usage: #example
 Instance: StfArzt-BY3-Max-Gutmann
 InstanceOf: StfArzt
 Usage: #example
-* identifier[ID] = "231"
-* identifier[ANR] = "564"
-* identifier[Zulassungsnummer] = "897"
+* identifier[ID]
+  * system = "https://github.com/gematik/fhir-sterbefall/issues/62"
+  * value = "231"
+* identifier[ANR].value = "564"
+* identifier[Zulassungsnummer]
+  * system = "https://github.com/gematik/fhir-sterbefall/issues/62"
+  * value = "897"
 * name[name]
   * text = "Dr. Emil Gutmann"
   * family = "Gutmann"
@@ -35,8 +43,8 @@ Usage: #example
   * prefix.extension[prefix-qualifier].valueCode = #AC
 * address[Strassenanschrift]
   * line = "Bucher Str. 36"
-  * line.extension[Strasse] = "Bucher Str."
-  * line.extension[Hausnummer] = "36"
+  * line.extension[Strasse].valueString = "Bucher Str."
+  * line.extension[Hausnummer].valueString = "36"
   * city = "Nürnberg"
   * postalCode = "90408"
   * country = "DE"
@@ -47,17 +55,21 @@ Usage: #example
 Instance: StfArzt-BY3-Max-Flurer
 InstanceOf: StfArzt
 Usage: #example
-* identifier[ID] = "312"
-* identifier[ANR] = "645"
-* identifier[Zulassungsnummer] = "978"
+* identifier[ID]
+  * system = "https://github.com/gematik/fhir-sterbefall/issues/62"
+  * value = "312"
+* identifier[ANR].value = "645"
+* identifier[Zulassungsnummer]
+  * system = "https://github.com/gematik/fhir-sterbefall/issues/62"
+  * value = "978"
 * name[name]
   * text = "Sieglinde Flurer"
   * family = "Flurer"
   * given[+] = "Sieglinde"
 * address[Strassenanschrift]
   * line = "Kellerstr. 5"
-  * line.extension[Strasse] = "Kellerstr."
-  * line.extension[Hausnummer] = "5"
+  * line.extension[Strasse].valueString = "Kellerstr."
+  * line.extension[Hausnummer].valueString = "5"
   * city = "Nürnberg"
   * postalCode = "90408"
   * country = "DE"

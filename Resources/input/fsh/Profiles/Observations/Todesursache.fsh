@@ -5,7 +5,7 @@ Title: "STF Todesursache"
 Description: "Todesursache (kompatibel zu [MII PR Onkologie Tod](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod) )"
 * insert Meta
 * code MS
-* code.coding = $sct#184305005
+* code = $sct#184305005
 * subject 1.. MS
 * subject only Reference(Patient)
 * effective[x] MS
