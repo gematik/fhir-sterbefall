@@ -81,6 +81,7 @@ Usage: #example
 * insert StfMemberTodesursacheByMax(#C78, "mit Lebermetastasen", #Obduktionsschein)
 
 RuleSet: StfMemberTodesursacheByMax(code, text, quelle)
+* effectiveDateTime = "2025-01-05T10:30:00+01:00"
 * status = #final
 * subject = Reference(StfVerstorbenePerson-BY3-Max)
 * performer = Reference(StfArzt-BY3-Max-Boese)
@@ -91,4 +92,5 @@ RuleSet: StfMemberTodesursacheByMax(code, text, quelle)
 
 RuleSet: StfMemberTodesursacheByMaxMitZeitdauer(code, text, zeitdauer, quelle)
 * insert StfMemberTodesursacheByMax({code}, {text}, {quelle})
+* effectiveDateTime = "2025-01-01T10:30:00+01:00"
 * component[ZeitdauerBeginnBisTod].valueString = {zeitdauer}
