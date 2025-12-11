@@ -1,22 +1,29 @@
-Profile: StfExportBundle
-Parent: Bundle
-Id: StfExportBundle
-Title: "STF Export Bundle"
-Description: "Das StfExportBundle dient als Container für den standardisierten Austausch von Daten im Rahmen des Sterbefallprozesses. 
-Es basiert auf der Ressource `Bundle` und verwendet den Typ `collection`, um alle relevanten STF Ressourcen zu bündeln."
-* insert Meta
-* type MS
-* type = #collection
-* timestamp MS
-  * ^short = "Exportzeitpunkt"
-* entry MS
-  * fullUrl MS
-  * resource MS
-  * resource only StfArzt or StfVerstorbenePerson or StfArztZuordnung or StfDatei or StfLeichenschau or StfOrganisation or StfSterbeurkundeAusstellung or StfBasisObservation or StfExportProvenance or StfObduktionAnfrage or StfObduktion or StfVerstorbenePersonPseudonymisiert
-* entry ^slicing.discriminator.type = #profile
-* entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.rules = #open
-* entry contains
-  Provenance 1..1 MS
-* entry[Provenance]
-  * resource only StfExportProvenance
+Instance: StfExportBundle-BY3-Max
+InstanceOf: StfExportBundle
+Usage: #example
+* timestamp = "2025-06-01T12:00:00+02:00"
+* entry[Provenance] = Reference(StfExportProvenance-BY3-Max)
+* entry[+] = Reference(StfArzt-BY3-Max-Boese)
+* entry[+] = Reference(StfArzt-BY3-Max-Gutmann)
+* entry[+] = Reference(StfArzt-BY3-Max-Flurer)
+* entry[+] = Reference(StfArztZuordnung-BY3-Max-Gutmann)
+* entry[+] = Reference(StfDatei-Obduktion-BY3-Max)
+* entry[+] = Reference(StfObservationKrebserkrankung-BY3-Max)
+* entry[+] = Reference(StfObduktionAnfrage-BY3-Max)
+* entry[+] = Reference(StfObduktion-BY3-Max)
+* entry[+] = Reference(StfOrganisation-BY3-Max)
+* entry[+] = Reference(StfOrganisation-GA-BY3-Max)
+* entry[+] = Reference(StfOrganisation-GM-BY3-Max)
+* entry[+] = Reference(StfTodesursache-Su-BY3-Max)
+* entry[+] = Reference(StfTodesursache2-Su-BY3-Max)
+* entry[+] = Reference(StfTodesursache3-Su-BY3-Max)
+* entry[+] = Reference(StfTodesursache4-Su-BY3-Max)
+* entry[+] = Reference(StfTodesursache5-Su-BY3-Max)
+* entry[+] = Reference(StfTodesursache-Os-BY3-Max)
+* entry[+] = Reference(StfTodesursache2-Os-BY3-Max)
+* entry[+] = Reference(StfTodesursache3-Os-BY3-Max)
+* entry[+] = Reference(StfTodesursache4-Os-BY3-Max)
+* entry[+] = Reference(StfTodesursache5-Os-BY3-Max)
+* entry[+] = Reference(StfVerstorbenePerson-BY3-Max)
+* entry[+] = Reference(StfVerstorbenePersonPseudonymisiert-BY3-Max)
+* entry[+] = Reference(StfSterbeurkundeAusstellung-BY3-Max)

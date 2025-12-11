@@ -1,22 +1,31 @@
-Profile: StfExportProvenance
-Parent: Provenance
-Id: StfExportProvenance
-Title: "STF ExportBundle Provenance"
-Description: "Die StfExportProvenance Ressource dokumentiert die Herkunft und den Erstellungsprozess der im StfExportBundle enthaltenen Ressourcen. Außerdem wird die Ressource technisch für den Löschprozess benötigt."
-* insert Meta
-* target MS
-* target only Reference(StfArzt or StfVerstorbenePerson or StfArztZuordnung or StfDatei or StfLeichenschau or StfOrganisation or StfSterbeurkundeAusstellung or StfBasisObservation or StfObduktionAnfrage or StfObduktion or StfVerstorbenePersonPseudonymisiert)
-  * ^comment = "Verweis auf die Ressource im StfExportBundle, für die diese Provenance Ressource erstellt wurde"
-* recorded MS
-* reason 1.. MS
-* reason = http://terminology.hl7.org/CodeSystem/v3-ActReason#DECSD
-* activity 1.. MS
-* activity = http://terminology.hl7.org/CodeSystem/v3-DataOperation#CREATE
+Instance: StfExportProvenance-BY3-Max
+InstanceOf: StfExportProvenance
+Usage: #example
+* target[+] = Reference(StfArzt-BY3-Max-Boese)
+* target[+] = Reference(StfArzt-BY3-Max-Gutmann)
+* target[+] = Reference(StfArzt-BY3-Max-Flurer)
+* target[+] = Reference(StfArztZuordnung-BY3-Max-Gutmann)
+* target[+] = Reference(StfDatei-Obduktion-BY3-Max)
+* target[+] = Reference(StfObservationKrebserkrankung-BY3-Max)
+* target[+] = Reference(StfObduktionAnfrage-BY3-Max)
+* target[+] = Reference(StfObduktion-BY3-Max)
+* target[+] = Reference(StfOrganisation-BY3-Max)
+* target[+] = Reference(StfOrganisation-GA-BY3-Max)
+* target[+] = Reference(StfOrganisation-GM-BY3-Max)
+* target[+] = Reference(StfTodesursache-Su-BY3-Max)
+* target[+] = Reference(StfTodesursache2-Su-BY3-Max)
+* target[+] = Reference(StfTodesursache3-Su-BY3-Max)
+* target[+] = Reference(StfTodesursache4-Su-BY3-Max)
+* target[+] = Reference(StfTodesursache5-Su-BY3-Max)
+* target[+] = Reference(StfTodesursache-Os-BY3-Max)
+* target[+] = Reference(StfTodesursache2-Os-BY3-Max)
+* target[+] = Reference(StfTodesursache3-Os-BY3-Max)
+* target[+] = Reference(StfTodesursache4-Os-BY3-Max)
+* target[+] = Reference(StfTodesursache5-Os-BY3-Max)
+* target[+] = Reference(StfVerstorbenePerson-BY3-Max)
+* target[+] = Reference(StfVerstorbenePersonPseudonymisiert-BY3-Max)
+* target[+] = Reference(StfSterbeurkundeAusstellung-BY3-Max)
+* recorded = "2025-06-01T12:00:00+02:00"
 * agent MS
-  * who MS
-    * display 1.. MS
-      * ^comment = "Name der generierenden Software"
-  * onBehalfOf 1.. MS
-  * onBehalfOf.reference 1.. MS
-  * onBehalfOf only Reference(StfOrganisation)
-    * ^comment = "Verweis auf die Organisation des Gesundheitsamtes"
+  * who.display = "Software des GA Nürnberg"
+  * onBehalfOf = Reference(StfOrganisation-GA-BY3-Max)
