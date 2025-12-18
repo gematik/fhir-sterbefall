@@ -38,7 +38,7 @@ Leitfaden für Kommentierende:
 
 ## License
 
-Copyright 2025 Hessisches Ministerium für Familie, Senioren, Sport, Gesundheit und Pflege
+Copyright 2025 gematik GmbH
 
 Apache License, Version 2.0
 
