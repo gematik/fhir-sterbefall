@@ -35,3 +35,11 @@ Leitfaden für Kommentierende:
 <!-- Namen und Kontaktdaten der verantwortlichen Personen /Ansprechpartner-->
 * Stefan Lang (stefan.lang@lang-hitc.de)
 * Rüdiger Hochscheidt (ruediger.hochscheidt@H-IT-Beratung.de)
+
+## License
+
+Copyright 2025 TBD
+
+Apache License, Version 2.0
+
+See the [LICENSE](./LICENSE) for the specific language governing permissions and limitations under the License
