@@ -132,7 +132,6 @@
       "reference": "Observation/Todesursache-5-BY2"
     }
   ],
-  "status": "final",
   "code": {
     "coding": [
       {
@@ -142,6 +141,7 @@
       }
     ]
   },
+  "status": "final",
   "subject": {
     "reference": "Patient/StfVerstorbenePerson-BY2"
   }

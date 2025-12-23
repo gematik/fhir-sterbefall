@@ -1,0 +1,59 @@
+{
+  "resourceType": "Organization",
+  "id": "StfOrganisation-BY3-Max",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfOrganisation"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://myGesundheitsamt.de/fhir/organisationen",
+      "value": "123456"
+    }
+  ],
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "StAmt",
+          "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfOrganisationsTypCS"
+        }
+      ]
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "Hirschelgasse 32"
+      ],
+      "_line": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString": "Hirschelgasse"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString": "32"
+            }
+          ]
+        }
+      ],
+      "extension": [
+        {
+          "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfBundeslandExtension",
+          "valueCoding": {
+            "code": "DE-BY",
+            "system": "urn:iso:std:iso:3166-2:de"
+          }
+        }
+      ],
+      "postalCode": "90403",
+      "city": "Nürnberg",
+      "country": "DE"
+    }
+  ],
+  "name": "Standesamt Nürnberg"
+}

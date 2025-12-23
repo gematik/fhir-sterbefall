@@ -1,0 +1,36 @@
+{
+  "resourceType": "Patient",
+  "id": "StfVerstorbenePersonPseudonymisiert-BY3-Max",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfVerstorbenePersonPseudonymisiert"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "PI",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+          }
+        ]
+      },
+      "value": "331",
+      "assigner": {
+        "reference": "Organization/StfOrganisation-GA-BY3-Max"
+      }
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "DC",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+          }
+        ]
+      },
+      "value": "7916"
+    }
+  ]
+}

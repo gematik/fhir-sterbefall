@@ -247,7 +247,6 @@
             "reference": "Observation/Todesursache-5-BY1"
           }
         ],
-        "status": "final",
         "code": {
           "coding": [
             {
@@ -257,6 +256,7 @@
             }
           ]
         },
+        "status": "final",
         "subject": {
           "reference": "Patient/StfVerstorbenePerson-BY1"
         }
@@ -331,7 +331,6 @@
             }
           }
         ],
-        "status": "final",
         "code": {
           "coding": [
             {
@@ -341,6 +340,7 @@
             }
           ]
         },
+        "status": "final",
         "subject": {
           "reference": "Patient/StfVerstorbenePerson-BY1"
         }
@@ -404,7 +404,6 @@
             }
           }
         ],
-        "status": "final",
         "code": {
           "coding": [
             {
@@ -414,6 +413,7 @@
             }
           ]
         },
+        "status": "final",
         "subject": {
           "reference": "Patient/StfVerstorbenePerson-BY1"
         }
@@ -488,7 +488,6 @@
             }
           }
         ],
-        "status": "final",
         "code": {
           "coding": [
             {
@@ -498,6 +497,7 @@
             }
           ]
         },
+        "status": "final",
         "subject": {
           "reference": "Patient/StfVerstorbenePerson-BY1"
         }
@@ -572,7 +572,6 @@
             }
           }
         ],
-        "status": "final",
         "code": {
           "coding": [
             {
@@ -582,6 +581,7 @@
             }
           ]
         },
+        "status": "final",
         "subject": {
           "reference": "Patient/StfVerstorbenePerson-BY1"
         }

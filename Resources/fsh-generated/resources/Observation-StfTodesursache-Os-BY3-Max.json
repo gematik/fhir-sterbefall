@@ -1,0 +1,123 @@
+{
+  "resourceType": "Observation",
+  "id": "StfTodesursache-Os-BY3-Max",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
+    ]
+  },
+  "performer": [
+    {
+      "reference": "Practitioner/StfArzt-BY3-Max-Boese"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10",
+        "code": "I99",
+        "version": "2019"
+      }
+    ],
+    "text": "Herz-Kreislaufversagen"
+  },
+  "component": [
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "Obduktionsschein",
+            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
+          }
+        ]
+      },
+      "code": {
+        "coding": [
+          {
+            "code": "quelle",
+            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+          }
+        ]
+      }
+    }
+  ],
+  "hasMember": [
+    {
+      "extension": [
+        {
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "TU2",
+                "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS"
+              }
+            ]
+          },
+          "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension"
+        }
+      ],
+      "reference": "Observation/StfTodesursache2-Os-BY3-Max"
+    },
+    {
+      "extension": [
+        {
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "TU3",
+                "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS"
+              }
+            ]
+          },
+          "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension"
+        }
+      ],
+      "reference": "Observation/StfTodesursache3-Os-BY3-Max"
+    },
+    {
+      "extension": [
+        {
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "TU4",
+                "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS"
+              }
+            ]
+          },
+          "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension"
+        }
+      ],
+      "reference": "Observation/StfTodesursache4-Os-BY3-Max"
+    },
+    {
+      "extension": [
+        {
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "TU5",
+                "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS"
+              }
+            ]
+          },
+          "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension"
+        }
+      ],
+      "reference": "Observation/StfTodesursache5-Os-BY3-Max"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "184305005",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "effectiveDateTime": "2025-01-05T10:30:00+01:00",
+  "status": "final",
+  "subject": {
+    "reference": "Patient/StfVerstorbenePerson-BY3-Max"
+  }
+}
