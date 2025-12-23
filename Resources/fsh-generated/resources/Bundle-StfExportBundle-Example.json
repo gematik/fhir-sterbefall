@@ -492,7 +492,6 @@
             "reference": "Observation/StfTodesursache-Grundleiden-Example"
           }
         ],
-        "status": "final",
         "code": {
           "coding": [
             {
@@ -502,6 +501,7 @@
             }
           ]
         },
+        "status": "final",
         "subject": {
           "reference": "Patient/StfVerstorbenePerson-Example",
           "display": "Max Mustermann"
@@ -572,7 +572,6 @@
             }
           }
         ],
-        "status": "final",
         "code": {
           "coding": [
             {
@@ -582,6 +581,7 @@
             }
           ]
         },
+        "status": "final",
         "subject": {
           "reference": "Patient/StfVerstorbenePerson-Example"
         },

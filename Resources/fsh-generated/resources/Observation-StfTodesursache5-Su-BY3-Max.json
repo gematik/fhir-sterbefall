@@ -1,0 +1,68 @@
+{
+  "resourceType": "Observation",
+  "id": "StfTodesursache5-Su-BY3-Max",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
+    ]
+  },
+  "performer": [
+    {
+      "reference": "Practitioner/StfArzt-BY3-Max-Boese"
+    }
+  ],
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10",
+        "code": "I63",
+        "version": "2019"
+      }
+    ],
+    "text": "Hirninfarkt"
+  },
+  "component": [
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "Sterbeurkunde",
+            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
+          }
+        ]
+      },
+      "code": {
+        "coding": [
+          {
+            "code": "quelle",
+            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+          }
+        ]
+      }
+    },
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "zeitdauerBeginnBisTod",
+            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+          }
+        ]
+      },
+      "valueString": "Vor 8 Monaten"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "184305005",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "effectiveDateTime": "2025-01-01T10:30:00+01:00",
+  "status": "final",
+  "subject": {
+    "reference": "Patient/StfVerstorbenePerson-BY3-Max"
+  }
+}

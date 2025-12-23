@@ -112,7 +112,6 @@
       "reference": "Observation/Todesursache-4-VB1"
     }
   ],
-  "status": "final",
   "code": {
     "coding": [
       {
@@ -122,6 +121,7 @@
       }
     ]
   },
+  "status": "final",
   "subject": {
     "reference": "Patient/StfVerstorbenePerson-VB1"
   }

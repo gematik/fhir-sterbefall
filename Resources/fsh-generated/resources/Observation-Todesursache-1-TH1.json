@@ -124,7 +124,6 @@
       "reference": "Observation/Todesursache-5-TH1"
     }
   ],
-  "status": "final",
   "code": {
     "coding": [
       {
@@ -134,6 +133,7 @@
       }
     ]
   },
+  "status": "final",
   "subject": {
     "reference": "Patient/StfVerstorbenePerson-TH1"
   }

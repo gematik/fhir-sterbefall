@@ -1,0 +1,113 @@
+{
+  "resourceType": "Practitioner",
+  "id": "StfArzt-BY3-Max-Gutmann",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArzt"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "ArztId",
+            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztIdentifierType"
+          }
+        ]
+      },
+      "system": "https://github.com/gematik/fhir-sterbefall/issues/62",
+      "value": "231"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "LANR"
+          }
+        ]
+      },
+      "system": "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR",
+      "value": "564"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "Zulassungsnr",
+            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztIdentifierType"
+          }
+        ]
+      },
+      "system": "https://github.com/gematik/fhir-sterbefall/issues/62",
+      "value": "897"
+    }
+  ],
+  "name": [
+    {
+      "given": [
+        "Emil"
+      ],
+      "prefix": [
+        "Dr."
+      ],
+      "_prefix": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+              "valueCode": "AC"
+            }
+          ]
+        }
+      ],
+      "use": "official",
+      "text": "Dr. Emil Gutmann",
+      "family": "Gutmann"
+    }
+  ],
+  "address": [
+    {
+      "line": [
+        "Bucher Str. 36"
+      ],
+      "_line": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString": "Bucher Str."
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString": "36"
+            }
+          ]
+        }
+      ],
+      "type": "both",
+      "city": "Nürnberg",
+      "postalCode": "90408",
+      "country": "DE"
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "0911/638355"
+    }
+  ],
+  "qualification": [
+    {
+      "code": {
+        "coding": [
+          {
+            "code": "Niedergelassen",
+            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfBerufsgruppeCS"
+          }
+        ]
+      }
+    }
+  ]
+}

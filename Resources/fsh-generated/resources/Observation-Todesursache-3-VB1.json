@@ -54,7 +54,6 @@
       }
     }
   ],
-  "status": "final",
   "code": {
     "coding": [
       {
@@ -64,6 +63,7 @@
       }
     ]
   },
+  "status": "final",
   "subject": {
     "reference": "Patient/StfVerstorbenePerson-VB1"
   }

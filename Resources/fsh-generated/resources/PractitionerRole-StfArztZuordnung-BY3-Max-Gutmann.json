@@ -1,0 +1,25 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "StfArztZuordnung-BY3-Max-Gutmann",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArztZuordnung"
+    ]
+  },
+  "specialty": [
+    {
+      "coding": [
+        {
+          "code": "Rechtsmediziner",
+          "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfFacharztgruppeCS"
+        }
+      ]
+    }
+  ],
+  "practitioner": {
+    "reference": "Practitioner/StfArzt-BY3-Max-Gutmann"
+  },
+  "organization": {
+    "reference": "Organization/StfOrganisation-GM-BY3-Max"
+  }
+}
