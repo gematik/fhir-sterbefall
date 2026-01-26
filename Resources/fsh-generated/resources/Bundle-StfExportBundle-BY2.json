@@ -351,8 +351,7 @@
           "coding": [
             {
               "code": "184305005",
-              "system": "http://snomed.info/sct",
-              "display": "Cause of Death"
+              "system": "http://snomed.info/sct"
             }
           ]
         },
@@ -429,8 +428,7 @@
           "coding": [
             {
               "code": "184305005",
-              "system": "http://snomed.info/sct",
-              "display": "Cause of Death"
+              "system": "http://snomed.info/sct"
             }
           ]
         },
@@ -512,8 +510,7 @@
           "coding": [
             {
               "code": "184305005",
-              "system": "http://snomed.info/sct",
-              "display": "Cause of Death"
+              "system": "http://snomed.info/sct"
             }
           ]
         },
