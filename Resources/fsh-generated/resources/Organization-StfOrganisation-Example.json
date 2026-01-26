@@ -70,11 +70,5 @@
   "partOf": {
     "display": "Stadt Köln"
   },
-  "extension": [
-    {
-      "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfPruefcodeExtension",
-      "valueString": "PCODE98765"
-    }
-  ],
   "name": "Standesamt Musterstadt"
 }
