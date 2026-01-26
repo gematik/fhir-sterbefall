@@ -86,25 +86,8 @@
       ],
       "extension": [
         {
-          "extension": [
-            {
-              "url": "Bundesland",
-              "valueInteger": 5
-            },
-            {
-              "url": "Regierungsbezirk",
-              "valueInteger": 1
-            },
-            {
-              "url": "Landkreis",
-              "valueInteger": 62
-            },
-            {
-              "url": "Gemeinde",
-              "valueInteger": 14
-            }
-          ],
-          "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfGemeindekennzahlExtension"
+          "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfGemeindekennzahlExtension",
+          "valueString": "516214"
         }
       ],
       "type": "both",
