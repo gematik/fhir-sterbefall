@@ -5,7 +5,8 @@ Description: "Beispielinstanz einer Todesursache nach dem StfTodesursache-Profil
 Usage: #example
 
 * status = #final
-* code = $sct#184305005 "Cause of Death"
+* code.coding[SCT] = $sct#184305005 "Cause of Death"
+* code.coding[TodesursacheTyp] = StfTodesursacheCodeCS#TU1 "Todesursache 1"
 * subject = Reference(Patient/StfVerstorbenePerson-Example) "Max Mustermann"
 * effectiveDateTime = "2023-07-10"  // Beginn der Krankheit
 * performer = Reference(Practitioner/StfArzt-Example)

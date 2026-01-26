@@ -4,6 +4,7 @@ Title: "STF Weitere Todesursachen"
 Description: "Dieses CodeSystem definiert ergänzende Todesursachen, die im Rahmen der standardisierten Dokumentation eines Sterbefalls verwendet werden. 
 Es ermöglicht die strukturierte Erfassung mehrerer Ursachenketten."
 * insert Meta
+* #TU1 "Todesursache 1" "Unmittelbare Todesursache"
 * #TU2 "Todesursache 2" "Als Folge von..."
 * #TU3 "Todesursache 3" "Als Folge von... (Grundleiden)"
 * #TU4 "Todesursache 4"
