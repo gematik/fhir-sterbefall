@@ -26,7 +26,7 @@
     {
       "coding": [
         {
-          "system": "http://gematik.de/fhir/oegd/stf/ValueSet/StfOrganisationsTypVS",
+          "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfOrganisationsTypCS",
           "code": "Klinik",
           "display": "Klinik"
         }
