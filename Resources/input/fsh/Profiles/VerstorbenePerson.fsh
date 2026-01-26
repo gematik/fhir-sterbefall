@@ -88,6 +88,7 @@ RuleSet: Patient-identifier
     * ^comment = "Im Rahmen des Projektes wurde kein NamingSystem festgelegt. Aus diesem Grund ist die Angabe eines type verpflichtend."
   * type 1.. MS
   * type = http://terminology.hl7.org/CodeSystem/v2-0203#DC
+  * value 1.. MS
 
 Extension: StfGemeindekennzahlExtension
 Id: StfGemeindekennzahlExtension
