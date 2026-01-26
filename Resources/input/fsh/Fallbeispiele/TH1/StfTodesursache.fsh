@@ -2,7 +2,8 @@ Instance: Todesursache-1-TH1
 InstanceOf: StfTodesursache
 Usage: #example
 * status = #final
-* code = $sct#184305005 "Cause of Death"
+* code.coding[SCT] = $sct#184305005 "Cause of Death"
+* code.coding[TodesursacheTyp] = StfTodesursacheCodeCS#TU1 "Todesursache 1"
 * subject = Reference(StfVerstorbenePerson-TH1)
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version = "2019"

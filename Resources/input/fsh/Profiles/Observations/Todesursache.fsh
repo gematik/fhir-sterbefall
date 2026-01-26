@@ -5,7 +5,16 @@ Title: "STF Todesursache"
 Description: "Todesursache (kompatibel zu [MII PR Onkologie Tod](https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/StructureDefinition/mii-pr-onko-tod) )"
 * insert Meta
 * code MS
-* code = $sct#184305005
+* code.coding ^slicing.discriminator.type = #pattern
+* code.coding ^slicing.discriminator.path = "$this"
+* code.coding ^slicing.rules = #open
+* code.coding contains
+  TodesursacheTyp ..1 MS and
+  SCT 1..1 MS
+* code.coding[SCT] = $sct#184305005
+* code.coding[TodesursacheTyp] from StfTodesursacheCode (required)
+  * ^patternCoding.system = Canonical(StfTodesursacheCodeCS)
+  * ^comment = "Stellt die Instanz der Observation die unmittelbare Todesursache da, so ist hier der Code TU1 (unmittelbare Todesursache) zu verwenden. Für alle weiteren Todesursachen sind die Codes TU2 bis TU5 bzw. GA (Todesursache Gesundheitsamt) zu verwenden. Diese sind im Element hasMember als Extension mit der Referenz zu verknüpfen, eine Angabe im Code Element ist optional."
 * subject 1.. MS
 * subject only Reference(Patient)
 * effective[x] MS

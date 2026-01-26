@@ -3,6 +3,8 @@ Instance: StfTodesursache-Su-BY3-Max
 InstanceOf: StfTodesursache
 Usage: #example
 * insert StfMemberTodesursacheByMaxMitZeitdauer(#J96, "respiratorische Insuffizienz", "30 Minuten", #Sterbeurkunde)
+* code.coding[SCT] = $sct#184305005 "Cause of Death"
+* code.coding[TodesursacheTyp] = StfTodesursacheCodeCS#TU1 "Todesursache 1"
 * hasMember[+] = Reference(StfTodesursache2-Su-BY3-Max)
 * hasMember[=].extension[TodesursacheTyp].valueCodeableConcept.coding = StfTodesursacheCodeCS#TU2
 * hasMember[+] = Reference(StfTodesursache3-Su-BY3-Max)
