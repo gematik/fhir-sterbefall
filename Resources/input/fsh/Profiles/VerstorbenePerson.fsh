@@ -17,10 +17,15 @@ Description: "Informationen zur verstorbenen Person"
   * use = #official
   * family 1.. MS
   * family ^comment = "Nachname"
+  * family.extension[namenszusatz] MS
+  * family.extension[nachname] MS
+  * family.extension[vorsatzwort] MS
   * given 1.. MS
   * given ^comment = "Vorname"
   * prefix MS
   * prefix ^comment = "Titel"
+  * text MS
+  * text ^comment = "Vollständiger Name als Text"
 * name[geburtsname] only $de.basis-humanName
 * name[geburtsname]
   * use = #maiden
