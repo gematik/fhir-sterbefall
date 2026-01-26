@@ -903,6 +903,17 @@
                 }
               ]
             }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "todesursacheKlassifikation",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                }
+              ]
+            },
+            "valueString": "Sturz in häuslicher Umgebung vor 3 Tagen"
           }
         ],
         "code": {
