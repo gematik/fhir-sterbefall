@@ -6,6 +6,11 @@
       "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObservationKrebserkrankung"
     ]
   },
+  "partOf": [
+    {
+      "reference": "Procedure/StfLeichenschau-BY3-Max"
+    }
+  ],
   "valueCodeableConcept": {
     "coding": [
       {

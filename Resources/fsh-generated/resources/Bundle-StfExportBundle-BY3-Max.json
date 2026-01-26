@@ -527,6 +527,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObservationKrebserkrankung"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-BY3-Max"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {
@@ -810,6 +815,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-BY3-Max"
+          }
+        ],
         "performer": [
           {
             "reference": "Practitioner/StfArzt-BY3-Max-Boese"
@@ -895,6 +905,20 @@
             }
           }
         ],
+        "code": {
+          "coding": [
+            {
+              "code": "184305005",
+              "system": "http://snomed.info/sct",
+              "display": "Cause of Death"
+            },
+            {
+              "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
+              "code": "TU1",
+              "display": "Todesursache 1"
+            }
+          ]
+        },
         "hasMember": [
           {
             "extension": [
@@ -969,14 +993,6 @@
             "text": "Hirninfarkt beidseitig vor 8 Monaten, infolge einseitige Lähmung links\nFortgeschrittenes Pankreaskarzinom mit Lebermetastasen, keine OO, Chemotherapie\nabgebrochen, sonstige palliative Therapie"
           }
         ],
-        "code": {
-          "coding": [
-            {
-              "code": "184305005",
-              "system": "http://snomed.info/sct"
-            }
-          ]
-        },
         "effectiveDateTime": "2025-01-01T10:30:00+01:00",
         "status": "final",
         "subject": {
@@ -994,6 +1010,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-BY3-Max"
+          }
+        ],
         "performer": [
           {
             "reference": "Practitioner/StfArzt-BY3-Max-Boese"
@@ -1065,6 +1086,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-BY3-Max"
+          }
+        ],
         "performer": [
           {
             "reference": "Practitioner/StfArzt-BY3-Max-Boese"
@@ -1136,6 +1162,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-BY3-Max"
+          }
+        ],
         "performer": [
           {
             "reference": "Practitioner/StfArzt-BY3-Max-Boese"
@@ -1207,6 +1238,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-BY3-Max"
+          }
+        ],
         "performer": [
           {
             "reference": "Practitioner/StfArzt-BY3-Max-Boese"
@@ -1278,6 +1314,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfObduktion-BY3-Max"
+          }
+        ],
         "performer": [
           {
             "reference": "Practitioner/StfArzt-BY3-Max-Boese"
@@ -1404,6 +1445,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfObduktion-BY3-Max"
+          }
+        ],
         "performer": [
           {
             "reference": "Practitioner/StfArzt-BY3-Max-Boese"
@@ -1464,6 +1510,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfObduktion-BY3-Max"
+          }
+        ],
         "performer": [
           {
             "reference": "Practitioner/StfArzt-BY3-Max-Boese"
@@ -1524,6 +1575,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfObduktion-BY3-Max"
+          }
+        ],
         "performer": [
           {
             "reference": "Practitioner/StfArzt-BY3-Max-Boese"
@@ -1584,6 +1640,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfObduktion-BY3-Max"
+          }
+        ],
         "performer": [
           {
             "reference": "Practitioner/StfArzt-BY3-Max-Boese"

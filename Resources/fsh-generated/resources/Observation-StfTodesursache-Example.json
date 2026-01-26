@@ -6,6 +6,25 @@
       "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
     ]
   },
+  "partOf": [
+    {
+      "reference": "Procedure/StfLeichenschau-Example"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "184305005",
+        "system": "http://snomed.info/sct",
+        "display": "Cause of Death"
+      },
+      {
+        "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
+        "code": "TU1",
+        "display": "Todesursache 1"
+      }
+    ]
+  },
   "performer": [
     {
       "reference": "Practitioner/StfArzt-Example"
@@ -113,15 +132,6 @@
       "reference": "Observation/StfTodesursache-Grundleiden-Example"
     }
   ],
-  "code": {
-    "coding": [
-      {
-        "code": "184305005",
-        "system": "http://snomed.info/sct",
-        "display": "Cause of Death"
-      }
-    ]
-  },
   "status": "final",
   "subject": {
     "reference": "Patient/StfVerstorbenePerson-Example",

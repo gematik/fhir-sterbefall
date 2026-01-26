@@ -113,6 +113,25 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-VB1"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "184305005",
+              "system": "http://snomed.info/sct",
+              "display": "Cause of Death"
+            },
+            {
+              "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
+              "code": "TU1",
+              "display": "Todesursache 1"
+            }
+          ]
+        },
         "valueCodeableConcept": {
           "coding": [
             {
@@ -219,15 +238,6 @@
             "reference": "Observation/Todesursache-4-VB1"
           }
         ],
-        "code": {
-          "coding": [
-            {
-              "code": "184305005",
-              "system": "http://snomed.info/sct",
-              "display": "Cause of Death"
-            }
-          ]
-        },
         "status": "final",
         "subject": {
           "reference": "Patient/StfVerstorbenePerson-VB1"
@@ -244,6 +254,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-VB1"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {
@@ -317,6 +332,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-VB1"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {
@@ -390,6 +410,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-VB1"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {

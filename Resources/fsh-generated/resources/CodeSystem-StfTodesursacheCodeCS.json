@@ -10,6 +10,11 @@
   "url": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
   "concept": [
     {
+      "code": "TU1",
+      "display": "Todesursache 1",
+      "definition": "Unmittelbare Todesursache"
+    },
+    {
       "code": "TU2",
       "display": "Todesursache 2",
       "definition": "Als Folge von..."
@@ -35,5 +40,5 @@
   "experimental": false,
   "publisher": "ELFA Maßnahme Interoperabilität",
   "date": "2025-12-05",
-  "count": 5
+  "count": 6
 }

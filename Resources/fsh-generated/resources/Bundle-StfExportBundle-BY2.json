@@ -113,6 +113,25 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-BY2"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "184305005",
+              "system": "http://snomed.info/sct",
+              "display": "Cause of Death"
+            },
+            {
+              "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
+              "code": "TU1",
+              "display": "Todesursache 1"
+            }
+          ]
+        },
         "valueCodeableConcept": {
           "coding": [
             {
@@ -239,15 +258,6 @@
             "reference": "Observation/Todesursache-5-BY2"
           }
         ],
-        "code": {
-          "coding": [
-            {
-              "code": "184305005",
-              "system": "http://snomed.info/sct",
-              "display": "Cause of Death"
-            }
-          ]
-        },
         "status": "final",
         "subject": {
           "reference": "Patient/StfVerstorbenePerson-BY2"
@@ -264,6 +274,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-BY2"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {
@@ -357,6 +372,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-BY2"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {
@@ -430,6 +450,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-BY2"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {
@@ -508,6 +533,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObservationKrebserkrankung"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-BY2"
+          }
+        ],
         "note": [
           {
             "text": "Mamma-CA"

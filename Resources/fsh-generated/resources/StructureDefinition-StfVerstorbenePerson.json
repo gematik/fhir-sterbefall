@@ -178,10 +178,34 @@
         "patternCode": "official"
       },
       {
+        "id": "Patient.name:name.text",
+        "path": "Patient.name.text",
+        "comment": "Vollständiger Name als Text",
+        "mustSupport": true
+      },
+      {
         "id": "Patient.name:name.family",
         "path": "Patient.name.family",
         "comment": "Nachname",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.family.extension:namenszusatz",
+        "path": "Patient.name.family.extension",
+        "sliceName": "namenszusatz",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.family.extension:nachname",
+        "path": "Patient.name.family.extension",
+        "sliceName": "nachname",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.family.extension:vorsatzwort",
+        "path": "Patient.name.family.extension",
+        "sliceName": "vorsatzwort",
         "mustSupport": true
       },
       {

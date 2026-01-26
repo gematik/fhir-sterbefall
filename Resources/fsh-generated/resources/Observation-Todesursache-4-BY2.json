@@ -6,6 +6,11 @@
       "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
     ]
   },
+  "partOf": [
+    {
+      "reference": "Procedure/StfLeichenschau-BY2"
+    }
+  ],
   "valueCodeableConcept": {
     "coding": [
       {

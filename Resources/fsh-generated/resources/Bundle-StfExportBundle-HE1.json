@@ -117,6 +117,25 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-HE1"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "184305005",
+              "system": "http://snomed.info/sct",
+              "display": "Cause of Death"
+            },
+            {
+              "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
+              "code": "TU1",
+              "display": "Todesursache 1"
+            }
+          ]
+        },
         "valueCodeableConcept": {
           "coding": [
             {
@@ -217,15 +236,6 @@
             }
           }
         ],
-        "code": {
-          "coding": [
-            {
-              "code": "184305005",
-              "system": "http://snomed.info/sct",
-              "display": "Cause of Death"
-            }
-          ]
-        },
         "status": "final",
         "subject": {
           "reference": "Patient/StfVerstorbenePerson-HE1"
@@ -242,6 +252,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-HE1"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {
@@ -315,6 +330,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-HE1"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {
@@ -388,6 +408,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObservationKrebserkrankung"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-HE1"
+          }
+        ],
         "note": [
           {
             "text": "Magenkarzinom"

@@ -19,16 +19,46 @@
   "differential": {
     "element": [
       {
-        "id": "Observation.code",
-        "path": "Observation.code",
-        "patternCodeableConcept": {
-          "coding": [
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "slicing": {
+          "discriminator": [
             {
-              "code": "184305005",
-              "system": "http://snomed.info/sct"
+              "type": "pattern",
+              "path": "$this"
             }
-          ]
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.code.coding:TodesursacheTyp",
+        "path": "Observation.code.coding",
+        "sliceName": "TodesursacheTyp",
+        "comment": "Stellt die Instanz der Observation die unmittelbare Todesursache da, so ist hier der Code TU1 (unmittelbare Todesursache) zu verwenden. Für alle weiteren Todesursachen sind die Codes TU2 bis TU5 bzw. GA (Todesursache Gesundheitsamt) zu verwenden. Diese sind im Element hasMember als Extension mit der Referenz zu verknüpfen, eine Angabe im Code Element ist optional.",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://gematik.de/fhir/oegd/stf/ValueSet/StfTodesursacheCodeVS"
         }
+      },
+      {
+        "id": "Observation.code.coding:SCT",
+        "path": "Observation.code.coding",
+        "sliceName": "SCT",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "184305005",
+          "system": "http://snomed.info/sct"
+        },
+        "mustSupport": true
       },
       {
         "id": "Observation.effective[x]",

@@ -1,0 +1,21 @@
+{
+  "resourceType": "Procedure",
+  "id": "StfLeichenschau-BY3-Max",
+  "meta": {
+    "profile": [
+      "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfLeichenschau"
+    ]
+  },
+  "performer": [
+    {
+      "actor": {
+        "reference": "Practitioner/StfArzt-BY3-Max-Boese"
+      }
+    }
+  ],
+  "status": "completed",
+  "performedDateTime": "2025-01-01",
+  "subject": {
+    "reference": "Patient/StfVerstorbenePerson-BY3-Max"
+  }
+}
