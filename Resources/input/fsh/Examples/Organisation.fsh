@@ -29,7 +29,6 @@ Usage: #example
 * contact.telecom[1].value = "max.mustermann@standesamt-musterstadt.de"
 * contact.telecom[1].use = #work
 * partOf.display = "Stadt Köln"
-* extension[StfPruefcodeExtension].valueString = "PCODE98765"
 
 Instance: StfOrganisationGesundheitsamtRegensburg
 InstanceOf: StfOrganisation

@@ -26,11 +26,3 @@ Context: Address
 * insert Meta
 * value[x] only Coding
 * valueCoding from $de.basis-bundeslaender
-
-Extension: StfPruefcodeExtension
-Id: StfPruefcodeExtension
-Title: "STF Prüfcode Extension"
-Description: "Mit dieser Extension kann ein Prüfcode an einer Organisation ergänzt werden."
-Context: Organization
-* insert Meta
-* value[x] only string
