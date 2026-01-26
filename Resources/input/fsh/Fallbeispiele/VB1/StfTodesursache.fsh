@@ -25,7 +25,6 @@ InstanceOf: StfTodesursache
 Usage: #example
 * status = #final
 * partOf = Reference(StfLeichenschau-VB1)
-* code = $sct#184305005 "Cause of Death"
 * subject = Reference(StfVerstorbenePerson-VB1)
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version = "2019"
@@ -39,7 +38,6 @@ InstanceOf: StfTodesursache
 Usage: #example
 * status = #final
 * partOf = Reference(StfLeichenschau-VB1)
-* code = $sct#184305005 "Cause of Death"
 * subject = Reference(StfVerstorbenePerson-VB1)
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version = "2019"
@@ -53,7 +51,6 @@ InstanceOf: StfTodesursache
 Usage: #example
 * status = #final
 * partOf = Reference(StfLeichenschau-VB1)
-* code = $sct#184305005 "Cause of Death"
 * subject = Reference(StfVerstorbenePerson-VB1)
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version = "2019"

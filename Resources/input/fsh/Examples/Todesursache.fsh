@@ -41,7 +41,6 @@ Title: "Grundleiden der Todesursache"
 Usage: #example
 * status = #final
 * partOf = Reference(Procedure/StfLeichenschau-Example)
-* code = $sct#184305005 "Cause of Death"
 * subject = Reference(Patient/StfVerstorbenePerson-Example)
 * effectiveDateTime = "2020-01-15"  // Beginn des Grundleidens
 * performer = Reference(Practitioner/StfArzt-Example)

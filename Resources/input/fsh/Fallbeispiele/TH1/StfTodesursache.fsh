@@ -26,7 +26,6 @@ InstanceOf: StfTodesursache
 Usage: #example
 * status = #final
 * partOf = Reference(StfLeichenschau-TH1)
-* code = $sct#184305005 "Cause of Death"
 * subject = Reference(StfVerstorbenePerson-TH1)
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version = "2019"
@@ -40,7 +39,6 @@ InstanceOf: StfTodesursache
 Usage: #example
 * status = #final
 * partOf = Reference(StfLeichenschau-TH1)
-* code = $sct#184305005 "Cause of Death"
 * subject = Reference(StfVerstorbenePerson-TH1)
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version = "2019"
@@ -54,7 +52,6 @@ InstanceOf: StfTodesursache
 Usage: #example
 * status = #final
 * partOf = Reference(StfLeichenschau-TH1)
-* code = $sct#184305005 "Cause of Death"
 * subject = Reference(StfVerstorbenePerson-TH1)
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
 * valueCodeableConcept.coding.version = "2019"
@@ -68,7 +65,6 @@ InstanceOf: StfTodesursache
 Usage: #example
 * status = #final
 * partOf = Reference(StfLeichenschau-TH1)
-* code = $sct#184305005 "Cause of Death"
 * subject = Reference(StfVerstorbenePerson-TH1)
 * insert ExampleKrankheitCode(#I50.0, "Linksherzinsuffizienz")
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
