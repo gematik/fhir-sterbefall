@@ -1,5 +1,5 @@
 ---
-subject: http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDateien
+subject: http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDatei
 expand: 1
 ---
 
@@ -11,7 +11,7 @@ expand: 1
 from
 	StructureDefinition
 where
-	url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDateien'
+	url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDatei'
 select
 	Canonical: url, Status: status, Version: version, Basis: baseDefinition
 ```
@@ -37,7 +37,7 @@ select
         from
 	        StructureDefinition
         where
-	        url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDateien'
+	        url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDatei'
         select
 	        Beschreibung: description
         with
@@ -47,7 +47,7 @@ select
         from 
             StructureDefinition 
         where 
-            url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDateien' 
+            url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDatei' 
         for 
             differential.element 
             where 
@@ -66,7 +66,7 @@ select
 from 
     StructureDefinition
 where 
-    url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDateien' 
+    url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDatei' 
 for 
     snapshot.element
     where 
@@ -77,5 +77,5 @@ for
 
 ### Constraints/Invarianten
 @``` 
-from StructureDefinition where url = 'https://www.oegd.de/fhir/seu/StructureDefinition/StfDateien' for differential.element.constraint select Name: key, Schweregrad: severity, Beschreibung: human, Ausdruck: expression
+from StructureDefinition where url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDatei' for differential.element.constraint select Name: key, Schweregrad: severity, Beschreibung: human, Ausdruck: expression
 ```
