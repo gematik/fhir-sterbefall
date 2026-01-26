@@ -42,7 +42,4 @@ Usage: #example
 * address[Strassenanschrift].country = "DE"
 
 // Gemeindekennzahl Extension
-* address[Strassenanschrift].extension[StfGemeindekennzahlExtension].extension[Bundesland].valueInteger = 5
-* address[Strassenanschrift].extension[StfGemeindekennzahlExtension].extension[Regierungsbezirk].valueInteger = 1
-* address[Strassenanschrift].extension[StfGemeindekennzahlExtension].extension[Landkreis].valueInteger = 62
-* address[Strassenanschrift].extension[StfGemeindekennzahlExtension].extension[Gemeinde].valueInteger = 14
+* address[Strassenanschrift].extension[StfGemeindekennzahlExtension].valueString = "516214"

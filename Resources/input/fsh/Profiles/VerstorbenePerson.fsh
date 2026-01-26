@@ -93,18 +93,10 @@ RuleSet: Patient-identifier
 Extension: StfGemeindekennzahlExtension
 Id: StfGemeindekennzahlExtension
 Title: "STF Gemeindekennzahl Extension"
-Description: "Abbildung der GKZ (Gemeindekennzahl) bestehend aus Bundesland (zweistellig), Regierungsbezirk (einstellig), Landkreis (Landkreis) und Gemeinde (zweistellig)"
+Description: "Abbildung der GKZ (Gemeindekennzahl) bestehend aus Bundesland, Regierungsbezirk, Landkreis und Gemeinde"
 Context: Address
 * insert Meta
-* extension contains
-  Bundesland 1..1 MS and
-  Regierungsbezirk 1..1 MS and
-  Landkreis 1..1 MS and
-  Gemeinde 1..1 MS
-* extension[Bundesland].value[x] only integer
-* extension[Regierungsbezirk].value[x] only integer
-* extension[Landkreis].value[x] only integer
-* extension[Gemeinde].value[x] only integer
+* value[x] only string
 
 
 Profile: StfVerstorbenePersonPseudonymisiert
