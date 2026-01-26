@@ -24,9 +24,9 @@ Usage: #example
 * component[ZeitdauerBeginnBisTod].code = StfObservationCodesErweiterungCS#zeitdauerBeginnBisTod
 * component[ZeitdauerBeginnBisTod].valueString = "1-2 Wochen"
 
-* component[Details].code = StfObservationCodesErweiterungCS#todesursacheKlassifikation
-* component[Details].valueCodeableConcept.coding = $icd-10-who#I25.1
-* component[Details].valueCodeableConcept.coding.version = "2019"
+* component[WeitereAngaben].code = StfObservationCodesErweiterungCS#todesursacheKlassifikation
+* component[WeitereAngaben].valueCodeableConcept.coding = $icd-10-who#I25.1
+* component[WeitereAngaben].valueCodeableConcept.coding.version = "2019"
 
 * component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Obduktionsschein
 

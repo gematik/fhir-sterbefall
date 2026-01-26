@@ -55,7 +55,7 @@ sonst n"
 * component ^slicing.rules = #open
 * component contains
   NichtNatuerlicherTod ..1 MS and
-  Details ..1 MS and
+  WeitereAngaben ..* MS and
   ZeitdauerBeginnBisTod ..1 MS and
   Quelle ..1 MS
 * component[NichtNatuerlicherTod]
@@ -76,15 +76,16 @@ dann ka;"
   * code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
   * value[x] only CodeableConcept
   * valueCodeableConcept.coding from StfJaNeinUnbekannt (required)
+  * valueCodeableConcept.text MS
 * component[ZeitdauerBeginnBisTod]
   * ^comment = "Angabe der Zeitdauer von Beginn der Krankheit bis zum Tod in beliebiger Angabe"
   * code = StfObservationCodesErweiterungCS#zeitdauerBeginnBisTod
   * value[x] only string
   * valueString MS
-* component[Details]
+* component[WeitereAngaben]
   * ^comment = "Weitere Angaben zur Klassifikation der Todesursache, z.B. bei Unfall, Vergiftung,  Gewalteinwirkung, Selbsttötung sowie bei Komplikationen medizinischer Behandlung Äußere Ursache der Schädigung (Angaben über den Hergang); bei Vergiftungen zusätzlich Angabe des Mittels"
   * code = StfObservationCodesErweiterungCS#todesursacheKlassifikation
-  * value[x] only CodeableConcept
+  * value[x] only CodeableConcept or string
   //* valueCodeableConcept from $icd-10-who (required)
   * valueCodeableConcept.coding.system 1.. MS
   * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
@@ -92,6 +93,7 @@ dann ka;"
   * valueCodeableConcept.coding.code 1.. MS
   * valueCodeableConcept.coding.display MS
   * valueCodeableConcept.text MS
+  * valueString MS
 * component[Quelle]
   * ^comment = "Quellangabe der Information. Z.B. ob die Todesursache aus dem Leichenschauschein oder dem Obduktionsschein stammt."
   * code = StfObservationCodesErweiterungCS#quelle

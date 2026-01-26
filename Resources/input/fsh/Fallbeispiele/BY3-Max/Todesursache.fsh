@@ -24,10 +24,12 @@ abgebrochen, sonstige palliative Therapie"
 Bauch auf mitgeführte Gehhilfe gestürzt, leichte Abschürfungen im Gesicht; Hämatom im
 Bauchraum; später über Buchschmerzen /Unwohlsein geklagt. Vermutung ggf. innere
 Verletzungen, die unbehandelt geblieben sind."
-* component[Details]
+* component[WeitereAngaben][+]
   * valueCodeableConcept.coding.version = "2019"
   * valueCodeableConcept.coding.code = #W10
   * valueCodeableConcept.text = "mgl. Innere Verletzungen"
+* component[WeitereAngaben][+]
+  * valueString = "Sturz in häuslicher Umgebung vor 3 Tagen"
 
 Instance: StfTodesursache2-Su-BY3-Max
 InstanceOf: StfTodesursache
