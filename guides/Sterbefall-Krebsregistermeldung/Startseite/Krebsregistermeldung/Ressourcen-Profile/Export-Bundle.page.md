@@ -1,5 +1,6 @@
 ---
-subject: http://gematik.de/fhir/oegd/stf/StructureDefinition/ExportBundle
+subject: http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportBundle
+canonical: http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportBundle
 expand: 1
 ---
 
@@ -11,7 +12,7 @@ expand: 1
 from
 	StructureDefinition
 where
-	url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/ExportBundle'
+	url = %canonical
 select
 	Canonical: url, Status: status, Version: version, Basis: baseDefinition
 ```
@@ -30,7 +31,7 @@ select
         from
 	        StructureDefinition
         where
-	        url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/ExportBundle'
+	        url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportBundle'
         select
 	        Beschreibung: description
         with
@@ -40,7 +41,7 @@ select
         from 
             StructureDefinition 
         where 
-            url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/ExportBundle' 
+            url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportBundle'
         for 
             differential.element 
             where 
@@ -59,7 +60,7 @@ select
 from 
     StructureDefinition
 where 
-    url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/ExportBundle' 
+    url = %canonical
 for 
     snapshot.element
     where 
@@ -70,5 +71,5 @@ for
 
 ### Constraints/Invarianten
 @``` 
-from StructureDefinition where url = 'https://www.oegd.de/fhir/seu/StructureDefinition/ExportBundle' for differential.element.constraint select Name: key, Schweregrad: severity, Beschreibung: human, Ausdruck: expression
+from StructureDefinition where url = %canonical for differential.element.constraint select Name: key, Schweregrad: severity, Beschreibung: human, Ausdruck: expression
 ```
