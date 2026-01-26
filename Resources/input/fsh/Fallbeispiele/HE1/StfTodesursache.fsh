@@ -2,6 +2,7 @@ Instance: Todesursache-1-HE1
 InstanceOf: StfTodesursache
 Usage: #example
 * status = #final
+* partOf = Reference(StfLeichenschau-HE1)
 * code.coding[SCT] = $sct#184305005 "Cause of Death"
 * code.coding[TodesursacheTyp] = StfTodesursacheCodeCS#TU1 "Todesursache 1"
 * subject = Reference(StfVerstorbenePerson-HE1)
@@ -23,6 +24,7 @@ Instance: Todesursache-2-HE1
 InstanceOf: StfTodesursache
 Usage: #example
 * status = #final
+* partOf = Reference(StfLeichenschau-HE1)
 * code = $sct#184305005 "Cause of Death"
 * subject = Reference(StfVerstorbenePerson-HE1)
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
@@ -36,6 +38,7 @@ Instance: Todesursache-3-HE1
 InstanceOf: StfTodesursache
 Usage: #example
 * status = #final
+* partOf = Reference(StfLeichenschau-HE1)
 * code = $sct#184305005 "Cause of Death"
 * subject = Reference(StfVerstorbenePerson-HE1)
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"

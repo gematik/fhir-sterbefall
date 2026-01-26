@@ -7,6 +7,7 @@ Usage: #example
 * meta.profile = Canonical(StfObservationKrebserkrankung)
 
 * status = #final
+* partOf = Reference(Procedure/StfLeichenschau-Example)
 * code = $sct#108369006 "Tumor"
 * subject = Reference(Patient/StfVerstorbenePerson-Example)
 * effectiveDateTime = "2025-03-02T14:30:00+01:00"
@@ -24,6 +25,7 @@ Usage: #example
 * meta.profile = Canonical(StfObservationKrebserkrankung)
 
 * status = #final
+* partOf = Reference(Procedure/StfObduktion-Example)
 * code = $sct#108369006 "Tumor"
 * subject = Reference(Patient/StfVerstorbenePerson-Example)
 * effectiveDateTime = "2025-03-02T14:30:00+01:00"

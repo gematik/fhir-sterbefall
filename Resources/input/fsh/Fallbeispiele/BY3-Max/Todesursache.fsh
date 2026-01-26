@@ -2,6 +2,7 @@
 Instance: StfTodesursache-Su-BY3-Max
 InstanceOf: StfTodesursache
 Usage: #example
+* partOf = Reference(StfLeichenschau-BY3-Max)
 * insert StfMemberTodesursacheByMaxMitZeitdauer(#J96, "respiratorische Insuffizienz", "30 Minuten", #Sterbeurkunde)
 * code.coding[SCT] = $sct#184305005 "Cause of Death"
 * code.coding[TodesursacheTyp] = StfTodesursacheCodeCS#TU1 "Todesursache 1"
@@ -31,27 +32,32 @@ Verletzungen, die unbehandelt geblieben sind."
 Instance: StfTodesursache2-Su-BY3-Max
 InstanceOf: StfTodesursache
 Usage: #example
+* partOf = Reference(StfLeichenschau-BY3-Max)
 * insert StfMemberTodesursacheByMaxMitZeitdauer(#J84, "interstitielle pulmonale Pneumonitis", "1 Woche", #Sterbeurkunde)
 
 Instance: StfTodesursache3-Su-BY3-Max
 InstanceOf: StfTodesursache
 Usage: #example
+* partOf = Reference(StfLeichenschau-BY3-Max)
 * insert StfMemberTodesursacheByMaxMitZeitdauer(#C25, "Pankresakarzinom", "Seit 10/2024", #Sterbeurkunde)
 
 Instance: StfTodesursache4-Su-BY3-Max
 InstanceOf: StfTodesursache
 Usage: #example
+* partOf = Reference(StfLeichenschau-BY3-Max)
 * insert StfMemberTodesursacheByMaxMitZeitdauer(#C78, "Lebermetastasen", "Seit 10/2024", #Sterbeurkunde)
 
 Instance: StfTodesursache5-Su-BY3-Max
 InstanceOf: StfTodesursache
 Usage: #example
+* partOf = Reference(StfLeichenschau-BY3-Max)
 * insert StfMemberTodesursacheByMaxMitZeitdauer(#I63, "Hirninfarkt", "Vor 8 Monaten", #Sterbeurkunde)
 
 //Obduktionsschein
 Instance: StfTodesursache-Os-BY3-Max
 InstanceOf: StfTodesursache
 Usage: #example
+* partOf = Reference(StfObduktion-BY3-Max)
 * insert StfMemberTodesursacheByMax(#I99, "Herz-Kreislaufversagen", #Obduktionsschein)
 * hasMember[+] = Reference(StfTodesursache2-Os-BY3-Max)
 * hasMember[=].extension[TodesursacheTyp].valueCodeableConcept.coding = StfTodesursacheCodeCS#TU2
@@ -65,21 +71,25 @@ Usage: #example
 Instance: StfTodesursache2-Os-BY3-Max
 InstanceOf: StfTodesursache
 Usage: #example
+* partOf = Reference(StfObduktion-BY3-Max)
 * insert StfMemberTodesursacheByMax(#R58, "innere Blutungen im Bauchraum", #Obduktionsschein)
 
 Instance: StfTodesursache3-Os-BY3-Max
 InstanceOf: StfTodesursache
 Usage: #example
+* partOf = Reference(StfObduktion-BY3-Max)
 * insert StfMemberTodesursacheByMax(#S36, "Milzruptur", #Obduktionsschein)
 
 Instance: StfTodesursache4-Os-BY3-Max
 InstanceOf: StfTodesursache
 Usage: #example
+* partOf = Reference(StfObduktion-BY3-Max)
 * insert StfMemberTodesursacheByMax(#C25, "Pankreaskarzinom", #Obduktionsschein)
 
 Instance: StfTodesursache5-Os-BY3-Max
 InstanceOf: StfTodesursache
 Usage: #example
+* partOf = Reference(StfObduktion-BY3-Max)
 * insert StfMemberTodesursacheByMax(#C78, "mit Lebermetastasen", #Obduktionsschein)
 
 RuleSet: StfMemberTodesursacheByMax(code, text, quelle)

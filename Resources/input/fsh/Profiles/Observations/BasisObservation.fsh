@@ -5,6 +5,10 @@ Title: "STF Basis Observation"
 Description: "Dieses Profil stellt die Basis Observation im Kontext der STF dar. Alle weiteren Observation sind auf dieser Basis aufbauend."
 * insert Meta
 * status MS
+* partOf 1..1 MS
+* partOf only Reference(StfLeichenschau or StfObduktion or Procedure)
+  * ^short = "Zuordnung 'Todesursache aus Leichenschau' vs. 'Todesursache aus Obduktion'"
+  * ^comment = "Gibt an, ob die Todesursache aus der Leichenschau oder aus der Obduktion stammt."
 * code MS
 * code from StfObservationCodes
 * subject 1.. MS

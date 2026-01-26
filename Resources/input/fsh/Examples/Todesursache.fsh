@@ -5,6 +5,7 @@ Description: "Beispielinstanz einer Todesursache nach dem StfTodesursache-Profil
 Usage: #example
 
 * status = #final
+* partOf = Reference(Procedure/StfLeichenschau-Example)
 * code.coding[SCT] = $sct#184305005 "Cause of Death"
 * code.coding[TodesursacheTyp] = StfTodesursacheCodeCS#TU1 "Todesursache 1"
 * subject = Reference(Patient/StfVerstorbenePerson-Example) "Max Mustermann"
@@ -39,6 +40,7 @@ InstanceOf: StfTodesursache
 Title: "Grundleiden der Todesursache"
 Usage: #example
 * status = #final
+* partOf = Reference(Procedure/StfLeichenschau-Example)
 * code = $sct#184305005 "Cause of Death"
 * subject = Reference(Patient/StfVerstorbenePerson-Example)
 * effectiveDateTime = "2020-01-15"  // Beginn des Grundleidens
