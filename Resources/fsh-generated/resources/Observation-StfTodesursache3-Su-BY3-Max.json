@@ -31,6 +31,25 @@
       "valueCodeableConcept": {
         "coding": [
           {
+            "code": "LA26681-9",
+            "system": "http://loinc.org",
+            "display": "Underlying"
+          }
+        ]
+      },
+      "code": {
+        "coding": [
+          {
+            "code": "82791-5",
+            "system": "http://loinc.org"
+          }
+        ]
+      }
+    },
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
             "code": "Sterbeurkunde",
             "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
           }

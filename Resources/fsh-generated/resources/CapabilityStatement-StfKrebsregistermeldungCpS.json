@@ -1,0 +1,93 @@
+{
+  "resourceType": "CapabilityStatement",
+  "id": "StfKrebsregistermeldungCpS",
+  "url": "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementFormularDatenQuelleAkteur",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "DE",
+          "system": "urn:iso:std:iso:3166",
+          "display": "Germany"
+        }
+      ]
+    }
+  ],
+  "format": [
+    "application/fhir+xml",
+    "application/fhir+json"
+  ],
+  "rest": [
+    {
+      "resource": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "supportedProfile": [
+            "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportProvenance"
+          ],
+          "_supportedProfile": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ]
+            }
+          ],
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "read"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
+            }
+          ],
+          "searchParam": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "_lastUpdated",
+              "definition": "http://hl7.org/fhir/SearchParameter/Resource-lastupdated",
+              "type": "date",
+              "documentation": "**Beispiel:**    \n        `GET [base]/Provenance?_lastUpdated=2025-01-25T13:45:00+02:00`"
+            }
+          ],
+          "type": "Provenance"
+        }
+      ],
+      "mode": "server"
+    }
+  ],
+  "version": "1.0.0",
+  "status": "active",
+  "experimental": false,
+  "publisher": "ELFA Maßnahme Interoperabilität",
+  "date": "2026-01-26",
+  "kind": "requirements",
+  "fhirVersion": "4.0.1",
+  "name": "Stf Krebsregistermeldung CapabilityStatement",
+  "title": "Stf Krebsregistermeldung CapabilityStatement",
+  "description": "CapabilityStatement für die benötigten Interaktionen zur Übermittlung von Daten zur Krebsregistermeldung und Abfrage durch die Datenverarbeitung auf Seiten der Krebsregister."
+}

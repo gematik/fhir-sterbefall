@@ -33,22 +33,6 @@
         "min": 1
       },
       {
-        "id": "Observation.code.coding:TodesursacheTyp",
-        "path": "Observation.code.coding",
-        "sliceName": "TodesursacheTyp",
-        "comment": "Stellt die Instanz der Observation die unmittelbare Todesursache da, so ist hier der Code TU1 (unmittelbare Todesursache) zu verwenden. Für alle weiteren Todesursachen sind die Codes TU2 bis TU5 bzw. GA (Todesursache Gesundheitsamt) zu verwenden. Diese sind im Element hasMember als Extension mit der Referenz zu verknüpfen, eine Angabe im Code Element ist optional.",
-        "min": 0,
-        "max": "1",
-        "patternCoding": {
-          "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS"
-        },
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://gematik.de/fhir/oegd/stf/ValueSet/StfTodesursacheCodeVS"
-        }
-      },
-      {
         "id": "Observation.code.coding:SCT",
         "path": "Observation.code.coding",
         "sliceName": "SCT",
@@ -142,27 +126,6 @@
         "comment": "Verknüpfung von nachgelagerten Todesursachen. Alle weiteren Todesursachen, die zur Haupttodesursache geführt haben, werden über hasMember referenziert. Jede dieser Todesursachen enthält eine Extension, die den Typ der Todesursache (z.B. Todesursache 2, Todesursache 3 etc.) angibt. Die weiteren Todesursachen selber dürfen keine hasMember Referenzen enthalten."
       },
       {
-        "id": "Observation.hasMember.extension",
-        "path": "Observation.hasMember.extension",
-        "min": 1
-      },
-      {
-        "id": "Observation.hasMember.extension:TodesursacheTyp",
-        "path": "Observation.hasMember.extension",
-        "sliceName": "TodesursacheTyp",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
         "id": "Observation.hasMember.reference",
         "path": "Observation.hasMember.reference",
         "mustSupport": true
@@ -179,6 +142,7 @@
           ],
           "rules": "open"
         },
+        "min": 1,
         "mustSupport": true
       },
       {
@@ -217,6 +181,58 @@
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "Observation.component:Todesursachensequenz",
+        "path": "Observation.component",
+        "sliceName": "Todesursachensequenz",
+        "comment": "Hier ist abgebildet, an welcher Stelle der Sequenz diese Todesursache kommt. (Ia, Ib, Ic, II)",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:Todesursachensequenz.code",
+        "path": "Observation.component.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "82791-5",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:Todesursachensequenz.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:Todesursachensequenz.value[x]:valueCodeableConcept",
+        "path": "Observation.component.value[x]",
+        "sliceName": "valueCodeableConcept",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:Todesursachensequenz.value[x]:valueCodeableConcept.coding",
+        "path": "Observation.component.value[x].coding",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://gematik.de/fhir/oegd/stf/ValueSet/StfTodesursachensequenzVS"
+        }
       },
       {
         "id": "Observation.component:NichtNatuerlicherTod",
@@ -313,6 +329,11 @@
             "code": "CodeableConcept"
           }
         ]
+      },
+      {
+        "id": "Observation.component:WeitereAngaben.value[x]:valueCodeableConcept.coding",
+        "path": "Observation.component.value[x].coding",
+        "mustSupport": true
       },
       {
         "id": "Observation.component:WeitereAngaben.value[x]:valueCodeableConcept.coding.system",
@@ -442,6 +463,11 @@
           "strength": "required",
           "valueSet": "http://gematik.de/fhir/oegd/stf/ValueSet/StfDateiTypVS"
         }
+      },
+      {
+        "id": "Observation.component:Quelle.value[x]:valueCodeableConcept.coding",
+        "path": "Observation.component.value[x].coding",
+        "mustSupport": true
       }
     ]
   }
