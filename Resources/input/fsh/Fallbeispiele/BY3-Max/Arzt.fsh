@@ -1,13 +1,7 @@
 Instance: StfArzt-BY3-Max-Boese
 InstanceOf: StfArzt
 Usage: #example
-* identifier[ID]
-  * system = "https://github.com/gematik/fhir-sterbefall/issues/62"
-  * value = "123"
 * identifier[ANR].value = "456"
-* identifier[Zulassungsnummer]
-  * system = "https://github.com/gematik/fhir-sterbefall/issues/62"
-  * value = "789"
 * name[name]
   * text = "Dr. Kamilla Böse"
   * family = "Böse"
@@ -27,12 +21,13 @@ Usage: #example
 Instance: StfArzt-BY3-Max-Gutmann
 InstanceOf: StfArzt
 Usage: #example
-* identifier[ID]
-  * system = "https://github.com/gematik/fhir-sterbefall/issues/62"
-  * value = "231"
 * identifier[ANR].value = "564"
-* identifier[Zulassungsnummer]
-  * system = "https://github.com/gematik/fhir-sterbefall/issues/62"
+* name[name]
+  * text = "Dr. Emil Gutmann"
+  * family = "Gutmann"
+  * given[+] = "Emil"
+  * prefix = "Dr."
+  * prefix.extension[prefix-qualifier].valueCode = #AC
   * value = "897"
 * name[name]
   * text = "Dr. Emil Gutmann"
@@ -53,13 +48,7 @@ Usage: #example
 Instance: StfArzt-BY3-Max-Flurer
 InstanceOf: StfArzt
 Usage: #example
-* identifier[ID]
-  * system = "https://github.com/gematik/fhir-sterbefall/issues/62"
-  * value = "312"
 * identifier[ANR].value = "645"
-* identifier[Zulassungsnummer]
-  * system = "https://github.com/gematik/fhir-sterbefall/issues/62"
-  * value = "978"
 * name[name]
   * text = "Sieglinde Flurer"
   * family = "Flurer"

@@ -1,8 +1,6 @@
 Instance: StfOrganisation-BY3-Max
 InstanceOf: StfOrganisation
 Usage: #example
-* identifier.system = "http://myGesundheitsamt.de/fhir/organisationen"
-* identifier.value = "123456"
 * name = "Standesamt Nürnberg"
 * type = StfOrganisationsTypCS#StAmt
 * address
@@ -17,8 +15,6 @@ Usage: #example
 Instance: StfOrganisation-GA-BY3-Max
 InstanceOf: StfOrganisation
 Usage: #example
-* identifier.system = "http://myGesundheitsamt.de/fhir/organisationen"
-* identifier.value = "123457"
 * name = "Gesundheitsamt Nürnberg"
 * type = StfOrganisationsTypCS#GA
 * address
@@ -33,8 +29,6 @@ Usage: #example
 Instance: StfOrganisation-GM-BY3-Max
 InstanceOf: StfOrganisation
 Usage: #example
-* identifier.system = "http://myGesundheitsamt.de/fhir/organisationen"
-* identifier.value = "123458"
 * name = "Gerichtsmedizin Nürnberg"
 * type = StfOrganisationsTypCS#GerichtsmedInst
 * address
