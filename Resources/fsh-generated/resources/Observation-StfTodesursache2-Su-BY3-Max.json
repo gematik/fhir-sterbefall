@@ -31,6 +31,25 @@
       "valueCodeableConcept": {
         "coding": [
           {
+            "code": "LA26680-1",
+            "system": "http://loinc.org",
+            "display": "Contributory"
+          }
+        ]
+      },
+      "code": {
+        "coding": [
+          {
+            "code": "82791-5",
+            "system": "http://loinc.org"
+          }
+        ]
+      }
+    },
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
             "code": "Sterbeurkunde",
             "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
           }

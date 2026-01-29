@@ -26,6 +26,15 @@
         ]
       },
       {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "82791-5",
+            "display": "Cause of death sequence"
+          }
+        ]
+      },
+      {
         "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
       }
     ]

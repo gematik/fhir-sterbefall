@@ -31,6 +31,25 @@
       "valueCodeableConcept": {
         "coding": [
           {
+            "code": "LA46-8",
+            "system": "http://loinc.org",
+            "display": "Other"
+          }
+        ]
+      },
+      "code": {
+        "coding": [
+          {
+            "code": "82791-5",
+            "system": "http://loinc.org"
+          }
+        ]
+      }
+    },
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
             "code": "Obduktionsschein",
             "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
           }

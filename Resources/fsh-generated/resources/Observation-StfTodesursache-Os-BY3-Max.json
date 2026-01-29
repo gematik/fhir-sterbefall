@@ -31,6 +31,25 @@
       "valueCodeableConcept": {
         "coding": [
           {
+            "code": "LA26682-7",
+            "system": "http://loinc.org",
+            "display": "Immediate/Primary"
+          }
+        ]
+      },
+      "code": {
+        "coding": [
+          {
+            "code": "82791-5",
+            "system": "http://loinc.org"
+          }
+        ]
+      }
+    },
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
             "code": "Obduktionsschein",
             "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
           }
@@ -48,67 +67,15 @@
   ],
   "hasMember": [
     {
-      "extension": [
-        {
-          "valueCodeableConcept": {
-            "coding": [
-              {
-                "code": "TU2",
-                "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS"
-              }
-            ]
-          },
-          "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension"
-        }
-      ],
       "reference": "Observation/StfTodesursache2-Os-BY3-Max"
     },
     {
-      "extension": [
-        {
-          "valueCodeableConcept": {
-            "coding": [
-              {
-                "code": "TU3",
-                "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS"
-              }
-            ]
-          },
-          "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension"
-        }
-      ],
       "reference": "Observation/StfTodesursache3-Os-BY3-Max"
     },
     {
-      "extension": [
-        {
-          "valueCodeableConcept": {
-            "coding": [
-              {
-                "code": "TU4",
-                "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS"
-              }
-            ]
-          },
-          "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension"
-        }
-      ],
       "reference": "Observation/StfTodesursache4-Os-BY3-Max"
     },
     {
-      "extension": [
-        {
-          "valueCodeableConcept": {
-            "coding": [
-              {
-                "code": "TU5",
-                "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS"
-              }
-            ]
-          },
-          "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension"
-        }
-      ],
       "reference": "Observation/StfTodesursache5-Os-BY3-Max"
     }
   ],
