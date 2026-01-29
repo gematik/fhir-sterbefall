@@ -23,7 +23,6 @@ Usage: #example
   * country = "DE"
 * telecom[Telefon]
   * value = "0911/488356"
-* qualification.code = http://gematik.de/fhir/oegd/stf/CodeSystem/StfBerufsgruppeCS#Niedergelassen //TODO ?
 
 Instance: StfArzt-BY3-Max-Gutmann
 InstanceOf: StfArzt
@@ -50,7 +49,6 @@ Usage: #example
   * country = "DE"
 * telecom[Telefon]
   * value = "0911/638355"
-* qualification.code = StfBerufsgruppeCS#Niedergelassen
 
 Instance: StfArzt-BY3-Max-Flurer
 InstanceOf: StfArzt
@@ -73,4 +71,3 @@ Usage: #example
   * city = "Nürnberg"
   * postalCode = "90408"
   * country = "DE"
-* qualification.code = StfBerufsgruppeCS#Niedergelassen

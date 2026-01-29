@@ -95,10 +95,6 @@ Description: "Informationen über Ärzte und Ärztinnen, die im Kontext der STF 
   * ^comment = "Fax des Arztes"
   * system = #fax
   * value MS
-* qualification MS
-* qualification.code MS
-* qualification.code ^comment = "Berufsgruppe"
-* qualification.code from StfBerufsgruppe
 
 CodeSystem: StfArztIdentifierType
 Id: StfArztIdentifierType

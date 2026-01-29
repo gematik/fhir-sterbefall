@@ -40,6 +40,3 @@ Usage: #example
 
 * telecom[Telefax].system = #fax
 * telecom[Telefax].value = "+49-123-456788" // Fax des Arztes
-
-// Qualifikation
-* qualification.code = StfBerufsgruppeCS#Krankenhaus "Krankenhaus"

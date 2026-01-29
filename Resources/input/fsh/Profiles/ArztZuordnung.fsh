@@ -8,5 +8,13 @@ Description: "Zuordnung von Ärztinnen und Ärzten zu Organisationen im Kontext 
 * organization MS
 * organization ^comment = "Institution des Arztes"
 * specialty MS
-* specialty ^comment = "Facharztgruppe"
-* specialty from StfFacharztgruppe
+* code MS
+* code.coding MS
+* code.coding ^slicing.discriminator.type = #pattern
+* code.coding ^slicing.discriminator.path = "$this"
+* code.coding ^slicing.rules = #open
+* code.coding contains
+    Berufsgruppe ..1 MS
+* code.coding[Berufsgruppe] from StfBerufsgruppe (required)
+* specialty ^comment = "Arztrolle"
+* specialty from StfArztrolle
