@@ -48,7 +48,7 @@ Usage: #definition
     * supportedProfile[+] = Canonical(StfObduktion)
       * insert Expectation(#SHALL)
   * resource[+] insert ShallResource(#ServiceRequest, StfObduktionAnfrage)
-  * resource[+] insert ShallResource(#Organisation, StfOrganisation)
+  * resource[+] insert ShallResource(#Organization, StfOrganisation)
   * operation[+]
     * name = "receiveBundle"
     * definition = Canonical(StfReceiveBundle)
