@@ -4,4 +4,4 @@ Das Informationsmodell stellt die Beziehungen zwischen den verschiedenen Objektk
 
 Zu den jeweiligen Datenelementen vgl. die entsprechenden FHIR-Ressourcen.
 
-{{render:STF_Krebsregister_Informationsmodell.png}}
+{{render:images-infomodell}}

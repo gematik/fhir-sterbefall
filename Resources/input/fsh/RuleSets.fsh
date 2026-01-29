@@ -19,3 +19,8 @@ RuleSet: Meta
 
 RuleSet: ExampleFullUrl(resource, id)
 * fullUrl = "https://mein.fhir-server.local/fhir/{resource}/{id}"
+
+RuleSet: Expectation (expectation)
+* extension[+]
+  * url = $capabilitystatement-expectation
+  * valueCode = {expectation}

@@ -9,12 +9,8 @@ Description: "Todesursache (kompatibel zu [MII PR Onkologie Tod](https://www.med
 * code.coding ^slicing.discriminator.path = "$this"
 * code.coding ^slicing.rules = #open
 * code.coding contains
-  TodesursacheTyp ..1 MS and
   SCT 1..1 MS
 * code.coding[SCT] = $sct#184305005
-* code.coding[TodesursacheTyp] from StfTodesursacheCode (required)
-  * ^patternCoding.system = Canonical(StfTodesursacheCodeCS)
-  * ^comment = "Stellt die Instanz der Observation die unmittelbare Todesursache da, so ist hier der Code TU1 (unmittelbare Todesursache) zu verwenden. Für alle weiteren Todesursachen sind die Codes TU2 bis TU5 bzw. GA (Todesursache Gesundheitsamt) zu verwenden. Diese sind im Element hasMember als Extension mit der Referenz zu verknüpfen, eine Angabe im Code Element ist optional."
 * subject 1.. MS
 * subject only Reference(Patient)
 * effective[x] MS
@@ -42,7 +38,6 @@ sonst n"
 * hasMember MS
 * hasMember ^comment = "Verknüpfung von nachgelagerten Todesursachen. Alle weiteren Todesursachen, die zur Haupttodesursache geführt haben, werden über hasMember referenziert. Jede dieser Todesursachen enthält eine Extension, die den Typ der Todesursache (z.B. Todesursache 2, Todesursache 3 etc.) angibt. Die weiteren Todesursachen selber dürfen keine hasMember Referenzen enthalten."
 * hasMember.reference MS
-* hasMember.extension contains StfTodesursacheTypExtension named TodesursacheTyp 1..1 MS
 * note MS
 * note ^comment = "Nähere Angaben zur Todesursache und zu Begleiterkrankung (Epikrise)"
 * component MS
@@ -54,10 +49,20 @@ sonst n"
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component contains
+  Todesursachensequenz 1..1 MS and
   NichtNatuerlicherTod ..1 MS and
   WeitereAngaben ..* MS and
   ZeitdauerBeginnBisTod ..1 MS and
   Quelle ..1 MS
+* component[Todesursachensequenz]
+  * ^comment = "Hier ist abgebildet, an welcher Stelle der Sequenz diese Todesursache kommt. (Ia, Ib, Ic, II)"
+  * code MS
+  * code = $loinc#82791-5
+  * value[x] MS
+  * value[x] only CodeableConcept
+  * valueCodeableConcept 1.. MS
+  * valueCodeableConcept.coding from StfTodesursachensequenzVS (required)
+  * valueCodeableConcept.coding 1.. MS
 * component[NichtNatuerlicherTod]
   * ^comment = "Anhaltspunkte für einen nicht-natürlichen Tod
 
@@ -73,20 +78,27 @@ Wenn Todesart =  nicht natürlich ODER
 
 Wenn Todesart = leer, 
 dann ka;"
+  * code MS
   * code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
+  * value[x] MS
   * value[x] only CodeableConcept
   * valueCodeableConcept.coding from StfJaNeinUnbekannt (required)
   * valueCodeableConcept.text MS
 * component[ZeitdauerBeginnBisTod]
   * ^comment = "Angabe der Zeitdauer von Beginn der Krankheit bis zum Tod in beliebiger Angabe"
+  * code MS
   * code = StfObservationCodesErweiterungCS#zeitdauerBeginnBisTod
+  * value[x] MS
   * value[x] only string
   * valueString MS
 * component[WeitereAngaben]
   * ^comment = "Weitere Angaben zur Klassifikation der Todesursache, z.B. bei Unfall, Vergiftung,  Gewalteinwirkung, Selbsttötung sowie bei Komplikationen medizinischer Behandlung Äußere Ursache der Schädigung (Angaben über den Hergang); bei Vergiftungen zusätzlich Angabe des Mittels"
+  * code MS
   * code = StfObservationCodesErweiterungCS#todesursacheKlassifikation
+  * value[x] MS
   * value[x] only CodeableConcept or string
-  //* valueCodeableConcept from $icd-10-who (required)
+  * valueCodeableConcept MS
+  * valueCodeableConcept.coding MS
   * valueCodeableConcept.coding.system 1.. MS
   * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"
   * valueCodeableConcept.coding.version 1.. MS
@@ -96,15 +108,10 @@ dann ka;"
   * valueString MS
 * component[Quelle]
   * ^comment = "Quellangabe der Information. Z.B. ob die Todesursache aus dem Leichenschauschein oder dem Obduktionsschein stammt."
+  * code MS
   * code = StfObservationCodesErweiterungCS#quelle
+  * value[x] MS
   * value[x] only CodeableConcept
+  * valueCodeableConcept MS
   * valueCodeableConcept from StfDateiTyp (required)
-
-
-Extension: StfTodesursacheTypExtension
-Id: StfTodesursacheTypExtension
-Title: "Todesursache Typ"
-Context: Observation.hasMember
-* insert Meta
-* value[x] only CodeableConcept
-* valueCodeableConcept from StfTodesursacheCode (extensible)
+  * valueCodeableConcept.coding MS

@@ -30,6 +30,7 @@ Description: "Im Kontext des Sterbefall relevante Observation Codes"
 * insert Meta
 * $sct#108369006 "Tumor"
 * $sct#184305005 "Cause of Death"
+* $loinc#82791-5 "Cause of death sequence"
 * include codes from system StfObservationCodesErweiterungCS
 
 CodeSystem: StfObservationCodesErweiterungCS

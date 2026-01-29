@@ -7,7 +7,6 @@ Usage: #example
 * status = #final
 * partOf = Reference(Procedure/StfLeichenschau-Example)
 * code.coding[SCT] = $sct#184305005 "Cause of Death"
-* code.coding[TodesursacheTyp] = StfTodesursacheCodeCS#TU1 "Todesursache 1"
 * subject = Reference(Patient/StfVerstorbenePerson-Example) "Max Mustermann"
 * effectiveDateTime = "2023-07-10"  // Beginn der Krankheit
 * performer = Reference(Practitioner/StfArzt-Example)
@@ -18,6 +17,7 @@ Usage: #example
 * note.text = "Patient erlitt einen massiven Herzinfarkt nach längerer kardialer Vorgeschichte mit koronarer Herzkrankheit und Bluthochdruck."
 
 // Components
+* component[Todesursachensequenz].valueCodeableConcept.coding = $loinc#LA26682-7 "Immediate/Primary"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
 
@@ -32,7 +32,6 @@ Usage: #example
 
 // Nachgelagerte Todesursache (Grundleiden)
 * hasMember = Reference(StfTodesursache-Grundleiden-Example)
-* hasMember.extension[TodesursacheTyp].valueCodeableConcept = StfTodesursacheCodeCS#TU3 "Todesursache 3"
 
 // Referenzierte Instanz für Grundleiden
 Instance: StfTodesursache-Grundleiden-Example
@@ -50,6 +49,7 @@ Usage: #example
 * valueCodeableConcept.text = "Chronische ischämische Herzkrankheit, nicht näher bezeichnet"
 
 // Component für natürlichen Tod auch hier setzen
+* component[Todesursachensequenz].valueCodeableConcept.coding = $loinc#LA26681-9 "Underlying"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
 * component[Quelle].valueCodeableConcept = StfDateiTypCS#Leichenschauschein
