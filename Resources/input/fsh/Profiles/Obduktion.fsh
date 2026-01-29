@@ -15,8 +15,9 @@ Description: "Abbildung der Informationen zu einer Obduktion im Kontext der STF"
 * performedDateTime MS
 * performedDateTime ^comment = "Uhrzeit der Obduktion"
 * asserter MS
+* asserter.reference MS
 * asserter.display MS
-* asserter.display ^comment = "Bei wem die Obduktion beantragt wurde"
+* asserter.display ^comment = "Bei wem die Obduktion beantragt wurde, bzw. Ausstellender Arzt der Obduktion"
 * location MS
 * location.display MS
 * location.display ^comment = "Ort der Durchführung"
