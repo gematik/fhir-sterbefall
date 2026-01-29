@@ -28,7 +28,6 @@ Usage: #example
   * given[+] = "Emil"
   * prefix = "Dr."
   * prefix.extension[prefix-qualifier].valueCode = #AC
-  * value = "897"
 * name[name]
   * text = "Dr. Emil Gutmann"
   * family = "Gutmann"

@@ -22,8 +22,10 @@ Description: "Abbildung der Informationen zu einer Obduktion im Kontext der STF"
 * location.display MS
 * location.display ^comment = "Ort der Durchführung"
 * performer MS
+  * ^comment = "Angaben zur durchführenden Person oder Institution. Sind Person und Institution bekannt, ist als performer die PractitionerRole zu verwenden. Alternativ kann die Institution (Organization) als onBehalfOf angegeben werden."
 * performer.function MS
 * performer.function from StfOrganisationsTypObduktion (extensible)
+* performer.onBehalfOf MS
 * performer.actor MS
 * performer.actor.display MS
 * performer.actor.display ^comment = "Name Pathologisches Institut oder Gerichtsmedizinisches Institut"
