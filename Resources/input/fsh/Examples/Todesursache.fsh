@@ -28,8 +28,6 @@ Usage: #example
 * component[WeitereAngaben].valueCodeableConcept.coding = $icd-10-who#I25.1
 * component[WeitereAngaben].valueCodeableConcept.coding.version = "2019"
 
-* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Obduktionsschein
-
 // Nachgelagerte Todesursache (Grundleiden)
 * hasMember = Reference(StfTodesursache-Grundleiden-Example)
 
@@ -52,4 +50,3 @@ Usage: #example
 * component[Todesursachensequenz].valueCodeableConcept.coding = $loinc#LA26681-9 "Underlying"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
-* component[Quelle].valueCodeableConcept = StfDateiTypCS#Leichenschauschein

@@ -11,7 +11,6 @@ Usage: #example
 * valueCodeableConcept.text = "Septischer Schock"
 * component[Todesursachensequenz].valueCodeableConcept.coding = $loinc#LA26682-7 "Immediate/Primary"
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
-* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 * hasMember[+] = Reference(Todesursache-2-TH1)
 * hasMember[+] = Reference(Todesursache-3-TH1)
 * hasMember[+] = Reference(Todesursache-4-TH1)
@@ -29,7 +28,6 @@ Usage: #example
 * valueCodeableConcept.text = "Erysipel"
 * component[Todesursachensequenz].valueCodeableConcept.coding = $loinc#LA26680-1 "Contributory"
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
-* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 
 Instance: Todesursache-3-TH1
 InstanceOf: StfTodesursache
@@ -43,7 +41,6 @@ Usage: #example
 * valueCodeableConcept.text = "Akutes Nierenversagen"
 * component[Todesursachensequenz].valueCodeableConcept.coding = $loinc#LA26681-9 "Underlying"
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
-* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 
 Instance: Todesursache-4-TH1
 InstanceOf: StfTodesursache
@@ -57,7 +54,6 @@ Usage: #example
 * valueCodeableConcept.text = "Kardiomyopathie, septisch"
 * component[Todesursachensequenz].valueCodeableConcept.coding = $loinc#LA46-8 "Other"
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
-* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 
 Instance: Todesursache-5-TH1
 InstanceOf: StfTodesursache
@@ -68,7 +64,6 @@ Usage: #example
 * insert ExampleKrankheitCode(#I50.0, "Linksherzinsuffizienz")
 * component[Todesursachensequenz].valueCodeableConcept.coding = $loinc#LA46-8 "Other"
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
-* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 
 RuleSet: ExampleKrankheitCode(icd, text)
 * valueCodeableConcept.coding.system = "http://hl7.org/fhir/sid/icd-10"

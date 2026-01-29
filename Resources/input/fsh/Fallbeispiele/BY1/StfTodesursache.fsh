@@ -14,8 +14,6 @@ Usage: #example
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
 * component[ZeitdauerBeginnBisTod].code = StfObservationCodesErweiterungCS#zeitdauerBeginnBisTod
 * component[ZeitdauerBeginnBisTod].valueString = "1 Woche"
-* component[Quelle].code = StfObservationCodesErweiterungCS#quelle
-* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 * note.text = "Multiorganversagen, Nierenversagen, Herzinsuffizienz, COPD, Vorhofflimmern"
 * hasMember[+] = Reference(Todesursache-2-BY1)
 * hasMember[+] = Reference(Todesursache-3-BY1)
@@ -37,8 +35,6 @@ Usage: #example
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
 * component[ZeitdauerBeginnBisTod].code = StfObservationCodesErweiterungCS#zeitdauerBeginnBisTod
 * component[ZeitdauerBeginnBisTod].valueString = "1-2 Wochen"
-* component[Quelle].code = StfObservationCodesErweiterungCS#quelle
-* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 
 Instance: Todesursache-3-BY1
 InstanceOf: StfTodesursache
@@ -53,8 +49,6 @@ Usage: #example
 * component[Todesursachensequenz].valueCodeableConcept.coding = $loinc#LA26681-9 "Underlying"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
-* component[Quelle].code = StfObservationCodesErweiterungCS#quelle
-* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 
 Instance: Todesursache-4-BY1
 InstanceOf: StfTodesursache
@@ -71,8 +65,6 @@ Usage: #example
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
 * component[ZeitdauerBeginnBisTod].code = StfObservationCodesErweiterungCS#zeitdauerBeginnBisTod
 * component[ZeitdauerBeginnBisTod].valueString = "2022"
-* component[Quelle].code = StfObservationCodesErweiterungCS#quelle
-* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 
 Instance: Todesursache-5-BY1
 InstanceOf: StfTodesursache
@@ -89,5 +81,3 @@ Usage: #example
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
 * component[ZeitdauerBeginnBisTod].code = StfObservationCodesErweiterungCS#zeitdauerBeginnBisTod
 * component[ZeitdauerBeginnBisTod].valueString = "2018"
-* component[Quelle].code = StfObservationCodesErweiterungCS#quelle
-* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein

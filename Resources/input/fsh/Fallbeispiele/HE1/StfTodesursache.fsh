@@ -16,7 +16,6 @@ Usage: #example
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
 * component[ZeitdauerBeginnBisTod].code = StfObservationCodesErweiterungCS#zeitdauerBeginnBisTod
 * component[ZeitdauerBeginnBisTod].valueString = "Stunden"
-* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 
 Instance: Todesursache-2-HE1
 InstanceOf: StfTodesursache
@@ -30,7 +29,6 @@ Usage: #example
 * valueCodeableConcept.text = "Apoplex"
 * component[Todesursachensequenz].valueCodeableConcept.coding = $loinc#LA26680-1 "Contributory"
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
-* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 
 Instance: Todesursache-3-HE1
 InstanceOf: StfTodesursache
@@ -44,4 +42,3 @@ Usage: #example
 * valueCodeableConcept.text = "NSTEMI"
 * component[Todesursachensequenz].valueCodeableConcept.coding = $loinc#LA26681-9 "Underlying"
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
-* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein

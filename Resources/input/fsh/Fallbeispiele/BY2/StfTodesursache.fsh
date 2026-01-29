@@ -17,8 +17,6 @@ Usage: #example
 * component[WeitereAngaben].valueCodeableConcept.coding.version = "2019"
 * component[WeitereAngaben].valueCodeableConcept.coding.code = #W19
 * component[WeitereAngaben].valueCodeableConcept.text = "Sturz von unbestimmter Höhe"
-* component[Quelle].code = StfObservationCodesErweiterungCS#quelle
-* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 * note.text = "Sturz im Krankenhaus auf dem Weg zur Toilette"
 * hasMember[+] = Reference(Todesursache-2-BY2)
 * hasMember[+] = Reference(Todesursache-4-BY2)
@@ -42,8 +40,6 @@ Usage: #example
 * component[WeitereAngaben].valueCodeableConcept.coding.version = "2019"
 * component[WeitereAngaben].valueCodeableConcept.coding.code = #W19
 * component[WeitereAngaben].valueCodeableConcept.text = "Sturz von unbestimmter Höhe"
-* component[Quelle].code = StfObservationCodesErweiterungCS#quelle
-* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 
 Instance: Todesursache-4-BY2
 InstanceOf: StfTodesursache
@@ -58,8 +54,6 @@ Usage: #example
 * component[Todesursachensequenz].valueCodeableConcept.coding = $loinc#LA46-8 "Other"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
-* component[Quelle].code = StfObservationCodesErweiterungCS#quelle
-* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 
 Instance: Todesursache-5-BY2
 InstanceOf: StfTodesursache
@@ -74,6 +68,4 @@ Usage: #example
 * component[Todesursachensequenz].valueCodeableConcept.coding = $loinc#LA46-8 "Other"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
-* component[Quelle].code = StfObservationCodesErweiterungCS#quelle
-* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 * note.text = "Maligne Neubildung der Brust (Krebs)"

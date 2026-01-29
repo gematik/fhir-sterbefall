@@ -11,7 +11,6 @@ Usage: #example
 * valueCodeableConcept.text = "Exitus letalis bei Bronchopneumonie (beidseitig)"
 * component[Todesursachensequenz].valueCodeableConcept.coding = $loinc#LA26682-7 "Immediate/Primary"
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
-* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 * note.text = "Weitere relevante Erkrankungen: COPD, Vorhofflimmern, Diabetes mellitus Typ 2"
 * hasMember[+] = Reference(Todesursache-2-VB1)
 * hasMember[+] = Reference(Todesursache-3-VB1)
@@ -29,7 +28,6 @@ Usage: #example
 * valueCodeableConcept.text = "Dekompensierte Herzinsuffizienz"
 * component[Todesursachensequenz].valueCodeableConcept.coding = $loinc#LA26680-1 "Contributory"
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
-* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 
 Instance: Todesursache-3-VB1
 InstanceOf: StfTodesursache
@@ -43,7 +41,6 @@ Usage: #example
 * valueCodeableConcept.text = "Akutes Nierenversagen"
 * component[Todesursachensequenz].valueCodeableConcept.coding = $loinc#LA26681-9 "Underlying"
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
-* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 
 Instance: Todesursache-4-VB1
 InstanceOf: StfTodesursache
@@ -57,4 +54,3 @@ Usage: #example
 * valueCodeableConcept.text = "Arterielle Hypertonie"
 * component[Todesursachensequenz].valueCodeableConcept.coding = $loinc#LA46-8 "Other"
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
-* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein

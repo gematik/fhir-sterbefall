@@ -3,7 +3,7 @@ Instance: StfTodesursache-Su-BY3-Max
 InstanceOf: StfTodesursache
 Usage: #example
 * partOf = Reference(StfLeichenschau-BY3-Max)
-* insert StfMemberTodesursacheByMaxMitZeitdauer(#J96, "respiratorische Insuffizienz", "30 Minuten", #Sterbeurkunde, $loinc#LA26682-7 "Immediate/Primary")
+* insert StfMemberTodesursacheByMaxMitZeitdauer(#J96, "respiratorische Insuffizienz", "30 Minuten", $loinc#LA26682-7 "Immediate/Primary")
 * code.coding[SCT] = $sct#184305005 "Cause of Death"
 * hasMember[+] = Reference(StfTodesursache2-Su-BY3-Max)
 * hasMember[+] = Reference(StfTodesursache3-Su-BY3-Max)
@@ -30,32 +30,32 @@ Instance: StfTodesursache2-Su-BY3-Max
 InstanceOf: StfTodesursache
 Usage: #example
 * partOf = Reference(StfLeichenschau-BY3-Max)
-* insert StfMemberTodesursacheByMaxMitZeitdauer(#J84, "interstitielle pulmonale Pneumonitis", "1 Woche", #Sterbeurkunde, $loinc#LA26680-1 "Contributory")
+* insert StfMemberTodesursacheByMaxMitZeitdauer(#J84, "interstitielle pulmonale Pneumonitis", "1 Woche", $loinc#LA26680-1 "Contributory")
 
 Instance: StfTodesursache3-Su-BY3-Max
 InstanceOf: StfTodesursache
 Usage: #example
 * partOf = Reference(StfLeichenschau-BY3-Max)
-* insert StfMemberTodesursacheByMaxMitZeitdauer(#C25, "Pankresakarzinom", "Seit 10/2024", #Sterbeurkunde, $loinc#LA26681-9 "Underlying")
+* insert StfMemberTodesursacheByMaxMitZeitdauer(#C25, "Pankresakarzinom", "Seit 10/2024", $loinc#LA26681-9 "Underlying")
 
 Instance: StfTodesursache4-Su-BY3-Max
 InstanceOf: StfTodesursache
 Usage: #example
 * partOf = Reference(StfLeichenschau-BY3-Max)
-* insert StfMemberTodesursacheByMaxMitZeitdauer(#C78, "Lebermetastasen", "Seit 10/2024", #Sterbeurkunde, $loinc#LA46-8 "Other")
+* insert StfMemberTodesursacheByMaxMitZeitdauer(#C78, "Lebermetastasen", "Seit 10/2024", $loinc#LA46-8 "Other")
 
 Instance: StfTodesursache5-Su-BY3-Max
 InstanceOf: StfTodesursache
 Usage: #example
 * partOf = Reference(StfLeichenschau-BY3-Max)
-* insert StfMemberTodesursacheByMaxMitZeitdauer(#I63, "Hirninfarkt", "Vor 8 Monaten", #Sterbeurkunde, $loinc#LA46-8 "Other")
+* insert StfMemberTodesursacheByMaxMitZeitdauer(#I63, "Hirninfarkt", "Vor 8 Monaten", $loinc#LA46-8 "Other")
 
 //Obduktionsschein
 Instance: StfTodesursache-Os-BY3-Max
 InstanceOf: StfTodesursache
 Usage: #example
 * partOf = Reference(StfObduktion-BY3-Max)
-* insert StfMemberTodesursacheByMax(#I99, "Herz-Kreislaufversagen", #Obduktionsschein, $loinc#LA26682-7 "Immediate/Primary")
+* insert StfMemberTodesursacheByMax(#I99, "Herz-Kreislaufversagen", $loinc#LA26682-7 "Immediate/Primary")
 * hasMember[+] = Reference(StfTodesursache2-Os-BY3-Max)
 * hasMember[+] = Reference(StfTodesursache3-Os-BY3-Max)
 * hasMember[+] = Reference(StfTodesursache4-Os-BY3-Max)
@@ -65,27 +65,27 @@ Instance: StfTodesursache2-Os-BY3-Max
 InstanceOf: StfTodesursache
 Usage: #example
 * partOf = Reference(StfObduktion-BY3-Max)
-* insert StfMemberTodesursacheByMax(#R58, "innere Blutungen im Bauchraum", #Obduktionsschein, $loinc#LA26680-1 "Contributory")
+* insert StfMemberTodesursacheByMax(#R58, "innere Blutungen im Bauchraum", $loinc#LA26680-1 "Contributory")
 
 Instance: StfTodesursache3-Os-BY3-Max
 InstanceOf: StfTodesursache
 Usage: #example
 * partOf = Reference(StfObduktion-BY3-Max)
-* insert StfMemberTodesursacheByMax(#S36, "Milzruptur", #Obduktionsschein, $loinc#LA26681-9 "Underlying")
+* insert StfMemberTodesursacheByMax(#S36, "Milzruptur", $loinc#LA26681-9 "Underlying")
 
 Instance: StfTodesursache4-Os-BY3-Max
 InstanceOf: StfTodesursache
 Usage: #example
 * partOf = Reference(StfObduktion-BY3-Max)
-* insert StfMemberTodesursacheByMax(#C25, "Pankreaskarzinom", #Obduktionsschein, $loinc#LA46-8 "Other")
+* insert StfMemberTodesursacheByMax(#C25, "Pankreaskarzinom", $loinc#LA46-8 "Other")
 
 Instance: StfTodesursache5-Os-BY3-Max
 InstanceOf: StfTodesursache
 Usage: #example
 * partOf = Reference(StfObduktion-BY3-Max)
-* insert StfMemberTodesursacheByMax(#C78, "mit Lebermetastasen", #Obduktionsschein, $loinc#LA46-8 "Other")
+* insert StfMemberTodesursacheByMax(#C78, "mit Lebermetastasen", $loinc#LA46-8 "Other")
 
-RuleSet: StfMemberTodesursacheByMax(code, text, quelle, loincAnswer)
+RuleSet: StfMemberTodesursacheByMax(code, text, loincAnswer)
 * effectiveDateTime = "2025-01-05T10:30:00+01:00"
 * status = #final
 * subject = Reference(StfVerstorbenePerson-BY3-Max)
@@ -94,9 +94,8 @@ RuleSet: StfMemberTodesursacheByMax(code, text, quelle, loincAnswer)
 * valueCodeableConcept.coding.version = "2019"
 * valueCodeableConcept.text = {text}
 * component[Todesursachensequenz].valueCodeableConcept.coding = {loincAnswer}
-* component[Quelle].valueCodeableConcept.coding = StfDateiTypCS{quelle}
 
-RuleSet: StfMemberTodesursacheByMaxMitZeitdauer(code, text, zeitdauer, quelle, loincAnswer)
-* insert StfMemberTodesursacheByMax({code}, {text}, {quelle}, {loincAnswer})
+RuleSet: StfMemberTodesursacheByMaxMitZeitdauer(code, text, zeitdauer, loincAnswer)
+* insert StfMemberTodesursacheByMax({code}, {text}, {loincAnswer})
 * effectiveDateTime = "2025-01-01T10:30:00+01:00"
 * component[ZeitdauerBeginnBisTod].valueString = {zeitdauer}

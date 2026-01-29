@@ -52,8 +52,7 @@ sonst n"
   Todesursachensequenz 1..1 MS and
   NichtNatuerlicherTod ..1 MS and
   WeitereAngaben ..* MS and
-  ZeitdauerBeginnBisTod ..1 MS and
-  Quelle ..1 MS
+  ZeitdauerBeginnBisTod ..1 MS
 * component[Todesursachensequenz]
   * ^comment = "Hier ist abgebildet, an welcher Stelle der Sequenz diese Todesursache kommt. (Ia, Ib, Ic, II)"
   * code MS
@@ -106,12 +105,3 @@ dann ka;"
   * valueCodeableConcept.coding.display MS
   * valueCodeableConcept.text MS
   * valueString MS
-* component[Quelle]
-  * ^comment = "Quellangabe der Information. Z.B. ob die Todesursache aus dem Leichenschauschein oder dem Obduktionsschein stammt."
-  * code MS
-  * code = StfObservationCodesErweiterungCS#quelle
-  * value[x] MS
-  * value[x] only CodeableConcept
-  * valueCodeableConcept MS
-  * valueCodeableConcept from StfDateiTyp (required)
-  * valueCodeableConcept.coding MS
