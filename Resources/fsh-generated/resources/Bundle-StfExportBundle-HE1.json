@@ -202,24 +202,6 @@
               ]
             },
             "valueString": "Stunden"
-          },
-          {
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "Leichenschauschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-                }
-              ]
-            },
-            "code": {
-              "coding": [
-                {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                }
-              ]
-            }
           }
         ],
         "status": "final",
@@ -286,24 +268,6 @@
               "coding": [
                 {
                   "code": "nichtNatuerlicherTod",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                }
-              ]
-            }
-          },
-          {
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "Leichenschauschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-                }
-              ]
-            },
-            "code": {
-              "coding": [
-                {
-                  "code": "quelle",
                   "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
                 }
               ]
@@ -382,24 +346,6 @@
               "coding": [
                 {
                   "code": "nichtNatuerlicherTod",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                }
-              ]
-            }
-          },
-          {
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "Leichenschauschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-                }
-              ]
-            },
-            "code": {
-              "coding": [
-                {
-                  "code": "quelle",
                   "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
                 }
               ]

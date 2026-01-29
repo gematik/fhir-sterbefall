@@ -419,55 +419,6 @@
           }
         ],
         "mustSupport": true
-      },
-      {
-        "id": "Observation.component:Quelle",
-        "path": "Observation.component",
-        "sliceName": "Quelle",
-        "comment": "Quellangabe der Information. Z.B. ob die Todesursache aus dem Leichenschauschein oder dem Obduktionsschein stammt.",
-        "min": 0,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.component:Quelle.code",
-        "path": "Observation.component.code",
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "quelle",
-              "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-            }
-          ]
-        }
-      },
-      {
-        "id": "Observation.component:Quelle.value[x]",
-        "path": "Observation.component.value[x]",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:Quelle.value[x]:valueCodeableConcept",
-        "path": "Observation.component.value[x]",
-        "sliceName": "valueCodeableConcept",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://gematik.de/fhir/oegd/stf/ValueSet/StfDateiTypVS"
-        }
-      },
-      {
-        "id": "Observation.component:Quelle.value[x]:valueCodeableConcept.coding",
-        "path": "Observation.component.value[x].coding",
-        "mustSupport": true
       }
     ]
   }

@@ -91,24 +91,6 @@
         ]
       },
       "valueString": "Stunden"
-    },
-    {
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "Leichenschauschein",
-            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-          }
-        ]
-      },
-      "code": {
-        "coding": [
-          {
-            "code": "quelle",
-            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-          }
-        ]
-      }
     }
   ],
   "status": "final",

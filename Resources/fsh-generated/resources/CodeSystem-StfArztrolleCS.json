@@ -2,11 +2,11 @@
   "resourceType": "CodeSystem",
   "status": "active",
   "content": "complete",
-  "name": "StfFacharztgruppeCS",
-  "id": "StfFacharztgruppeCS",
-  "title": "STF Facharztgruppe",
+  "name": "StfArztrolleCS",
+  "id": "StfArztrolleCS",
+  "title": "STF Arztrolle",
   "version": "1.0.0-ballot",
-  "url": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfFacharztgruppeCS",
+  "url": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztrolleCS",
   "concept": [
     {
       "code": "Hausarzt",

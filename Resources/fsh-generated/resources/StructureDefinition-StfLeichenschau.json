@@ -49,6 +49,22 @@
         "mustSupport": true
       },
       {
+        "id": "Procedure.asserter",
+        "path": "Procedure.asserter",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.asserter.reference",
+        "path": "Procedure.asserter.reference",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.asserter.display",
+        "path": "Procedure.asserter.display",
+        "comment": "Bei wem die Leichenschau beantragt wurde, bzw. Ausstellender Arzt der Leichenschau",
+        "mustSupport": true
+      },
+      {
         "id": "Procedure.performer.actor",
         "path": "Procedure.performer.actor",
         "comment": "Optionale Verknüpfung mit dem durchführenden Arzt oder Ärztin",

@@ -194,24 +194,6 @@
                 }
               ]
             }
-          },
-          {
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "Leichenschauschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-                }
-              ]
-            },
-            "code": {
-              "coding": [
-                {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                }
-              ]
-            }
           }
         ],
         "note": [
@@ -318,24 +300,6 @@
                 }
               ]
             }
-          },
-          {
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "Leichenschauschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-                }
-              ]
-            },
-            "code": {
-              "coding": [
-                {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                }
-              ]
-            }
           }
         ],
         "code": {
@@ -414,24 +378,6 @@
                 }
               ]
             }
-          },
-          {
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "Leichenschauschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-                }
-              ]
-            },
-            "code": {
-              "coding": [
-                {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                }
-              ]
-            }
           }
         ],
         "code": {
@@ -506,24 +452,6 @@
               "coding": [
                 {
                   "code": "nichtNatuerlicherTod",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                }
-              ]
-            }
-          },
-          {
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "Leichenschauschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-                }
-              ]
-            },
-            "code": {
-              "coding": [
-                {
-                  "code": "quelle",
                   "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
                 }
               ]

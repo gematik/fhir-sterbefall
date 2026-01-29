@@ -19,6 +19,27 @@
   "differential": {
     "element": [
       {
+        "id": "Patient.extension:zuletztBehandelnderArzt",
+        "path": "Patient.extension",
+        "sliceName": "zuletztBehandelnderArzt",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfZuletztBehandelnderArztExtension"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.extension:zuletztBehandelnderArzt.value[x]",
+        "path": "Patient.extension.value[x]",
+        "mustSupport": true
+      },
+      {
         "id": "Patient.identifier",
         "path": "Patient.identifier",
         "slicing": {

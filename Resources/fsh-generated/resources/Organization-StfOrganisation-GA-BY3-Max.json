@@ -6,12 +6,6 @@
       "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfOrganisation"
     ]
   },
-  "identifier": [
-    {
-      "system": "http://myGesundheitsamt.de/fhir/organisationen",
-      "value": "123457"
-    }
-  ],
   "type": [
     {
       "coding": [

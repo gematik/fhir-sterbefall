@@ -6,6 +6,14 @@
       "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfVerstorbenePerson"
     ]
   },
+  "extension": [
+    {
+      "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfZuletztBehandelnderArztExtension",
+      "valueReference": {
+        "reference": "Practitioner/StfArzt-BY3-Max-Flurer"
+      }
+    }
+  ],
   "identifier": [
     {
       "type": {
