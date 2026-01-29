@@ -1,6 +1,7 @@
 Instance: StfVerstorbenePerson-BY3-Max
 InstanceOf: StfVerstorbenePerson
 Usage: #example
+* extension[zuletztBehandelnderArzt].valueReference = Reference(StfArzt-BY3-Max-Flurer)
 * identifier[IdImGesundheitsamt]
   * value = "331"
   * assigner = Reference(StfOrganisation-GA-BY3-Max)

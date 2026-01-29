@@ -5,6 +5,8 @@ Title: "STF Verstorbene Person"
 Description: "Informationen zur verstorbenen Person"
 * insert Meta
 * insert Patient-identifier
+* extension contains StfZuletztBehandelnderArztExtension named zuletztBehandelnderArzt ..1 MS
+* extension[zuletztBehandelnderArzt].valueReference MS
 * name MS
 * name ^slicing.discriminator.type = #value
 * name ^slicing.discriminator.path = "use"
@@ -98,6 +100,13 @@ Context: Address
 * insert Meta
 * value[x] only string
 
+Extension: StfZuletztBehandelnderArztExtension
+Id: StfZuletztBehandelnderArztExtension
+Title: "STF zuletzt behandelnder Arzt Extension"
+Description: "Ergänzende Information zur verstorbenen Person, die den zuletzt behandelnden Arzt angibt."
+Context: Patient
+* insert Meta
+* value[x] only Reference(Practitioner)
 
 Profile: StfVerstorbenePersonPseudonymisiert
 Parent: Patient
