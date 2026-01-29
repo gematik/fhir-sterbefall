@@ -14,6 +14,7 @@ Usage: #definition
 * url = "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementFormularDatenQuelleAkteur"
 * name = "Stf Krebsregistermeldung CapabilityStatement"
 * title = "Stf Krebsregistermeldung CapabilityStatement"
+* description = "CapabilityStatement für die benötigten Interaktionen zur Übermittlung von Daten zur Krebsregistermeldung und Abfrage durch die Datenverarbeitung auf Seiten der Krebsregister."
 * rest
   * mode = #server
   * resource[+]

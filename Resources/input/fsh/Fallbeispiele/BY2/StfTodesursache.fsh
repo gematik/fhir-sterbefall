@@ -34,7 +34,7 @@ Usage: #example
 * valueCodeableConcept.coding.version = "2019"
 * valueCodeableConcept.coding.code = #S72.0
 * valueCodeableConcept.text = "Schenkelhalsfraktur"
-* component[Todesursachensequenz].valueCodeableConcept.coding = $loinc#LA26680-1 "Contributing"
+* component[Todesursachensequenz].valueCodeableConcept.coding = $loinc#LA26680-1 "Contributory"
 * component[NichtNatuerlicherTod].code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#Y
 * component[WeitereAngaben].code = StfObservationCodesErweiterungCS#todesursacheKlassifikation

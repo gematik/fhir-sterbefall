@@ -27,7 +27,7 @@ Usage: #example
 * valueCodeableConcept.coding.version = "2019"
 * valueCodeableConcept.coding.code = #A46
 * valueCodeableConcept.text = "Erysipel"
-* component[Todesursachensequenz].valueCodeableConcept.coding = $loinc#LA26680-1 "Contributing"
+* component[Todesursachensequenz].valueCodeableConcept.coding = $loinc#LA26680-1 "Contributory"
 * component[NichtNatuerlicherTod].valueCodeableConcept.coding = $v2-0532#N
 * component[Quelle].valueCodeableConcept.coding = StfDateiTypCS#Leichenschauschein
 

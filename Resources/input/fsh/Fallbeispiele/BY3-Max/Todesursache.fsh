@@ -30,7 +30,7 @@ Instance: StfTodesursache2-Su-BY3-Max
 InstanceOf: StfTodesursache
 Usage: #example
 * partOf = Reference(StfLeichenschau-BY3-Max)
-* insert StfMemberTodesursacheByMaxMitZeitdauer(#J84, "interstitielle pulmonale Pneumonitis", "1 Woche", #Sterbeurkunde, $loinc#LA26680-1 "Contributing")
+* insert StfMemberTodesursacheByMaxMitZeitdauer(#J84, "interstitielle pulmonale Pneumonitis", "1 Woche", #Sterbeurkunde, $loinc#LA26680-1 "Contributory")
 
 Instance: StfTodesursache3-Su-BY3-Max
 InstanceOf: StfTodesursache
@@ -65,7 +65,7 @@ Instance: StfTodesursache2-Os-BY3-Max
 InstanceOf: StfTodesursache
 Usage: #example
 * partOf = Reference(StfObduktion-BY3-Max)
-* insert StfMemberTodesursacheByMax(#R58, "innere Blutungen im Bauchraum", #Obduktionsschein, $loinc#LA26680-1 "Contributing")
+* insert StfMemberTodesursacheByMax(#R58, "innere Blutungen im Bauchraum", #Obduktionsschein, $loinc#LA26680-1 "Contributory")
 
 Instance: StfTodesursache3-Os-BY3-Max
 InstanceOf: StfTodesursache
