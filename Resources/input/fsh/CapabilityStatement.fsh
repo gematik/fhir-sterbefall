@@ -32,7 +32,7 @@ Usage: #definition
       * insert Expectation(#SHALL)
       * name = "_lastUpdated"
       * definition = "http://hl7.org/fhir/SearchParameter/Resource-lastupdated"
-      * type = #datetime
+      * type = #date
       * documentation = 
         "**Beispiel:**    
         `GET [base]/Provenance?_lastUpdated=2025-01-25T13:45:00+02:00`"
