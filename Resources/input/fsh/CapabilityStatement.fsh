@@ -49,6 +49,12 @@ Usage: #definition
       * insert Expectation(#SHALL)
   * resource[+] insert ShallResource(#ServiceRequest, StfObduktionAnfrage)
   * resource[+] insert ShallResource(#Organisation, StfOrganisation)
+  * operation[+]
+    * name = "receiveBundle"
+    * definition = Canonical(StfReceiveBundle)
+  * operation[+]
+    * name = "deleteBundle"
+    * definition = Canonical(StfDeleteBundle)
 
 RuleSet: ShallResource(resourceType, profile)    
 * type = {resourceType}
