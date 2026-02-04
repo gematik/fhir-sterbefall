@@ -36,7 +36,7 @@ jobs:
           DOTNET_VALIDATION_ENABLED: true
           JAVA_VALIDATION_ENABLED: true
           JAVA_VALIDATION_OPTIONS: >
-            -allow-example-urls true 
+            -allow-example-urls
             -output validation.json
             -html-output validation.html
             -show-message-ids
