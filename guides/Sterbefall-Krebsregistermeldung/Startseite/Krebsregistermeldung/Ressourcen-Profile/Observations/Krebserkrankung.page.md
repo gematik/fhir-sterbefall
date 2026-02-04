@@ -19,16 +19,25 @@ select
 
 ### Inhalt
 
-| ID        | Type      | Min  | Max  | Pattern   | Fixed    | must-support| VS-Url      | Strength    | VS Concepts |
-|-----------|-----------|------|------|-----------|----------|-------------|-------------|-------------|-------------|
-| Observation.status | code | 1 | 1 | N/A | N/A | true | http://hl7.org/fhir/ValueSet/observation-status | required | Final, Registered, Cancelled, Amended, Entered in Error, Preliminary, Corrected, Unknown |
-| Observation.code | CodeableConcept | 1 | 1 | N/A | N/A | true | http://gematik.de/fhir/oegd/stf/ValueSet/StfObservationCodes | required | Tumor, Nicht natürlicher Tod, Klassifikation der Todesursache |
-| Observation.subject | Reference | 1 | 1 | N/A | N/A | true | N/A | N/A | N/A |
-| Observation.effective[x] | dateTime, Period, Timing, instant | 0 | 1 | N/A | N/A | true | N/A | N/A | N/A |
-| Observation.effective[x]:effectiveDateTime | dateTime | 0 | 1 | N/A | N/A | true | N/A | N/A | N/A |
-| Observation.value[x] | CodeableConcept | 0 | 1 | N/A | N/A | true | N/A | N/A | N/A |
-| Observation.note | Annotation | 0 | * | N/A | N/A | true | N/A | N/A | N/A |
-| Observation.hasMember | Reference | 0 | * | N/A | N/A | true | N/A | N/A | N/A |
+@```
+from
+    StructureDefinition
+where
+    url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObservationKrebserkrankung'
+
+for snapshot.element
+where
+    mustSupport.exists()
+select {
+    ID: id,
+    Kurzbeschreibung: short,
+    Type: type[0].code,
+    Min: min,
+    Max: max,
+    VS_Url: binding.valueSet,
+    Strength: binding.strength
+}
+```
 
 <tabs>
   <tab title="Darstellung">{{tree, buttons}}</tab>
