@@ -11,7 +11,7 @@ expand: 2
 from
 	OperationDefinition
 where
-	url = %canoncial
+	url = 'http://gematik.de/fhir/oegd/stf/OperationDefinition/StfDeleteBundle'
 select
 	Canonical: url, Status: status, Version: version
 </fql>
@@ -22,9 +22,6 @@ select
 
 <tabs>
   <tab title="Darstellung">{{render}}</tab>
-  <tab title="Beschreibung"> 
-    {{page:Startseite\Krebsregistermeldung\Operations\FQL-Beschreibung.page.md}}
-  </tab>
   <tab title="XML">{{xml}}</tab>
   <tab title="JSON">{{json}}</tab>
   <tab title="Link">{{link}}</tab>
