@@ -19,11 +19,25 @@ select
 
 ### Inhalt
 
-| ID        | Type      | Min  | Max  | Pattern   | Fixed    | must-support| VS-Url      | Strength    | VS Concepts |
-|-----------|-----------|------|------|-----------|----------|-------------|-------------|-------------|-------------|
-| PractitionerRole.practitioner | Reference | 0 | 1 | N/A | N/A | true | N/A | N/A | N/A |
-| PractitionerRole.organization | Reference | 0 | 1 | N/A | N/A | true | N/A | N/A | N/A |
-| PractitionerRole.specialty | CodeableConcept | 0 | * | N/A | N/A | true | http://gematik.de/fhir/oegd/stf/ValueSet/StfFacharztgruppeVS | required | Notarzt/-ärztin, Sonstiges, diensthabender Arzt/Ärztin im Krankenhaus, Arzt/Ärztin des kassenärztlichen Notdienstes, Hausarzt/-ärztin, Rechtsmediziner/-in |
+@```
+from
+    StructureDefinition
+where
+    url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArztZuordnung'
+
+for snapshot.element
+where
+    mustSupport.exists()
+select {
+    ID: id,
+    Kurzbeschreibung: short,
+    Type: type[0].code,
+    Min: min,
+    Max: max,
+    VS_Url: binding.valueSet,
+    Strength: binding.strength
+}
+```
 
 <tabs>
   <tab title="Darstellung">{{tree, buttons}}</tab>

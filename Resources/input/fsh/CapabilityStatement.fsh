@@ -1,6 +1,7 @@
 Instance: StfKrebsregistermeldungCpS
 InstanceOf: CapabilityStatement
 Usage: #definition
+* url = "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementFormularDatenQuelleAkteur"
 * version = "1.0.0"
 * status = #active
 * experimental = false
@@ -11,7 +12,6 @@ Usage: #definition
 * fhirVersion = #4.0.1
 * format[+] = #application/fhir+xml
 * format[+] = #application/fhir+json
-* url = "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementFormularDatenQuelleAkteur"
 * name = "Stf Krebsregistermeldung CapabilityStatement"
 * title = "Stf Krebsregistermeldung CapabilityStatement"
 * description = "CapabilityStatement für die benötigten Interaktionen zur Übermittlung von Daten zur Krebsregistermeldung und Abfrage durch die Datenverarbeitung auf Seiten der Krebsregister."

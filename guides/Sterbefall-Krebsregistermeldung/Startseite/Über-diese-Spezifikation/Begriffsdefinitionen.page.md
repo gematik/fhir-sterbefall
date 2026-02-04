@@ -14,4 +14,4 @@ Die Bedeutung von [MustSupport-Flags](http://hl7.org/fhir/R4/conformance-rules.h
 
 #### Im Kontext der Verarbeitung von FHIR-Ressourcen
   
-    > Elemente, die mit MS gekennzeichnet sind, MÜSSEN vom empfangenden System verarbeitet werden. Das bedeutet Systeme MÜSSEN in der Lage sein, diese Elemente in der eigenen Persistenz-Ebene zu speichern
+    > Elemente, die mit MS gekennzeichnet sind, MÜSSEN vom empfangenden System verarbeitet werden. Das bedeutet Systeme MÜSSEN in der Lage sein, diese Elemente in der eigenen Persistenz-Ebene zu speichern.

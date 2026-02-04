@@ -7,8 +7,6 @@ Usage: #definition
 * status = #active
 * experimental = false
 * name = "activity"
-* status = #active
-* experimental = false
 * description = "Search Provenance by activity"
 * code = #activity
 * base = #Provenance

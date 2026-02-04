@@ -36,7 +36,7 @@ Wenn Todesart = ungeklärt ODER
 dann j
 sonst n"
 * hasMember MS
-* hasMember ^comment = "Verknüpfung von nachgelagerten Todesursachen. Alle weiteren Todesursachen, die zur Haupttodesursache geführt haben, werden über hasMember referenziert. Jede dieser Todesursachen enthält eine Extension, die den Typ der Todesursache (z.B. Todesursache 2, Todesursache 3 etc.) angibt. Die weiteren Todesursachen selber dürfen keine hasMember Referenzen enthalten."
+* hasMember ^comment = "Verknüpfung von nachgelagerten Todesursachen. Alle weiteren Todesursachen, die zur Haupttodesursache geführt haben, werden über hasMember referenziert. Die weiteren Todesursachen selber dürfen keine hasMember Referenzen enthalten."
 * hasMember.reference MS
 * note MS
 * note ^comment = "Nähere Angaben zur Todesursache und zu Begleiterkrankung (Epikrise)"
@@ -66,17 +66,17 @@ sonst n"
   * ^comment = "Anhaltspunkte für einen nicht-natürlichen Tod
 
 Wenn Todesart = natürlich, 
-dann n
+dann 'ja' (Y)
 
 Wenn Todesart =  nicht natürlich ODER 
 = Tötung ODER 
 = Selbsttötung ODER 
 = Unfall ODER
 = Komplikationen medizinischer Behandlungen ODER
-= Ereignis, dessen nähere Umstände unbestimmt dann j 
+= Ereignis, dessen nähere Umstände unbestimmt dann 'nein' (N) 
 
 Wenn Todesart = leer, 
-dann ka;"
+dann unbekannt (unknown);"
   * code MS
   * code = StfObservationCodesErweiterungCS#nichtNatuerlicherTod
   * value[x] MS

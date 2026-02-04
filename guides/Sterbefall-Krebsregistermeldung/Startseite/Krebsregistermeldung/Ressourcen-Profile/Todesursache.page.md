@@ -19,6 +19,26 @@ select
 
 ### Inhalt
 
+@```
+from
+    StructureDefinition
+where
+    url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache'
+
+for snapshot.element
+where
+    mustSupport.exists()
+select {
+    ID: id,
+    Kurzbeschreibung: short,
+    Type: type[0].code,
+    Min: min,
+    Max: max,
+    VS_Url: binding.valueSet,
+    Strength: binding.strength
+}
+```
+
 <tabs>
   <tab title="Darstellung">{{tree, buttons}}</tab>
   <tab title="Beschreibung"> 

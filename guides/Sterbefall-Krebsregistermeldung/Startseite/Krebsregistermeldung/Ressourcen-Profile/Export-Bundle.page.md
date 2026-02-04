@@ -20,9 +20,25 @@ select
 
 ### Inhalt
 
-| ID        | Type      | Min  | Max  | Pattern   | Fixed    | must-support| VS-Url      | Strength    | VS Concepts |
-|-----------|-----------|------|------|-----------|----------|-------------|-------------|-------------|-------------|
-| Bundle.timestamp | instant | 0 | 1 | N/A | N/A | true | N/A | N/A | N/A |
+@```
+from
+    StructureDefinition
+where
+    url = %canonical
+
+for snapshot.element
+where
+    mustSupport.exists()
+select {
+    ID: id,
+    Kurzbeschreibung: short,
+    Type: type[0].code,
+    Min: min,
+    Max: max,
+    VS_Url: binding.valueSet,
+    Strength: binding.strength
+}
+```
 
 <tabs>
   <tab title="Darstellung">{{tree, buttons}}</tab>
