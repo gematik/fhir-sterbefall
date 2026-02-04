@@ -123,7 +123,7 @@
       {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
-        "comment": "Verknüpfung von nachgelagerten Todesursachen. Alle weiteren Todesursachen, die zur Haupttodesursache geführt haben, werden über hasMember referenziert. Jede dieser Todesursachen enthält eine Extension, die den Typ der Todesursache (z.B. Todesursache 2, Todesursache 3 etc.) angibt. Die weiteren Todesursachen selber dürfen keine hasMember Referenzen enthalten."
+        "comment": "Verknüpfung von nachgelagerten Todesursachen. Alle weiteren Todesursachen, die zur Haupttodesursache geführt haben, werden über hasMember referenziert. Die weiteren Todesursachen selber dürfen keine hasMember Referenzen enthalten."
       },
       {
         "id": "Observation.hasMember.reference",
@@ -238,7 +238,7 @@
         "id": "Observation.component:NichtNatuerlicherTod",
         "path": "Observation.component",
         "sliceName": "NichtNatuerlicherTod",
-        "comment": "Anhaltspunkte für einen nicht-natürlichen Tod\n\nWenn Todesart = natürlich, \ndann n\n\nWenn Todesart =  nicht natürlich ODER \n= Tötung ODER \n= Selbsttötung ODER \n= Unfall ODER\n= Komplikationen medizinischer Behandlungen ODER\n= Ereignis, dessen nähere Umstände unbestimmt dann j \n\nWenn Todesart = leer, \ndann ka;",
+        "comment": "Anhaltspunkte für einen nicht-natürlichen Tod\n\nWenn Todesart = natürlich, \ndann 'ja' (Y)\n\nWenn Todesart =  nicht natürlich ODER \n= Tötung ODER \n= Selbsttötung ODER \n= Unfall ODER\n= Komplikationen medizinischer Behandlungen ODER\n= Ereignis, dessen nähere Umstände unbestimmt dann 'nein' (N) \n\nWenn Todesart = leer, \ndann unbekannt (unknown);",
         "min": 0,
         "max": "1",
         "mustSupport": true
