@@ -11,6 +11,15 @@ Usage: #example
 * performer[GerichtsmedizinischesInstitut].onBehalfOf = Reference(StfOrganisation-GM-BY3-Max)
 * report = Reference(StfDatei-Obduktion-BY3-Max)
 
+Instance: StfLeichenschau-BY3-Max
+InstanceOf: StfLeichenschau
+Usage: #example
+* status = #completed
+* performedDateTime = "2025-01-01"
+* performer.actor = Reference(StfArzt-BY3-Max-Boese)
+* subject = Reference(StfVerstorbenePerson-BY3-Max)
+
+
 
 Instance: StfObduktionAnfrage-BY3-Max
 InstanceOf: StfObduktionAnfrage

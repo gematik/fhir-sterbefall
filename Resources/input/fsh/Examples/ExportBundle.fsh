@@ -5,40 +5,40 @@ Description: "Beispiel Export Bundle"
 Usage: #example
 * timestamp = "2023-10-15T14:28:00Z"
 * type = #collection
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(PractitionerRole, StfArztZuordnung-Example)
   * resource = StfArztZuordnung-Example
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Practitioner, StfArzt-Example)
   * resource = StfArzt-Example
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(DocumentReference, StfDatei-Example)
   * resource = StfDatei-Example
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Procedure, StfLeichenschau-Example)
   * resource = StfLeichenschau-Example
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Organization, StfOrganisation-Example)
   * resource = StfOrganisation-Example
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Provenance, StfSterbeurkundeAusstellung-Example)
   * resource = StfSterbeurkundeAusstellung-Example
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Observation, StfTodesursache-Example)
   * resource = StfTodesursache-Example
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Observation, StfTodesursache-Grundleiden-Example)
   * resource = StfTodesursache-Grundleiden-Example
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Patient, StfVerstorbenePerson-Example)
   * resource = StfVerstorbenePerson-Example
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Organization, StfOrganisationGesundheitsamtRegensburg)
   * resource = StfOrganisationGesundheitsamtRegensburg
-* entry[+]
+* entry[Provenance]
   * insert ExampleFullUrl(Provenance, StfExportProvenance-Example)
   * resource = StfExportProvenance-Example
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(ServiceRequest, StfObduktionAnfrage-Example)
   * resource = StfObduktionAnfrage-Example
 

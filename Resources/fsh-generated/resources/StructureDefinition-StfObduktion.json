@@ -68,9 +68,14 @@
         "mustSupport": true
       },
       {
+        "id": "Procedure.asserter.reference",
+        "path": "Procedure.asserter.reference",
+        "mustSupport": true
+      },
+      {
         "id": "Procedure.asserter.display",
         "path": "Procedure.asserter.display",
-        "comment": "Bei wem die Obduktion beantragt wurde",
+        "comment": "Bei wem die Obduktion beantragt wurde, bzw. Ausstellender Arzt der Obduktion",
         "mustSupport": true
       },
       {
@@ -85,6 +90,7 @@
           ],
           "rules": "open"
         },
+        "comment": "Angaben zur durchführenden Person oder Institution. Sind Person und Institution bekannt, ist als performer die PractitionerRole zu verwenden. Alternativ kann die Institution (Organization) als onBehalfOf angegeben werden.",
         "mustSupport": true
       },
       {
@@ -105,6 +111,11 @@
         "id": "Procedure.performer.actor.display",
         "path": "Procedure.performer.actor.display",
         "comment": "Name Pathologisches Institut oder Gerichtsmedizinisches Institut",
+        "mustSupport": true
+      },
+      {
+        "id": "Procedure.performer.onBehalfOf",
+        "path": "Procedure.performer.onBehalfOf",
         "mustSupport": true
       },
       {

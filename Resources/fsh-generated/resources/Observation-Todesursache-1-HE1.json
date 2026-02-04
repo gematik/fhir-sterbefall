@@ -6,6 +6,20 @@
       "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
     ]
   },
+  "partOf": [
+    {
+      "reference": "Procedure/StfLeichenschau-HE1"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "184305005",
+        "system": "http://snomed.info/sct",
+        "display": "Cause of Death"
+      }
+    ]
+  },
   "valueCodeableConcept": {
     "coding": [
       {
@@ -23,41 +37,32 @@
   ],
   "hasMember": [
     {
-      "extension": [
-        {
-          "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
-          "valueCodeableConcept": {
-            "coding": [
-              {
-                "code": "TU2",
-                "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
-                "display": "Todesursache 2"
-              }
-            ]
-          }
-        }
-      ],
       "reference": "Observation/Todesursache-2-HE1"
     },
     {
-      "extension": [
-        {
-          "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
-          "valueCodeableConcept": {
-            "coding": [
-              {
-                "code": "TU3",
-                "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
-                "display": "Todesursache 3"
-              }
-            ]
-          }
-        }
-      ],
       "reference": "Observation/Todesursache-3-HE1"
     }
   ],
   "component": [
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "LA26682-7",
+            "system": "http://loinc.org",
+            "display": "Immediate/Primary"
+          }
+        ]
+      },
+      "code": {
+        "coding": [
+          {
+            "code": "82791-5",
+            "system": "http://loinc.org"
+          }
+        ]
+      }
+    },
     {
       "valueCodeableConcept": {
         "coding": [
@@ -86,35 +91,8 @@
         ]
       },
       "valueString": "Stunden"
-    },
-    {
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "Leichenschauschein",
-            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-          }
-        ]
-      },
-      "code": {
-        "coding": [
-          {
-            "code": "quelle",
-            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-          }
-        ]
-      }
     }
   ],
-  "code": {
-    "coding": [
-      {
-        "code": "184305005",
-        "system": "http://snomed.info/sct",
-        "display": "Cause of Death"
-      }
-    ]
-  },
   "status": "final",
   "subject": {
     "reference": "Patient/StfVerstorbenePerson-HE1"

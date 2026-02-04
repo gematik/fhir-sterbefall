@@ -117,6 +117,20 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-HE1"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "184305005",
+              "system": "http://snomed.info/sct",
+              "display": "Cause of Death"
+            }
+          ]
+        },
         "valueCodeableConcept": {
           "coding": [
             {
@@ -134,41 +148,32 @@
         ],
         "hasMember": [
           {
-            "extension": [
-              {
-                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "code": "TU2",
-                      "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
-                      "display": "Todesursache 2"
-                    }
-                  ]
-                }
-              }
-            ],
             "reference": "Observation/Todesursache-2-HE1"
           },
           {
-            "extension": [
-              {
-                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "code": "TU3",
-                      "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
-                      "display": "Todesursache 3"
-                    }
-                  ]
-                }
-              }
-            ],
             "reference": "Observation/Todesursache-3-HE1"
           }
         ],
         "component": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA26682-7",
+                  "system": "http://loinc.org",
+                  "display": "Immediate/Primary"
+                }
+              ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "82791-5",
+                  "system": "http://loinc.org"
+                }
+              ]
+            }
+          },
           {
             "valueCodeableConcept": {
               "coding": [
@@ -197,35 +202,8 @@
               ]
             },
             "valueString": "Stunden"
-          },
-          {
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "Leichenschauschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-                }
-              ]
-            },
-            "code": {
-              "coding": [
-                {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                }
-              ]
-            }
           }
         ],
-        "code": {
-          "coding": [
-            {
-              "code": "184305005",
-              "system": "http://snomed.info/sct",
-              "display": "Cause of Death"
-            }
-          ]
-        },
         "status": "final",
         "subject": {
           "reference": "Patient/StfVerstorbenePerson-HE1"
@@ -242,6 +220,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-HE1"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {
@@ -253,6 +236,25 @@
           "text": "Apoplex"
         },
         "component": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA26680-1",
+                  "system": "http://loinc.org",
+                  "display": "Contributory"
+                }
+              ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "82791-5",
+                  "system": "http://loinc.org"
+                }
+              ]
+            }
+          },
           {
             "valueCodeableConcept": {
               "coding": [
@@ -270,32 +272,13 @@
                 }
               ]
             }
-          },
-          {
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "Leichenschauschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-                }
-              ]
-            },
-            "code": {
-              "coding": [
-                {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                }
-              ]
-            }
           }
         ],
         "code": {
           "coding": [
             {
               "code": "184305005",
-              "system": "http://snomed.info/sct",
-              "display": "Cause of Death"
+              "system": "http://snomed.info/sct"
             }
           ]
         },
@@ -315,6 +298,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-HE1"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {
@@ -326,6 +314,25 @@
           "text": "NSTEMI"
         },
         "component": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA26681-9",
+                  "system": "http://loinc.org",
+                  "display": "Underlying"
+                }
+              ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "82791-5",
+                  "system": "http://loinc.org"
+                }
+              ]
+            }
+          },
           {
             "valueCodeableConcept": {
               "coding": [
@@ -343,32 +350,13 @@
                 }
               ]
             }
-          },
-          {
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "Leichenschauschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-                }
-              ]
-            },
-            "code": {
-              "coding": [
-                {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                }
-              ]
-            }
           }
         ],
         "code": {
           "coding": [
             {
               "code": "184305005",
-              "system": "http://snomed.info/sct",
-              "display": "Cause of Death"
+              "system": "http://snomed.info/sct"
             }
           ]
         },
@@ -388,6 +376,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObservationKrebserkrankung"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-HE1"
+          }
+        ],
         "note": [
           {
             "text": "Magenkarzinom"

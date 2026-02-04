@@ -6,6 +6,11 @@
       "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
     ]
   },
+  "partOf": [
+    {
+      "reference": "Procedure/StfLeichenschau-BY2"
+    }
+  ],
   "valueCodeableConcept": {
     "coding": [
       {
@@ -17,6 +22,25 @@
     "text": "Mamma-CA"
   },
   "component": [
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "LA46-8",
+            "system": "http://loinc.org",
+            "display": "Other"
+          }
+        ]
+      },
+      "code": {
+        "coding": [
+          {
+            "code": "82791-5",
+            "system": "http://loinc.org"
+          }
+        ]
+      }
+    },
     {
       "valueCodeableConcept": {
         "coding": [
@@ -34,24 +58,6 @@
           }
         ]
       }
-    },
-    {
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "Leichenschauschein",
-            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-          }
-        ]
-      },
-      "code": {
-        "coding": [
-          {
-            "code": "quelle",
-            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-          }
-        ]
-      }
     }
   ],
   "note": [
@@ -63,8 +69,7 @@
     "coding": [
       {
         "code": "184305005",
-        "system": "http://snomed.info/sct",
-        "display": "Cause of Death"
+        "system": "http://snomed.info/sct"
       }
     ]
   },

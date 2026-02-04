@@ -6,12 +6,23 @@
       "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArztZuordnung"
     ]
   },
+  "code": [
+    {
+      "coding": [
+        {
+          "code": "Krankenhaus",
+          "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfBerufsgruppeCS",
+          "display": "Krankenhaus"
+        }
+      ]
+    }
+  ],
   "specialty": [
     {
       "coding": [
         {
           "code": "Krankenhausarzt",
-          "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfFacharztgruppeCS",
+          "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztrolleCS",
           "display": "diensthabender Arzt/Ärztin im Krankenhaus"
         }
       ]

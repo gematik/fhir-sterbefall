@@ -8,40 +8,8 @@
   },
   "identifier": [
     {
-      "type": {
-        "coding": [
-          {
-            "code": "ArztId",
-            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztIdentifierType"
-          }
-        ]
-      },
-      "system": "https://github.com/gematik/fhir-sterbefall/issues/62",
-      "value": "312"
-    },
-    {
-      "type": {
-        "coding": [
-          {
-            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-            "code": "LANR"
-          }
-        ]
-      },
       "system": "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR",
       "value": "645"
-    },
-    {
-      "type": {
-        "coding": [
-          {
-            "code": "Zulassungsnr",
-            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztIdentifierType"
-          }
-        ]
-      },
-      "system": "https://github.com/gematik/fhir-sterbefall/issues/62",
-      "value": "978"
     }
   ],
   "name": [
@@ -77,18 +45,6 @@
       "city": "Nürnberg",
       "postalCode": "90408",
       "country": "DE"
-    }
-  ],
-  "qualification": [
-    {
-      "code": {
-        "coding": [
-          {
-            "code": "Niedergelassen",
-            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfBerufsgruppeCS"
-          }
-        ]
-      }
     }
   ]
 }

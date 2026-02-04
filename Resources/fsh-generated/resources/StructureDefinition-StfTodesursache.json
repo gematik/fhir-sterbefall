@@ -19,16 +19,30 @@
   "differential": {
     "element": [
       {
-        "id": "Observation.code",
-        "path": "Observation.code",
-        "patternCodeableConcept": {
-          "coding": [
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "slicing": {
+          "discriminator": [
             {
-              "code": "184305005",
-              "system": "http://snomed.info/sct"
+              "type": "pattern",
+              "path": "$this"
             }
-          ]
-        }
+          ],
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.code.coding:SCT",
+        "path": "Observation.code.coding",
+        "sliceName": "SCT",
+        "min": 1,
+        "max": "1",
+        "patternCoding": {
+          "code": "184305005",
+          "system": "http://snomed.info/sct"
+        },
+        "mustSupport": true
       },
       {
         "id": "Observation.effective[x]",
@@ -109,28 +123,7 @@
       {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
-        "comment": "Verknüpfung von nachgelagerten Todesursachen. Alle weiteren Todesursachen, die zur Haupttodesursache geführt haben, werden über hasMember referenziert. Jede dieser Todesursachen enthält eine Extension, die den Typ der Todesursache (z.B. Todesursache 2, Todesursache 3 etc.) angibt. Die weiteren Todesursachen selber dürfen keine hasMember Referenzen enthalten."
-      },
-      {
-        "id": "Observation.hasMember.extension",
-        "path": "Observation.hasMember.extension",
-        "min": 1
-      },
-      {
-        "id": "Observation.hasMember.extension:TodesursacheTyp",
-        "path": "Observation.hasMember.extension",
-        "sliceName": "TodesursacheTyp",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension"
-            ]
-          }
-        ],
-        "mustSupport": true
+        "comment": "Verknüpfung von nachgelagerten Todesursachen. Alle weiteren Todesursachen, die zur Haupttodesursache geführt haben, werden über hasMember referenziert. Die weiteren Todesursachen selber dürfen keine hasMember Referenzen enthalten."
       },
       {
         "id": "Observation.hasMember.reference",
@@ -149,6 +142,7 @@
           ],
           "rules": "open"
         },
+        "min": 1,
         "mustSupport": true
       },
       {
@@ -189,10 +183,62 @@
         "mustSupport": true
       },
       {
+        "id": "Observation.component:Todesursachensequenz",
+        "path": "Observation.component",
+        "sliceName": "Todesursachensequenz",
+        "comment": "Hier ist abgebildet, an welcher Stelle der Sequenz diese Todesursache kommt. (Ia, Ib, Ic, II)",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:Todesursachensequenz.code",
+        "path": "Observation.component.code",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "82791-5",
+              "system": "http://loinc.org"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:Todesursachensequenz.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:Todesursachensequenz.value[x]:valueCodeableConcept",
+        "path": "Observation.component.value[x]",
+        "sliceName": "valueCodeableConcept",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:Todesursachensequenz.value[x]:valueCodeableConcept.coding",
+        "path": "Observation.component.value[x].coding",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://gematik.de/fhir/oegd/stf/ValueSet/StfTodesursachensequenzVS"
+        }
+      },
+      {
         "id": "Observation.component:NichtNatuerlicherTod",
         "path": "Observation.component",
         "sliceName": "NichtNatuerlicherTod",
-        "comment": "Anhaltspunkte für einen nicht-natürlichen Tod\n\nWenn Todesart = natürlich, \ndann n\n\nWenn Todesart =  nicht natürlich ODER \n= Tötung ODER \n= Selbsttötung ODER \n= Unfall ODER\n= Komplikationen medizinischer Behandlungen ODER\n= Ereignis, dessen nähere Umstände unbestimmt dann j \n\nWenn Todesart = leer, \ndann ka;",
+        "comment": "Anhaltspunkte für einen nicht-natürlichen Tod\n\nWenn Todesart = natürlich, \ndann 'ja' (Y)\n\nWenn Todesart =  nicht natürlich ODER \n= Tötung ODER \n= Selbsttötung ODER \n= Unfall ODER\n= Komplikationen medizinischer Behandlungen ODER\n= Ereignis, dessen nähere Umstände unbestimmt dann 'nein' (N) \n\nWenn Todesart = leer, \ndann unbekannt (unknown);",
         "min": 0,
         "max": "1",
         "mustSupport": true
@@ -237,16 +283,21 @@
         }
       },
       {
-        "id": "Observation.component:Details",
-        "path": "Observation.component",
-        "sliceName": "Details",
-        "comment": "Weitere Angaben zur Klassifikation der Todesursache, z.B. bei Unfall, Vergiftung,  Gewalteinwirkung, Selbsttötung sowie bei Komplikationen medizinischer Behandlung Äußere Ursache der Schädigung (Angaben über den Hergang); bei Vergiftungen zusätzlich Angabe des Mittels",
-        "min": 0,
-        "max": "1",
+        "id": "Observation.component:NichtNatuerlicherTod.value[x]:valueCodeableConcept.text",
+        "path": "Observation.component.value[x].text",
         "mustSupport": true
       },
       {
-        "id": "Observation.component:Details.code",
+        "id": "Observation.component:WeitereAngaben",
+        "path": "Observation.component",
+        "sliceName": "WeitereAngaben",
+        "comment": "Weitere Angaben zur Klassifikation der Todesursache, z.B. bei Unfall, Vergiftung,  Gewalteinwirkung, Selbsttötung sowie bei Komplikationen medizinischer Behandlung Äußere Ursache der Schädigung (Angaben über den Hergang); bei Vergiftungen zusätzlich Angabe des Mittels",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:WeitereAngaben.code",
         "path": "Observation.component.code",
         "patternCodeableConcept": {
           "coding": [
@@ -258,16 +309,19 @@
         }
       },
       {
-        "id": "Observation.component:Details.value[x]",
+        "id": "Observation.component:WeitereAngaben.value[x]",
         "path": "Observation.component.value[x]",
         "type": [
           {
             "code": "CodeableConcept"
+          },
+          {
+            "code": "string"
           }
         ]
       },
       {
-        "id": "Observation.component:Details.value[x]:valueCodeableConcept",
+        "id": "Observation.component:WeitereAngaben.value[x]:valueCodeableConcept",
         "path": "Observation.component.value[x]",
         "sliceName": "valueCodeableConcept",
         "type": [
@@ -277,32 +331,50 @@
         ]
       },
       {
-        "id": "Observation.component:Details.value[x]:valueCodeableConcept.coding.system",
+        "id": "Observation.component:WeitereAngaben.value[x]:valueCodeableConcept.coding",
+        "path": "Observation.component.value[x].coding",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:WeitereAngaben.value[x]:valueCodeableConcept.coding.system",
         "path": "Observation.component.value[x].coding.system",
         "min": 1,
         "patternUri": "http://hl7.org/fhir/sid/icd-10",
         "mustSupport": true
       },
       {
-        "id": "Observation.component:Details.value[x]:valueCodeableConcept.coding.version",
+        "id": "Observation.component:WeitereAngaben.value[x]:valueCodeableConcept.coding.version",
         "path": "Observation.component.value[x].coding.version",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Observation.component:Details.value[x]:valueCodeableConcept.coding.code",
+        "id": "Observation.component:WeitereAngaben.value[x]:valueCodeableConcept.coding.code",
         "path": "Observation.component.value[x].coding.code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Observation.component:Details.value[x]:valueCodeableConcept.coding.display",
+        "id": "Observation.component:WeitereAngaben.value[x]:valueCodeableConcept.coding.display",
         "path": "Observation.component.value[x].coding.display",
         "mustSupport": true
       },
       {
-        "id": "Observation.component:Details.value[x]:valueCodeableConcept.text",
+        "id": "Observation.component:WeitereAngaben.value[x]:valueCodeableConcept.text",
         "path": "Observation.component.value[x].text",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.component:WeitereAngaben.value[x]:valueString",
+        "path": "Observation.component.value[x]",
+        "sliceName": "valueString",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -347,50 +419,6 @@
           }
         ],
         "mustSupport": true
-      },
-      {
-        "id": "Observation.component:Quelle",
-        "path": "Observation.component",
-        "sliceName": "Quelle",
-        "comment": "Quellangabe der Information. Z.B. ob die Todesursache aus dem Leichenschauschein oder dem Obduktionsschein stammt.",
-        "min": 0,
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.component:Quelle.code",
-        "path": "Observation.component.code",
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "code": "quelle",
-              "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-            }
-          ]
-        }
-      },
-      {
-        "id": "Observation.component:Quelle.value[x]",
-        "path": "Observation.component.value[x]",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:Quelle.value[x]:valueCodeableConcept",
-        "path": "Observation.component.value[x]",
-        "sliceName": "valueCodeableConcept",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://gematik.de/fhir/oegd/stf/ValueSet/StfDateiTypVS"
-        }
       }
     ]
   }

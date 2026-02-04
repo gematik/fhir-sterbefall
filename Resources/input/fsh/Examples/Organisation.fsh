@@ -6,7 +6,7 @@ Usage: #example
 * meta.profile = Canonical(StfOrganisation)
 * identifier.system = "https://fhir.gematik.de/sid/standesamt"
 * identifier.value = "SA12345"
-* type.coding.system = Canonical(StfOrganisationsTyp)
+* type.coding.system = Canonical(StfOrganisationsTypCS)
 * type.coding.code = #StAmt
 * type.coding.display = "Standesamt"
 * name = "Standesamt Musterstadt"
@@ -29,7 +29,6 @@ Usage: #example
 * contact.telecom[1].value = "max.mustermann@standesamt-musterstadt.de"
 * contact.telecom[1].use = #work
 * partOf.display = "Stadt Köln"
-* extension[StfPruefcodeExtension].valueString = "PCODE98765"
 
 Instance: StfOrganisationGesundheitsamtRegensburg
 InstanceOf: StfOrganisation

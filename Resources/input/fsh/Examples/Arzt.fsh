@@ -3,18 +3,10 @@ InstanceOf: StfArzt
 Title: "Beispiel STF Arzt"
 Description: "Beispielhafte Instanz eines Arztes im Kontext der STF"
 Usage: #example
-// Identifier
-* identifier[ID].system = "https://example.de/arztliste"
-* identifier[ID].value = "123456" // ID des Arztes laut Arztliste der Ärztekammer
-
 * identifier[ANR].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[ANR].type.coding.code = #LANR // Die Lebenslange Arztnummer (LANR) des Arztes
 * identifier[ANR].system =  "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR"
 * identifier[ANR].value = "987654321"
-
-* identifier[Zulassungsnummer].system = "https://example.de/zulassung"
-* identifier[Zulassungsnummer].value = "ZUL123456"
-
 // Name
 * name[name].use = #official
 * name[name].text = "Dr. med. Hans Müller"
@@ -40,6 +32,3 @@ Usage: #example
 
 * telecom[Telefax].system = #fax
 * telecom[Telefax].value = "+49-123-456788" // Fax des Arztes
-
-// Qualifikation
-* qualification.code = StfBerufsgruppeCS#Krankenhaus "Krankenhaus"

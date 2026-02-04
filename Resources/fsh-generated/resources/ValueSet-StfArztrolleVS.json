@@ -1,0 +1,19 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "StfArztrolle",
+  "id": "StfArztrolleVS",
+  "title": "STF Arztrolle",
+  "version": "1.0.0-ballot",
+  "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfArztrolleVS",
+  "experimental": false,
+  "publisher": "ELFA Maßnahme Interoperabilität",
+  "date": "2025-12-05",
+  "compose": {
+    "include": [
+      {
+        "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztrolleCS"
+      }
+    ]
+  }
+}

@@ -6,6 +6,11 @@
       "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
     ]
   },
+  "partOf": [
+    {
+      "reference": "Procedure/StfLeichenschau-TH1"
+    }
+  ],
   "valueCodeableConcept": {
     "coding": [
       {
@@ -17,6 +22,25 @@
     "text": "Erysipel"
   },
   "component": [
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "LA26680-1",
+            "system": "http://loinc.org",
+            "display": "Contributory"
+          }
+        ]
+      },
+      "code": {
+        "coding": [
+          {
+            "code": "82791-5",
+            "system": "http://loinc.org"
+          }
+        ]
+      }
+    },
     {
       "valueCodeableConcept": {
         "coding": [
@@ -34,32 +58,13 @@
           }
         ]
       }
-    },
-    {
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "Leichenschauschein",
-            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-          }
-        ]
-      },
-      "code": {
-        "coding": [
-          {
-            "code": "quelle",
-            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-          }
-        ]
-      }
     }
   ],
   "code": {
     "coding": [
       {
         "code": "184305005",
-        "system": "http://snomed.info/sct",
-        "display": "Cause of Death"
+        "system": "http://snomed.info/sct"
       }
     ]
   },

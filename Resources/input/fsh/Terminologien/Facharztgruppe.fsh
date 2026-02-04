@@ -1,6 +1,6 @@
-CodeSystem: StfFacharztgruppeCS
-Id: StfFacharztgruppeCS
-Title: "STF Facharztgruppe"
+CodeSystem: StfArztrolleCS
+Id: StfArztrolleCS
+Title: "STF Arztrolle"
 * insert Meta
 * #Hausarzt "Hausarzt/-ärztin"
 * #Notarzt "Notarzt/-ärztin"
@@ -9,8 +9,8 @@ Title: "STF Facharztgruppe"
 * #Rechtsmediziner "Rechtsmediziner/-in"
 * #Sonstiges "Sonstiges"
 
-ValueSet: StfFacharztgruppe
-Id: StfFacharztgruppeVS
-Title: "STF Facharztgruppe"
+ValueSet: StfArztrolle
+Id: StfArztrolleVS
+Title: "STF Arztrolle"
 * insert Meta
-* include codes from system StfFacharztgruppeCS
+* include codes from system StfArztrolleCS

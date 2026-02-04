@@ -113,6 +113,20 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-VB1"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "184305005",
+              "system": "http://snomed.info/sct",
+              "display": "Cause of Death"
+            }
+          ]
+        },
         "valueCodeableConcept": {
           "coding": [
             {
@@ -124,6 +138,25 @@
           "text": "Exitus letalis bei Bronchopneumonie (beidseitig)"
         },
         "component": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA26682-7",
+                  "system": "http://loinc.org",
+                  "display": "Immediate/Primary"
+                }
+              ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "82791-5",
+                  "system": "http://loinc.org"
+                }
+              ]
+            }
+          },
           {
             "valueCodeableConcept": {
               "coding": [
@@ -141,24 +174,6 @@
                 }
               ]
             }
-          },
-          {
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "Leichenschauschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-                }
-              ]
-            },
-            "code": {
-              "coding": [
-                {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                }
-              ]
-            }
           }
         ],
         "note": [
@@ -168,66 +183,15 @@
         ],
         "hasMember": [
           {
-            "extension": [
-              {
-                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "code": "TU2",
-                      "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
-                      "display": "Todesursache 2"
-                    }
-                  ]
-                }
-              }
-            ],
             "reference": "Observation/Todesursache-2-VB1"
           },
           {
-            "extension": [
-              {
-                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "code": "TU3",
-                      "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
-                      "display": "Todesursache 3"
-                    }
-                  ]
-                }
-              }
-            ],
             "reference": "Observation/Todesursache-3-VB1"
           },
           {
-            "extension": [
-              {
-                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "code": "TU4",
-                      "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
-                      "display": "Todesursache 4"
-                    }
-                  ]
-                }
-              }
-            ],
             "reference": "Observation/Todesursache-4-VB1"
           }
         ],
-        "code": {
-          "coding": [
-            {
-              "code": "184305005",
-              "system": "http://snomed.info/sct",
-              "display": "Cause of Death"
-            }
-          ]
-        },
         "status": "final",
         "subject": {
           "reference": "Patient/StfVerstorbenePerson-VB1"
@@ -244,6 +208,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-VB1"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {
@@ -255,6 +224,25 @@
           "text": "Dekompensierte Herzinsuffizienz"
         },
         "component": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA26680-1",
+                  "system": "http://loinc.org",
+                  "display": "Contributory"
+                }
+              ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "82791-5",
+                  "system": "http://loinc.org"
+                }
+              ]
+            }
+          },
           {
             "valueCodeableConcept": {
               "coding": [
@@ -272,32 +260,13 @@
                 }
               ]
             }
-          },
-          {
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "Leichenschauschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-                }
-              ]
-            },
-            "code": {
-              "coding": [
-                {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                }
-              ]
-            }
           }
         ],
         "code": {
           "coding": [
             {
               "code": "184305005",
-              "system": "http://snomed.info/sct",
-              "display": "Cause of Death"
+              "system": "http://snomed.info/sct"
             }
           ]
         },
@@ -317,6 +286,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-VB1"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {
@@ -328,6 +302,25 @@
           "text": "Akutes Nierenversagen"
         },
         "component": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA26681-9",
+                  "system": "http://loinc.org",
+                  "display": "Underlying"
+                }
+              ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "82791-5",
+                  "system": "http://loinc.org"
+                }
+              ]
+            }
+          },
           {
             "valueCodeableConcept": {
               "coding": [
@@ -345,32 +338,13 @@
                 }
               ]
             }
-          },
-          {
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "Leichenschauschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-                }
-              ]
-            },
-            "code": {
-              "coding": [
-                {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                }
-              ]
-            }
           }
         ],
         "code": {
           "coding": [
             {
               "code": "184305005",
-              "system": "http://snomed.info/sct",
-              "display": "Cause of Death"
+              "system": "http://snomed.info/sct"
             }
           ]
         },
@@ -390,6 +364,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-VB1"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {
@@ -401,6 +380,25 @@
           "text": "Arterielle Hypertonie"
         },
         "component": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA46-8",
+                  "system": "http://loinc.org",
+                  "display": "Other"
+                }
+              ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "82791-5",
+                  "system": "http://loinc.org"
+                }
+              ]
+            }
+          },
           {
             "valueCodeableConcept": {
               "coding": [
@@ -418,32 +416,13 @@
                 }
               ]
             }
-          },
-          {
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "Leichenschauschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-                }
-              ]
-            },
-            "code": {
-              "coding": [
-                {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                }
-              ]
-            }
           }
         ],
         "code": {
           "coding": [
             {
               "code": "184305005",
-              "system": "http://snomed.info/sct",
-              "display": "Cause of Death"
+              "system": "http://snomed.info/sct"
             }
           ]
         },

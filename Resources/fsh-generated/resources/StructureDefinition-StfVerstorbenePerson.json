@@ -19,6 +19,27 @@
   "differential": {
     "element": [
       {
+        "id": "Patient.extension:zuletztBehandelnderArzt",
+        "path": "Patient.extension",
+        "sliceName": "zuletztBehandelnderArzt",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfZuletztBehandelnderArztExtension"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.extension:zuletztBehandelnderArzt.value[x]",
+        "path": "Patient.extension.value[x]",
+        "mustSupport": true
+      },
+      {
         "id": "Patient.identifier",
         "path": "Patient.identifier",
         "slicing": {
@@ -135,6 +156,12 @@
         "mustSupport": true
       },
       {
+        "id": "Patient.identifier:Sterbebuchnummer.value",
+        "path": "Patient.identifier.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "Patient.active",
         "path": "Patient.active",
         "comment": "Als modifier-Element muss dieses Feld beachtet werden",
@@ -178,10 +205,34 @@
         "patternCode": "official"
       },
       {
+        "id": "Patient.name:name.text",
+        "path": "Patient.name.text",
+        "comment": "Vollständiger Name als Text",
+        "mustSupport": true
+      },
+      {
         "id": "Patient.name:name.family",
         "path": "Patient.name.family",
         "comment": "Nachname",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.family.extension:namenszusatz",
+        "path": "Patient.name.family.extension",
+        "sliceName": "namenszusatz",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.family.extension:nachname",
+        "path": "Patient.name.family.extension",
+        "sliceName": "nachname",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.name:name.family.extension:vorsatzwort",
+        "path": "Patient.name.family.extension",
+        "sliceName": "vorsatzwort",
         "mustSupport": true
       },
       {

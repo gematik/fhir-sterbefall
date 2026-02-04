@@ -4,32 +4,16 @@ Id: StfArzt
 Title: "STF Arzt"
 Description: "Informationen über Ärzte und Ärztinnen, die im Kontext der STF relevant sind"
 * insert Meta
-* identifier MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
 * identifier ^definition = "In diesem Element wird der Identifier (Identifikator) für diese behandelnde Person definiert. Der Identifikator kann aus diversen Quellen stammen."
 * identifier contains
-    ID ..1 MS and
-    ANR ..1 MS and
-    Zulassungsnummer ..1 MS
-* identifier[ID] ^comment = "ID des Arztes laut Arztliste der Ärztekammer"
-* identifier[ID] ^patternIdentifier.type = StfArztIdentifierType#ArztId
-* identifier[ID].type = StfArztIdentifierType#ArztId
-* identifier[ID].system 1.. MS
-* identifier[ID].value 1.. MS
+    ANR ..1
 * identifier[ANR] only $de.basis-identifier-lanr
 * identifier[ANR] ^patternIdentifier.system = "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR"
 * identifier[ANR] ^definition = "In diesem Element wird die Arztnummer (umgangssprachlich auch Lebenslange Arztnummer „LANR“ genannt) nach § 108 SGB V abgebildet."
 * identifier[ANR] ^comment = "Die Lebenslange Arztnummer (LANR) des Arztes"
-* identifier[ANR].type 1.. MS
-* identifier[ANR].type.coding 1..1 MS
-* identifier[ANR].type.coding.system 1.. MS
-* identifier[ANR].type.coding.code 1.. MS
-* identifier[Zulassungsnummer] ^patternIdentifier.type = StfArztIdentifierType#Zulassungsnr
-* identifier[Zulassungsnummer].type = StfArztIdentifierType#Zulassungsnr
-* identifier[Zulassungsnummer].system 1.. MS
-* identifier[Zulassungsnummer].value 1.. MS
 * name MS
 * name ^slicing.discriminator.type = #value
 * name ^slicing.discriminator.path = "use"
@@ -95,10 +79,6 @@ Description: "Informationen über Ärzte und Ärztinnen, die im Kontext der STF 
   * ^comment = "Fax des Arztes"
   * system = #fax
   * value MS
-* qualification MS
-* qualification.code MS
-* qualification.code ^comment = "Berufsgruppe"
-* qualification.code from StfBerufsgruppe
 
 CodeSystem: StfArztIdentifierType
 Id: StfArztIdentifierType

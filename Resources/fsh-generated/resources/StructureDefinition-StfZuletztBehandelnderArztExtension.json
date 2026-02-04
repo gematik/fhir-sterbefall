@@ -1,21 +1,21 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "StfPruefcodeExtension",
-  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfPruefcodeExtension",
+  "id": "StfZuletztBehandelnderArztExtension",
+  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfZuletztBehandelnderArztExtension",
   "version": "1.0.0-ballot",
-  "name": "StfPruefcodeExtension",
-  "title": "STF Prüfcode Extension",
+  "name": "StfZuletztBehandelnderArztExtension",
+  "title": "STF zuletzt behandelnder Arzt Extension",
   "status": "active",
   "experimental": false,
   "date": "2025-12-05",
   "publisher": "ELFA Maßnahme Interoperabilität",
-  "description": "Mit dieser Extension kann ein Prüfcode an einer Organisation ergänzt werden.",
+  "description": "Ergänzende Information zur verstorbenen Person, die den zuletzt behandelnden Arzt angibt.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
   "context": [
     {
-      "expression": "Organization",
+      "expression": "Patient",
       "type": "element"
     }
   ],
@@ -27,8 +27,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "STF Prüfcode Extension",
-        "definition": "Mit dieser Extension kann ein Prüfcode an einer Organisation ergänzt werden."
+        "short": "STF zuletzt behandelnder Arzt Extension",
+        "definition": "Ergänzende Information zur verstorbenen Person, die den zuletzt behandelnden Arzt angibt."
       },
       {
         "id": "Extension.extension",
@@ -38,14 +38,17 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfPruefcodeExtension"
+        "fixedUri": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfZuletztBehandelnderArztExtension"
       },
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "type": [
           {
-            "code": "string"
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner"
+            ]
           }
         ]
       }

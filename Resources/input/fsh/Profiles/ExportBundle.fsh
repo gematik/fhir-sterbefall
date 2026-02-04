@@ -9,14 +9,13 @@ Es basiert auf der Ressource `Bundle` und verwendet den Typ `collection`, um all
 * type = #collection
 * timestamp MS
   * ^short = "Exportzeitpunkt"
-* entry MS
-  * fullUrl MS
-  * resource MS
-  * resource only StfArzt or StfVerstorbenePerson or StfArztZuordnung or StfDatei or StfLeichenschau or StfOrganisation or StfSterbeurkundeAusstellung or StfBasisObservation or StfExportProvenance or StfObduktionAnfrage or StfObduktion or StfVerstorbenePersonPseudonymisiert
 * entry ^slicing.discriminator.type = #profile
 * entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.rules = #open
+* entry ^slicing.rules = #closed
 * entry contains
-  Provenance 1..1 MS
+  Provenance 1..1 MS and
+  Inhalt 0..* MS
 * entry[Provenance]
   * resource only StfExportProvenance
+* entry[Inhalt]
+  * resource only StfArzt or StfVerstorbenePerson or StfArztZuordnung or StfDatei or StfLeichenschau or StfOrganisation or StfSterbeurkundeAusstellung or StfBasisObservation or StfObduktionAnfrage or StfObduktion or StfVerstorbenePersonPseudonymisiert

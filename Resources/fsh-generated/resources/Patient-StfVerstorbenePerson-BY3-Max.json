@@ -6,6 +6,14 @@
       "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfVerstorbenePerson"
     ]
   },
+  "extension": [
+    {
+      "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfZuletztBehandelnderArztExtension",
+      "valueReference": {
+        "reference": "Practitioner/StfArzt-BY3-Max-Flurer"
+      }
+    }
+  ],
   "identifier": [
     {
       "type": {
@@ -66,25 +74,8 @@
       ],
       "extension": [
         {
-          "extension": [
-            {
-              "url": "Bundesland",
-              "valueInteger": 95
-            },
-            {
-              "url": "Regierungsbezirk",
-              "valueInteger": 6
-            },
-            {
-              "url": "Landkreis",
-              "valueInteger": 40
-            },
-            {
-              "url": "Gemeinde",
-              "valueInteger": 0
-            }
-          ],
-          "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfGemeindekennzahlExtension"
+          "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfGemeindekennzahlExtension",
+          "valueString": "956400"
         }
       ],
       "type": "both",

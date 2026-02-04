@@ -30,13 +30,44 @@
         "mustSupport": true
       },
       {
-        "id": "PractitionerRole.specialty",
-        "path": "PractitionerRole.specialty",
-        "comment": "Facharztgruppe",
+        "id": "PractitionerRole.code",
+        "path": "PractitionerRole.code",
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.code.coding",
+        "path": "PractitionerRole.code.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.code.coding:Berufsgruppe",
+        "path": "PractitionerRole.code.coding",
+        "sliceName": "Berufsgruppe",
+        "min": 0,
+        "max": "1",
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://gematik.de/fhir/oegd/stf/ValueSet/StfFacharztgruppeVS"
+          "valueSet": "http://gematik.de/fhir/oegd/stf/ValueSet/StfBerufsgruppeVS"
+        }
+      },
+      {
+        "id": "PractitionerRole.specialty",
+        "path": "PractitionerRole.specialty",
+        "comment": "Arztrolle",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://gematik.de/fhir/oegd/stf/ValueSet/StfArztrolleVS"
         }
       }
     ]

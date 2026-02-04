@@ -16,7 +16,7 @@
     {
       "coding": [
         {
-          "system": "http://gematik.de/fhir/oegd/stf/ValueSet/StfOrganisationsTypVS",
+          "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfOrganisationsTypCS",
           "code": "StAmt",
           "display": "Standesamt"
         }
@@ -70,11 +70,5 @@
   "partOf": {
     "display": "Stadt Köln"
   },
-  "extension": [
-    {
-      "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfPruefcodeExtension",
-      "valueString": "PCODE98765"
-    }
-  ],
   "name": "Standesamt Musterstadt"
 }

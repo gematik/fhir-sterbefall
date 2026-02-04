@@ -3,36 +3,36 @@ InstanceOf: StfExportBundle
 Usage: #example
 * timestamp = "2025-11-06T12:49:00Z"
 * type = #collection
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Patient, StfVerstorbenePerson-BY1)
   * resource = StfVerstorbenePerson-BY1
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Procedure, StfLeichenschau-BY1)
   * resource = StfLeichenschau-BY1
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Observation, Todesursache-1-BY1)
   * resource = Todesursache-1-BY1
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Observation, Todesursache-2-BY1)
   * resource = Todesursache-2-BY1
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Observation, Todesursache-3-BY1)
   * resource = Todesursache-3-BY1
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Observation, Todesursache-4-BY1)
   * resource = Todesursache-4-BY1
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Observation, Todesursache-5-BY1)
   * resource = Todesursache-5-BY1
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Organization, StfOrganisation-GA-BY1)
   * resource = StfOrganisation-GA-BY1
-* entry[+]
-  * insert ExampleFullUrl(Provenance, StfExportProvenanceExample-BY1)
-  * resource = StfExportProvenanceExample-BY1
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Practitioner, StfArzt-BY1)
   * resource = StfArzt-BY1
+* entry[Provenance]
+  * insert ExampleFullUrl(Provenance, StfExportProvenanceExample-BY1)
+  * resource = StfExportProvenanceExample-BY1
 
 Instance: StfExportProvenanceExample-BY1
 InstanceOf: StfExportProvenance

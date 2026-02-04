@@ -6,6 +6,11 @@
       "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
     ]
   },
+  "partOf": [
+    {
+      "reference": "Procedure/StfLeichenschau-BY3-Max"
+    }
+  ],
   "performer": [
     {
       "reference": "Practitioner/StfArzt-BY3-Max-Boese"
@@ -26,16 +31,17 @@
       "valueCodeableConcept": {
         "coding": [
           {
-            "code": "Sterbeurkunde",
-            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
+            "code": "LA26680-1",
+            "system": "http://loinc.org",
+            "display": "Contributory"
           }
         ]
       },
       "code": {
         "coding": [
           {
-            "code": "quelle",
-            "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+            "code": "82791-5",
+            "system": "http://loinc.org"
           }
         ]
       }

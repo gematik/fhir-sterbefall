@@ -16,7 +16,7 @@ Usage: #example
 * address.extension[StfBundeslandExtension].valueCoding.display = "Thüringen"
 * identifier.system = "https://fhir.gematik.de/sid/standesamt"
 * identifier.value = "16051000"
-* type.coding.system = Canonical(StfOrganisationsTyp)
+* type.coding.system = Canonical(StfOrganisationsTypCS)
 * type.coding.code = #StAmt
 * type.coding.display = "Standesamt"
 * name = "Standesamt Erfurt"
@@ -30,7 +30,7 @@ Usage: #example
 * address.country = "DE"
 * address.extension[StfBundeslandExtension].valueCoding.code = #DE-TH
 * address.extension[StfBundeslandExtension].valueCoding.display = "Thüringen"
-* type.coding.system = Canonical(StfOrganisationsTyp)
+* type.coding.system = Canonical(StfOrganisationsTypCS)
 * type.coding.code = #Klinik
 * type.coding.display = "Klinik"
 * name = "Heliosklinikum Erfurt"

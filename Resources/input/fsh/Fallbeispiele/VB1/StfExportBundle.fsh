@@ -3,31 +3,31 @@ InstanceOf: StfExportBundle
 Usage: #example
 * timestamp = "2025-11-06T12:49:00Z"
 * type = #collection
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Patient, StfVerstorbenePerson-VB1)
   * resource = StfVerstorbenePerson-VB1
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Procedure, StfLeichenschau-VB1)
   * resource = StfLeichenschau-VB1
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Observation, Todesursache-1-VB1)
   * resource = Todesursache-1-VB1
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Observation, Todesursache-2-VB1)
   * resource = Todesursache-2-VB1
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Observation, Todesursache-3-VB1)
   * resource = Todesursache-3-VB1
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Observation, Todesursache-4-VB1)
   * resource = Todesursache-4-VB1
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Organization, StfOrganisation-GA-VB1)
   * resource = StfOrganisation-GA-VB1
-* entry[+]
+* entry[Provenance]
   * insert ExampleFullUrl(Provenance, StfExportProvenanceExample-VB1)
   * resource = StfExportProvenanceExample-VB1
-* entry[+]
+* entry[Inhalt][+]
   * insert ExampleFullUrl(Practitioner, StfArzt-VB1)
   * resource = StfArzt-VB1
 

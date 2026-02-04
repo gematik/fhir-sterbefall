@@ -1,5 +1,5 @@
 ---
-subject: http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDateien
+subject: http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDatei
 expand: 1
 ---
 
@@ -11,7 +11,7 @@ expand: 1
 from
 	StructureDefinition
 where
-	url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDateien'
+	url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDatei'
 select
 	Canonical: url, Status: status, Version: version, Basis: baseDefinition
 ```
@@ -19,16 +19,25 @@ select
 
 ### Inhalt
 
-| ID        | Type      | Min  | Max  | Pattern   | Fixed    | must-support| VS-Url      | Strength    | VS Concepts |
-|-----------|-----------|------|------|-----------|----------|-------------|-------------|-------------|-------------|
-| DocumentReference.identifier | Identifier | 0 | * | N/A | N/A | true | N/A | N/A | N/A |
-| DocumentReference.status | code | 1 | 1 | N/A | N/A | true | http://hl7.org/fhir/ValueSet/document-reference-status | required | Current, Superseded, Entered in Error |
-| DocumentReference.type | CodeableConcept | 0 | 1 | N/A | N/A | true | http://gematik.de/fhir/oegd/stf/ValueSet/StfDateiTypVS | extensible | Sterbeurkunde, Obduktionsschein |
-| DocumentReference.subject | Reference | 0 | 1 | N/A | N/A | true | N/A | N/A | N/A |
-| DocumentReference.date | instant | 0 | 1 | N/A | N/A | true | N/A | N/A | N/A |
-| DocumentReference.author | Reference | 0 | * | N/A | N/A | true | N/A | N/A | N/A |
-| DocumentReference.context | BackboneElement | 0 | 1 | N/A | N/A | true | N/A | N/A | N/A |
-| DocumentReference.context.related | Reference | 0 | * | N/A | N/A | true | N/A | N/A | N/A |
+@```
+from
+    StructureDefinition
+where
+    url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDatei'
+
+for snapshot.element
+where
+    mustSupport.exists()
+select {
+    ID: id,
+    Kurzbeschreibung: short,
+    Type: type[0].code,
+    Min: min,
+    Max: max,
+    VS_Url: binding.valueSet,
+    Strength: binding.strength
+}
+```
 
 <tabs>
   <tab title="Darstellung">{{tree, buttons}}</tab>
@@ -37,7 +46,7 @@ select
         from
 	        StructureDefinition
         where
-	        url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDateien'
+	        url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDatei'
         select
 	        Beschreibung: description
         with
@@ -47,7 +56,7 @@ select
         from 
             StructureDefinition 
         where 
-            url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDateien' 
+            url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDatei' 
         for 
             differential.element 
             where 
@@ -66,7 +75,7 @@ select
 from 
     StructureDefinition
 where 
-    url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDateien' 
+    url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDatei' 
 for 
     snapshot.element
     where 
@@ -77,5 +86,5 @@ for
 
 ### Constraints/Invarianten
 @``` 
-from StructureDefinition where url = 'https://www.oegd.de/fhir/seu/StructureDefinition/StfDateien' for differential.element.constraint select Name: key, Schweregrad: severity, Beschreibung: human, Ausdruck: expression
+from StructureDefinition where url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDatei' for differential.element.constraint select Name: key, Schweregrad: severity, Beschreibung: human, Ausdruck: expression
 ```

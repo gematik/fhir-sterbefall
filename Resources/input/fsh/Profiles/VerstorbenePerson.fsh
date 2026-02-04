@@ -5,6 +5,8 @@ Title: "STF Verstorbene Person"
 Description: "Informationen zur verstorbenen Person"
 * insert Meta
 * insert Patient-identifier
+* extension contains StfZuletztBehandelnderArztExtension named zuletztBehandelnderArzt ..1 MS
+* extension[zuletztBehandelnderArzt].valueReference MS
 * name MS
 * name ^slicing.discriminator.type = #value
 * name ^slicing.discriminator.path = "use"
@@ -17,10 +19,15 @@ Description: "Informationen zur verstorbenen Person"
   * use = #official
   * family 1.. MS
   * family ^comment = "Nachname"
+  * family.extension[namenszusatz] MS
+  * family.extension[nachname] MS
+  * family.extension[vorsatzwort] MS
   * given 1.. MS
   * given ^comment = "Vorname"
   * prefix MS
   * prefix ^comment = "Titel"
+  * text MS
+  * text ^comment = "Vollständiger Name als Text"
 * name[geburtsname] only $de.basis-humanName
 * name[geburtsname]
   * use = #maiden
@@ -83,23 +90,23 @@ RuleSet: Patient-identifier
     * ^comment = "Im Rahmen des Projektes wurde kein NamingSystem festgelegt. Aus diesem Grund ist die Angabe eines type verpflichtend."
   * type 1.. MS
   * type = http://terminology.hl7.org/CodeSystem/v2-0203#DC
+  * value 1.. MS
 
 Extension: StfGemeindekennzahlExtension
 Id: StfGemeindekennzahlExtension
 Title: "STF Gemeindekennzahl Extension"
-Description: "Abbildung der GKZ (Gemeindekennzahl) bestehend aus Bundesland (zweistellig), Regierungsbezirk (einstellig), Landkreis (Landkreis) und Gemeinde (zweistellig)"
+Description: "Abbildung der GKZ (Gemeindekennzahl) bestehend aus Bundesland, Regierungsbezirk, Landkreis und Gemeinde"
 Context: Address
 * insert Meta
-* extension contains
-  Bundesland 1..1 MS and
-  Regierungsbezirk 1..1 MS and
-  Landkreis 1..1 MS and
-  Gemeinde 1..1 MS
-* extension[Bundesland].value[x] only integer
-* extension[Regierungsbezirk].value[x] only integer
-* extension[Landkreis].value[x] only integer
-* extension[Gemeinde].value[x] only integer
+* value[x] only string
 
+Extension: StfZuletztBehandelnderArztExtension
+Id: StfZuletztBehandelnderArztExtension
+Title: "STF zuletzt behandelnder Arzt Extension"
+Description: "Ergänzende Information zur verstorbenen Person, die den zuletzt behandelnden Arzt angibt."
+Context: Patient
+* insert Meta
+* value[x] only Reference(Practitioner)
 
 Profile: StfVerstorbenePersonPseudonymisiert
 Parent: Patient

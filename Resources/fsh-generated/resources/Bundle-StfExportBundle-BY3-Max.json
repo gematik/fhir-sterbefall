@@ -134,40 +134,8 @@
         },
         "identifier": [
           {
-            "type": {
-              "coding": [
-                {
-                  "code": "ArztId",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztIdentifierType"
-                }
-              ]
-            },
-            "system": "https://github.com/gematik/fhir-sterbefall/issues/62",
-            "value": "123"
-          },
-          {
-            "type": {
-              "coding": [
-                {
-                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                  "code": "LANR"
-                }
-              ]
-            },
             "system": "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR",
             "value": "456"
-          },
-          {
-            "type": {
-              "coding": [
-                {
-                  "code": "Zulassungsnr",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztIdentifierType"
-                }
-              ]
-            },
-            "system": "https://github.com/gematik/fhir-sterbefall/issues/62",
-            "value": "789"
           }
         ],
         "name": [
@@ -223,18 +191,6 @@
             "system": "phone",
             "value": "0911/488356"
           }
-        ],
-        "qualification": [
-          {
-            "code": {
-              "coding": [
-                {
-                  "code": "Niedergelassen",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfBerufsgruppeCS"
-                }
-              ]
-            }
-          }
         ]
       }
     },
@@ -250,45 +206,14 @@
         },
         "identifier": [
           {
-            "type": {
-              "coding": [
-                {
-                  "code": "ArztId",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztIdentifierType"
-                }
-              ]
-            },
-            "system": "https://github.com/gematik/fhir-sterbefall/issues/62",
-            "value": "231"
-          },
-          {
-            "type": {
-              "coding": [
-                {
-                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                  "code": "LANR"
-                }
-              ]
-            },
             "system": "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR",
             "value": "564"
-          },
-          {
-            "type": {
-              "coding": [
-                {
-                  "code": "Zulassungsnr",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztIdentifierType"
-                }
-              ]
-            },
-            "system": "https://github.com/gematik/fhir-sterbefall/issues/62",
-            "value": "897"
           }
         ],
         "name": [
           {
             "given": [
+              "Emil",
               "Emil"
             ],
             "prefix": [
@@ -339,18 +264,6 @@
             "system": "phone",
             "value": "0911/638355"
           }
-        ],
-        "qualification": [
-          {
-            "code": {
-              "coding": [
-                {
-                  "code": "Niedergelassen",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfBerufsgruppeCS"
-                }
-              ]
-            }
-          }
         ]
       }
     },
@@ -366,40 +279,8 @@
         },
         "identifier": [
           {
-            "type": {
-              "coding": [
-                {
-                  "code": "ArztId",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztIdentifierType"
-                }
-              ]
-            },
-            "system": "https://github.com/gematik/fhir-sterbefall/issues/62",
-            "value": "312"
-          },
-          {
-            "type": {
-              "coding": [
-                {
-                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                  "code": "LANR"
-                }
-              ]
-            },
             "system": "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR",
             "value": "645"
-          },
-          {
-            "type": {
-              "coding": [
-                {
-                  "code": "Zulassungsnr",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztIdentifierType"
-                }
-              ]
-            },
-            "system": "https://github.com/gematik/fhir-sterbefall/issues/62",
-            "value": "978"
           }
         ],
         "name": [
@@ -436,18 +317,6 @@
             "postalCode": "90408",
             "country": "DE"
           }
-        ],
-        "qualification": [
-          {
-            "code": {
-              "coding": [
-                {
-                  "code": "Niedergelassen",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfBerufsgruppeCS"
-                }
-              ]
-            }
-          }
         ]
       }
     },
@@ -461,12 +330,23 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArztZuordnung"
           ]
         },
+        "code": [
+          {
+            "coding": [
+              {
+                "code": "Krankenhaus",
+                "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfBerufsgruppeCS",
+                "display": "Krankenhaus"
+              }
+            ]
+          }
+        ],
         "specialty": [
           {
             "coding": [
               {
                 "code": "Rechtsmediziner",
-                "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfFacharztgruppeCS"
+                "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztrolleCS"
               }
             ]
           }
@@ -527,6 +407,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObservationKrebserkrankung"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-BY3-Max"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {
@@ -624,12 +509,6 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfOrganisation"
           ]
         },
-        "identifier": [
-          {
-            "system": "http://myGesundheitsamt.de/fhir/organisationen",
-            "value": "123456"
-          }
-        ],
         "type": [
           {
             "coding": [
@@ -686,12 +565,6 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfOrganisation"
           ]
         },
-        "identifier": [
-          {
-            "system": "http://myGesundheitsamt.de/fhir/organisationen",
-            "value": "123457"
-          }
-        ],
         "type": [
           {
             "coding": [
@@ -748,12 +621,6 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfOrganisation"
           ]
         },
-        "identifier": [
-          {
-            "system": "http://myGesundheitsamt.de/fhir/organisationen",
-            "value": "123458"
-          }
-        ],
         "type": [
           {
             "coding": [
@@ -810,6 +677,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-BY3-Max"
+          }
+        ],
         "performer": [
           {
             "reference": "Practitioner/StfArzt-BY3-Max-Boese"
@@ -830,16 +702,17 @@
             "valueCodeableConcept": {
               "coding": [
                 {
-                  "code": "Sterbeurkunde",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
+                  "code": "LA26682-7",
+                  "system": "http://loinc.org",
+                  "display": "Immediate/Primary"
                 }
               ]
             },
             "code": {
               "coding": [
                 {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                  "code": "82791-5",
+                  "system": "http://loinc.org"
                 }
               ]
             }
@@ -893,71 +766,39 @@
                 }
               ]
             }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "todesursacheKlassifikation",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                }
+              ]
+            },
+            "valueString": "Sturz in häuslicher Umgebung vor 3 Tagen"
           }
         ],
+        "code": {
+          "coding": [
+            {
+              "code": "184305005",
+              "system": "http://snomed.info/sct",
+              "display": "Cause of Death"
+            }
+          ]
+        },
         "hasMember": [
           {
-            "extension": [
-              {
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "code": "TU2",
-                      "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS"
-                    }
-                  ]
-                },
-                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension"
-              }
-            ],
             "reference": "Observation/StfTodesursache2-Su-BY3-Max"
           },
           {
-            "extension": [
-              {
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "code": "TU3",
-                      "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS"
-                    }
-                  ]
-                },
-                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension"
-              }
-            ],
             "reference": "Observation/StfTodesursache3-Su-BY3-Max"
           },
           {
-            "extension": [
-              {
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "code": "TU4",
-                      "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS"
-                    }
-                  ]
-                },
-                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension"
-              }
-            ],
             "reference": "Observation/StfTodesursache4-Su-BY3-Max"
           },
           {
-            "extension": [
-              {
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "code": "TU5",
-                      "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS"
-                    }
-                  ]
-                },
-                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension"
-              }
-            ],
             "reference": "Observation/StfTodesursache5-Su-BY3-Max"
           }
         ],
@@ -969,14 +810,6 @@
             "text": "Hirninfarkt beidseitig vor 8 Monaten, infolge einseitige Lähmung links\nFortgeschrittenes Pankreaskarzinom mit Lebermetastasen, keine OO, Chemotherapie\nabgebrochen, sonstige palliative Therapie"
           }
         ],
-        "code": {
-          "coding": [
-            {
-              "code": "184305005",
-              "system": "http://snomed.info/sct"
-            }
-          ]
-        },
         "effectiveDateTime": "2025-01-01T10:30:00+01:00",
         "status": "final",
         "subject": {
@@ -994,6 +827,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-BY3-Max"
+          }
+        ],
         "performer": [
           {
             "reference": "Practitioner/StfArzt-BY3-Max-Boese"
@@ -1014,16 +852,17 @@
             "valueCodeableConcept": {
               "coding": [
                 {
-                  "code": "Sterbeurkunde",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
+                  "code": "LA26680-1",
+                  "system": "http://loinc.org",
+                  "display": "Contributory"
                 }
               ]
             },
             "code": {
               "coding": [
                 {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                  "code": "82791-5",
+                  "system": "http://loinc.org"
                 }
               ]
             }
@@ -1065,6 +904,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-BY3-Max"
+          }
+        ],
         "performer": [
           {
             "reference": "Practitioner/StfArzt-BY3-Max-Boese"
@@ -1085,16 +929,17 @@
             "valueCodeableConcept": {
               "coding": [
                 {
-                  "code": "Sterbeurkunde",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
+                  "code": "LA26681-9",
+                  "system": "http://loinc.org",
+                  "display": "Underlying"
                 }
               ]
             },
             "code": {
               "coding": [
                 {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                  "code": "82791-5",
+                  "system": "http://loinc.org"
                 }
               ]
             }
@@ -1136,6 +981,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-BY3-Max"
+          }
+        ],
         "performer": [
           {
             "reference": "Practitioner/StfArzt-BY3-Max-Boese"
@@ -1156,16 +1006,17 @@
             "valueCodeableConcept": {
               "coding": [
                 {
-                  "code": "Sterbeurkunde",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
+                  "code": "LA46-8",
+                  "system": "http://loinc.org",
+                  "display": "Other"
                 }
               ]
             },
             "code": {
               "coding": [
                 {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                  "code": "82791-5",
+                  "system": "http://loinc.org"
                 }
               ]
             }
@@ -1207,6 +1058,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-BY3-Max"
+          }
+        ],
         "performer": [
           {
             "reference": "Practitioner/StfArzt-BY3-Max-Boese"
@@ -1227,16 +1083,17 @@
             "valueCodeableConcept": {
               "coding": [
                 {
-                  "code": "Sterbeurkunde",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
+                  "code": "LA46-8",
+                  "system": "http://loinc.org",
+                  "display": "Other"
                 }
               ]
             },
             "code": {
               "coding": [
                 {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                  "code": "82791-5",
+                  "system": "http://loinc.org"
                 }
               ]
             }
@@ -1278,6 +1135,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfObduktion-BY3-Max"
+          }
+        ],
         "performer": [
           {
             "reference": "Practitioner/StfArzt-BY3-Max-Boese"
@@ -1298,16 +1160,17 @@
             "valueCodeableConcept": {
               "coding": [
                 {
-                  "code": "Obduktionsschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
+                  "code": "LA26682-7",
+                  "system": "http://loinc.org",
+                  "display": "Immediate/Primary"
                 }
               ]
             },
             "code": {
               "coding": [
                 {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                  "code": "82791-5",
+                  "system": "http://loinc.org"
                 }
               ]
             }
@@ -1315,67 +1178,15 @@
         ],
         "hasMember": [
           {
-            "extension": [
-              {
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "code": "TU2",
-                      "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS"
-                    }
-                  ]
-                },
-                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension"
-              }
-            ],
             "reference": "Observation/StfTodesursache2-Os-BY3-Max"
           },
           {
-            "extension": [
-              {
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "code": "TU3",
-                      "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS"
-                    }
-                  ]
-                },
-                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension"
-              }
-            ],
             "reference": "Observation/StfTodesursache3-Os-BY3-Max"
           },
           {
-            "extension": [
-              {
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "code": "TU4",
-                      "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS"
-                    }
-                  ]
-                },
-                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension"
-              }
-            ],
             "reference": "Observation/StfTodesursache4-Os-BY3-Max"
           },
           {
-            "extension": [
-              {
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "code": "TU5",
-                      "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS"
-                    }
-                  ]
-                },
-                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension"
-              }
-            ],
             "reference": "Observation/StfTodesursache5-Os-BY3-Max"
           }
         ],
@@ -1404,6 +1215,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfObduktion-BY3-Max"
+          }
+        ],
         "performer": [
           {
             "reference": "Practitioner/StfArzt-BY3-Max-Boese"
@@ -1424,16 +1240,17 @@
             "valueCodeableConcept": {
               "coding": [
                 {
-                  "code": "Obduktionsschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
+                  "code": "LA26680-1",
+                  "system": "http://loinc.org",
+                  "display": "Contributory"
                 }
               ]
             },
             "code": {
               "coding": [
                 {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                  "code": "82791-5",
+                  "system": "http://loinc.org"
                 }
               ]
             }
@@ -1464,6 +1281,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfObduktion-BY3-Max"
+          }
+        ],
         "performer": [
           {
             "reference": "Practitioner/StfArzt-BY3-Max-Boese"
@@ -1484,16 +1306,17 @@
             "valueCodeableConcept": {
               "coding": [
                 {
-                  "code": "Obduktionsschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
+                  "code": "LA26681-9",
+                  "system": "http://loinc.org",
+                  "display": "Underlying"
                 }
               ]
             },
             "code": {
               "coding": [
                 {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                  "code": "82791-5",
+                  "system": "http://loinc.org"
                 }
               ]
             }
@@ -1524,6 +1347,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfObduktion-BY3-Max"
+          }
+        ],
         "performer": [
           {
             "reference": "Practitioner/StfArzt-BY3-Max-Boese"
@@ -1544,16 +1372,17 @@
             "valueCodeableConcept": {
               "coding": [
                 {
-                  "code": "Obduktionsschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
+                  "code": "LA46-8",
+                  "system": "http://loinc.org",
+                  "display": "Other"
                 }
               ]
             },
             "code": {
               "coding": [
                 {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                  "code": "82791-5",
+                  "system": "http://loinc.org"
                 }
               ]
             }
@@ -1584,6 +1413,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfObduktion-BY3-Max"
+          }
+        ],
         "performer": [
           {
             "reference": "Practitioner/StfArzt-BY3-Max-Boese"
@@ -1604,16 +1438,17 @@
             "valueCodeableConcept": {
               "coding": [
                 {
-                  "code": "Obduktionsschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
+                  "code": "LA46-8",
+                  "system": "http://loinc.org",
+                  "display": "Other"
                 }
               ]
             },
             "code": {
               "coding": [
                 {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                  "code": "82791-5",
+                  "system": "http://loinc.org"
                 }
               ]
             }
@@ -1644,6 +1479,14 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfVerstorbenePerson"
           ]
         },
+        "extension": [
+          {
+            "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfZuletztBehandelnderArztExtension",
+            "valueReference": {
+              "reference": "Practitioner/StfArzt-BY3-Max-Flurer"
+            }
+          }
+        ],
         "identifier": [
           {
             "type": {
@@ -1704,25 +1547,8 @@
             ],
             "extension": [
               {
-                "extension": [
-                  {
-                    "url": "Bundesland",
-                    "valueInteger": 95
-                  },
-                  {
-                    "url": "Regierungsbezirk",
-                    "valueInteger": 6
-                  },
-                  {
-                    "url": "Landkreis",
-                    "valueInteger": 40
-                  },
-                  {
-                    "url": "Gemeinde",
-                    "valueInteger": 0
-                  }
-                ],
-                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfGemeindekennzahlExtension"
+                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfGemeindekennzahlExtension",
+                "valueString": "956400"
               }
             ],
             "type": "both",

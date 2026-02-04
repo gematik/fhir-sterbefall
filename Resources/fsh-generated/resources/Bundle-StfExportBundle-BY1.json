@@ -113,6 +113,20 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-BY1"
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "184305005",
+              "system": "http://snomed.info/sct",
+              "display": "Cause of Death"
+            }
+          ]
+        },
         "valueCodeableConcept": {
           "coding": [
             {
@@ -124,6 +138,25 @@
           "text": "Multiorganversagen"
         },
         "component": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA26682-7",
+                  "system": "http://loinc.org",
+                  "display": "Immediate/Primary"
+                }
+              ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "82791-5",
+                  "system": "http://loinc.org"
+                }
+              ]
+            }
+          },
           {
             "valueCodeableConcept": {
               "coding": [
@@ -152,24 +185,6 @@
               ]
             },
             "valueString": "1 Woche"
-          },
-          {
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "Leichenschauschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-                }
-              ]
-            },
-            "code": {
-              "coding": [
-                {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                }
-              ]
-            }
           }
         ],
         "note": [
@@ -179,83 +194,18 @@
         ],
         "hasMember": [
           {
-            "extension": [
-              {
-                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "code": "TU2",
-                      "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
-                      "display": "Todesursache 2"
-                    }
-                  ]
-                }
-              }
-            ],
             "reference": "Observation/Todesursache-2-BY1"
           },
           {
-            "extension": [
-              {
-                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "code": "TU3",
-                      "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
-                      "display": "Todesursache 3"
-                    }
-                  ]
-                }
-              }
-            ],
             "reference": "Observation/Todesursache-3-BY1"
           },
           {
-            "extension": [
-              {
-                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "code": "TU4",
-                      "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
-                      "display": "Todesursache 4"
-                    }
-                  ]
-                }
-              }
-            ],
             "reference": "Observation/Todesursache-4-BY1"
           },
           {
-            "extension": [
-              {
-                "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "code": "TU5",
-                      "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
-                      "display": "Todesursache 5"
-                    }
-                  ]
-                }
-              }
-            ],
             "reference": "Observation/Todesursache-5-BY1"
           }
         ],
-        "code": {
-          "coding": [
-            {
-              "code": "184305005",
-              "system": "http://snomed.info/sct",
-              "display": "Cause of Death"
-            }
-          ]
-        },
         "status": "final",
         "subject": {
           "reference": "Patient/StfVerstorbenePerson-BY1"
@@ -272,6 +222,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-BY1"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {
@@ -283,6 +238,25 @@
           "text": "Nierenversagen"
         },
         "component": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA26680-1",
+                  "system": "http://loinc.org",
+                  "display": "Contributory"
+                }
+              ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "82791-5",
+                  "system": "http://loinc.org"
+                }
+              ]
+            }
+          },
           {
             "valueCodeableConcept": {
               "coding": [
@@ -311,32 +285,13 @@
               ]
             },
             "valueString": "1-2 Wochen"
-          },
-          {
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "Leichenschauschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-                }
-              ]
-            },
-            "code": {
-              "coding": [
-                {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                }
-              ]
-            }
           }
         ],
         "code": {
           "coding": [
             {
               "code": "184305005",
-              "system": "http://snomed.info/sct",
-              "display": "Cause of Death"
+              "system": "http://snomed.info/sct"
             }
           ]
         },
@@ -356,6 +311,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-BY1"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {
@@ -367,6 +327,25 @@
           "text": "Herzinsuffizienz"
         },
         "component": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA26681-9",
+                  "system": "http://loinc.org",
+                  "display": "Underlying"
+                }
+              ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "82791-5",
+                  "system": "http://loinc.org"
+                }
+              ]
+            }
+          },
           {
             "valueCodeableConcept": {
               "coding": [
@@ -384,32 +363,13 @@
                 }
               ]
             }
-          },
-          {
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "Leichenschauschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-                }
-              ]
-            },
-            "code": {
-              "coding": [
-                {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                }
-              ]
-            }
           }
         ],
         "code": {
           "coding": [
             {
               "code": "184305005",
-              "system": "http://snomed.info/sct",
-              "display": "Cause of Death"
+              "system": "http://snomed.info/sct"
             }
           ]
         },
@@ -429,6 +389,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-BY1"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {
@@ -440,6 +405,25 @@
           "text": "COPD"
         },
         "component": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA46-8",
+                  "system": "http://loinc.org",
+                  "display": "Other"
+                }
+              ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "82791-5",
+                  "system": "http://loinc.org"
+                }
+              ]
+            }
+          },
           {
             "valueCodeableConcept": {
               "coding": [
@@ -468,32 +452,13 @@
               ]
             },
             "valueString": "2022"
-          },
-          {
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "Leichenschauschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-                }
-              ]
-            },
-            "code": {
-              "coding": [
-                {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                }
-              ]
-            }
           }
         ],
         "code": {
           "coding": [
             {
               "code": "184305005",
-              "system": "http://snomed.info/sct",
-              "display": "Cause of Death"
+              "system": "http://snomed.info/sct"
             }
           ]
         },
@@ -513,6 +478,11 @@
             "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
           ]
         },
+        "partOf": [
+          {
+            "reference": "Procedure/StfLeichenschau-BY1"
+          }
+        ],
         "valueCodeableConcept": {
           "coding": [
             {
@@ -524,6 +494,25 @@
           "text": "Vorhofflimmern"
         },
         "component": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "LA46-8",
+                  "system": "http://loinc.org",
+                  "display": "Other"
+                }
+              ]
+            },
+            "code": {
+              "coding": [
+                {
+                  "code": "82791-5",
+                  "system": "http://loinc.org"
+                }
+              ]
+            }
+          },
           {
             "valueCodeableConcept": {
               "coding": [
@@ -552,32 +541,13 @@
               ]
             },
             "valueString": "2018"
-          },
-          {
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "code": "Leichenschauschein",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-                }
-              ]
-            },
-            "code": {
-              "coding": [
-                {
-                  "code": "quelle",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                }
-              ]
-            }
           }
         ],
         "code": {
           "coding": [
             {
               "code": "184305005",
-              "system": "http://snomed.info/sct",
-              "display": "Cause of Death"
+              "system": "http://snomed.info/sct"
             }
           ]
         },
@@ -608,6 +578,35 @@
           }
         ],
         "name": "Gesundheitsamt Regensburg"
+      }
+    },
+    {
+      "fullUrl": "https://mein.fhir-server.local/fhir/Practitioner/StfArzt-BY1",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "StfArzt-BY1",
+        "meta": {
+          "profile": [
+            "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArzt"
+          ]
+        },
+        "name": [
+          {
+            "given": [
+              "Musterarzt"
+            ],
+            "use": "official",
+            "text": "Musterarzt",
+            "family": "Musterarzt"
+          }
+        ],
+        "address": [
+          {
+            "type": "both",
+            "city": "Musterstadt",
+            "postalCode": "12345"
+          }
+        ]
       }
     },
     {
@@ -678,35 +677,6 @@
           ]
         },
         "recorded": "2025-11-06T12:49:00Z"
-      }
-    },
-    {
-      "fullUrl": "https://mein.fhir-server.local/fhir/Practitioner/StfArzt-BY1",
-      "resource": {
-        "resourceType": "Practitioner",
-        "id": "StfArzt-BY1",
-        "meta": {
-          "profile": [
-            "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArzt"
-          ]
-        },
-        "name": [
-          {
-            "given": [
-              "Musterarzt"
-            ],
-            "use": "official",
-            "text": "Musterarzt",
-            "family": "Musterarzt"
-          }
-        ],
-        "address": [
-          {
-            "type": "both",
-            "city": "Musterstadt",
-            "postalCode": "12345"
-          }
-        ]
       }
     }
   ],

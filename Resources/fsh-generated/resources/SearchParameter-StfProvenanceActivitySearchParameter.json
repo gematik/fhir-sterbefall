@@ -1,0 +1,19 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "StfProvenanceActivitySearchParameter",
+  "url": "http://gematik.de/fhir/oegd/stf/SearchParameter/StfProvenanceActivitySearchParameter",
+  "base": [
+    "Provenance"
+  ],
+  "version": "1.0.0",
+  "publisher": "ELFA Maßnahme Interoperabilität",
+  "date": "2025-01-29",
+  "status": "active",
+  "experimental": false,
+  "name": "activity",
+  "description": "Search Provenance by activity",
+  "code": "activity",
+  "type": "token",
+  "expression": "Provenance.activity",
+  "xpathUsage": "normal"
+}

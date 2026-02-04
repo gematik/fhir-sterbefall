@@ -11,6 +11,10 @@ Description: "Mit diesem Profil wird eine Leichenschau im Kontext des Sterbefall
 * performed[x] only dateTime
 * performedDateTime MS
 * performedDateTime ^comment = "Datum und optional Uhrzeit der Leichenschau"
+* asserter MS
+* asserter.reference MS
+* asserter.display MS
+* asserter.display ^comment = "Bei wem die Leichenschau beantragt wurde, bzw. Ausstellender Arzt der Leichenschau"
 * performer.actor MS
 * performer.actor only Reference(Practitioner)
 * performer.actor ^comment = "Optionale Verknüpfung mit dem durchführenden Arzt oder Ärztin"

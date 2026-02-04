@@ -19,14 +19,10 @@
     {
       "code": "zeitdauerBeginnBisTod",
       "display": "Zeitdauer von Beginn der Krankheit bis Tod"
-    },
-    {
-      "code": "quelle",
-      "display": "Quelle der Information"
     }
   ],
   "experimental": false,
   "publisher": "ELFA Maßnahme Interoperabilität",
   "date": "2025-12-05",
-  "count": 4
+  "count": 3
 }

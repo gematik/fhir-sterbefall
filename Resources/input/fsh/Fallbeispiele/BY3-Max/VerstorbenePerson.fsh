@@ -1,6 +1,7 @@
 Instance: StfVerstorbenePerson-BY3-Max
 InstanceOf: StfVerstorbenePerson
 Usage: #example
+* extension[zuletztBehandelnderArzt].valueReference = Reference(StfArzt-BY3-Max-Flurer)
 * identifier[IdImGesundheitsamt]
   * value = "331"
   * assigner = Reference(StfOrganisation-GA-BY3-Max)
@@ -20,11 +21,7 @@ Usage: #example
   * city = "Nürnberg"
   * postalCode = "90403"
   * country = "DE"
-  * extension[GKZ]
-    * extension[Bundesland].valueInteger = 95
-    * extension[Regierungsbezirk].valueInteger = 6
-    * extension[Landkreis].valueInteger = 40
-    * extension[Gemeinde].valueInteger = 00
+  * extension[GKZ].valueString = "956400"
 
 Instance: StfVerstorbenePersonPseudonymisiert-BY3-Max
 InstanceOf: StfVerstorbenePersonPseudonymisiert
