@@ -11,7 +11,7 @@ expand: 1
 from
 	StructureDefinition
 where
-	url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportBundle
+	url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportBundle'
 select
 	Canonical: url, Status: status, Version: version, Basis: baseDefinition
 ```
