@@ -1,5 +1,5 @@
 ---
-subject: http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension
+subject: http://gematik.de/fhir/oegd/stf/StructureDefinition/StfZuletztBehandelnderArztExtension
 expand: 2
 ---
 
@@ -11,7 +11,7 @@ expand: 2
 from
 	StructureDefinition
 where
-	url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension'
+	url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfZuletztBehandelnderArztExtension'
 select
 	CanonicalURL: url, Kontext: context.expression, Status: status, Version: version
 ```
@@ -22,7 +22,7 @@ select
 |-----------|-----------|------|------|-----------|----------|-------------|-------------|-------------|-------------|
 | Extension |  | 0 | * | N/A | N/A | false | N/A | N/A | N/A |
 | Extension.extension | N/A | 0 | 0 | N/A | N/A | false | N/A | N/A | N/A |
-| Extension.url | string | 1 | 1 | N/A | http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension | false | N/A | N/A | N/A |
+| Extension.url | string | 1 | 1 | N/A | http://gematik.de/fhir/oegd/stf/StructureDefinition/StfZuletztBehandelnderArztExtension | false | N/A | N/A | N/A |
 | Extension.value[x] | CodeableConcept | 0 | 1 | N/A | N/A | false | http://gematik.de/fhir/oegd/stf/ValueSet/StfTodesursacheCodeVS | extensible | Todesursache_4, Todesursache 3, Todesursache_5, Todesursache 2, Todesursache Gesundheitsamt |
 
 <tabs>
@@ -32,7 +32,7 @@ select
     from
     	StructureDefinition
     where
-	    url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension'
+	    url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfZuletztBehandelnderArztExtension'
     select
 	    Beschreibung: description
     ```
