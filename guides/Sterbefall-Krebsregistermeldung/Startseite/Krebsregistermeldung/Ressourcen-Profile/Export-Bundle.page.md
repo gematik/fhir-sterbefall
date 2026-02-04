@@ -1,6 +1,5 @@
 ---
 subject: http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportBundle
-canonical: http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportBundle
 expand: 1
 ---
 
@@ -12,7 +11,7 @@ expand: 1
 from
 	StructureDefinition
 where
-	url = %canonical
+	url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportBundle
 select
 	Canonical: url, Status: status, Version: version, Basis: baseDefinition
 ```
@@ -24,8 +23,7 @@ select
 from
     StructureDefinition
 where
-    url = %canonical
-
+    url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportBundle'
 for snapshot.element
 where
     mustSupport.exists()
@@ -71,12 +69,11 @@ select {
 </tabs>
 
 ### Terminology-Bindings
-<!-- TODO: FQL funktioniert noch nicht wie vorgesehen-->
 @```
 from 
     StructureDefinition
 where 
-    url = %canonical
+    url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportBundle'
 for 
     snapshot.element
     where 
