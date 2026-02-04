@@ -1,5 +1,5 @@
 ---
-subject: http://gematik.de/fhir/oegd/stf/ValueSet/StfFacharztgruppeVS
+subject: http://gematik.de/fhir/oegd/stf/ValueSet/StfArztrolle
 ---
 
 ## {{link}}
@@ -10,7 +10,7 @@ subject: http://gematik.de/fhir/oegd/stf/ValueSet/StfFacharztgruppeVS
 from
 	ValueSet
 where
-	url = 'http://gematik.de/fhir/oegd/stf/ValueSet/StfFacharztgruppeVS'
+	url = 'http://gematik.de/fhir/oegd/stf/ValueSet/StfArztrolle'
 select
 	CanonicalURL: url, Status: status, Version: version
 ```
@@ -20,16 +20,6 @@ select
 <tabs>
     <tab title="Darstellung">      
         {{render}}
-    </tab>
-    <tab title="Beschreibung">
-    @```
-from
-	ValueSet
-where
-	url = 'http://gematik.de/fhir/oegd/stf	/ValueSet/StfFacharztgruppeVS'
-select
-	Beschreibung: description
-```
     </tab>
     <tab title="XML">      
         {{xml}}

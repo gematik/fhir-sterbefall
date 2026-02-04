@@ -21,16 +21,6 @@ select
     <tab title="Darstellung">      
         {{render}}
     </tab>
-    <tab title="Beschreibung">
-    @```
-from
-	ValueSet
-where
-	url = 'http://gematik.de/fhir/oegd/stf	/ValueSet/StfJaNeinUnbekanntVS'
-select
-	Beschreibung: description
-```
-    </tab>
     <tab title="XML">      
         {{xml}}
     </tab>

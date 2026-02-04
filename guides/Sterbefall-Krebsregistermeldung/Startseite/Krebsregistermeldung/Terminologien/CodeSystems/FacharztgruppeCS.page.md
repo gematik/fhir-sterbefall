@@ -1,5 +1,5 @@
 ---
-subject: http://gematik.de/fhir/oegd/stf/CodeSystem/StfFacharztgruppeCS
+subject: http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztrolleCS
 ---
 
 ## {{link}}
@@ -10,7 +10,7 @@ subject: http://gematik.de/fhir/oegd/stf/CodeSystem/StfFacharztgruppeCS
 from
 	CodeSystem
 where
-	url = 'http://gematik.de/fhir/oegd/stf/CodeSystem/StfFacharztgruppeCS'
+	url = 'http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztrolleCS'
 select
 	Beschreibung: description, CanonicalURL: url, Status: status, Version: version
 ```
@@ -26,22 +26,13 @@ select
 from
 	CodeSystem
 where
-	url = 'http://gematik.de/fhir/oegd/stf/CodeSystem/StfFacharztgruppeCS'
+	url = 'http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztrolleCS'
 for concept
 select
 	Code: code, Anzeigetext: display, Definition: definition
 ```
     </tab>
-    <tab title="Beschreibung">
-    @```
-from
-	CodeSystem
-where
-	url = 'http://example.org/CodeSystem/MeinCodeSystem'
-select
-	Beschreibung: description
-```
-    </tab>
+
     <tab title="XML">      
         {{xml}}
     </tab>

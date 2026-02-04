@@ -32,16 +32,7 @@ select
 	Code: code, Anzeigetext: display, Definition: definition
 ```
     </tab>
-    <tab title="Beschreibung">
-    @```
-from
-	CodeSystem
-where
-	url = 'http://example.org/CodeSystem/MeinCodeSystem'
-select
-	Beschreibung: description
-```
-    </tab>
+
     <tab title="XML">      
         {{xml}}
     </tab>
