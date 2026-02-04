@@ -84,5 +84,5 @@ for
 
 ### Constraints/Invarianten
 @``` 
-from StructureDefinition where url = %canonical for differential.element.constraint select Name: key, Schweregrad: severity, Beschreibung: human, Ausdruck: expression
+from StructureDefinition where url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportBundle' for differential.element.constraint select Name: key, Schweregrad: severity, Beschreibung: human, Ausdruck: expression
 ```
