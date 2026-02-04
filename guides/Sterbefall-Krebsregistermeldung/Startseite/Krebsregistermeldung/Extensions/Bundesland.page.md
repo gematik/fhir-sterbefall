@@ -18,26 +18,6 @@ select
 
 ### Inhalt
 
-@```
-from
-    StructureDefinition
-where
-    url = 'http://gematik.de/fhir/oegd/stf/StructureDefinition/StfBundeslandExtension'
-
-for snapshot.element
-where
-    mustSupport.exists()
-select {
-    ID: id,
-    Kurzbeschreibung: short,
-    Type: type[0].code,
-    Min: min,
-    Max: max,
-    VS_Url: binding.valueSet,
-    Strength: binding.strength
-}
-```
-
 <tabs>
   <tab title="Darstellung">{{tree, snapshot}}</tab>
   <tab title="Beschreibung"> 
