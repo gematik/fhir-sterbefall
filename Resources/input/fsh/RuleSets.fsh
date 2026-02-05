@@ -11,7 +11,7 @@ RuleSet: CodConObsReq(system, code, vs)
 * valueCodeableConcept from {vs} (required)
 
 RuleSet: Meta
-* ^version = "1.0.0-ballot"
+* ^version = "1.0.0"
 * ^status = #active
 * ^experimental = false
 * ^publisher = "ELFA Maßnahme Interoperabilität"
