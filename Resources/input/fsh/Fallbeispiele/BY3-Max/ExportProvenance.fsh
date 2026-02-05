@@ -8,6 +8,7 @@ Usage: #example
 * target[+] = Reference(StfDatei-Obduktion-BY3-Max)
 * target[+] = Reference(StfObservationKrebserkrankung-BY3-Max)
 * target[+] = Reference(StfObduktionAnfrage-BY3-Max)
+* target[+] = Reference(StfLeichenschau-BY3-Max)
 * target[+] = Reference(StfObduktion-BY3-Max)
 * target[+] = Reference(StfOrganisation-BY3-Max)
 * target[+] = Reference(StfOrganisation-GA-BY3-Max)

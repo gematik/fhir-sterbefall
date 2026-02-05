@@ -76,3 +76,6 @@ Usage: #example
 
 * entry[Inhalt][+] insert ExampleFullUrl(Provenance, StfSterbeurkundeAusstellung-BY3-Max)
 * entry[Inhalt][=].resource = StfSterbeurkundeAusstellung-BY3-Max
+
+* entry[Inhalt][+] insert ExampleFullUrl(Procedure, StfLeichenschau-BY3-Max)
+* entry[Inhalt][=].resource = StfLeichenschau-BY3-Max
