@@ -7,7 +7,7 @@
   "title": "STF ExportBundle Provenance",
   "status": "active",
   "experimental": false,
-  "date": "2025-12-05",
+  "date": "2026-02-05",
   "publisher": "ELFA Maßnahme Interoperabilität",
   "description": "Die StfExportProvenance Ressource dokumentiert die Herkunft und den Erstellungsprozess der im StfExportBundle enthaltenen Ressourcen. Außerdem wird die Ressource technisch für den Löschprozess benötigt.",
   "fhirVersion": "4.0.1",

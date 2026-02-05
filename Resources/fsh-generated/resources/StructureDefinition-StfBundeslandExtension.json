@@ -7,7 +7,7 @@
   "title": "STF Bundesland Extension",
   "status": "active",
   "experimental": false,
-  "date": "2025-12-05",
+  "date": "2026-02-05",
   "publisher": "ELFA Maßnahme Interoperabilität",
   "description": "Mit dieser Extension ist es möglich, ein Coding für deutsche Bundesländer an einer Adresse zu ergänzen.",
   "fhirVersion": "4.0.1",
