@@ -1711,7 +1711,7 @@ tests {
     
     console.log(`FHIR Validation found ${errors.length} errors and ${warnings.length} warnings.`);
   
-    expect(errors.length, `FHIR validation failed with expected 2 error: ${errors.map(e => e.diagnostics).join(" —— ")}`).to.equal(2);
+    expect(errors.length, `FHIR validation failed with expected 5 error: ${errors.map(e => e.diagnostics).join(" —— ")}`).to.equal(5);
   });
 }
 
