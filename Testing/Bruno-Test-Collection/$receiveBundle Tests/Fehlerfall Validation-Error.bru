@@ -16,7 +16,7 @@ post {
 body:json {
   {
     "resourceType": "Bundle",
-    "id": "ExportBundleExample",
+    "id": "StfExportBundle-BY3-Max",
     "meta": {
       "profile": [
         "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportBundle"
@@ -24,335 +24,100 @@ body:json {
     },
     "entry": [
       {
-        "fullUrl": "urn:uuid:41afdf2a-a1ab-483a-ae30-f4302c5bef46",
-        "resource": {
-          "resourceType": "PractitionerRole",
-          "id": "41afdf2a-a1ab-483a-ae30-f4302c5bef46",
-          "meta": {
-            "profile": [
-              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArztZuordnung"
-            ]
-          },
-          "specialty": [
-            {
-              "coding": [
-                {
-                  "code": "Krankenhausarzt",
-                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfFacharztgruppeCS",
-                  "display": "diensthabender Arzt/Ärztin im Krankenhaus"
-                }
-              ]
-            }
-          ],
-          "practitioner": {
-            "reference": "urn:uuid:f55058d9-ea20-482b-8ec6-045be8ac69f1"
-          },
-          "organization": {
-            "reference": "urn:uuid:1147216d-4e9f-4ffc-9a10-1b79bd667277"
-          }
-        }
-      },
-      {
-        "fullUrl": "urn:uuid:f55058d9-ea20-482b-8ec6-045be8ac69f1",
-        "resource": {
-          "resourceType": "Practitioner",
-          "id": "f55058d9-ea20-482b-8ec6-045be8ac69f1",
-          "meta": {
-            "profile": [
-              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArzt"
-            ]
-          },
-          "identifier": [
-            {
-              "type": {
-                "coding": [
-                  {
-                    "code": "ArztId",
-                    "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztIdentifierType"
-                  }
-                ]
-              },
-              "system": "https://example.de/arztliste",
-              "value": "123456"
-            },
-            {
-              "type": {
-                "coding": [
-                  {
-                    "system": "http://terminology.hl7.org/CodeSystem/v2-02032",
-                    "code": "LANR"
-                  }
-                ]
-              },
-              "system": "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR",
-              "value": "987654321"
-            },
-            {
-              "type": {
-                "coding": [
-                  {
-                    "code": "Zulassungsnr",
-                    "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztIdentifierType"
-                  }
-                ]
-              },
-              "system": "https://example.de/zulassung",
-              "value": "ZUL123456"
-            }
-          ],
-          "name": [
-            {
-              "given": [
-                "Hans"
-              ],
-              "prefix": [
-                "Dr. med."
-              ],
-              "_prefix": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
-                      "valueCode": "AC"
-                    }
-                  ]
-                }
-              ],
-              "use": "official",
-              "text": "Dr. med. Hans Müller",
-              "family": "Müller"
-            }
-          ],
-          "address": [
-            {
-              "line": [
-                "Hauptstraße 1"
-              ],
-              "_line": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-                      "valueString": "Hauptstraße"
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-                      "valueString": "1"
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
-                      "valueString": "EG"
-                    }
-                  ]
-                }
-              ],
-              "type": "both",
-              "city": "Musterstadt",
-              "postalCode": "12345",
-              "country": "DE"
-            }
-          ],
-          "telecom": [
-            {
-              "system": "phone",
-              "value": "+49-123-456789"
-            },
-            {
-              "system": "fax",
-              "value": "+49-123-456788"
-            }
-          ],
-          "qualification": [
-            {
-              "code": {
-                "coding": [
-                  {
-                    "code": "Krankenhaus",
-                    "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfBerufsgruppeCS",
-                    "display": "Krankenhaus"
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      },
-      {
-        "fullUrl": "urn:uuid:cabda3e0-609f-4549-83ec-a9883f754f2e",
-        "resource": {
-          "resourceType": "DocumentReference",
-          "id": "cabda3e0-609f-4549-83ec-a9883f754f2e",
-          "meta": {
-            "profile": [
-              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDatei"
-            ]
-          },
-          "identifier": [
-            {
-              "type": {
-                "coding": [
-                  {
-                    "code": "PI",
-                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                    "display": "Patient internal identifier"
-                  }
-                ]
-              },
-              "value": "S4567/2025"
-            }
-          ],
-          "author": [
-            {
-              "reference": "urn:uuid:1147216d-4e9f-4ffc-9a10-1b79bd667277",
-              "display": "Standesamt Berlin-Mitte"
-            }
-          ],
-          "content": [
-            {
-              "attachment": {
-                "contentType": "application/pdf",
-                "data": "U3RlcmJldXJrdW5kZSBTNDU2Ny8yMDI1"
-              }
-            }
-          ],
-          "status": "current",
-          "type": {
-            "coding": [
-              {
-                "code": "Sterbeurkunde",
-                "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS",
-                "display": "Sterbeurkunde"
-              }
-            ]
-          },
-          "subject": {
-            "reference": "urn:uuid:45396da2-34e8-4b57-b2b3-3af03923ed6a",
-            "display": "Dr. Erika Müller"
-          },
-          "date": "2023-07-15T10:30:00+02:00"
-        }
-      },
-      {
-        "fullUrl": "urn:uuid:31773f34-377f-4e46-b353-0f58f42f9637",
-        "resource": {
-          "resourceType": "Procedure",
-          "id": "31773f34-377f-4e46-b353-0f58f42f9637",
-          "meta": {
-            "profile": [
-              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfLeichenschau"
-            ]
-          },
-          "subject": {
-            "reference": "urn:uuid:45396da2-34e8-4b57-b2b3-3af03923ed6a"
-          },
-          "code": {
-            "coding": [
-              {
-                "code": "29240004",
-                "system": "http://snomed.info/sct"
-              }
-            ]
-          },
-          "status": "completed",
-          "performedDateTime": "2025-03-01T10:00:00+01:00"
-        }
-      },
-      {
-        "fullUrl": "urn:uuid:1147216d-4e9f-4ffc-9a10-1b79bd667277",
-        "resource": {
-          "resourceType": "Organization",
-          "id": "1147216d-4e9f-4ffc-9a10-1b79bd667277",
-          "meta": {
-            "profile": [
-              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfOrganisation"
-            ]
-          },
-          "identifier": [
-            {
-              "system": "https://fhir.gematik.de/sid/standesamt",
-              "value": "SA12345"
-            }
-          ],
-          "type": [
-            {
-              "coding": [
-                {
-                  "system": "http://gematik.de/fhir/oegd/stf/ValueSet/StfOrganisationsTypVS",
-                  "code": "standesamt",
-                  "display": "Standesamt"
-                }
-              ]
-            }
-          ],
-          "address": [
-            {
-              "line": [
-                "Rathausplatz 1"
-              ],
-              "extension": [
-                {
-                  "valueCoding": {
-                    "code": "DE-NW",
-                    "display": "Nordrhein-Westfalen"
-                  },
-                  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfBundeslandExtension"
-                }
-              ],
-              "type": "both",
-              "city": "Musterstadt",
-              "postalCode": "12345",
-              "country": "DE"
-            }
-          ],
-          "contact": [
-            {
-              "name": {
-                "given": [
-                  "Max"
-                ],
-                "use": "official",
-                "text": "Max Mustermann",
-                "family": "Mustermann"
-              },
-              "telecom": [
-                {
-                  "system": "phone",
-                  "value": "+49 123 456789",
-                  "use": "work"
-                },
-                {
-                  "system": "email",
-                  "value": "max.mustermann@standesamt-musterstadt.de",
-                  "use": "work"
-                }
-              ]
-            }
-          ],
-          "partOf": {
-            "display": "Stadt Köln"
-          },
-          "extension": [
-            {
-              "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfPruefcodeExtension",
-              "valueString": "PCODE98765"
-            }
-          ],
-          "name": "Standesamt Musterstadt"
-        }
-      },
-      {
-        "fullUrl": "urn:uuid:69fa4ca2-b7e0-4bc9-80c4-f6d22d18aa12",
+        "fullUrl": "https://mein.fhir-server.local/fhir/Provenance/StfExportProvenance-BY3-Max",
         "resource": {
           "resourceType": "Provenance",
-          "id": "69fa4ca2-b7e0-4bc9-80c4-f6d22d18aa12",
+          "id": "StfExportProvenance-BY3-Max",
           "meta": {
             "profile": [
-              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfSterbeurkundeAusstellung"
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfExportProvenance"
             ]
           },
           "target": [
             {
-              "reference": "urn:uuid:45396da2-34e8-4b57-b2b3-3af03923ed6a"
+              "reference": "Practitioner/StfArzt-BY3-Max-Boese"
+            },
+            {
+              "reference": "Practitioner/StfArzt-BY3-Max-Gutmann"
+            },
+            {
+              "reference": "Practitioner/StfArzt-BY3-Max-Flurer"
+            },
+            {
+              "reference": "PractitionerRole/StfArztZuordnung-BY3-Max-Gutmann"
+            },
+            {
+              "reference": "DocumentReference/StfDatei-Obduktion-BY3-Max"
+            },
+            {
+              "reference": "Observation/StfObservationKrebserkrankung-BY3-Max"
+            },
+            {
+              "reference": "ServiceRequest/StfObduktionAnfrage-BY3-Max"
+            },
+            {
+              "reference": "Procedure/StfLeichenschau-BY3-Max"
+            },
+            {
+              "reference": "Procedure/StfObduktion-BY3-Max"
+            },
+            {
+              "reference": "Organization/StfOrganisation-BY3-Max"
+            },
+            {
+              "reference": "Organization/StfOrganisation-GA-BY3-Max"
+            },
+            {
+              "reference": "Organization/StfOrganisation-GM-BY3-Max"
+            },
+            {
+              "reference": "Observation/StfTodesursache-Su-BY3-Max"
+            },
+            {
+              "reference": "Observation/StfTodesursache2-Su-BY3-Max"
+            },
+            {
+              "reference": "Observation/StfTodesursache3-Su-BY3-Max"
+            },
+            {
+              "reference": "Observation/StfTodesursache4-Su-BY3-Max"
+            },
+            {
+              "reference": "Observation/StfTodesursache5-Su-BY3-Max"
+            },
+            {
+              "reference": "Observation/StfTodesursache-Os-BY3-Max"
+            },
+            {
+              "reference": "Observation/StfTodesursache2-Os-BY3-Max"
+            },
+            {
+              "reference": "Observation/StfTodesursache3-Os-BY3-Max"
+            },
+            {
+              "reference": "Observation/StfTodesursache4-Os-BY3-Max"
+            },
+            {
+              "reference": "Observation/StfTodesursache5-Os-BY3-Max"
+            },
+            {
+              "reference": "Patient/StfVerstorbenePerson-BY3-Max"
+            },
+            {
+              "reference": "Patient/StfVerstorbenePersonPseudonymisiert-BY3-Max"
+            },
+            {
+              "reference": "Provenance/StfSterbeurkundeAusstellung-BY3-Max"
+            }
+          ],
+          "agent": [
+            {
+              "who": {
+                "display": "Software des GA Nürnberg"
+              },
+              "onBehalfOf": {
+                "reference": "Organization/StfOrganisation-GA-BY3-Max"
+              }
             }
           ],
           "reason": [
@@ -365,191 +130,37 @@ body:json {
               ]
             }
           ],
-          "agent": [
-            {
-              "who": {
-                "reference": "urn:uuid:1147216d-4e9f-4ffc-9a10-1b79bd667277"
-              }
-            }
-          ],
           "activity": {
             "coding": [
               {
-                "code": "LA",
-                "system": "http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion"
+                "code": "CREATE",
+                "system": "http://terminology.hl7.org/CodeSystem/v3-DataOperation"
               }
             ]
           },
-          "recorded": "2023-10-15T14:28:00Z"
+          "recorded": "2025-06-01T12:00:00+02:00"
         }
       },
       {
-        "fullUrl": "urn:uuid:a8085a69-66a4-478b-8f25-1ee2d0a09090",
+        "fullUrl": "https://mein.fhir-server.local/fhir/Practitioner/StfArzt-BY3-Max-Boese",
         "resource": {
-          "resourceType": "Observation",
-          "id": "a8085a69-66a4-478b-8f25-1ee2d0a09090",
+          "resourceType": "Practitioner",
+          "id": "StfArzt-BY3-Max-Boese",
           "meta": {
             "profile": [
-              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
-            ]
-          },
-          "performer": [
-            {
-              "reference": "urn:uuid:f55058d9-ea20-482b-8ec6-045be8ac69f1"
-            }
-          ],
-          "valueCodeableConcept": {
-            "coding": [
-              {
-                "system": "http://hl7.org/fhir/sid/icd-10",
-                "version": "2023",
-                "code": "I21.0",
-                "display": "Akuter transmuraler Myokardinfarkt der Vorderwand"
-              }
-            ]
-          },
-          "note": [
-            {
-              "text": "Patient erlitt einen massiven Herzinfarkt nach längerer kardialer Vorgeschichte mit koronarer Herzkrankheit und Bluthochdruck."
-            }
-          ],
-          "component": [
-            {
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "code": "N",
-                    "system": "http://terminology.hl7.org/CodeSystem/v2-0532",
-                    "display": "Nein"
-                  }
-                ]
-              },
-              "code": {
-                "coding": [
-                  {
-                    "code": "nichtNatuerlicherTod",
-                    "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                  }
-                ]
-              }
-            },
-            {
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/sid/icd-10",
-                    "code": "I25.1",
-                    "display": "Atherosklerose des Herzens",
-                    "version": "2023"
-                  }
-                ]
-              },
-              "code": {
-                "coding": [
-                  {
-                    "code": "todesursacheKlassifikation",
-                    "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                  }
-                ]
-              }
-            },
-            {
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "code": "Obduktionsschein",
-                    "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
-                  }
-                ]
-              },
-              "code": {
-                "coding": [
-                  {
-                    "code": "quelle",
-                    "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
-                  }
-                ]
-              }
-            }
-          ],
-          "hasMember": [
-            {
-              "extension": [
-                {
-                  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursacheTypExtension",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "code": "TU3",
-                        "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
-                        "display": "Todesursache 3"
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "status": "final",
-          "code": {
-            "coding": [
-              {
-                "code": "184305005",
-                "system": "http://snomed.info/sct",
-                "display": "Cause of Death"
-              }
-            ]
-          },
-          "subject": {
-            "reference": "urn:uuid:45396da2-34e8-4b57-b2b3-3af03923ed6a",
-            "display": "Max Mustermann"
-          },
-          "effectiveDateTime": "2023-07-10"
-        }
-      },
-      {
-        "fullUrl": "urn:uuid:45396da2-34e8-4b57-b2b3-3af03923ed6a",
-        "resource": {
-          "resourceType": "Patient",
-          "id": "45396da2-34e8-4b57-b2b3-3af03923ed6a",
-          "meta": {
-            "profile": [
-              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfVerstorbenePerson"
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArzt"
             ]
           },
           "identifier": [
             {
-              "type": {
-                "coding": [
-                  {
-                    "code": "PI",
-                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                    "display": "Patient internal identifier"
-                  }
-                ]
-              },
-              "assigner": {
-                "display": "Gesundheitsamt Musterstadt"
-              },
-              "value": "GA78901"
-            },
-            {
-              "type": {
-                "coding": [
-                  {
-                    "code": "DC",
-                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                    "display": "Death Certificate ID"
-                  }
-                ]
-              },
-              "value": "S4567/2025"
+              "system": "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR",
+              "value": "456"
             }
           ],
           "name": [
             {
               "given": [
-                "Erika"
+                "Kamilla"
               ],
               "prefix": [
                 "Dr."
@@ -565,74 +176,1522 @@ body:json {
                 }
               ],
               "use": "official",
-              "family": "Müller"
-            },
-            {
-              "use": "maiden",
-              "family": "Schmidt"
+              "text": "Dr. Kamilla Böse",
+              "family": "Böse"
             }
           ],
           "address": [
             {
               "line": [
-                "Musterweg 123"
+                "Kilianstr. 5"
               ],
               "_line": [
                 {
                   "extension": [
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
-                      "valueString": "Musterweg"
+                      "valueString": "Kilianstr."
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
-                      "valueString": "123"
+                      "valueString": "5"
+                    }
+                  ]
+                }
+              ],
+              "type": "both",
+              "city": "Nürnberg",
+              "postalCode": "90425",
+              "country": "DE"
+            }
+          ],
+          "telecom": [
+            {
+              "system": "phone",
+              "value": "0911/488356"
+            }
+          ]
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/Practitioner/StfArzt-BY3-Max-Gutmann",
+        "resource": {
+          "resourceType": "Practitioner",
+          "id": "StfArzt-BY3-Max-Gutmann",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArzt"
+            ]
+          },
+          "identifier": [
+            {
+              "system": "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR",
+              "value": "564"
+            }
+          ],
+          "name": [
+            {
+              "given": [
+                "Emil",
+                "Emil"
+              ],
+              "prefix": [
+                "Dr."
+              ],
+              "_prefix": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                      "valueCode": "AC"
+                    }
+                  ]
+                }
+              ],
+              "use": "official",
+              "text": "Dr. Emil Gutmann",
+              "family": "Gutmann"
+            }
+          ],
+          "address": [
+            {
+              "line": [
+                "Bucher Str. 36"
+              ],
+              "_line": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                      "valueString": "Bucher Str."
                     },
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator",
-                      "valueString": "2. Stock"
+                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                      "valueString": "36"
+                    }
+                  ]
+                }
+              ],
+              "type": "both",
+              "city": "Nürnberg",
+              "postalCode": "90408",
+              "country": "DE"
+            }
+          ],
+          "telecom": [
+            {
+              "system": "phone",
+              "value": "0911/638355"
+            }
+          ]
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/Practitioner/StfArzt-BY3-Max-Flurer",
+        "resource": {
+          "resourceType": "Practitioner",
+          "id": "StfArzt-BY3-Max-Flurer",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArzt"
+            ]
+          },
+          "identifier": [
+            {
+              "system": "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_ANR",
+              "value": "645"
+            }
+          ],
+          "name": [
+            {
+              "given": [
+                "Sieglinde"
+              ],
+              "use": "official",
+              "text": "Sieglinde Flurer",
+              "family": "Flurer"
+            }
+          ],
+          "address": [
+            {
+              "line": [
+                "Kellerstr. 5"
+              ],
+              "_line": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                      "valueString": "Kellerstr."
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                      "valueString": "5"
+                    }
+                  ]
+                }
+              ],
+              "type": "both",
+              "city": "Nürnberg",
+              "postalCode": "90408",
+              "country": "DE"
+            }
+          ]
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/PractitionerRole/StfArztZuordnung-BY3-Max-Gutmann",
+        "resource": {
+          "resourceType": "PractitionerRole",
+          "id": "StfArztZuordnung-BY3-Max-Gutmann",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArztZuordnung"
+            ]
+          },
+          "code": [
+            {
+              "coding": [
+                {
+                  "code": "Krankenhaus",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfBerufsgruppeCS",
+                  "display": "Krankenhaus"
+                }
+              ]
+            }
+          ],
+          "specialty": [
+            {
+              "coding": [
+                {
+                  "code": "Rechtsmediziner",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztrolleCS"
+                }
+              ]
+            }
+          ],
+          "practitioner": {
+            "reference": "Practitioner/StfArzt-BY3-Max-Gutmann"
+          },
+          "organization": {
+            "reference": "Organization/StfOrganisation-GM-BY3-Max"
+          }
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/DocumentReference/StfDatei-Obduktion-BY3-Max",
+        "resource": {
+          "resourceType": "DocumentReference",
+          "id": "StfDatei-Obduktion-BY3-Max",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfDatei"
+            ]
+          },
+          "author": [
+            {
+              "reference": "Practitioner/StfArzt-BY3-Max-Gutmann"
+            }
+          ],
+          "content": [
+            {
+              "attachment": {
+                "contentType": "application/pdf",
+                "data": "JVBERi0xLjcNCiW1tbW1DQoxIDAgb2JqDQo8PC9UeXBlL0NhdGFsb2cvUGFnZXMgMiAwIFIvTGFuZyhkZSkgL1N0cnVjdFRyZWVSb290IDE1IDAgUi9NYXJrSW5mbzw8L01hcmtlZCB0cnVlPj4vTWV0YWRhdGEgMjcgMCBSL1ZpZXdlclByZWZlcmVuY2VzIDI4IDAgUj4+DQplbmRvYmoNCjIgMCBvYmoNCjw8L1R5cGUvUGFnZXMvQ291bnQgMS9LaWRzWyAzIDAgUl0gPj4NCmVuZG9iag0KMyAwIG9iag0KPDwvVHlwZS9QYWdlL1BhcmVudCAyIDAgUi9SZXNvdXJjZXM8PC9Gb250PDwvRjEgNSAwIFIvRjIgMTIgMCBSPj4vRXh0R1N0YXRlPDwvR1MxMCAxMCAwIFIvR1MxMSAxMSAwIFI+Pi9Qcm9jU2V0Wy9QREYvVGV4dC9JbWFnZUIvSW1hZ2VDL0ltYWdlSV0gPj4vTWVkaWFCb3hbIDAgMCA1OTUuMzIgODQxLjkyXSAvQ29udGVudHMgNCAwIFIvR3JvdXA8PC9UeXBlL0dyb3VwL1MvVHJhbnNwYXJlbmN5L0NTL0RldmljZVJHQj4+L1RhYnMvUy9TdHJ1Y3RQYXJlbnRzIDA+Pg0KZW5kb2JqDQo0IDAgb2JqDQo8PC9GaWx0ZXIvRmxhdGVEZWNvZGUvTGVuZ3RoIDI3MD4+DQpzdHJlYW0NCniclVHLasMwELwL9A97TAq1d/UWGEFsK6GlOZQYeig9BJr6VNPH/0NlK8+ml+oyzGpndtmBcvOxHaCqynVz1wKWD9uhh9nr7raN8xCgbhv45AwLHJ9zlgBBe11IAU5R4QV87Th7uoGBs7rjrFwSCFt4A90bZ2M3AgFRUiiwShVOQPee+lYbQui/kzf0mdKerjh7rhCVCeQqJEpoE1+qzLWbULZ+qpOwQfqESgYaUYpcP6DRQdBJf9TtfYlkxl++SIsLHWE9cTKLo//0H+PVHImJu6TTuU7mbK5ugtDXex32GLkQp/1lVOEFunvOYjrvI2f/jEP8EYeyvnDmPI4phHz6Gcwv5kFcN/AD7ONw9w0KZW5kc3RyZWFtDQplbmRvYmoNCjUgMCBvYmoNCjw8L1R5cGUvRm9udC9TdWJ0eXBlL1R5cGUwL0Jhc2VGb250L0JDREVFRStBcHRvcyMyMERpc3BsYXkvRW5jb2RpbmcvSWRlbnRpdHktSC9EZXNjZW5kYW50Rm9udHMgNiAwIFIvVG9Vbmljb2RlIDIzIDAgUj4+DQplbmRvYmoNCjYgMCBvYmoNClsgNyAwIFJdIA0KZW5kb2JqDQo3IDAgb2JqDQo8PC9CYXNlRm9udC9CQ0RFRUUrQXB0b3MjMjBEaXNwbGF5L1N1YnR5cGUvQ0lERm9udFR5cGUyL1R5cGUvRm9udC9DSURUb0dJRE1hcC9JZGVudGl0eS9EVyAxMDAwL0NJRFN5c3RlbUluZm8gOCAwIFIvRm9udERlc2NyaXB0b3IgOSAwIFIvVyAyNSAwIFI+Pg0KZW5kb2JqDQo4IDAgb2JqDQo8PC9PcmRlcmluZyhJZGVudGl0eSkgL1JlZ2lzdHJ5KEFkb2JlKSAvU3VwcGxlbWVudCAwPj4NCmVuZG9iag0KOSAwIG9iag0KPDwvVHlwZS9Gb250RGVzY3JpcHRvci9Gb250TmFtZS9CQ0RFRUUrQXB0b3MjMjBEaXNwbGF5L0ZsYWdzIDMyL0l0YWxpY0FuZ2xlIDAvQXNjZW50IDkzOS9EZXNjZW50IC0yODIvQ2FwSGVpZ2h0IDkzOS9BdmdXaWR0aCA1NDAvTWF4V2lkdGggMTY3Mi9Gb250V2VpZ2h0IDQwMC9YSGVpZ2h0IDI1MC9TdGVtViA1NC9Gb250QkJveFsgLTUwMyAtMjgyIDExNjkgOTM5XSAvRm9udEZpbGUyIDI0IDAgUj4+DQplbmRvYmoNCjEwIDAgb2JqDQo8PC9UeXBlL0V4dEdTdGF0ZS9CTS9Ob3JtYWwvY2EgMT4+DQplbmRvYmoNCjExIDAgb2JqDQo8PC9UeXBlL0V4dEdTdGF0ZS9CTS9Ob3JtYWwvQ0EgMT4+DQplbmRvYmoNCjEyIDAgb2JqDQo8PC9UeXBlL0ZvbnQvU3VidHlwZS9UcnVlVHlwZS9OYW1lL0YyL0Jhc2VGb250L0JDREZFRStBcHRvcyMyMERpc3BsYXkvRW5jb2RpbmcvV2luQW5zaUVuY29kaW5nL0ZvbnREZXNjcmlwdG9yIDEzIDAgUi9GaXJzdENoYXIgMzIvTGFzdENoYXIgMzIvV2lkdGhzIDI2IDAgUj4+DQplbmRvYmoNCjEzIDAgb2JqDQo8PC9UeXBl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XSAgMjc4WyAyMTBdICAyOTVbIDQ0N10gIDMwNlsgNTA2XSAgMzIzWyA1MTNdICAzNDRbIDMxMF0gIDM0OFsgNDYzXSAgMzU3WyAzMDRdICAzNjJbIDUwNl0gIDM4OFsgNDQwXSAgOTg1WyAxOTNdICA5OTZbIDI0Nl0gXSANCmVuZG9iag0KMjYgMCBvYmoNClsgMTkzXSANCmVuZG9iag0KMjcgMCBvYmoNCjw8L1R5cGUvTWV0YWRhdGEvU3VidHlwZS9YTUwvTGVuZ3RoIDMwOTE+Pg0Kc3RyZWFtDQo8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/Pjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IjMuMS03MDEiPgo8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgo8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiAgeG1sbnM6cGRmPSJodHRwOi8vbnMuYWRvYmUuY29tL3BkZi8xLjMvIj4KPHBkZjpQcm9kdWNlcj5NaWNyb3NvZnTCriBXb3JkIGbDvHIgTWljcm9zb2Z0IDM2NTwvcGRmOlByb2R1Y2VyPjwvcmRmOkRlc2NyaXB0aW9uPgo8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIj4KPGRjOmNyZWF0b3I+PHJkZjpTZXE+PHJkZjpsaT5TY2jDtm4sIEpvbmFzPC9yZGY6bGk+PC9yZGY6U2VxPjwvZGM6Y3JlYXRvcj48L3JkZjpEZXNjcmlwdGlvbj4KPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyI+Cjx4bXA6Q3JlYXRvclRvb2w+TWljcm9zb2Z0wq4gV29yZCBmw7xyIE1pY3Jvc29mdCAzNjU8L3htcDpDcmVhdG9yVG9vbD48eG1wOkNyZWF0ZURhdGU+MjAyNS0xMi0xMVQxMDo0MjoxNyswMTowMDwveG1wOkNyZWF0ZURhdGU+PHhtcDpNb2RpZnlEYXRlPjIwMjUtMTItMTFUMTA6NDI6MTcrMDE6MDA8L3htcDpNb2RpZnlEYXRlPjwvcmRmOkRlc2NyaXB0aW9uPgo8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiAgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iPgo8eG1wTU06RG9jdW1lbnRJRD51dWlkOjEyNDkzM0MwLTkyNDAtNDdEQS04NzlGLThBQzAxMDU5NjY4MjwveG1wTU06RG9jdW1lbnRJRD48eG1wTU06SW5zdGFuY2VJRD51dWlkOjEyNDkzM0MwLTkyNDAtNDdEQS04NzlGLThBQzAxMDU5NjY4MjwveG1wTU06SW5zdGFuY2VJRD48L3JkZjpEZXNjcmlwdGlvbj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCjwvcmRmOlJERj48L3g6eG1wbWV0YT48P3hwYWNrZXQgZW5kPSJ3Ij8+DQplbmRzdHJlYW0NCmVuZG9iag0KMjggMCBvYmoNCjw8L0Rpc3BsYXlEb2NUaXRsZSB0cnVlPj4NCmVuZG9iag0KMjkgMCBvYmoNCjw8L1R5cGUvWFJlZi9TaXplIDI5L1dbIDEgNCAyXSAvUm9vdCAxIDAgUi9JbmZvIDE0IDAgUi9JRFs8QzAzMzQ5MTI0MDkyREE0Nzg3OUY4QUMwMTA1OTY2ODI+PEMwMzM0OTEyNDA5MkRBNDc4NzlGOEFDMDEwNTk2NjgyPl0gL0ZpbHRlci9GbGF0ZURlY29kZS9MZW5ndGggMTA4Pj4NCnN0cmVhbQ0KeJwtzL0RRWAQheHz+R1G4I4ZXVAAYqlMAcqS6sLcRhAqQGSEfM6xwT7JvgvYuW9j9w94mcRGzEXcTiziJN4oduKvJEhFK5SHB+DYnzkc4QpP+MKI7zKwXZQxj2eSNKQYSFmLnlR/4AFavw/RDQplbmRzdHJlYW0NCmVuZG9iag0KeHJlZg0KMCAzMA0KMDAwMDAwMDAxNSA2NTUzNSBmDQowMDAwMDAwMDE3IDAwMDAwIG4NCjAwMDAwMDAxNjMgMDAwMDAgbg0KMDAwMDAwMDIxOSAwMDAwMCBuDQowMDAwMDAwNTAzIDAwMDAwIG4NCjAwMDAwMDA4NDcgMDAwMDAgbg0KMDAwMDAwMDk4NSAwMDAwMCBuDQowMDAwMDAxMDEzIDAwMDAwIG4NCjAwMDAwMDExNzggMDAwMDAgbg0KMDAwMDAwMTI1MSAwMDAwMCBuDQowMDAwMDAxNDk4IDAwMDAwIG4NCjAwMDAwMDE1NTIgMDAwMDAgbg0KMDAwMDAwMTYwNiAwMDAwMCBuDQowMDAwMDAxNzgzIDAwMDAwIG4NCjAwMDAwMDIwMzEgMDAwMDAgbg0KMDAwMDAwMDAxNiA2NTUzNSBmDQowMDAwMDAwMDE3IDY1NTM1IGYNCjAwMDAwMDAwMTggNjU1MzUgZg0KMDAwMDAwMDAxOSA2NTUzNSBmDQowMDAwMDAwMDIwIDY1NTM1IGYNCjAwMDAwMDAwMjEgNjU1MzUgZg0KMDAwMDAwMDAyMiA2NTUzNSBmDQowMDAwMDAwMDAwIDY1NTM1IGYNCjAwMDAwMDI3NDYgMDAwMDAgbg0KMDAwMDAwMzEzMiAwMDAwMCBuDQowMDAwMDExNjE4IDAwMDAwIG4NCjAwMDAwMTE4MzUgMDAwMDAgbg0KMDAwMDAxMTg2MiAwMDAwMCBuDQowMDAwMDE1MDM2IDAwMDAwIG4NCjAwMDAwMTUwODEgMDAwMDAgbg0KdHJhaWxlcg0KPDwvU2l6ZSAzMC9Sb290IDEgMCBSL0luZm8gMTQgMCBSL0lEWzxDMDMzNDkxMjQwOTJEQTQ3ODc5RjhBQzAxMDU5NjY4Mj48QzAzMzQ5MTI0MDkyREE0Nzg3OUY4QUMwMTA1OTY2ODI+XSA+Pg0Kc3RhcnR4cmVmDQoxNTM5MA0KJSVFT0YNCnhyZWYNCjAgMA0KdHJhaWxlcg0KPDwvU2l6ZSAzMC9Sb290IDEgMCBSL0luZm8gMTQgMCBSL0lEWzxDMDMzNDkxMjQwOTJEQTQ3ODc5RjhBQzAxMDU5NjY4Mj48QzAzMzQ5MTI0MDkyREE0Nzg3OUY4QUMwMTA1OTY2ODI+XSAvUHJldiAxNTM5MC9YUmVmU3RtIDE1MDgxPj4NCnN0YXJ0eHJlZg0KMTYxNDcNCiUlRU9G"
+              }
+            }
+          ],
+          "status": "current",
+          "type": {
+            "coding": [
+              {
+                "code": "Obduktionsschein",
+                "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS"
+              }
+            ]
+          },
+          "subject": {
+            "reference": "Patient/StfVerstorbenePerson-BY3-Max"
+          },
+          "date": "2025-01-05T10:30:00+01:00"
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/Observation/StfObservationKrebserkrankung-BY3-Max",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "StfObservationKrebserkrankung-BY3-Max",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObservationKrebserkrankung"
+            ]
+          },
+          "partOf": [
+            {
+              "reference": "Procedure/StfLeichenschau-BY3-Max"
+            }
+          ],
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "Y",
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0532"
+              }
+            ]
+          },
+          "code": {
+            "coding": [
+              {
+                "code": "108369006",
+                "system": "http://snomed.info/sct"
+              }
+            ]
+          },
+          "subject": {
+            "reference": "Patient/StfVerstorbenePerson-BY3-Max"
+          },
+          "status": "final"
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/ServiceRequest/StfObduktionAnfrage-BY3-Max",
+        "resource": {
+          "resourceType": "ServiceRequest",
+          "id": "StfObduktionAnfrage-BY3-Max",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObduktionAnfrage"
+            ]
+          },
+          "status": "completed",
+          "intent": "order",
+          "subject": {
+            "reference": "Patient/StfVerstorbenePerson-BY3-Max"
+          }
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/Procedure/StfObduktion-BY3-Max",
+        "resource": {
+          "resourceType": "Procedure",
+          "id": "StfObduktion-BY3-Max",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfObduktion"
+            ]
+          },
+          "basedOn": [
+            {
+              "reference": "ServiceRequest/StfObduktionAnfrage-BY3-Max"
+            }
+          ],
+          "location": {
+            "display": "Nürnberg"
+          },
+          "performer": [
+            {
+              "function": {
+                "coding": [
+                  {
+                    "code": "PathInst",
+                    "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfOrganisationsTypCS"
+                  }
+                ]
+              },
+              "actor": {
+                "reference": "Practitioner/StfArzt-BY3-Max-Gutmann"
+              },
+              "onBehalfOf": {
+                "reference": "Organization/StfOrganisation-GM-BY3-Max"
+              }
+            }
+          ],
+          "report": [
+            {
+              "reference": "DocumentReference/StfDatei-Obduktion-BY3-Max"
+            }
+          ],
+          "subject": {
+            "reference": "Patient/StfVerstorbenePerson-BY3-Max"
+          },
+          "status": "completed",
+          "performedDateTime": "2025-05-01"
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/Organization/StfOrganisation-BY3-Max",
+        "resource": {
+          "resourceType": "Organization",
+          "id": "StfOrganisation-BY3-Max",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfOrganisation"
+            ]
+          },
+          "type": [
+            {
+              "coding": [
+                {
+                  "code": "StAmt",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfOrganisationsTypCS"
+                }
+              ]
+            }
+          ],
+          "address": [
+            {
+              "line": [
+                "Hirschelgasse 32"
+              ],
+              "_line": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                      "valueString": "Hirschelgasse"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                      "valueString": "32"
                     }
                   ]
                 }
               ],
               "extension": [
                 {
-                  "extension": [
-                    {
-                      "url": "Bundesland",
-                      "valueInteger": 5
-                    },
-                    {
-                      "url": "Regierungsbezirk",
-                      "valueInteger": 1
-                    },
-                    {
-                      "url": "Landkreis",
-                      "valueInteger": 62
-                    },
-                    {
-                      "url": "Gemeinde",
-                      "valueInteger": 14
-                    }
-                  ],
-                  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfGemeindekennzahlExtension"
+                  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfBundeslandExtension",
+                  "valueCoding": {
+                    "code": "DE-BY",
+                    "system": "urn:iso:std:iso:3166-2:de"
+                  }
                 }
               ],
-              "type": "both",
-              "city": "Musterstadt",
-              "postalCode": "12345",
+              "postalCode": "90403",
+              "city": "Nürnberg",
               "country": "DE"
             }
           ],
-          "gender": "female",
-          "birthDate": "1945-03-15",
-          "deceasedDateTime": "2025-03-01T08:30:00+01:00"
+          "name": "Standesamt Nürnberg"
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/Organization/StfOrganisation-GA-BY3-Max",
+        "resource": {
+          "resourceType": "Organization",
+          "id": "StfOrganisation-GA-BY3-Max",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfOrganisation"
+            ]
+          },
+          "type": [
+            {
+              "coding": [
+                {
+                  "code": "GA",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfOrganisationsTypCS"
+                }
+              ]
+            }
+          ],
+          "address": [
+            {
+              "line": [
+                "Hirschelgasse 32"
+              ],
+              "_line": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                      "valueString": "Hirschelgasse"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                      "valueString": "32"
+                    }
+                  ]
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfBundeslandExtension",
+                  "valueCoding": {
+                    "code": "DE-BY",
+                    "system": "urn:iso:std:iso:3166-2:de"
+                  }
+                }
+              ],
+              "postalCode": "90403",
+              "city": "Nürnberg",
+              "country": "DE"
+            }
+          ],
+          "name": "Gesundheitsamt Nürnberg"
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/Organization/StfOrganisation-GM-BY3-Max",
+        "resource": {
+          "resourceType": "Organization",
+          "id": "StfOrganisation-GM-BY3-Max",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfOrganisation"
+            ]
+          },
+          "type": [
+            {
+              "coding": [
+                {
+                  "code": "GerichtsmedInst",
+                  "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfOrganisationsTypCS"
+                }
+              ]
+            }
+          ],
+          "address": [
+            {
+              "line": [
+                "Hirschelgasse 32"
+              ],
+              "_line": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                      "valueString": "Hirschelgasse"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                      "valueString": "32"
+                    }
+                  ]
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfBundeslandExtension",
+                  "valueCoding": {
+                    "code": "DE-BY",
+                    "system": "urn:iso:std:iso:3166-2:de"
+                  }
+                }
+              ],
+              "postalCode": "90403",
+              "city": "Nürnberg",
+              "country": "DE"
+            }
+          ],
+          "name": "Gerichtsmedizin Nürnberg"
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/Observation/StfTodesursache-Su-BY3-Max",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "StfTodesursache-Su-BY3-Max",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
+            ]
+          },
+          "partOf": [
+            {
+              "reference": "Procedure/StfLeichenschau-BY3-Max"
+            }
+          ],
+          "performer": [
+            {
+              "reference": "Practitioner/StfArzt-BY3-Max-Boese"
+            }
+          ],
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "J96",
+                "version": "2019"
+              }
+            ],
+            "text": "respiratorische Insuffizienz"
+          },
+          "component": [
+            {
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "LA26682-7",
+                    "system": "http://loinc.org",
+                    "display": "Immediate/Primary"
+                  }
+                ]
+              },
+              "code": {
+                "coding": [
+                  {
+                    "code": "82791-5",
+                    "system": "http://loinc.org"
+                  }
+                ]
+              }
+            },
+            {
+              "code": {
+                "coding": [
+                  {
+                    "code": "zeitdauerBeginnBisTod",
+                    "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                  }
+                ]
+              },
+              "valueString": "30 Minuten"
+            },
+            {
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "Y",
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0532"
+                  }
+                ],
+                "text": "Sturz im häuslichen Umfeld vor 3 Tagen, von oberer Stufe im Treppeneingangsbereich; mit dem\r\nBauch auf mitgeführte Gehhilfe gestürzt, leichte Abschürfungen im Gesicht; Hämatom im\r\nBauchraum; später über Buchschmerzen /Unwohlsein geklagt. Vermutung ggf. innere\r\nVerletzungen, die unbehandelt geblieben sind."
+              },
+              "code": {
+                "coding": [
+                  {
+                    "code": "nichtNatuerlicherTod",
+                    "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                  }
+                ]
+              }
+            },
+            {
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/sid/icd-10",
+                    "version": "2019",
+                    "code": "W10"
+                  }
+                ],
+                "text": "mgl. Innere Verletzungen"
+              },
+              "code": {
+                "coding": [
+                  {
+                    "code": "todesursacheKlassifikation",
+                    "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                  }
+                ]
+              }
+            },
+            {
+              "code": {
+                "coding": [
+                  {
+                    "code": "todesursacheKlassifikation",
+                    "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                  }
+                ]
+              },
+              "valueString": "Sturz in häuslicher Umgebung vor 3 Tagen"
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "code": "184305005",
+                "system": "http://snomed.info/sct",
+                "display": "Cause of Death"
+              }
+            ]
+          },
+          "hasMember": [
+            {
+              "reference": "Observation/StfTodesursache2-Su-BY3-Max"
+            },
+            {
+              "reference": "Observation/StfTodesursache3-Su-BY3-Max"
+            },
+            {
+              "reference": "Observation/StfTodesursache4-Su-BY3-Max"
+            },
+            {
+              "reference": "Observation/StfTodesursache5-Su-BY3-Max"
+            }
+          ],
+          "note": [
+            {
+              "text": "Pankreaskarzinom mit Lebermetastasen, palliative Therapie Sturz in häuslicher Umgebung, Abschürfungen im Gesicht, Hämatom im Bauchraum"
+            },
+            {
+              "text": "Hirninfarkt beidseitig vor 8 Monaten, infolge einseitige Lähmung links\r\nFortgeschrittenes Pankreaskarzinom mit Lebermetastasen, keine OO, Chemotherapie\r\nabgebrochen, sonstige palliative Therapie"
+            }
+          ],
+          "effectiveDateTime": "2025-01-01T10:30:00+01:00",
+          "status": "final",
+          "subject": {
+            "reference": "Patient/StfVerstorbenePerson-BY3-Max"
+          }
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/Observation/StfTodesursache2-Su-BY3-Max",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "StfTodesursache2-Su-BY3-Max",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
+            ]
+          },
+          "partOf": [
+            {
+              "reference": "Procedure/StfLeichenschau-BY3-Max"
+            }
+          ],
+          "performer": [
+            {
+              "reference": "Practitioner/StfArzt-BY3-Max-Boese"
+            }
+          ],
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "J84",
+                "version": "2019"
+              }
+            ],
+            "text": "interstitielle pulmonale Pneumonitis"
+          },
+          "component": [
+            {
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "LA26680-1",
+                    "system": "http://loinc.org",
+                    "display": "Contributory"
+                  }
+                ]
+              },
+              "code": {
+                "coding": [
+                  {
+                    "code": "82791-5",
+                    "system": "http://loinc.org"
+                  }
+                ]
+              }
+            },
+            {
+              "code": {
+                "coding": [
+                  {
+                    "code": "zeitdauerBeginnBisTod",
+                    "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                  }
+                ]
+              },
+              "valueString": "1 Woche"
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "code": "184305005",
+                "system": "http://snomed.info/sct"
+              }
+            ]
+          },
+          "effectiveDateTime": "2025-01-01T10:30:00+01:00",
+          "status": "final",
+          "subject": {
+            "reference": "Patient/StfVerstorbenePerson-BY3-Max"
+          }
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/Observation/StfTodesursache3-Su-BY3-Max",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "StfTodesursache3-Su-BY3-Max",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
+            ]
+          },
+          "partOf": [
+            {
+              "reference": "Procedure/StfLeichenschau-BY3-Max"
+            }
+          ],
+          "performer": [
+            {
+              "reference": "Practitioner/StfArzt-BY3-Max-Boese"
+            }
+          ],
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "C25",
+                "version": "2019"
+              }
+            ],
+            "text": "Pankresakarzinom"
+          },
+          "component": [
+            {
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "LA26681-9",
+                    "system": "http://loinc.org",
+                    "display": "Underlying"
+                  }
+                ]
+              },
+              "code": {
+                "coding": [
+                  {
+                    "code": "82791-5",
+                    "system": "http://loinc.org"
+                  }
+                ]
+              }
+            },
+            {
+              "code": {
+                "coding": [
+                  {
+                    "code": "zeitdauerBeginnBisTod",
+                    "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                  }
+                ]
+              },
+              "valueString": "Seit 10/2024"
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "code": "184305005",
+                "system": "http://snomed.info/sct"
+              }
+            ]
+          },
+          "effectiveDateTime": "2025-01-01T10:30:00+01:00",
+          "status": "final",
+          "subject": {
+            "reference": "Patient/StfVerstorbenePerson-BY3-Max"
+          }
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/Observation/StfTodesursache4-Su-BY3-Max",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "StfTodesursache4-Su-BY3-Max",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
+            ]
+          },
+          "partOf": [
+            {
+              "reference": "Procedure/StfLeichenschau-BY3-Max"
+            }
+          ],
+          "performer": [
+            {
+              "reference": "Practitioner/StfArzt-BY3-Max-Boese"
+            }
+          ],
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "C78",
+                "version": "2019"
+              }
+            ],
+            "text": "Lebermetastasen"
+          },
+          "component": [
+            {
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "LA46-8",
+                    "system": "http://loinc.org",
+                    "display": "Other"
+                  }
+                ]
+              },
+              "code": {
+                "coding": [
+                  {
+                    "code": "82791-5",
+                    "system": "http://loinc.org"
+                  }
+                ]
+              }
+            },
+            {
+              "code": {
+                "coding": [
+                  {
+                    "code": "zeitdauerBeginnBisTod",
+                    "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                  }
+                ]
+              },
+              "valueString": "Seit 10/2024"
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "code": "184305005",
+                "system": "http://snomed.info/sct"
+              }
+            ]
+          },
+          "effectiveDateTime": "2025-01-01T10:30:00+01:00",
+          "status": "final",
+          "subject": {
+            "reference": "Patient/StfVerstorbenePerson-BY3-Max"
+          }
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/Observation/StfTodesursache5-Su-BY3-Max",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "StfTodesursache5-Su-BY3-Max",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
+            ]
+          },
+          "partOf": [
+            {
+              "reference": "Procedure/StfLeichenschau-BY3-Max"
+            }
+          ],
+          "performer": [
+            {
+              "reference": "Practitioner/StfArzt-BY3-Max-Boese"
+            }
+          ],
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "I63",
+                "version": "2019"
+              }
+            ],
+            "text": "Hirninfarkt"
+          },
+          "component": [
+            {
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "LA46-8",
+                    "system": "http://loinc.org",
+                    "display": "Other"
+                  }
+                ]
+              },
+              "code": {
+                "coding": [
+                  {
+                    "code": "82791-5",
+                    "system": "http://loinc.org"
+                  }
+                ]
+              }
+            },
+            {
+              "code": {
+                "coding": [
+                  {
+                    "code": "zeitdauerBeginnBisTod",
+                    "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfObservationCodesErweiterungCS"
+                  }
+                ]
+              },
+              "valueString": "Vor 8 Monaten"
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "code": "184305005",
+                "system": "http://snomed.info/sct"
+              }
+            ]
+          },
+          "effectiveDateTime": "2025-01-01T10:30:00+01:00",
+          "status": "final",
+          "subject": {
+            "reference": "Patient/StfVerstorbenePerson-BY3-Max"
+          }
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/Observation/StfTodesursache-Os-BY3-Max",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "StfTodesursache-Os-BY3-Max",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
+            ]
+          },
+          "partOf": [
+            {
+              "reference": "Procedure/StfObduktion-BY3-Max"
+            }
+          ],
+          "performer": [
+            {
+              "reference": "Practitioner/StfArzt-BY3-Max-Boese"
+            }
+          ],
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "I99",
+                "version": "2019"
+              }
+            ],
+            "text": "Herz-Kreislaufversagen"
+          },
+          "component": [
+            {
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "LA26682-7",
+                    "system": "http://loinc.org",
+                    "display": "Immediate/Primary"
+                  }
+                ]
+              },
+              "code": {
+                "coding": [
+                  {
+                    "code": "82791-5",
+                    "system": "http://loinc.org"
+                  }
+                ]
+              }
+            }
+          ],
+          "hasMember": [
+            {
+              "reference": "Observation/StfTodesursache2-Os-BY3-Max"
+            },
+            {
+              "reference": "Observation/StfTodesursache3-Os-BY3-Max"
+            },
+            {
+              "reference": "Observation/StfTodesursache4-Os-BY3-Max"
+            },
+            {
+              "reference": "Observation/StfTodesursache5-Os-BY3-Max"
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "code": "184305005",
+                "system": "http://snomed.info/sct"
+              }
+            ]
+          },
+          "effectiveDateTime": "2025-01-05T10:30:00+01:00",
+          "status": "final",
+          "subject": {
+            "reference": "Patient/StfVerstorbenePerson-BY3-Max"
+          }
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/Observation/StfTodesursache2-Os-BY3-Max",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "StfTodesursache2-Os-BY3-Max",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
+            ]
+          },
+          "partOf": [
+            {
+              "reference": "Procedure/StfObduktion-BY3-Max"
+            }
+          ],
+          "performer": [
+            {
+              "reference": "Practitioner/StfArzt-BY3-Max-Boese"
+            }
+          ],
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "R58",
+                "version": "2019"
+              }
+            ],
+            "text": "innere Blutungen im Bauchraum"
+          },
+          "component": [
+            {
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "LA26680-1",
+                    "system": "http://loinc.org",
+                    "display": "Contributory"
+                  }
+                ]
+              },
+              "code": {
+                "coding": [
+                  {
+                    "code": "82791-5",
+                    "system": "http://loinc.org"
+                  }
+                ]
+              }
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "code": "184305005",
+                "system": "http://snomed.info/sct"
+              }
+            ]
+          },
+          "effectiveDateTime": "2025-01-05T10:30:00+01:00",
+          "status": "final",
+          "subject": {
+            "reference": "Patient/StfVerstorbenePerson-BY3-Max"
+          }
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/Observation/StfTodesursache3-Os-BY3-Max",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "StfTodesursache3-Os-BY3-Max",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
+            ]
+          },
+          "partOf": [
+            {
+              "reference": "Procedure/StfObduktion-BY3-Max"
+            }
+          ],
+          "performer": [
+            {
+              "reference": "Practitioner/StfArzt-BY3-Max-Boese"
+            }
+          ],
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "S36",
+                "version": "2019"
+              }
+            ],
+            "text": "Milzruptur"
+          },
+          "component": [
+            {
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "LA26681-9",
+                    "system": "http://loinc.org",
+                    "display": "Underlying"
+                  }
+                ]
+              },
+              "code": {
+                "coding": [
+                  {
+                    "code": "82791-5",
+                    "system": "http://loinc.org"
+                  }
+                ]
+              }
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "code": "184305005",
+                "system": "http://snomed.info/sct"
+              }
+            ]
+          },
+          "effectiveDateTime": "2025-01-05T10:30:00+01:00",
+          "status": "final",
+          "subject": {
+            "reference": "Patient/StfVerstorbenePerson-BY3-Max"
+          }
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/Observation/StfTodesursache4-Os-BY3-Max",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "StfTodesursache4-Os-BY3-Max",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
+            ]
+          },
+          "partOf": [
+            {
+              "reference": "Procedure/StfObduktion-BY3-Max"
+            }
+          ],
+          "performer": [
+            {
+              "reference": "Practitioner/StfArzt-BY3-Max-Boese"
+            }
+          ],
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "C25",
+                "version": "2019"
+              }
+            ],
+            "text": "Pankreaskarzinom"
+          },
+          "component": [
+            {
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "LA46-8",
+                    "system": "http://loinc.org",
+                    "display": "Other"
+                  }
+                ]
+              },
+              "code": {
+                "coding": [
+                  {
+                    "code": "82791-5",
+                    "system": "http://loinc.org"
+                  }
+                ]
+              }
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "code": "184305005",
+                "system": "http://snomed.info/sct"
+              }
+            ]
+          },
+          "effectiveDateTime": "2025-01-05T10:30:00+01:00",
+          "status": "final",
+          "subject": {
+            "reference": "Patient/StfVerstorbenePerson-BY3-Max"
+          }
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/Observation/StfTodesursache5-Os-BY3-Max",
+        "resource": {
+          "resourceType": "Observation",
+          "id": "StfTodesursache5-Os-BY3-Max",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfTodesursache"
+            ]
+          },
+          "partOf": [
+            {
+              "reference": "Procedure/StfObduktion-BY3-Max"
+            }
+          ],
+          "performer": [
+            {
+              "reference": "Practitioner/StfArzt-BY3-Max-Boese"
+            }
+          ],
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "C78",
+                "version": "2019"
+              }
+            ],
+            "text": "mit Lebermetastasen"
+          },
+          "component": [
+            {
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "code": "LA46-8",
+                    "system": "http://loinc.org",
+                    "display": "Other"
+                  }
+                ]
+              },
+              "code": {
+                "coding": [
+                  {
+                    "code": "82791-5",
+                    "system": "http://loinc.org"
+                  }
+                ]
+              }
+            }
+          ],
+          "code": {
+            "coding": [
+              {
+                "code": "184305005",
+                "system": "http://snomed.info/sct"
+              }
+            ]
+          },
+          "effectiveDateTime": "2025-01-05T10:30:00+01:00",
+          "status": "final",
+          "subject": {
+            "reference": "Patient/StfVerstorbenePerson-BY3-Max"
+          }
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/Patient/StfVerstorbenePerson-BY3-Max",
+        "resource": {
+          "resourceType": "Patient",
+          "id": "StfVerstorbenePerson-BY3-Max",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfVerstorbenePerson"
+            ]
+          },
+          "extension": [
+            {
+              "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfZuletztBehandelnderArztExtension",
+              "valueReference": {
+                "reference": "Practitioner/StfArzt-BY3-Max-Flurer"
+              }
+            }
+          ],
+          "identifier": [
+            {
+              "type": {
+                "coding": [
+                  {
+                    "code": "PI",
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                    "display": "Patient internal identifier"
+                  }
+                ]
+              },
+              "value": "331",
+              "assigner": {
+                "reference": "Organization/StfOrganisation-GA-BY3-Max"
+              }
+            },
+            {
+              "type": {
+                "coding": [
+                  {
+                    "code": "DC",
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                    "display": "Death Certificate ID"
+                  }
+                ]
+              },
+              "value": "7916"
+            }
+          ],
+          "name": [
+            {
+              "given": [
+                "Markus"
+              ],
+              "use": "official",
+              "family": "Meyer",
+              "text": "Markus Meyer"
+            }
+          ],
+          "address": [
+            {
+              "line": [
+                "Friedrich-Peter-Str. 25"
+              ],
+              "_line": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                      "valueString": "Friedrich-Peter-Str."
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                      "valueString": "25"
+                    }
+                  ]
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfGemeindekennzahlExtension",
+                  "valueString": "956400"
+                }
+              ],
+              "type": "both",
+              "city": "Nürnberg",
+              "postalCode": "90403",
+              "country": "DE"
+            }
+          ],
+          "active": true,
+          "birthDate": "1953-07-01",
+          "deceasedDateTime": "2025-01-01T17:00:00+01:00"
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/Patient/StfVerstorbenePersonPseudonymisiert-BY3-Max",
+        "resource": {
+          "resourceType": "Patient",
+          "id": "StfVerstorbenePersonPseudonymisiert-BY3-Max",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfVerstorbenePersonPseudonymisiert"
+            ]
+          },
+          "identifier": [
+            {
+              "type": {
+                "coding": [
+                  {
+                    "code": "PI",
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                  }
+                ]
+              },
+              "value": "331",
+              "assigner": {
+                "reference": "Organization/StfOrganisation-GA-BY3-Max"
+              }
+            },
+            {
+              "type": {
+                "coding": [
+                  {
+                    "code": "DC",
+                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                  }
+                ]
+              },
+              "value": "7916"
+            }
+          ]
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/Provenance/StfSterbeurkundeAusstellung-BY3-Max",
+        "resource": {
+          "resourceType": "Provenance",
+          "id": "StfSterbeurkundeAusstellung-BY3-Max",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfSterbeurkundeAusstellung"
+            ]
+          },
+          "target": [
+            {
+              "reference": "Patient/StfVerstorbenePerson-BY3-Max"
+            }
+          ],
+          "agent": [
+            {
+              "who": {
+                "reference": "Organization/StfOrganisation-BY3-Max"
+              }
+            }
+          ],
+          "reason": [
+            {
+              "coding": [
+                {
+                  "code": "DECSD",
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason"
+                }
+              ]
+            }
+          ],
+          "activity": {
+            "coding": [
+              {
+                "code": "LA",
+                "system": "http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion"
+              }
+            ]
+          },
+          "recorded": "2025-01-07T10:00:00+01:00"
+        }
+      },
+      {
+        "fullUrl": "https://mein.fhir-server.local/fhir/Procedure/StfLeichenschau-BY3-Max",
+        "resource": {
+          "resourceType": "Procedure",
+          "id": "StfLeichenschau-BY3-Max",
+          "meta": {
+            "profile": [
+              "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfLeichenschau"
+            ]
+          },
+          "performer": [
+            {
+              "actor": {
+                "reference": "Practitioner/StfArzt-BY3-Max-Boese"
+              }
+            }
+          ],
+          "status": "completed",
+          "performedDateTime": "2025-01-01",
+          "subject": {
+            "reference": "Patient/StfVerstorbenePerson-BY3-Max"
+          }
         }
       }
     ],
     "type": "collection",
-    "timestamp": "2023-10-15T14:28:00Z"
+    "timestamp": "2025-06-01T12:00:00+02:00"
   }
+  
 }
 
 assert {
