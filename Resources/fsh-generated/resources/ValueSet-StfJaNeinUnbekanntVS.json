@@ -4,7 +4,7 @@
   "name": "StfJaNeinUnbekannt",
   "id": "StfJaNeinUnbekanntVS",
   "title": "STF JaNeinUnbekannt",
-  "version": "1.0.0-ballot",
+  "version": "1.0.0",
   "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfJaNeinUnbekanntVS",
   "experimental": false,
   "publisher": "ELFA Maßnahme Interoperabilität",

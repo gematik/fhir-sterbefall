@@ -5,7 +5,7 @@
   "id": "StfDateiTypVS",
   "title": "STF Datei Typ",
   "description": "Typen von Dateien, die im Sterbefall Kontext vorkommen können",
-  "version": "1.0.0-ballot",
+  "version": "1.0.0",
   "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfDateiTypVS",
   "experimental": false,
   "publisher": "ELFA Maßnahme Interoperabilität",

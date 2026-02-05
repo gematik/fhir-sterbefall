@@ -4,7 +4,7 @@
   "name": "StfOrganisationsTypObduktion",
   "id": "StfOrganisationsTypObduktionVS",
   "title": "STF Typ einer Organisation bei Obduktionn",
-  "version": "1.0.0-ballot",
+  "version": "1.0.0",
   "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfOrganisationsTypObduktionVS",
   "experimental": false,
   "publisher": "ELFA Maßnahme Interoperabilität",

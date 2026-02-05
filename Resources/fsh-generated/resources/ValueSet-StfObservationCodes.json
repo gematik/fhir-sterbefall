@@ -5,7 +5,7 @@
   "id": "StfObservationCodes",
   "title": "STF Observation Codes",
   "description": "Im Kontext des Sterbefall relevante Observation Codes",
-  "version": "1.0.0-ballot",
+  "version": "1.0.0",
   "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfObservationCodes",
   "experimental": false,
   "publisher": "ELFA Maßnahme Interoperabilität",

@@ -6,7 +6,7 @@
   "id": "StfDateiTypCS",
   "title": "STF Datei Typ CS",
   "description": "Typen von Dateien, die im Sterbefall Kontext vorkommen können",
-  "version": "1.0.0-ballot",
+  "version": "1.0.0",
   "url": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS",
   "concept": [
     {

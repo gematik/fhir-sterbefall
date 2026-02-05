@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "StfZuletztBehandelnderArztExtension",
   "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfZuletztBehandelnderArztExtension",
-  "version": "1.0.0-ballot",
+  "version": "1.0.0",
   "name": "StfZuletztBehandelnderArztExtension",
   "title": "STF zuletzt behandelnder Arzt Extension",
   "status": "active",
