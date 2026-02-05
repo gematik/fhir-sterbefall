@@ -1,0 +1,48 @@
+meta {
+  name: SearchParameter Provenance.activity
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{host}}/Provenance?activity=LA
+  body: none
+  auth: inherit
+}
+
+params:query {
+  activity: LA
+}
+
+assert {
+  res.status: eq 200
+}
+
+script:pre-request {
+  const step1 = bru.getVar("Persistence_Step1");
+  
+  if (step1 !== "success") {
+    throw new Error("[SKIP] Dependency Request Step 1 failed — skipping execution.");
+  }
+}
+
+tests {
+  test("RESPONSE: Correct Bundle Type: searchset", () => {
+    const jsonData = res.getBody();
+    const bundleType = jsonData.type;
+  
+    expect(bundleType).to.equal("searchset");
+  });
+  
+  test("RESPONSE: Number of results is greater or equals 1", () => {
+    const jsonData = res.getBody();
+    const bundleType = jsonData.total;
+  
+    expect(bundleType).to.be.at.least(1);
+  });
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
