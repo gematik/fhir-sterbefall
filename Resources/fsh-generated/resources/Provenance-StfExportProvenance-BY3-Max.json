@@ -29,6 +29,9 @@
       "reference": "ServiceRequest/StfObduktionAnfrage-BY3-Max"
     },
     {
+      "reference": "Procedure/StfLeichenschau-BY3-Max"
+    },
+    {
       "reference": "Procedure/StfObduktion-BY3-Max"
     },
     {

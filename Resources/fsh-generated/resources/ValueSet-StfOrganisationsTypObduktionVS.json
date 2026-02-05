@@ -8,7 +8,7 @@
   "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfOrganisationsTypObduktionVS",
   "experimental": false,
   "publisher": "ELFA Maßnahme Interoperabilität",
-  "date": "2025-12-05",
+  "date": "2026-02-05",
   "compose": {
     "include": [
       {
