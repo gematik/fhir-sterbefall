@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "StfBundeslandExtension",
   "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfBundeslandExtension",
-  "version": "1.0.0-ballot",
+  "version": "1.0.0",
   "name": "StfBundeslandExtension",
   "title": "STF Bundesland Extension",
   "status": "active",

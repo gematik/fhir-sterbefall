@@ -5,7 +5,7 @@
   "name": "StfArztrolleCS",
   "id": "StfArztrolleCS",
   "title": "STF Arztrolle",
-  "version": "1.0.0-ballot",
+  "version": "1.0.0",
   "url": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztrolleCS",
   "concept": [
     {

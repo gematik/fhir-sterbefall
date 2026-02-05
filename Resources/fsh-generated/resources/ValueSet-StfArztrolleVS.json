@@ -4,7 +4,7 @@
   "name": "StfArztrolle",
   "id": "StfArztrolleVS",
   "title": "STF Arztrolle",
-  "version": "1.0.0-ballot",
+  "version": "1.0.0",
   "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfArztrolleVS",
   "experimental": false,
   "publisher": "ELFA Maßnahme Interoperabilität",

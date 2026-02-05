@@ -4,7 +4,7 @@
   "name": "StfOrganisationsTyp",
   "id": "StfOrganisationsTypVS",
   "title": "STF Typ einer Organisation",
-  "version": "1.0.0-ballot",
+  "version": "1.0.0",
   "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfOrganisationsTypVS",
   "experimental": false,
   "publisher": "ELFA Maßnahme Interoperabilität",

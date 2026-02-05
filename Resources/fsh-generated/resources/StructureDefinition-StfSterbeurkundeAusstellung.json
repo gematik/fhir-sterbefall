@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "StfSterbeurkundeAusstellung",
   "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfSterbeurkundeAusstellung",
-  "version": "1.0.0-ballot",
+  "version": "1.0.0",
   "name": "StfSterbeurkundeAusstellung",
   "title": "STF Sterbeurkunde Ausstellung",
   "status": "active",

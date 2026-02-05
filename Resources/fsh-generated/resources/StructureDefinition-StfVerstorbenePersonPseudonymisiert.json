@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "StfVerstorbenePersonPseudonymisiert",
   "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfVerstorbenePersonPseudonymisiert",
-  "version": "1.0.0-ballot",
+  "version": "1.0.0",
   "name": "StfVerstorbenePersonPseudonymisiert",
   "title": "STF pseudonymisierte Verstorbene Person",
   "status": "active",

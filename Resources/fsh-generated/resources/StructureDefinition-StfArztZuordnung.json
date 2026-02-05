@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "StfArztZuordnung",
   "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfArztZuordnung",
-  "version": "1.0.0-ballot",
+  "version": "1.0.0",
   "name": "StfArztZuordnung",
   "title": "STF Arzt Zuordnung",
   "status": "active",

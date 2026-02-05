@@ -5,7 +5,7 @@
   "name": "StfBerufsgruppeCS",
   "id": "StfBerufsgruppeCS",
   "title": "STF Berufsgruppe",
-  "version": "1.0.0-ballot",
+  "version": "1.0.0",
   "url": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfBerufsgruppeCS",
   "concept": [
     {
