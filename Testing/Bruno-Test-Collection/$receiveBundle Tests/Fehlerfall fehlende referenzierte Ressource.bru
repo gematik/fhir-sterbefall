@@ -1683,11 +1683,11 @@ tests {
     expect(resourceType).to.equal("OperationOutcome");
   });
   
-  test("RESPONSE: Correct HAPI Error: HAPI-1094", () => {
+  test("RESPONSE: Correct Error: Reference NICHT vorhanden", () => {
     const jsonData = res.getBody();
     const diagnostics = jsonData.issue?.[0].diagnostics;
   
-    expect(diagnostics, `Diagnostics: ${diagnostics}`).to.contains("HAPI-1094");
+    expect(diagnostics, `Diagnostics: ${diagnostics}`).to.contains("Reference NICHT vorhanden");
   });
 }
 
