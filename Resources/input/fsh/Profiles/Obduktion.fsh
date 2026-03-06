@@ -9,7 +9,7 @@ Description: "Abbildung der Informationen zu einer Obduktion im Kontext der STF"
 * basedOn only Reference(ServiceRequest)
 * status MS
 * code MS
-* code = $sct#29240004 "Autopsy examination (procedure)"
+* code = $sct#29240004
 * performed[x] MS
 * performed[x] only dateTime
 * performedDateTime MS

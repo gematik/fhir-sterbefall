@@ -36,9 +36,9 @@ tests {
   
   test("RESPONSE: Number of results is greater or equals 1", () => {
     const jsonData = res.getBody();
-    const bundleType = jsonData.total;
+    const entries = jsonData.entry;
   
-    expect(bundleType).to.be.at.least(1);
+    expect(entries.length).to.be.greaterThan(0);
   });
 }
 

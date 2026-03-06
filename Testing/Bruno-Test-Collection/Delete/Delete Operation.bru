@@ -30,72 +30,65 @@ script:pre-request {
 }
 
 tests {
-  test("DELETE: All transaction-response entries show SUCCESSFUL_DELETE or SUCCESSFUL_DELETE_ALREADY_DELETED", () => {
+  test("DELETE: OperationOutcome enthält nur erfolgreiche Delete-Diagnostics", () => {
     const body = res.getBody();
   
-    // 🔹 Grundstruktur prüfen
-    expect(body.resourceType).to.equal("Bundle");
-    expect(body.type).to.equal("transaction-response");
-    expect(body.entry).to.be.an("array").that.is.not.empty;
+    // Grundstruktur prüfen
+    expect(body.resourceType).to.equal("OperationOutcome");
+    expect(body.issue).to.be.an("array").that.is.not.empty;
   
-    const entries = body.entry || [];
+    const issues = body.issue || [];
   
-    // 🔍 Finde alle Einträge, die KEINEN erfolgreichen Lösch-Code haben
-    const invalidDeletes = entries
-      .map((e, idx) => {
-        const status = e.response?.status || "(missing)";
-        const location = e.response?.location || `(Entry[${idx}] ohne location)`;
-        const issues = e.response?.outcome?.issue || [];
+    // Erlaubt:
+    // - "Deleted <Resource>/<id> -> 410 Gone"
+    // - "deleteBundle abgeschlossen (transaktional)."
+    const invalidIssues = issues
+      .map((issue, idx) => {
+        const diagnostics = issue.diagnostics || "(missing diagnostics)";
+        const severity = issue.severity || "(missing severity)";
+        const code = issue.code || "(missing code)";
   
-        // Suche in den OperationOutcome-Issues nach den erlaubten Codes
-        const hasSuccessfulDelete = issues.some(issue =>
-          Array.isArray(issue.details?.coding) &&
-          issue.details.coding.some(c => c.code === "SUCCESSFUL_DELETE")
-        );
-  
-        const hasSuccessfulAlreadyDeleted = issues.some(issue =>
-          Array.isArray(issue.details?.coding) &&
-          issue.details.coding.some(c => c.code === "SUCCESSFUL_DELETE_ALREADY_DELETED")
-        );
-  
-        const ok = hasSuccessfulDelete || hasSuccessfulAlreadyDeleted;
+        const isDeletedEntry = /^Deleted\s+[A-Za-z]+\/[A-Za-z0-9.-]+\s+->\s+410\s+Gone$/.test(diagnostics);
+        const isTransactionDone = diagnostics === "deleteBundle abgeschlossen (transaktional).";
   
         return {
           index: idx,
-          location,
-          status,
-          ok,
-          code: hasSuccessfulDelete ? "SUCCESSFUL_DELETE" :
-                hasSuccessfulAlreadyDeleted ? "SUCCESSFUL_DELETE_ALREADY_DELETED" :
-                "(none)"
+          severity,
+          code,
+          diagnostics,
+          ok: isDeletedEntry || isTransactionDone
         };
       })
-      .filter(e => !e.ok);
+      .filter(i => !i.ok);
   
-    // 🔧 Debug-Übersicht
+    // Debug-Übersicht
     console.log(
-      "🔎 Delete-Status pro Entry:",
-      entries.map((e, idx) => {
-        const loc = e.response?.location || `(Entry[${idx}] ohne location)`;
-        const code =
-          e.response?.outcome?.issue?.[0]?.details?.coding?.[0]?.code || "(no code)";
-        return `${idx}: ${loc} -> ${code}`;
-      })
+      "🔎 Delete-Diagnostics pro Issue:",
+      issues.map((issue, idx) => `${idx}: ${issue.diagnostics || "(missing diagnostics)"}`)
     );
   
-    // 🧩 Erwartung: Alle Einträge müssen SUCCESSFUL_DELETE oder SUCCESSFUL_DELETE_ALREADY_DELETED haben
+    // Zusatzcheck: Es sollte mindestens ein echter Delete-Eintrag vorhanden sein
+    const deleteEntries = issues.filter(issue =>
+      /^Deleted\s+[A-Za-z]+\/[A-Za-z0-9.-]+\s+->\s+410\s+Gone$/.test(issue.diagnostics || "")
+    );
+  
     expect(
-      invalidDeletes.length,
-      invalidDeletes.length > 0
-        ? `Erwarte für alle Einträge SUCCESSFUL_DELETE oder SUCCESSFUL_DELETE_ALREADY_DELETED.\nAbweichungen:\n${invalidDeletes
-            .map(e => `Entry[${e.index}] ${e.location} -> ${e.status} (code=${e.code})`)
+      deleteEntries.length,
+      "Erwarte mindestens einen Diagnostics-Eintrag im Format 'Deleted <Resource>/<id> -> 410 Gone'."
+    ).to.be.greaterThan(0);
+  
+    // Erwartung: Alle Issues müssen entweder Delete-Erfolg oder Abschlussmeldung sein
+    expect(
+      invalidIssues.length,
+      invalidIssues.length > 0
+        ? `Erwarte nur erfolgreiche Delete-Diagnostics oder die Abschlussmeldung.\nAbweichungen:\n${invalidIssues
+            .map(i => `Issue[${i.index}] severity=${i.severity}, code=${i.code}, diagnostics=${i.diagnostics}`)
             .join("\n")}`
-        : "Alle Einträge zeigen korrekten Delete-Code."
+        : "Alle Issues enthalten gültige Delete-Diagnostics."
     ).to.equal(0);
   
-    console.log("✅ Alle Einträge im transaction-response enthalten SUCCESSFUL_DELETE oder SUCCESSFUL_DELETE_ALREADY_DELETED.");
+    console.log("✅ OperationOutcome enthält nur erfolgreiche Delete-Diagnostics.");
   });
-  
 }
 
 settings {
