@@ -43,8 +43,8 @@ Description: "Informationen über Ärzte und Ärztinnen, die im Kontext der STF 
   * line MS
   * line ^comment = "Hausnummer und Straße"
   * line.extension[Postfach] 0..0
-  * line.extension[Strasse] 1.. MS
-  * line.extension[Hausnummer] 1.. MS
+  * line.extension[Strasse] MS
+  * line.extension[Hausnummer] MS
   * line.extension[Adresszusatz] MS
   * city 0.. MS
   * city ^comment = "Ort"
