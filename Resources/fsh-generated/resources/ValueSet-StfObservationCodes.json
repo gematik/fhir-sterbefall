@@ -5,11 +5,11 @@
   "id": "StfObservationCodes",
   "title": "STF Observation Codes",
   "description": "Im Kontext des Sterbefall relevante Observation Codes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfObservationCodes",
   "experimental": false,
   "publisher": "ELFA Maßnahme Interoperabilität",
-  "date": "2026-02-05",
+  "date": "2026-03-24",
   "compose": {
     "include": [
       {

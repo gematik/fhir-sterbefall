@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "StfVerstorbenePerson",
   "url": "http://gematik.de/fhir/oegd/stf/StructureDefinition/StfVerstorbenePerson",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "StfVerstorbenePerson",
   "title": "STF Verstorbene Person",
   "status": "active",
   "experimental": false,
-  "date": "2026-02-05",
+  "date": "2026-03-24",
   "publisher": "ELFA Maßnahme Interoperabilität",
   "description": "Informationen zur verstorbenen Person",
   "fhirVersion": "4.0.1",
@@ -18,6 +18,20 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+        "id": "Patient.extension",
+        "path": "Patient.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
       {
         "id": "Patient.extension:zuletztBehandelnderArzt",
         "path": "Patient.extension",
