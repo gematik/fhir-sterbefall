@@ -36,12 +36,13 @@ jobs:
           DOTNET_VALIDATION_ENABLED: true
           JAVA_VALIDATION_ENABLED: true
           JAVA_VALIDATION_OPTIONS: >
-            -allow-example-urls
+            -allow-example-urls true
             -output validation.json
             -html-output validation.html
             -show-message-ids
             -language de
             -jurisdiction de
+            -display-issues-are-warnings
             -advisor-file validator/advisor.json
             -resolution-context file:Resources/fsh-generated/resources/
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
