@@ -3,22 +3,58 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: de.gematik.sterbefall
 canonical: http://gematik.de/fhir/oegd/stf
+name: SterbefallKrebsregistermeldung
+title: "ÖGD Sterbefall - Krebsregistermeldung"
+description: "FHIR-Spezifikation für die interoperable Übertragung der Daten aus der Todesbescheinigung an die Krebsregister im Rahmen des Öffentlichen Gesundheitsdienstes."
 status: draft # draft | active | retired | unknown
 version: 1.0.0-ballot
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+copyrightYear: 2024+
+releaseLabel: ballot
+license: Apache-2.0
+publisher:
+  name: gematik GmbH
+  url: https://gematik.de
+language: de
 dependencies:
   de.basisprofil.r4: 1.5.4
 instanceOptions:
   manualSliceOrdering: true # true | false
-FSHOnly: true
-  # Determines for which types of Instances SUSHI will automatically set meta.profile
-  # if InstanceOf references a profile:
-  #
-  # setMetaProfile: always # always | never | inline-only | standalone-only
-  #
-  #
-  # Determines for which types of Instances SUSHI will automatically set id
-  # if InstanceOf references a profile:
-  #
-  # setId: always # always | standalone-only
+
+pages:
+  index.md:
+    title: Einführung
+  ReleaseNotes.md:
+    title: Release Notes
+  Geltungsbereich-Scope.md:
+    title: Geltungsbereich (Scope)
+  Anleitung-zum-Review.md:
+    title: Anleitung zum Review
+  Akteure-und-Interaktionen.md:
+    title: Akteure und Interaktionen
+  Begriffsdefinitionen.md:
+    title: Begriffsdefinitionen
+  Informationsmodell.md:
+    title: Informationsmodell
+  Beispielarchitektur.md:
+    title: Beispielarchitektur
+  Beispiele.md:
+    title: Fallbeispiele
+  artifacts.md:
+    title: FHIR-Artefakte
+
+menu:
+  Einführung: index.html
+  Über diese Spezifikation:
+    Geltungsbereich Scope: Geltungsbereich-Scope.html
+    Anleitung zum Review: Anleitung-zum-Review.html
+    Akteure und Interaktionen: Akteure-und-Interaktionen.html
+    Begriffsdefinitionen: Begriffsdefinitionen.html
+    Informationsmodell: Informationsmodell.html
+    Beispielarchitektur: Beispielarchitektur.html
+  Krebsregistermeldung:
+    Fallbeispiele: Beispiele.html
+  Release Notes: ReleaseNotes.html
+  FHIR-Artefakte: artifacts.html
