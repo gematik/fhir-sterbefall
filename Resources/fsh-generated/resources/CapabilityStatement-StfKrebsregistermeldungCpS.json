@@ -1,7 +1,7 @@
 {
   "resourceType": "CapabilityStatement",
   "id": "StfKrebsregistermeldungCpS",
-  "url": "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementFormularDatenQuelleAkteur",
+  "url": "https://gematik.de/fhir/isik/CapabilityStatement/StfKrebsregistermeldungCpS",
   "jurisdiction": [
     {
       "coding": [
