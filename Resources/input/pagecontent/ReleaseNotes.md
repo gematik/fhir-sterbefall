@@ -1,5 +1,3 @@
-#### [de.gematik.sterbefall](https://simplifier.net/packages/de.gematik.sterbefall)
-
 ### Version 1.0.0
 
 Dies ist die finale Version 1.0.0 nach erfolgreichem Abschluss des Abstimmungsverfahrens (Ballot-Phase 12/2025-01/2026). Die Version beinhaltet umfangreiche Verbesserungen und Anpassungen basierend auf dem Feedback aus dem Ballot-Verfahren.

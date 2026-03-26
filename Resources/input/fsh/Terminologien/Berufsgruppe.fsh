@@ -1,6 +1,6 @@
 CodeSystem: StfBerufsgruppeCS
 Id: StfBerufsgruppeCS
-Title: "STF Berufsgruppe"
+Title: "STF Berufsgruppe CodeSystem"
 * insert Meta
 * #Krankenhaus "Krankenhaus"
 * #Niedergelassen "Niedergelassen"
@@ -10,6 +10,6 @@ Title: "STF Berufsgruppe"
 
 ValueSet: StfBerufsgruppe
 Id: StfBerufsgruppeVS
-Title: "STF Berufsgruppe"
+Title: "STF Berufsgruppe ValueSet"
 * insert Meta
 * include codes from system StfBerufsgruppeCS
