@@ -1,7 +1,7 @@
 Instance: StfKrebsregistermeldungCpS
 InstanceOf: CapabilityStatement
 Usage: #definition
-* url = "https://gematik.de/fhir/isik/CapabilityStatement/ISiKCapabilityStatementFormularDatenQuelleAkteur"
+* url = "https://gematik.de/fhir/isik/CapabilityStatement/StfKrebsregistermeldungCpS"
 * version = "1.0.0"
 * status = #active
 * experimental = false
