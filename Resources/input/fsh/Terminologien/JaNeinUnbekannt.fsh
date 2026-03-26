@@ -1,6 +1,6 @@
 ValueSet: StfJaNeinUnbekannt
 Id: StfJaNeinUnbekanntVS
-Title: "STF JaNeinUnbekannt"
+Title: "STF JaNeinUnbekannt CodeSystem"
 * insert Meta
 * $v2-0532#Y
 * $v2-0532#N
@@ -8,7 +8,7 @@ Title: "STF JaNeinUnbekannt"
 
 ValueSet: StfJaNein
 Id: StfJaNeinVS
-Title: "STF JaNeinUnbekannt"
+Title: "STF JaNeinUnbekannt ValueSet"
 * insert Meta
 * $v2-0532#Y
 * $v2-0532#N

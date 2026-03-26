@@ -1,8 +1,3 @@
-
-<img src="https://raw.githubusercontent.com/gematik/fhir-profiles-erp/main/Material/Gematik_Logo_Flag.png" alt="gematik logo" width="400">
-
-## ÖGD Sterbefall - Krebsregistermeldung
-
 <a href="https://github.com/gematik/fhir-sterbefall" class="btn btn-primary">GitHub Repository</a>
 
 ### Zusammenfassung

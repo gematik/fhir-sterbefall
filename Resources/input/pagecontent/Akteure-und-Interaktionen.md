@@ -17,6 +17,8 @@ Zum besseren Verständnis wurde der Workflow, der in diesem IG beschrieben ist, 
 
 <img src="Workflow.png" alt="Workflow-Diagramm" style="max-width: 100%;"/>
 
+---
+
 ### Beschreibung des Lösch-Workflow
 
 Aus dem Workflow ist zu entnehmen, dass die Export-Bundles nur temporär auf dem FHIR-Server des Landeskrebsregisters persistiert werden. Sobald eine erfolgreiche Verarbeitung stattgefunden hat, werden alle Ressourcen eines Export-Bundles gelöscht.
