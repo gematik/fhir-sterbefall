@@ -6,7 +6,7 @@
   "id": "StfDateiTypCS",
   "title": "STF Datei Typ CS",
   "description": "Typen von Dateien, die im Sterbefall Kontext vorkommen können",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "url": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfDateiTypCS",
   "concept": [
     {
@@ -24,6 +24,6 @@
   ],
   "experimental": false,
   "publisher": "ELFA Maßnahme Interoperabilität",
-  "date": "2026-03-24",
+  "date": "2026-03-30",
   "count": 3
 }

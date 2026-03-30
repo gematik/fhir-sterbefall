@@ -1,7 +1,7 @@
 {
   "resourceType": "CapabilityStatement",
   "id": "StfKrebsregistermeldungCpS",
-  "url": "https://gematik.de/fhir/isik/CapabilityStatement/StfKrebsregistermeldungCpS",
+  "url": "http://gematik.de/fhir/oegd/stf/CapabilityStatement/StfKrebsregistermeldungCpS",
   "jurisdiction": [
     {
       "coding": [
@@ -360,11 +360,11 @@
       "mode": "server"
     }
   ],
-  "version": "1.0.0",
+  "version": "1.0.2",
   "status": "active",
   "experimental": false,
   "publisher": "ELFA Maßnahme Interoperabilität",
-  "date": "2026-01-26",
+  "date": "2026-03-30",
   "kind": "requirements",
   "fhirVersion": "4.0.1",
   "name": "Stf Krebsregistermeldung CapabilityStatement",

@@ -4,11 +4,11 @@
   "name": "StfArztrolle",
   "id": "StfArztrolleVS",
   "title": "STF Arztrolle",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfArztrolleVS",
   "experimental": false,
   "publisher": "ELFA Maßnahme Interoperabilität",
-  "date": "2026-03-24",
+  "date": "2026-03-30",
   "compose": {
     "include": [
       {

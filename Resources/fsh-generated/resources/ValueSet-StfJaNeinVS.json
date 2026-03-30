@@ -4,11 +4,11 @@
   "name": "StfJaNein",
   "id": "StfJaNeinVS",
   "title": "STF JaNeinUnbekannt",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfJaNeinVS",
   "experimental": false,
   "publisher": "ELFA Maßnahme Interoperabilität",
-  "date": "2026-03-24",
+  "date": "2026-03-30",
   "compose": {
     "include": [
       {

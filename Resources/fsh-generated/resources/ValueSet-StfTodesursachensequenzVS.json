@@ -5,11 +5,11 @@
   "id": "StfTodesursachensequenzVS",
   "title": "STF Todesursachensequenz ValueSet",
   "description": "ValueSet zur Kodierung der Todesursachensequenz gemäß LOINC. Dabei stellt LA26682-7 -> '1a', LA26680-1 -> '1b', LA26681-9 -> '1c' und LA46-8 -> '2' dar.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfTodesursachensequenzVS",
   "experimental": false,
   "publisher": "ELFA Maßnahme Interoperabilität",
-  "date": "2026-03-24",
+  "date": "2026-03-30",
   "compose": {
     "include": [
       {

@@ -6,7 +6,7 @@
   "id": "StfArztIdentifierType",
   "title": "StfArztIdentifierType",
   "description": "Bis zur Klärung, welche konkrete ID gemeint ist, erfolgt die unterscheidung der Identifier über diese Codes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "url": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfArztIdentifierType",
   "concept": [
     {
@@ -21,6 +21,6 @@
   ],
   "experimental": false,
   "publisher": "ELFA Maßnahme Interoperabilität",
-  "date": "2026-03-24",
+  "date": "2026-03-30",
   "count": 2
 }
