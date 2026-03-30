@@ -11,11 +11,11 @@ RuleSet: CodConObsReq(system, code, vs)
 * valueCodeableConcept from {vs} (required)
 
 RuleSet: Meta
-* ^version = "1.0.1"
+* ^version = "1.0.2"
 * ^status = #active
 * ^experimental = false
 * ^publisher = "ELFA Maßnahme Interoperabilität"
-* ^date = "2026-03-24"
+* ^date = "2026-03-30"
 
 RuleSet: ExampleFullUrl(resource, id)
 * fullUrl = "https://mein.fhir-server.local/fhir/{resource}/{id}"

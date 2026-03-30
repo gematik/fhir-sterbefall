@@ -1,12 +1,11 @@
 Instance: StfKrebsregistermeldungCpS
 InstanceOf: CapabilityStatement
 Usage: #definition
-* url = "https://gematik.de/fhir/isik/CapabilityStatement/StfKrebsregistermeldungCpS"
-* version = "1.0.0"
+* version = "1.0.2"
 * status = #active
 * experimental = false
 * publisher = "ELFA Maßnahme Interoperabilität"
-* date = "2026-01-26"
+* date = "2026-03-30"
 * jurisdiction = urn:iso:std:iso:3166#DE "Germany"
 * kind = #requirements
 * fhirVersion = #4.0.1
