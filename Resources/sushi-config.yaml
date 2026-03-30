@@ -4,7 +4,7 @@
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: de.fhir.sterbefall-krebsregistermeldung
-canonical: http://ig.fhir.de/igs/sterbefall-krebsregistermeldung
+canonical: http://gematik.de/fhir/oegd/stf # TODO: Zu klären, ob wir das auf eine HL7 URL umstellen, dann brechen nur alle Canonicals...
 name: Sterbefall-Krebsregistermeldung
 title: "ÖGD Sterbefall - Krebsregistermeldung"
 #description: "FHIR-Spezifikation für die interoperable Übertragung der Daten aus der Todesbescheinigung an die Krebsregister im Rahmen des Öffentlichen Gesundheitsdienstes."
